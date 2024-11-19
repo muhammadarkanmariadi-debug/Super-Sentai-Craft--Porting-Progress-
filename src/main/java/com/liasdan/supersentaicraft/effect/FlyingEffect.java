@@ -13,17 +13,14 @@ public class FlyingEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-	 if (!pLivingEntity.level().isClientSide()) {
-			
-		
-		 pLivingEntity.resetFallDistance();
-		
+	public boolean shouldApplyEffectTickThisTick(int tickCount, int amplifier) {
+		return true;
 	}
-	 }
 
 	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+
+
 		return true;
 	}
 }

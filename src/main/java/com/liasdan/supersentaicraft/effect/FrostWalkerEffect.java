@@ -22,10 +22,10 @@ public class FrostWalkerEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 		if (pLivingEntity.onGround()) {
 			BlockPos pos = pLivingEntity.blockPosition();
-			
+
 	         BlockState blockstate = Blocks.FROSTED_ICE.defaultBlockState();
 	         int i = Math.min(16, 2);
 	         BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
@@ -36,7 +36,7 @@ public class FrostWalkerEffect extends MobEffect {
 	               BlockState blockstate1 = pLivingEntity.level().getBlockState(blockpos$mutableblockpos);
 	               if (blockstate1.isAir()) {
 	                  BlockState blockstate2 = pLivingEntity.level().getBlockState(blockpos);
-	                  if (blockstate2 == FrostedIceBlock.meltsInto() && blockstate.canSurvive(pLivingEntity.level(), blockpos) && pLivingEntity.level().isUnobstructed(blockstate, blockpos, CollisionContext.empty()) && !net.minecraftforge.event.ForgeEventFactory.onBlockPlace(pLivingEntity, net.minecraftforge.common.util.BlockSnapshot.create(pLivingEntity.level().dimension(), pLivingEntity.level(), blockpos), net.minecraft.core.Direction.UP)) {
+	                  if (blockstate2 == FrostedIceBlock.meltsInto() && blockstate.canSurvive(pLivingEntity.level(), blockpos) && pLivingEntity.level().isUnobstructed(blockstate, blockpos, CollisionContext.empty()) && !net.neoforged.neoforge.event.EventHooks.onBlockPlace(pLivingEntity, net.neoforged.neoforge.common.util.BlockSnapshot.create(pLivingEntity.level().dimension(), pLivingEntity.level(), blockpos), net.minecraft.core.Direction.UP)) {
 	                	  pLivingEntity.level().setBlockAndUpdate(blockpos, blockstate);
 	                	  pLivingEntity.level().scheduleTick(blockpos, Blocks.FROSTED_ICE, Mth.nextInt(pLivingEntity.getRandom(), 60, 120));
 	                  }
@@ -44,10 +44,6 @@ public class FrostWalkerEffect extends MobEffect {
 	            }
 	         }
 		}
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-		return true;
-	}
+        return true;
+    }
 }

@@ -27,10 +27,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ShinkengerItems {
 
@@ -38,155 +37,155 @@ public class ShinkengerItems {
 	
 	public static List<Item> NeedShinkenmaru= new ArrayList<Item>();
 	public static List<Item> NeedSakanamaru= new ArrayList<Item>();
-	
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SuperSentaiCraftCore.MODID);
+
+	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
-	public static final RegistryObject<Item> SHINKENGER_LOGO = ITEMS.register("shinkenger_logo",
+	public static final DeferredItem<Item> SHINKENGER_LOGO = ITEMS.register("shinkenger_logo",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));
     
-	public static final RegistryObject<Item> KYOUTSU_DISK = ITEMS.register("common_disk",
+	public static final DeferredItem<Item> KYOUTSU_DISK = ITEMS.register("common_disk",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));
 
-	public static final RegistryObject<Item> SHISHI_DISK = ITEMS.register("shishi_disk",
+	public static final DeferredItem<Item> SHISHI_DISK = ITEMS.register("shishi_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_red","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.FIRESLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false),
+            		new MobEffectInstance(EffectCore.FIRESLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddCompatibilityList(new String[] {"princess_shinken_red"}).AddToTabList(RangerTabs.SHINKENGER));
 
-	public static final RegistryObject<Item> RYUU_DISK = ITEMS.register("ryuu_disk",
+	public static final DeferredItem<Item> RYUU_DISK = ITEMS.register("ryuu_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_blue","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
-	public static final RegistryObject<Item> KAME_DISK = ITEMS.register("kame_disk",
+	public static final DeferredItem<Item> KAME_DISK = ITEMS.register("kame_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_pink","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
-	public static final RegistryObject<Item> KUMA_DISK = ITEMS.register("kuma_disk",
+	public static final DeferredItem<Item> KUMA_DISK = ITEMS.register("kuma_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_green","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
-	public static final RegistryObject<Item> SARU_DISK = ITEMS.register("saru_disk",
+	public static final DeferredItem<Item> SARU_DISK = ITEMS.register("saru_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_yellow","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
-	public static final RegistryObject<Item> SUSHI_DISK = ITEMS.register("sushi_disk",
+	public static final DeferredItem<Item> SUSHI_DISK = ITEMS.register("sushi_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_gold","shinken_gold_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 2,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
-	public static final RegistryObject<Item> INROMARU = ITEMS.register("inromaru",
+	public static final DeferredItem<Item> INROMARU = ITEMS.register("inromaru",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));
 	
-	public static final RegistryObject<Item> SUPER_DISK = ITEMS.register("super_disk",
+	public static final DeferredItem<Item> SUPER_DISK = ITEMS.register("super_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"shinken_super_mode","","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 4,true,false),
-            		new MobEffectInstance(EffectCore.FLYING.get(), 40, 4,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
+            		new MobEffectInstance(EffectCore.FLYING, 40, 4,true,false))
             .ChangeSlot(2).addNeedItem(INROMARU.get()).AddCompatibilityList(SHINKENGER).AddToTabList(RangerTabs.SHINKENGER));
     
-	public static final RegistryObject<Item> HYPER_DISK = ITEMS.register("hyper_disk",
+	public static final DeferredItem<Item> HYPER_DISK = ITEMS.register("hyper_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"shinken_hyper_mode","","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 5,true,false),
-            		new MobEffectInstance(EffectCore.FLYING.get(), 40, 5,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 5,true,false),
+            		new MobEffectInstance(EffectCore.FLYING, 40, 5,true,false))
             .ChangeSlot(2).AddCompatibilityList(SHINKENGER).AddToTabList(RangerTabs.SHINKENGER));
     
-	public static final RegistryObject<Item> GEDOU_DISK = ITEMS.register("gedou_disk",
+	public static final DeferredItem<Item> GEDOU_DISK = ITEMS.register("gedou_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"_gedou","shinken_red","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-            		new MobEffectInstance(EffectCore.SLASH.get(), 40, 4,true,false),
-            		new MobEffectInstance(EffectCore.FLYING.get(), 40, 4,true,false))
+            		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
+            		new MobEffectInstance(EffectCore.FLYING, 40, 4,true,false))
             .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
-    public static final RegistryObject<Item> SHINKENGER_HELMET = ITEMS.register("shinkenger_head",
+    public static final DeferredItem<Item> SHINKENGER_HELMET = ITEMS.register("shinkenger_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    public static final RegistryObject<Item> SHINKENGER_CHESTPLATE = ITEMS.register("shinkenger_torso",
+    public static final DeferredItem<Item> SHINKENGER_CHESTPLATE = ITEMS.register("shinkenger_torso",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    public static final RegistryObject<Item> SHINKENGER_LEGGINGS = ITEMS.register("shinkenger_legs",
+    public static final DeferredItem<Item> SHINKENGER_LEGGINGS = ITEMS.register("shinkenger_legs",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> RED_SHODOPHONE = ITEMS.register("red_shodophone",
+    public static final DeferredItem<Item> RED_SHODOPHONE = ITEMS.register("red_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_red",SHISHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SHISHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> BLUE_SHODOPHONE = ITEMS.register("blue_shodophone",
+    public static final DeferredItem<Item> BLUE_SHODOPHONE = ITEMS.register("blue_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_blue",RYUU_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(RYUU_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> PINK_SHODOPHONE = ITEMS.register("pink_shodophone",
+    public static final DeferredItem<Item> PINK_SHODOPHONE = ITEMS.register("pink_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_pink",KAME_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(KAME_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> GREEN_SHODOPHONE = ITEMS.register("green_shodophone",
+    public static final DeferredItem<Item> GREEN_SHODOPHONE = ITEMS.register("green_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_green",KUMA_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(KUMA_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> YELLOW_SHODOPHONE = ITEMS.register("yellow_shodophone",
+    public static final DeferredItem<Item> YELLOW_SHODOPHONE = ITEMS.register("yellow_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_yellow",SARU_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SARU_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> SUSHI_CHANGER = ITEMS.register("sushi_changer",
+    public static final DeferredItem<Item> SUSHI_CHANGER = ITEMS.register("sushi_changer",
     		() -> new SushiChangerItem(ArmorMaterials.DIAMOND,"shinken_gold",SUSHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SUSHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<Item> PRINCESS_SHODOPHONE = ITEMS.register("princess_red_shodophone",
+    public static final DeferredItem<Item> PRINCESS_SHODOPHONE = ITEMS.register("princess_red_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"princess_shinken_red",SHISHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SHISHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> SHINKENMARU = ITEMS.register("shinkenmaru",
+    public static final DeferredItem<SwordItem> SHINKENMARU = ITEMS.register("shinkenmaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(NeedShinkenmaru).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> REKKA_DAIZANTOU = ITEMS.register("rekka_daizantou",
+    public static final DeferredItem<SwordItem> REKKA_DAIZANTOU = ITEMS.register("rekka_daizantou",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<BaseBlasterItem> WATER_ARROW = ITEMS.register("water_arrow",
+    public static final DeferredItem<BaseBlasterItem> WATER_ARROW = ITEMS.register("water_arrow",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
 	
-    public static final RegistryObject<SwordItem> HEAVEN_FAN = ITEMS.register("heaven_fan",
+    public static final DeferredItem<SwordItem> HEAVEN_FAN = ITEMS.register("heaven_fan",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> WOOD_SPEAR = ITEMS.register("wood_spear",
+    public static final DeferredItem<SwordItem> WOOD_SPEAR = ITEMS.register("wood_spear",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<BaseThrowableItem> LAND_SLICER = ITEMS.register("land_slicer",
+    public static final DeferredItem<BaseThrowableItem> LAND_SLICER = ITEMS.register("land_slicer",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
 	
-    public static final RegistryObject<SwordItem> SAKANAMARU = ITEMS.register("sakanamaru",
+    public static final DeferredItem<SwordItem> SAKANAMARU = ITEMS.register("sakanamaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(NeedSakanamaru).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> SUPER_SHINKENMARU = ITEMS.register("super_shinkenmaru",
+    public static final DeferredItem<SwordItem> SUPER_SHINKENMARU = ITEMS.register("super_shinkenmaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> KYORYUMARU = ITEMS.register("kyoryumaru",
+    public static final DeferredItem<SwordItem> KYORYUMARU = ITEMS.register("kyoryumaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
-    public static final RegistryObject<SwordItem> KYORYUMARU_SAKANAMARU = ITEMS.register("kyoryumaru_sakanamaru",
+    public static final DeferredItem<SwordItem> KYORYUMARU_SAKANAMARU = ITEMS.register("kyoryumaru_sakanamaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).ChangeRepairItem(KYOUTSU_DISK.get()));
     
     public static void register(IEventBus eventBus) {

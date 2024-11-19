@@ -7,6 +7,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 
@@ -35,7 +36,7 @@ public class ExplosiveProjectileEntity extends ThrowableItemProjectile{
 	protected void onHit(HitResult pResult) {
 		super.onHit(pResult);
 	    if (!this.level().isClientSide) {
-	    	boolean flag = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.level(), this.getOwner());
+			boolean flag = this.level().getLevelData().getGameRules().getRule(GameRules.RULE_MOBGRIEFING).get();
 	    	this.level().explode(this, this.getX(), this.getY(), this.getZ(), (float)POWER, flag, Level.ExplosionInteraction.MOB);
 	    	this.discard();
 	    }

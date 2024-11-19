@@ -15,19 +15,20 @@ public class PunchEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-	 if (!pLivingEntity.level().isClientSide()) {
-
-			if (pLivingEntity.getMainHandItem().isEmpty()) {
-				pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, pAmplifier+3,true,false));
-			}
-		
-			
+	public boolean shouldApplyEffectTickThisTick(int tickCount, int amplifier) {
+		return true;
 	}
-	 }
 
 	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+		if (!pLivingEntity.level().isClientSide()) {
+
+			if (pLivingEntity.getMainHandItem().isEmpty()) {
+				pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, pAmplifier+3,false,false));
+			}
+
+
+		}
 		return true;
 	}
 }

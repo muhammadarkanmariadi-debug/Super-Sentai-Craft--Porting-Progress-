@@ -20,21 +20,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class OtherItems {
 
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SuperSentaiCraftCore.MODID);
+	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
-	public static final RegistryObject<Item> SUPER_SENTAI_LOGO = ITEMS.register("super_sentai_logo",
+	public static final DeferredItem<Item> SUPER_SENTAI_LOGO = ITEMS.register("super_sentai_logo",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
     
-	public static final RegistryObject<Item> BLANK_FORM = ITEMS.register("blank_form",
+	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","",""));
-    
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

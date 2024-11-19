@@ -30,14 +30,7 @@ import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.entity.projectile.ThrownEgg;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.entity.projectile.WitherSkull;
-import net.minecraft.world.item.ArrowItem;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
@@ -48,7 +41,7 @@ public class BasePickaxeItem extends PickaxeItem {
 	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
 	
 	public BasePickaxeItem(Tier toolTier, int Atk, float Spd, Properties prop) {
-		super(toolTier, Atk, Spd, prop.defaultDurability(toolTier.getUses()));
+		super(toolTier, prop.attributes(SwordItem.createAttributes(Tiers.DIAMOND, Atk, Spd)));
 	}
 	
 	public BasePickaxeItem ChangeRepairItem(Item item) {

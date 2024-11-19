@@ -2,12 +2,15 @@ package com.liasdan.supersentaicraft.items.others;
 
 import java.util.List;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.events.ModClientEvents;
 import com.liasdan.supersentaicraft.items.GorangerItems;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 
 public class BaseShieldItem extends ShieldItem {
 
@@ -15,8 +18,7 @@ public class BaseShieldItem extends ShieldItem {
 	
 	public BaseShieldItem(Properties prop) {
 		super(prop);
-		ModClientEvents.SHIELD_ITEM.add(this);
-
+		SuperSentaiCraftCore.SHIELD_ITEM.add(this);
 	}
 
 	public BaseShieldItem ChangeRepairItem(Item item) {
@@ -33,8 +35,7 @@ public class BaseShieldItem extends ShieldItem {
 		return this;
 	}
 
-	   @Override
-	   public boolean canPerformAction(ItemStack stack, net.minecraftforge.common.ToolAction toolAction) {
-	      return net.minecraftforge.common.ToolActions.DEFAULT_SHIELD_ACTIONS.contains(toolAction);
-	   }
+	public boolean canPerformAction(ItemStack stack, ItemAbility itemAbility) {
+		return ItemAbilities.DEFAULT_SHIELD_ACTIONS.contains(itemAbility);
+	}
 }

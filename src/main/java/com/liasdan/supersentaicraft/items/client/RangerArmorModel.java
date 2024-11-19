@@ -29,7 +29,7 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 				
 				return BELT.getBeltModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot,RIDER);
 				
-			}else return new ResourceLocation(SuperSentaiCraftCore.MODID, "geo/rangerbelt.geo.json");
+			}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/rangerbelt.geo.json");
 		}else {
 			
 			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
@@ -37,7 +37,7 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 				
 				return BELT.getModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot,RIDER);
 				
-			}else return new ResourceLocation(SuperSentaiCraftCore.MODID, "geo/ranger.geo.json");
+			}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/ranger.geo.json");
 		}
 	}
 
@@ -60,7 +60,7 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 	
 
 		}
-		return new ResourceLocation(SuperSentaiCraftCore.MODID, "textures/armor/"+FORM+".png");
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/"+FORM+".png");
 	}
 
 
@@ -68,7 +68,7 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 @Override
 public ResourceLocation getAnimationResource(RangerArmorItem animatable) {
 	if (slot== EquipmentSlot.FEET) {
-		return new ResourceLocation(SuperSentaiCraftCore.MODID, "animations/rangerbelt.animation.json");
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/rangerbelt.animation.json");
 	}else {
 		
 		if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
@@ -76,7 +76,7 @@ public ResourceLocation getAnimationResource(RangerArmorItem animatable) {
 			
 			return BELT.getAnimationResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot);
 			
-		}else return new ResourceLocation(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
+		}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
 	}
 
 }

@@ -16,19 +16,15 @@ public class SlashEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-	 if (!pLivingEntity.level().isClientSide()) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+		if (!pLivingEntity.level().isClientSide()) {
 
 			if (pLivingEntity.getMainHandItem().getItem() instanceof SwordItem) {
 				pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, pAmplifier,true,false));
 			}
-		
-			
-	}
-	 }
 
-	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+
+		}
 		return true;
 	}
 }

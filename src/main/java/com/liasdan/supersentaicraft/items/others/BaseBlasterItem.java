@@ -5,46 +5,43 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.events.ModClientEvents;
 import com.liasdan.supersentaicraft.items.GorangerItems;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.projectile.DragonFireball;
-import net.minecraft.world.entity.projectile.EyeOfEnder;
-import net.minecraft.world.entity.projectile.Fireball;
-import net.minecraft.world.entity.projectile.LargeFireball;
-import net.minecraft.world.entity.projectile.SmallFireball;
-import net.minecraft.world.entity.projectile.ThrownEgg;
-import net.minecraft.world.entity.projectile.ThrownEnderpearl;
-import net.minecraft.world.entity.projectile.WitherSkull;
-import net.minecraft.world.item.ArrowItem;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.entity.projectile.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.event.EventHooks;
+
+import javax.annotation.Nullable;
+
 public class BaseBlasterItem extends BowItem {
 
 	private final float attackDamage;
@@ -63,11 +60,9 @@ public class BaseBlasterItem extends BowItem {
 	private Boolean Changer = false;
 	
 	public BaseBlasterItem(Tier toolTier, int Atk, float Spd, Properties prop) {
-		super(prop.defaultDurability(toolTier.getUses()));
+		super(prop.durability(toolTier.getUses()).attributes(SwordItem.createAttributes(Tiers.DIAMOND, Atk, Spd)));
 		this.attackDamage = (float)Atk;
 		ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-		builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
-		builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", (double)Spd, AttributeModifier.Operation.ADDITION));
 		this.defaultModifiers = builder.build();
 
 	}
@@ -76,146 +71,85 @@ public class BaseBlasterItem extends BowItem {
 		return this.attackDamage;
 	}
 
-	public void releaseUsing(ItemStack p_40667_, Level p_40668_, LivingEntity p_40669_, int p_40670_) {
-		if (p_40669_ instanceof Player player) {
-			boolean flag = player.getAbilities().instabuild || EnchantmentHelper.getItemEnchantmentLevel(Enchantments.INFINITY_ARROWS, p_40667_) > 0;
-			ItemStack arrow = new ItemStack(Items.ARROW,1);
-			ItemStack belt = player.getItemBySlot(EquipmentSlot.FEET);
-			int i = this.getUseDuration(p_40667_) - p_40670_;
-			i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(p_40667_, p_40668_, player, i, !arrow.isEmpty() || flag);
-			if (i < 0) return;
+	public void releaseUsing(ItemStack stack, Level level, LivingEntity entityLiving, int timeLeft) {
+		if (entityLiving instanceof Player player) {
+			ItemStack itemstack = new ItemStack(Items.ARROW, 1);
+			itemstack.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
 
+			List<ItemStack> list = draw(stack, itemstack, player);
+			if (level instanceof ServerLevel) {
+				if (Changer && player.getItemBySlot(EquipmentSlot.FEET)==ItemStack.EMPTY) {
+					player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ChangerItem));
+					if (player.getItemBySlot(EquipmentSlot.OFFHAND).getItem() instanceof RangerFormChangeItem) player.getItemBySlot(EquipmentSlot.OFFHAND).getItem().use(level, player, InteractionHand.OFF_HAND);
+				}
+				ServerLevel serverlevel = (ServerLevel)level;
+				if (!list.isEmpty()) {
 
-			float f = 2f;
-			if (!((double)f < 0.1D)) {
-
-				if (!p_40668_.isClientSide) {
-					Vec3 look = player.getLookAngle();
-					
-					if (belt.isEmpty()){
-						if (Changer) player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ChangerItem));
-					}
-					
-					if (LFB) {
-						
-						LargeFireball fireball = new LargeFireball(p_40668_, player, look.x*3, look.y*3, look.z*3, LFBB);
-						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-
-
-						p_40668_.addFreshEntity(fireball);
+					Vec3 vec3 = player.getLookAngle();
+					if (SFB){
+						SmallFireball smallfireball = new SmallFireball(player.level(), player, vec3.normalize());
+						smallfireball.setPos(smallfireball.getX(), player.getY(0.5) + 0.5, smallfireball.getZ());
+						player.level().addFreshEntity(smallfireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
+					}else if (LFB){
+						LargeFireball largefireball = new LargeFireball(player.level(), player, vec3.normalize(),LFBB);
+						largefireball.setPos(largefireball.getX(), player.getY(0.5) + 0.5, largefireball.getZ());
+						player.level().addFreshEntity(largefireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}else if (DFB) {
-						DragonFireball fireball = new DragonFireball(p_40668_, player, look.x*3, look.y*3, look.z*3);
-						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-
-
-						p_40668_.addFreshEntity(fireball);
+						DragonFireball dragonfireball = new DragonFireball(player.level(), player, vec3.normalize());
+						dragonfireball.setPos(dragonfireball.getX(), player.getY(0.5D) + 0.5D, dragonfireball.getZ());
+						player.level().addFreshEntity(dragonfireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}else if (CK) {
-						ThrownEgg fireball = new ThrownEgg(p_40668_,player);
+						ThrownEgg fireball = new ThrownEgg(player.level(),player);
 						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-						fireball.setDeltaMovement( fireball.getDeltaMovement().add(look.x*3, look.y*3, look.z*3));
-
-						p_40668_.addFreshEntity(fireball);
+						fireball.setDeltaMovement( fireball.getDeltaMovement().add(vec3.x*3, vec3.y*3, vec3.z*3));
+						player.level().addFreshEntity(fireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}else if (WS) {
-						WitherSkull fireball = new WitherSkull(p_40668_, player, look.x*3, look.y*3, look.z*3);
+						WitherSkull fireball = new WitherSkull(player.level(), player,vec3.normalize());
 						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-						p_40668_.addFreshEntity(fireball);
+						player.level().addFreshEntity(fireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}
 					else if (EP) {
-						ThrownEnderpearl fireball = new ThrownEnderpearl(p_40668_,player);
+						ThrownEnderpearl fireball = new ThrownEnderpearl(player.level(),player);
 						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-
-						fireball.setDeltaMovement( fireball.getDeltaMovement().add(look.x*3, look.y*3, look.z*3));
-
-						p_40668_.addFreshEntity(fireball);
+						fireball.setDeltaMovement( fireball.getDeltaMovement().add(vec3.x*3, vec3.y*3, vec3.z*3));
+						player.level().addFreshEntity(fireball);
+						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}
-					else if (SFB) {
 
-						SmallFireball fireball = new SmallFireball(p_40668_, player, look.x*3, look.y*3, look.z*3);
-						fireball.setPos(fireball.getX(), player.getY(0.5D) + 0.5D, fireball.getZ());
-
-
-						p_40668_.addFreshEntity(fireball);
-					}
-					else{
-						ArrowItem arrowitem = (ArrowItem)(Items.ARROW);
-						AbstractArrow abstractarrow = arrowitem.createArrow(p_40668_, arrow, player);
-						abstractarrow = customArrow(abstractarrow);
-						abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);
-
-						abstractarrow.setCritArrow(true);
-
-						int j = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, p_40667_);
-						if (j > 0) {
-							abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 0.5D + 0.5D);
-						}
-
-						int k = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PUNCH_ARROWS, p_40667_);
-						if (k > 0) {
-							abstractarrow.setKnockback(k);
-						}
-
-						if (player.hasEffect(EffectCore.SHOTBOOST.get())) {
-							abstractarrow.setKnockback(3);
-						}
-
-						if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, p_40667_) > 0) {
-							abstractarrow.setSecondsOnFire(100);
-						}
-						
-						if (player.hasEffect(EffectCore.FIRESLASH.get())) {
-							abstractarrow.setSecondsOnFire(100);
-						}
-
-						p_40667_.hurtAndBreak(1, player, (p_276007_) -> {
-							p_276007_.broadcastBreakEvent(player.getUsedItemHand());
-						});
-						abstractarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
-
-						p_40668_.addFreshEntity(abstractarrow);
-					}
+					else this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, 3, 1.0F, true, (LivingEntity)null);
 				}
-
-				p_40668_.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-
-
+				level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + 1 * 0.5F);
 				player.awardStat(Stats.ITEM_USED.get(this));
 			}
-
-		}
-	}
-
-	public boolean hurtEnemy(ItemStack p_43278_, LivingEntity p_43279_, LivingEntity p_43280_) {
-		p_43278_.hurtAndBreak(1, p_43280_, (p_43296_) -> {
-			p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
-		});
-		return true;
-	}
-
-	public boolean mineBlock(ItemStack p_43282_, Level p_43283_, BlockState p_43284_, BlockPos p_43285_, LivingEntity p_43286_) {
-		if (p_43284_.getDestroySpeed(p_43283_, p_43285_) != 0.0F) {
-			p_43282_.hurtAndBreak(2, p_43286_, (p_43276_) -> {
-				p_43276_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
-			});
 		}
 
-		return true;
 	}
 
+	@Override
+	protected void shootProjectile(LivingEntity shooter, Projectile projectile, int index, float velocity, float inaccuracy, float angle, @Nullable LivingEntity target) {
+		projectile.shootFromRotation(shooter, shooter.getXRot(), shooter.getYRot() + angle, 0.0F, velocity, inaccuracy);
+	}
 
-	public InteractionResultHolder<ItemStack> use(Level p_40672_, Player p_40673_, InteractionHand p_40674_) {
-		ItemStack itemstack = p_40673_.getItemInHand(p_40674_);
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+		ItemStack itemstack = player.getItemInHand(hand);
+		boolean flag = !player.getProjectile(itemstack).isEmpty();
+		InteractionResultHolder<ItemStack> ret = EventHooks.onArrowNock(itemstack, level, player, hand, flag);
 
-		InteractionResultHolder<ItemStack> ret = net.minecraftforge.event.ForgeEventFactory.onArrowNock(itemstack, p_40672_, p_40673_, p_40674_, true);
 		if (ret != null) return ret;
-
-		p_40673_.startUsingItem(p_40674_);
-		return InteractionResultHolder.consume(itemstack);
+		else {
+			player.startUsingItem(hand);
+			return InteractionResultHolder.consume(itemstack);
+		}
 	}
 
-	public static float getPowerForTime(int p_40662_) {
-
-		return 1;
+	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		return true;
 	}
 
 	public int getDefaultProjectileRange() {
@@ -232,7 +166,7 @@ public class BaseBlasterItem extends BowItem {
 	}
 
 	public BaseBlasterItem IsSwordGun() {
-		ModClientEvents.SWORD_GUN_ITEM.add(this);
+		SuperSentaiCraftCore.SWORD_GUN_ITEM.add(this);
 		return this;
 	}
 
@@ -273,8 +207,11 @@ public class BaseBlasterItem extends BowItem {
 		return this;
 	}
 
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot p_43274_) {
-		return p_43274_ == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getDefaultAttributeModifiers(p_43274_);
+	public static ItemAttributeModifiers createAttributes(Tier tier, int attackDamage, float attackSpeed) {
+		return createAttributes(tier, (float)attackDamage, attackSpeed);
+	}
+	public static ItemAttributeModifiers createAttributes(Tier p_330371_, float p_331976_, float p_332104_) {
+		return ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, (double)(p_331976_ + p_330371_.getAttackDamageBonus()), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, (double)p_332104_, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
 	}
 
 }

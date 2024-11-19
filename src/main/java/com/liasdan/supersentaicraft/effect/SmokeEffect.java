@@ -16,15 +16,11 @@ public class SmokeEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 
-		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,pLivingEntity.getX(), pLivingEntity.getY(),pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
-		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,pLivingEntity.getX(), pLivingEntity.getY()+1,pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
-		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,pLivingEntity.getX(), pLivingEntity.getY()+0.5,pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, pLivingEntity.getX(), pLivingEntity.getY(), pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
+		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, pLivingEntity.getX(), pLivingEntity.getY() + 1, pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
+		pLivingEntity.level().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, pLivingEntity.getX(), pLivingEntity.getY() + 0.5, pLivingEntity.getZ(), 0.0D, 0.0D, 0.0D);
 		return true;
 	}
 }

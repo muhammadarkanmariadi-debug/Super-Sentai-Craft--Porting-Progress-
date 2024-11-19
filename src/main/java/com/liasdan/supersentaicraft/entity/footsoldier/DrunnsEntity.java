@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 
 public class DrunnsEntity extends BaseFootsoldierEntity {
 	
-    public DrunnsEntity(EntityType<? extends Zombie> type, Level level) {
+    public DrunnsEntity(EntityType<? extends BaseFootsoldierEntity> type, Level level) {
         super(type, level);
         NAME="drunn";
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(MobsItems.DRUNN_SPEAR.get()));
@@ -51,18 +51,4 @@ public class DrunnsEntity extends BaseFootsoldierEntity {
 		}
 		super.remove(p_149847_);
 	}
-
-
-    public static AttributeSupplier setAttributes() {
-    
-    	//.add(ForgeMod.ATTACK_RANGE.get(),2)
-        return Monster.createMonsterAttributes()
-        		.add(Attributes.FOLLOW_RANGE, 35.0D)
-        		.add(Attributes.MOVEMENT_SPEED,(double)0.23F)
-        		.add(Attributes.ATTACK_DAMAGE, 4.0D)
-        		.add(Attributes.ARMOR, 3.0D)
-        		.add(Attributes.MAX_HEALTH, 30.0D)
-        		.add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
-        		.build();
-     }
 }

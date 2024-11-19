@@ -2,17 +2,17 @@ package com.liasdan.supersentaicraft.items.others;
 
 import java.util.List;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.events.ModClientEvents;
 import com.liasdan.supersentaicraft.items.GorangerItems;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 public class BaseDualSwordItem extends SwordItem {
 
@@ -21,9 +21,9 @@ public class BaseDualSwordItem extends SwordItem {
 	private Boolean Triple = false;
 	
 	public BaseDualSwordItem(Tier toolTier, int Atk, float Spd, Properties prop) {
-		super(toolTier, Atk, Spd, prop);
+		super(toolTier, prop.attributes(SwordItem.createAttributes(Tiers.DIAMOND, Atk, Spd)));
 		
-		ModClientEvents.MULTI_WEAPON_ITEM.add(this);
+		SuperSentaiCraftCore.MULTI_WEAPON_ITEM.add(this);
 	}
 
 	public BaseDualSwordItem ChangeRepairItem(Item item) {
@@ -70,17 +70,22 @@ public class BaseDualSwordItem extends SwordItem {
 	
 	public static void set_mode(ItemStack itemstack, int flag)
 	{
-		if (!itemstack.hasTag())
-		{
-			itemstack.setTag(new CompoundTag());
+		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
 		}
-		itemstack.getTag().putInt("mode", flag);
+		CompoundTag  tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+		tag.putInt("item_mode", get_mode(itemstack)==0? 1:0);
 	}
-	
-	public static int get_mode(ItemStack itemstack) {
-		return itemstack.hasTag() ? itemstack.getTag().getInt("mode"): 0;
+
+	public static int get_mode (ItemStack itemstack)
+	{
+		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) return  0;
+		else{
+			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+			return tag.getInt("item_mode");
+		}
 	}
-	
+
 	public BaseDualSwordItem IsTripleWeapon() {
 		Triple = true;
 		return this;

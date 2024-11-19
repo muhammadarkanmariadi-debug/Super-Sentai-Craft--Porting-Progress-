@@ -1,5 +1,10 @@
 package com.liasdan.supersentaicraft.loot;
 
+import com.mojang.serialization.MapCodec;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
+import net.neoforged.neoforge.common.loot.LootModifier;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import com.google.common.base.Supplier;
@@ -12,15 +17,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.common.loot.LootModifier;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class AddSusItemModifier extends LootModifier {
 	
-	public static final Supplier<Codec<AddSusItemModifier>> CODEC = Suppliers.memoize(()
-			-> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-					.fieldOf("item").forGetter(m -> m.item)).apply(inst, AddSusItemModifier::new)));
+	public static final Supplier<MapCodec<AddSusItemModifier>> CODEC = Suppliers.memoize(()
+			-> RecordCodecBuilder.mapCodec(addSusItemModifierInstance -> AddSusItemModifier.codecStart(addSusItemModifierInstance).and(BuiltInRegistries.ITEM.byNameCodec()
+					.fieldOf("item").forGetter(m -> m.item)).apply(addSusItemModifierInstance, AddSusItemModifier::new)));
 	private final Item item;
 
 	protected AddSusItemModifier(LootItemCondition[] conditionsIn, Item item) {
@@ -45,7 +47,7 @@ public class AddSusItemModifier extends LootModifier {
 	}
 
 	@Override
-	public Codec<? extends IGlobalLootModifier> codec() {
+	public MapCodec<? extends IGlobalLootModifier> codec() {
 		return CODEC.get();
 	}
 }

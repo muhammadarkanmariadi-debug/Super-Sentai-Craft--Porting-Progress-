@@ -13,17 +13,11 @@ public class AntiPoisonEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 	 if (!pLivingEntity.level().isClientSide()) {
 
 			pLivingEntity.removeEffect(MobEffects.POISON);
-		
-			
 	}
-	 }
-
-	@Override
-	public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-		return true;
-	}
+        return true;
+    }
 }

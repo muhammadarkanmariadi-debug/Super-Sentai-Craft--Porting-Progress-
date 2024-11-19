@@ -13,51 +13,49 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class RangerBlocks {
 	
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SuperSentaiCraftCore.MODID);
+	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SuperSentaiCraftCore.MODID);
 	
-	public static final RegistryObject<Block> GINGAMAN_ORE = registerBlock("gingaman_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> GINGAMAN_ORE = registerBlock("gingaman_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
-	public static final RegistryObject<Block> DEEPSLATE_GINGAMAN_ORE = registerBlock("deepslate_gingaman_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> DEEPSLATE_GINGAMAN_ORE = registerBlock("deepslate_gingaman_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 	
-	public static final RegistryObject<Block> SHINKENGER_ORE = registerBlock("shinkenger_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> SHINKENGER_ORE = registerBlock("shinkenger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
-	public static final RegistryObject<Block> DEEPSLATE_SHINKENGER_ORE = registerBlock("deepslate_shinkenger_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> DEEPSLATE_SHINKENGER_ORE = registerBlock("deepslate_shinkenger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 	
-	public static final RegistryObject<Block> RYUSOULGER_ORE = registerBlock("ryusoulger_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> RYUSOULGER_ORE = registerBlock("ryusoulger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
-	public static final RegistryObject<Block> DEEPSLATE_RYUSOULGER_ORE = registerBlock("deepslate_ryusoulger_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+	public static final DeferredBlock<Block> DEEPSLATE_RYUSOULGER_ORE = registerBlock("deepslate_ryusoulger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
-	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-		RegistryObject<T> toReturn = BLOCKS.register(name, block);
+	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+		DeferredBlock<T> toReturn = BLOCKS.register(name, block);
 		registerBlockItem(name, toReturn);
 		return toReturn;
 	}
 
-	public static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block ){
-		return  OtherItems.ITEMS.register(name, () -> new BlockItem(block.get(),new Item.Properties()));
+	private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+		OtherItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
 	}
 
 	public static void register(IEventBus eventBus) {
 		BLOCKS.register(eventBus);
 	}
-	
 }

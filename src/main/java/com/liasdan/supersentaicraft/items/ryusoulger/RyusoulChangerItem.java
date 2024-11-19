@@ -8,16 +8,18 @@ import com.liasdan.supersentaicraft.items.ShinkengerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
+import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredItem;
+
 public class RyusoulChangerItem extends RangerChangerItem{
 
-	public RyusoulChangerItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
+	public RyusoulChangerItem (Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item> head, DeferredItem<Item>torso, DeferredItem<Item> legs, Properties properties)
 	{
 		super(material, rider, baseFormItem, head, torso, legs, properties);
 	}
@@ -53,9 +55,9 @@ public class RyusoulChangerItem extends RangerChangerItem{
 		if (slot == EquipmentSlot.HEAD)num=2;
 		
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
-			return new ResourceLocation(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
 		}else   
-			return new ResourceLocation(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
 
 	}
 	

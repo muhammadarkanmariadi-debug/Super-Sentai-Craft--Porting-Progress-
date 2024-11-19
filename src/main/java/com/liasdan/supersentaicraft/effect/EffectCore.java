@@ -2,63 +2,82 @@ package com.liasdan.supersentaicraft.effect;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class EffectCore {
 
-	public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, SuperSentaiCraftCore.MODID);
+	public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, SuperSentaiCraftCore.MODID);
 
 
-	public static final RegistryObject<MobEffect> BOOST = EFFECT.register("boost",
+	public static final Holder<MobEffect> BOOST = EFFECT.register("boost",
 			() -> new 	BoostEffect(MobEffectCategory.BENEFICIAL, 0xff0015));
 
-	public static final RegistryObject<MobEffect> ANTIPOISON = EFFECT.register("anti_poison",
+	public static final Holder<MobEffect> ANTIPOISON = EFFECT.register("anti_poison",
 			() -> new 	AntiPoisonEffect(MobEffectCategory.BENEFICIAL, 0x8532a8));
 
-	public static final RegistryObject<MobEffect> SLASH= EFFECT.register("slash",
+	public static final Holder<MobEffect> SLASH= EFFECT.register("slash",
 			() -> new 	SlashEffect(MobEffectCategory.BENEFICIAL, 0x21daff));
 
-	public static final RegistryObject<MobEffect> SHOTBOOST= EFFECT.register("shot_boost",
-			() -> new 	ShotBoostEffect(MobEffectCategory.BENEFICIAL, 0x21daff));
+	public static final Holder<MobEffect> SHOTBOOST= EFFECT.register("shot_boost",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0x21daff));
 
-	public static final RegistryObject<MobEffect> PUNCH= EFFECT.register("punch",
+	public static final Holder<MobEffect> PUNCH= EFFECT.register("punch",
 			() -> new 	PunchEffect(MobEffectCategory.BENEFICIAL, 0x1d8519));
 
-	public static final RegistryObject<MobEffect> FIREPUNCH= EFFECT.register("fire_punch",
-			() -> new 	FirePunchEffect(MobEffectCategory.BENEFICIAL, 0xff6000));
+	public static final Holder<MobEffect> FIREPUNCH= EFFECT.register("fire_punch",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
 
-	public static final RegistryObject<MobEffect> FLYING= EFFECT.register("flying",
+	public static final Holder<MobEffect> FLYING= EFFECT.register("flying",
 			() -> new 	FlyingEffect(MobEffectCategory.BENEFICIAL, 0x1d8519));
 
-	public static final RegistryObject<MobEffect> FIRESLASH= EFFECT.register("fire_slash",
-			() -> new 	FireSlashEffect(MobEffectCategory.BENEFICIAL, 0xff6000));
+	public static final Holder<MobEffect> FIRESLASH= EFFECT.register("fire_slash",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
 
-	public static final RegistryObject<MobEffect> SMALL= EFFECT.register("small",
-			() -> new 	SmallEffect(MobEffectCategory.BENEFICIAL, 0x1d8519));
+	public static final Holder<MobEffect> SMALL= EFFECT.register("small",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
+					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.small"), -0.1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
-	public static final RegistryObject<MobEffect> BIG= EFFECT.register("big",
-			() -> new 	BigEffect(MobEffectCategory.BENEFICIAL, 0x1d8519));
+	public static final Holder<MobEffect> BIG= EFFECT.register("big",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
+					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.big"), 1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
-	public static final RegistryObject<MobEffect> FLAT= EFFECT.register("flat",
-			() -> new 	BigEffect(MobEffectCategory.BENEFICIAL, 0xf7fada));
-
-	public static final RegistryObject<MobEffect> SMOKE= EFFECT.register("smoke",
+	public static final Holder<MobEffect> SMOKE= EFFECT.register("smoke",
 			() -> new 	SmokeEffect(MobEffectCategory.BENEFICIAL, 0xf7fada));
 
-	public static final RegistryObject<MobEffect> FROSTWALKER= EFFECT.register("frost_walker",
+	public static final Holder<MobEffect> FROSTWALKER= EFFECT.register("frost_walker",
 			() -> new 	FrostWalkerEffect(MobEffectCategory.BENEFICIAL, 0xf7fada));
 
+	public static final Holder<MobEffect>  EXPLOSIONPUNCH= EFFECT.register("explosion_punch",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
 
-	//FIRE_PUNCH_POTION
+	public static final Holder<MobEffect>  REFLECT= EFFECT.register("reflect",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xd1d1d1));
 
-	//BUGSTER_POTION 
+	public static final Holder<MobEffect>  EXPLOSIONSHOT= EFFECT.register("explosion_shot",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
 
-	
+	public static final Holder<MobEffect>  THUNDERSHOT= EFFECT.register("thunder_shot",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0x76ecff));
+
+	public static final Holder<MobEffect>  THUNDERPUNCH= EFFECT.register("thunder_punch",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0x76ecff));
+
+	public static final Holder<MobEffect> FLAT= EFFECT.register("flat",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect>  STRETCH= EFFECT.register("stretch",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf78d95));
+
+	public static final Holder<MobEffect>  WIDE= EFFECT.register("wide",
+			() -> new 	BasicEffect(MobEffectCategory.NEUTRAL, 0x87ce87));
 
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);

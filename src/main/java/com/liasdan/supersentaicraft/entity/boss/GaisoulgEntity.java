@@ -20,7 +20,7 @@ import net.minecraft.world.level.Level;
 
 public class GaisoulgEntity extends BaseFootsoldierEntity {
 	
-    public GaisoulgEntity(EntityType<? extends Zombie> type, Level level) {
+    public GaisoulgEntity(EntityType<? extends BaseFootsoldierEntity> type, Level level) {
         super(type, level);
         NAME="ld_gaisoulg";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(RyusoulgerItems.RYUSOULGER_HELMET.get()));
@@ -30,17 +30,4 @@ public class GaisoulgEntity extends BaseFootsoldierEntity {
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(RyusoulgerItems.GAISOUL_KEN.get()));
         this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(RyusoulgerItems.GAISOUL_SHIELD.get()));
     }
-
-    public static AttributeSupplier setAttributes() {
-    
-    	//.add(ForgeMod.ATTACK_RANGE.get(),2)
-        return Monster.createMonsterAttributes()
-        		.add(Attributes.FOLLOW_RANGE, 35.0D)
-        		.add(Attributes.MOVEMENT_SPEED,(double)0.23F)
-        		.add(Attributes.ATTACK_DAMAGE, 4.0D)
-        		.add(Attributes.ARMOR, 3.0D)
-        		.add(Attributes.MAX_HEALTH, 30.0D)
-        		.add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
-        		.build();
-     }
 }
