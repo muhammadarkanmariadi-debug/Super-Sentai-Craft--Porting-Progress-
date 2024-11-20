@@ -74,7 +74,7 @@ public class BaseDualSwordItem extends SwordItem {
 			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
 		}
 		CompoundTag  tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-		tag.putInt("item_mode", get_mode(itemstack)==0? 1:0);
+		tag.putInt("item_mode", flag);
 	}
 
 	public static int get_mode (ItemStack itemstack)

@@ -186,25 +186,25 @@ public class SuperSentaiCraftCore {
 				});
 			}
 		}
-	}
 
-	@SubscribeEvent
-	public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(MobsCore.ZOLDERS.get(), BasicEntityRenderer::new);
+		@SubscribeEvent
+		public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+			event.registerEntityRenderer(MobsCore.ZOLDERS.get(), BasicEntityRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.UNGLERS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.UNGLERS.get(), BasicEntityRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.YARTOTS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.YARTOTS.get(), BasicEntityRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.NANASHIS.get(), BasicEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.GEDOU_SHINKEN_RED.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.NANASHIS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.GEDOU_SHINKEN_RED.get(), BasicEntityRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.DRUNNS.get(), BasicEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.GAISOULG.get(), BasicEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.RYUSOUL_MORIA.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.DRUNNS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.GAISOULG.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.RYUSOUL_MORIA.get(), BasicEntityRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.EXPLOSIVE_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(MobsCore.WEAPON_PROJECTILE.get(), ThrownWeaponRenderer::new);
-		event.registerEntityRenderer(MobsCore.SHURIKEN_PROJECTILE.get(), ThrownShurikenRenderer::new);
+			event.registerEntityRenderer(MobsCore.EXPLOSIVE_PROJECTILE.get(), ThrownItemRenderer::new);
+			event.registerEntityRenderer(MobsCore.WEAPON_PROJECTILE.get(), ThrownWeaponRenderer::new);
+			event.registerEntityRenderer(MobsCore.SHURIKEN_PROJECTILE.get(), ThrownShurikenRenderer::new);
+		}
 	}
 }
