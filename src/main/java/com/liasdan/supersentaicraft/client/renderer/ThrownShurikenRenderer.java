@@ -50,6 +50,6 @@ public class ThrownShurikenRenderer<T extends Entity & ItemSupplier> extends Ent
 	   }
 
 	   public ResourceLocation getTextureLocation(Entity p_116083_) {
-	      return TextureAtlas.LOCATION_BLOCKS;
+	      return ResourceLocation.withDefaultNamespace("textures/atlas/blocks.png");
 	   }
 	}

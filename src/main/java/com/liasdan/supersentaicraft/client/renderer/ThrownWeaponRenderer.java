@@ -49,7 +49,7 @@ public class ThrownWeaponRenderer<T extends Entity & ItemSupplier> extends Entit
 	      }
 	   }
 
-	   public ResourceLocation getTextureLocation(Entity p_116083_) {
-	      return TextureAtlas.LOCATION_BLOCKS;
-	   }
-	}
+		public ResourceLocation getTextureLocation(Entity p_116083_) {
+			return ResourceLocation.withDefaultNamespace("textures/atlas/blocks.png");
+		}
+}

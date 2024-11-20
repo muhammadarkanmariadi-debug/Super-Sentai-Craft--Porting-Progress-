@@ -25,6 +25,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 public class ModCommonEvents {
 
@@ -124,6 +125,10 @@ public class ModCommonEvents {
 
 	public static class CommonEvents {
 
+		@SubscribeEvent
+		public void addCustomTrades(VillagerTradesEvent event) {
+
+		}
 	}
 
 	@SubscribeEvent
