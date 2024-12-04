@@ -4,11 +4,7 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.entity.boss.GaisoulgEntity;
 import com.liasdan.supersentaicraft.entity.boss.GedouShinkenRedEntity;
 import com.liasdan.supersentaicraft.entity.boss.RyusoulMoriaEntity;
-import com.liasdan.supersentaicraft.entity.footsoldier.DrunnsEntity;
-import com.liasdan.supersentaicraft.entity.footsoldier.NanashisEntity;
-import com.liasdan.supersentaicraft.entity.footsoldier.UnglersEntity;
-import com.liasdan.supersentaicraft.entity.footsoldier.YartotsEntity;
-import com.liasdan.supersentaicraft.entity.footsoldier.ZoldersEntity;
+import com.liasdan.supersentaicraft.entity.footsoldier.*;
 import com.liasdan.supersentaicraft.entity.projectile.ExplosiveProjectileEntity;
 import com.liasdan.supersentaicraft.entity.projectile.ShurikenProjectileEntity;
 import com.liasdan.supersentaicraft.entity.projectile.WeaponProjectileEntity;
@@ -34,7 +30,14 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> ZOLDERS_SPAWN_EGG = ITEMS.register("zolder_spawn_egg",
             () -> new DeferredSpawnEggItem(ZOLDERS, 0x121212, 0xa1a1a1, new Item.Properties()));
 
-    //11 Maskman
+	//02 JAKQ
+	public static final DeferredHolder<EntityType<?>, EntityType<CrimersEntity>> CRIMERS = MOBLIST.register("crimer",
+			() -> EntityType.Builder.of(CrimersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":crimer"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> CRIMERS_SPAWN_EGG = ITEMS.register("crimer_spawn_egg",
+			() -> new DeferredSpawnEggItem(CRIMERS, 0x878583, 0x121212, new Item.Properties()));
+
+	//11 Maskman
 	public static final DeferredHolder<EntityType<?>, EntityType<UnglersEntity>> UNGLERS = MOBLIST.register("ungler",
             () -> EntityType.Builder.of(UnglersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":ungler"));
     

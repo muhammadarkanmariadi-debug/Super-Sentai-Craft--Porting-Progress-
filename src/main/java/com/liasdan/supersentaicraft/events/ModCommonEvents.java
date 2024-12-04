@@ -135,6 +135,8 @@ public class ModCommonEvents {
 	public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
 		event.put(MobsCore.ZOLDERS.get(), ZoldersEntity.setAttributes().build());
 
+		event.put(MobsCore.CRIMERS.get(), CrimersEntity.setAttributes().build());
+
 		event.put(MobsCore.UNGLERS.get(), UnglersEntity.setAttributes().build());
 
 		event.put(MobsCore.YARTOTS.get(), YartotsEntity.setAttributes().build());
@@ -150,6 +152,8 @@ public class ModCommonEvents {
 	@SubscribeEvent
 	public static void entitySpawnRestriction(RegisterSpawnPlacementsEvent event) {
 		event.register(MobsCore.ZOLDERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.CRIMERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.UNGLERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

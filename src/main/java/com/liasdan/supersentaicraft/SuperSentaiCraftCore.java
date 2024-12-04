@@ -8,14 +8,7 @@ import com.liasdan.supersentaicraft.blocks.RangerBlocks;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.events.ModCommonEvents;
-import com.liasdan.supersentaicraft.items.GingamanItems;
-import com.liasdan.supersentaicraft.items.GorangerItems;
-import com.liasdan.supersentaicraft.items.MaskmanItems;
-import com.liasdan.supersentaicraft.items.MobsItems;
-import com.liasdan.supersentaicraft.items.OtherItems;
-import com.liasdan.supersentaicraft.items.RangerTabs;
-import com.liasdan.supersentaicraft.items.RyusoulgerItems;
-import com.liasdan.supersentaicraft.items.ShinkengerItems;
+import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
@@ -74,13 +67,16 @@ public class SuperSentaiCraftCore {
 		NeoForge.EVENT_BUS.register(this);
 		EffectCore.register(modEventBus);
 
+		OtherItems.register(modEventBus);
+
 		GorangerItems.register(modEventBus);
+		JAKQItems.register(modEventBus);
+		SunVulcanItems.register(modEventBus);
 		MaskmanItems.register(modEventBus);
 		GingamanItems.register(modEventBus);
 		ShinkengerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
 
-		OtherItems.register(modEventBus);
 		RangerBlocks.register(modEventBus);
 
 		MobsCore.register(modEventBus);
@@ -190,6 +186,8 @@ public class SuperSentaiCraftCore {
 		@SubscribeEvent
 		public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 			event.registerEntityRenderer(MobsCore.ZOLDERS.get(), BasicEntityRenderer::new);
+
+			event.registerEntityRenderer(MobsCore.CRIMERS.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.UNGLERS.get(), BasicEntityRenderer::new);
 

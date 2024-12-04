@@ -24,19 +24,23 @@ public class RangerTabs {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,
 			SuperSentaiCraftCore.MODID) ;
 	
-    /*public static DeferredItem<CreativeModeTab> RiderMiscTab = CREATIVE_MODE_TABS.register("ssc999", () -> 
-    		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.RIDER_CIRCUIT.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+"textures/gui/tab_iichigo_items.png"))
-    		.title(Component.literal("Misc Rider Items")).build());
-    		
-    public static DeferredItem<CreativeModeTab> RiderblockTab = CREATIVE_MODE_TABS.register("krc_999_blocks_tab", () -> 
+    /*public static DeferredItem<CreativeModeTab> RiderblockTab = CREATIVE_MODE_TABS.register("krc_999_blocks_tab", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(Rider_Blocks.PURE_GAIA_MEMORY_BLOCK.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+"textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("Rider Blocks")).build());*/
 	
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> GorangerTab = CREATIVE_MODE_TABS.register("ssc001", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(GorangerItems.GORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_goranger_items.png"))
 			.title(Component.literal("Himistsu Sentai Goranger")).build());
-    
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> MaskmanTab = CREATIVE_MODE_TABS.register("ssc011", () ->
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> JAKQTab = CREATIVE_MODE_TABS.register("ssc002", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(JAKQItems.JAKQ_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_jakq_items.png"))
+					.title(Component.literal("J.A.K.Q. Dengekitai")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> SunVulcanTab = CREATIVE_MODE_TABS.register("ssc005", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(SunVulcanItems.SUN_VULCAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_sun_vulcan_items.png"))
+					.title(Component.literal("Taiyou Sentai Sun Vulcan")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MaskmanTab = CREATIVE_MODE_TABS.register("ssc011", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(MaskmanItems.MASKMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_maskman_items.png"))
 			.title(Component.literal("Hikari Sentai Maskman")).build());
     
@@ -62,7 +66,11 @@ public class RangerTabs {
     
     public static List<Item> GORANGER= new ArrayList<Item>();
 
-    public static List<Item> MASKMAN= new ArrayList<Item>();
+	public static List<Item> JAKQ= new ArrayList<Item>();
+
+	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
+
+	public static List<Item> MASKMAN= new ArrayList<Item>();
     
     public static List<Item> GINGAMAN= new ArrayList<Item>();
     
@@ -84,6 +92,20 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.GORANGER.size(); i++)
 			{
 				event.accept( RangerTabs.GORANGER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.JAKQTab.get()) {
+			for (int i = 0; i < RangerTabs.JAKQ.size(); i++)
+			{
+				event.accept( RangerTabs.JAKQ.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.SunVulcanTab.get()) {
+			for (int i = 0; i < RangerTabs.SUN_VULCAN.size(); i++)
+			{
+				event.accept( RangerTabs.SUN_VULCAN.get(i));
 			}
 
 		}
@@ -118,6 +140,8 @@ public class RangerTabs {
 		else if(event.getTab() == RangerTabs.MiscTab.get()) {
 
 			event.accept(MobsCore.ZOLDERS_SPAWN_EGG);
+
+			event.accept(MobsCore.CRIMERS_SPAWN_EGG);
 
 			event.accept(MobsCore.UNGLERS_SPAWN_EGG);
 

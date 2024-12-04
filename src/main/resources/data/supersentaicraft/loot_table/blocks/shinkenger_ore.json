@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "supersentaicraft:deepslate_gingaman_ore",
+              "name": "supersentaicraft:shinkenger_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -36,8 +36,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 29,
-          "name": "supersentaicraft:gingaman_logo",
+          "weight": 160,
+          "name": "supersentaicraft:common_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -52,7 +52,7 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:red_ginga_medal",
+          "name": "supersentaicraft:shishi_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -67,7 +67,7 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:green_ginga_medal",
+          "name": "supersentaicraft:ryuu_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -82,7 +82,7 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:blue_ginga_medal",
+          "name": "supersentaicraft:kame_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -97,7 +97,7 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:yellow_ginga_medal",
+          "name": "supersentaicraft:kuma_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -112,7 +112,22 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:pink_ginga_medal",
+          "name": "supersentaicraft:saru_disk",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "supersentaicraft:sushi_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -127,7 +142,7 @@
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "supersentaicraft:black_knight_core",
+          "name": "supersentaicraft:super_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -141,8 +156,8 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "supersentaicraft:lights_of_ginga",
+          "weight": 5,
+          "name": "supersentaicraft:hyper_disk",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -157,5 +172,5 @@
       ]
     }
   ],
-  "random_sequence": "supersentaicraft:blocks/deepslate_gingaman_ore"
+  "random_sequence": "supersentaicraft:shinkenger_ore"
 }

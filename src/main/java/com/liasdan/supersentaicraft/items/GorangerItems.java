@@ -28,7 +28,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class GorangerItems {
 
-
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
 	public static final DeferredItem<Item> GORANGER_LOGO = ITEMS.register("goranger_logo",
