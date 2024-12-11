@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:goranger/goranger_manga"
@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"minecraft:book"
-            ]
+            "items": "minecraft:book"
           }
         ]
       }

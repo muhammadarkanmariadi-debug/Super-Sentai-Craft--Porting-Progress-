@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:maskman/maskman_head",
@@ -15,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:maskman_logo"
-            ]
+            "items": "supersentaicraft:maskman_logo"
           }
         ]
       }

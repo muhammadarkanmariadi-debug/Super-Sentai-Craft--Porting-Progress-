@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:sun_vulcan/mecha/taiyo_ken",
+      "supersentaicraft:sun_vulcan/mecha/vul_shield",
+      "supersentaicraft:sun_vulcan/mecha/vul_tonfa",
+      "supersentaicraft:sun_vulcan/mecha/vul_hand"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:sun_vulcan_robo_head"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

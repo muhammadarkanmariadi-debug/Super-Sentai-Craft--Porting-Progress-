@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:shinkenger/red_shodophone",
@@ -13,9 +13,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:shishi_disk"
-            ]
+            "items": "supersentaicraft:shishi_disk"
           }
         ]
       }

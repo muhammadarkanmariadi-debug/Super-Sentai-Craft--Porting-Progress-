@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:shinkenger/kyoryumaru",
@@ -14,9 +14,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:hyper_disk"
-            ]
+            "items": "supersentaicraft:hyper_disk"
           }
         ]
       }

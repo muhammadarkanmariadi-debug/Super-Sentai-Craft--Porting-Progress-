@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:maskman/black_masking_brace",
@@ -12,9 +12,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:black_aura_power"
-            ]
+            "items": "supersentaicraft:black_aura_power"
           }
         ]
       }

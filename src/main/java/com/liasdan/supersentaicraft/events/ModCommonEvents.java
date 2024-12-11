@@ -32,40 +32,7 @@ public class ModCommonEvents {
 	public static class EventHandler {
 
 		@SubscribeEvent
-		public void onPlayerTick(PlayerTickEvent.Post event) {
-			Entity entity = event.getEntity();
-
-			if (entity == null) return;
-
-			if (!event.getEntity().level().isClientSide()) {
-				if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EffectCore.FLYING) : false) {
-					if (entity instanceof Player _player) {
-						_player.getAbilities().mayfly = (true);
-						_player.onUpdateAbilities();
-					}
-				} else if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EffectCore.FLYING) : false)) {
-					if (entity instanceof Player _player) {
-
-						boolean checkGamemode = false;
-
-						if (_player instanceof ServerPlayer _serverPlayer) {
-							checkGamemode = _serverPlayer.gameMode.getGameModeForPlayer() != GameType.CREATIVE & _serverPlayer.gameMode.getGameModeForPlayer() != GameType.SPECTATOR;
-						} else if (entity.level().isClientSide()) {
-							checkGamemode = Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance()
-									.getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() != GameType.SPECTATOR && Minecraft.getInstance()
-									.getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() != GameType.CREATIVE;
-						}
-
-						_player.getAbilities().mayfly = (!checkGamemode);
-						_player.onUpdateAbilities();
-					}
-				}
-			}
-		}
-
-		@SubscribeEvent
 		public void addLivingDamageEvent(LivingDamageEvent.Post event) {
-
 
 			if (event.getSource().getEntity() instanceof LivingEntity _livEnt) {
 				if (event.getSource().is(DamageTypes.PLAYER_ATTACK) || event.getSource().is(DamageTypes.MOB_ATTACK) || event.getSource().is(DamageTypes.MOB_ATTACK_NO_AGGRO)) {
@@ -137,6 +104,8 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.CRIMERS.get(), CrimersEntity.setAttributes().build());
 
+		event.put(MobsCore.MACHINEMEN.get(), MachinemenEntity.setAttributes().build());
+
 		event.put(MobsCore.UNGLERS.get(), UnglersEntity.setAttributes().build());
 
 		event.put(MobsCore.YARTOTS.get(), YartotsEntity.setAttributes().build());
@@ -154,6 +123,8 @@ public class ModCommonEvents {
 		event.register(MobsCore.ZOLDERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.CRIMERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.MACHINEMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.UNGLERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

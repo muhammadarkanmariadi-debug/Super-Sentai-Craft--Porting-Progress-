@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:gingaman/gingaman_head",
@@ -14,9 +14,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:gingaman_logo"
-            ]
+            "items": "supersentaicraft:gingaman_logo"
           }
         ]
       }

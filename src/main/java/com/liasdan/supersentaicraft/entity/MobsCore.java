@@ -37,6 +37,13 @@ public class MobsCore {
 	public static final DeferredItem<DeferredSpawnEggItem> CRIMERS_SPAWN_EGG = ITEMS.register("crimer_spawn_egg",
 			() -> new DeferredSpawnEggItem(CRIMERS, 0x878583, 0x121212, new Item.Properties()));
 
+	//05 Sun Vulcan
+	public static final DeferredHolder<EntityType<?>, EntityType<MachinemenEntity>> MACHINEMEN = MOBLIST.register("machineman",
+			() -> EntityType.Builder.of(MachinemenEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":machineman"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> MACHINEMEN_SPAWN_EGG = ITEMS.register("machineman_spawn_egg",
+			() -> new DeferredSpawnEggItem(MACHINEMEN, 0x121212, 0xb81200, new Item.Properties()));
+
 	//11 Maskman
 	public static final DeferredHolder<EntityType<?>, EntityType<UnglersEntity>> UNGLERS = MOBLIST.register("ungler",
             () -> EntityType.Builder.of(UnglersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":ungler"));

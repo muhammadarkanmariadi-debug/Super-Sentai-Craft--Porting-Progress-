@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:goranger/aoranger_belt",
@@ -13,9 +13,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:ao_star"
-            ]
+            "items": "supersentaicraft:ao_star"
           }
         ]
       }

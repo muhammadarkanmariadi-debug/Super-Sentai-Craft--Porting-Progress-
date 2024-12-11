@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:goranger/akaranger_belt",
@@ -14,9 +14,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:aka_star"
-            ]
+            "items": "supersentaicraft:aka_star"
           }
         ]
       }

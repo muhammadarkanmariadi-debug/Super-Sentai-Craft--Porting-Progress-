@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:shinkenger/shinkenger_head",
@@ -15,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:common_disk"
-            ]
+            "items": "supersentaicraft:common_disk"
           }
         ]
       }

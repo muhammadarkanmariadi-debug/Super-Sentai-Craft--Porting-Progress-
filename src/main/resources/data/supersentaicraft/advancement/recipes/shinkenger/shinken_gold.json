@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:shinkenger/sushi_changer",
@@ -12,9 +12,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:sushi_disk"
-            ]
+            "items": "supersentaicraft:sushi_disk"
           }
         ]
       }

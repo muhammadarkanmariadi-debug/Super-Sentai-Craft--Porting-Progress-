@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
       "supersentaicraft:gingaman/yellow_ginga_brace",
@@ -13,9 +13,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-            	"supersentaicraft:yellow_ginga_medal"
-            ]
+            "items": "supersentaicraft:yellow_ginga_medal"
           }
         ]
       }

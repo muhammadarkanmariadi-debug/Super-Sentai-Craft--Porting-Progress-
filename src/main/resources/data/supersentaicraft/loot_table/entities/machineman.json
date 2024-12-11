@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:vul_eagle_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:vul_shark_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:vul_panther_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:sun_vulcan_logo",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:sun_vulcan_logo"
+        }
+      ]
+    }
+  ]
+}
