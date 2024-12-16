@@ -37,7 +37,12 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "supersentaicraft:blank_ryusoul",
-          "count": 2
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
         }
       ]
     },

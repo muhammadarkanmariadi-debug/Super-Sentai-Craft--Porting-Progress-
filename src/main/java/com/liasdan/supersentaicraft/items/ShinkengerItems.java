@@ -7,7 +7,6 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
@@ -133,27 +132,21 @@ public class ShinkengerItems {
     public static final DeferredItem<Item> RED_SHODOPHONE = ITEMS.register("red_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_red",SHISHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SHISHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> BLUE_SHODOPHONE = ITEMS.register("blue_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_blue",RYUU_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(RYUU_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> PINK_SHODOPHONE = ITEMS.register("pink_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_pink",KAME_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(KAME_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> GREEN_SHODOPHONE = ITEMS.register("green_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_green",KUMA_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(KUMA_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> YELLOW_SHODOPHONE = ITEMS.register("yellow_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"shinken_yellow",SARU_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SARU_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> SUSHI_CHANGER = ITEMS.register("sushi_changer",
     		() -> new SushiChangerItem(ArmorMaterials.DIAMOND,"shinken_gold",SUSHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SUSHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<Item> PRINCESS_SHODOPHONE = ITEMS.register("princess_red_shodophone",
     		() -> new ShodoPhoneItem(ArmorMaterials.DIAMOND,"princess_shinken_red",SHISHI_DISK,SHINKENGER_HELMET,SHINKENGER_CHESTPLATE,SHINKENGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(SHISHI_DISK).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
@@ -163,19 +156,14 @@ public class ShinkengerItems {
     
     public static final DeferredItem<SwordItem> REKKA_DAIZANTOU = ITEMS.register("rekka_daizantou",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<BaseBlasterItem> WATER_ARROW = ITEMS.register("water_arrow",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-	
     public static final DeferredItem<SwordItem> HEAVEN_FAN = ITEMS.register("heaven_fan",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<SwordItem> WOOD_SPEAR = ITEMS.register("wood_spear",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<BaseThrowableItem> LAND_SLICER = ITEMS.register("land_slicer",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-	
     public static final DeferredItem<SwordItem> SAKANAMARU = ITEMS.register("sakanamaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(NeedSakanamaru).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
@@ -184,7 +172,6 @@ public class ShinkengerItems {
     
     public static final DeferredItem<SwordItem> KYORYUMARU = ITEMS.register("kyoryumaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
     public static final DeferredItem<SwordItem> KYORYUMARU_SAKANAMARU = ITEMS.register("kyoryumaru_sakanamaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).ChangeRepairItem(KYOUTSU_DISK.get()));
     

@@ -1,9 +1,7 @@
 package com.liasdan.supersentaicraft.entity;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.entity.boss.GaisoulgEntity;
-import com.liasdan.supersentaicraft.entity.boss.GedouShinkenRedEntity;
-import com.liasdan.supersentaicraft.entity.boss.RyusoulMoriaEntity;
+import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 import com.liasdan.supersentaicraft.entity.projectile.ExplosiveProjectileEntity;
 import com.liasdan.supersentaicraft.entity.projectile.ShurikenProjectileEntity;
@@ -51,14 +49,33 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> UNGLERS_SPAWN_EGG = ITEMS.register("ungler_spawn_egg",
             () -> new DeferredSpawnEggItem(UNGLERS, 0x121212, 0xdcc568, new Item.Properties()));
 
-    //22 Gingaman
+	//20 Carranger
+	public static final DeferredHolder<EntityType<?>, EntityType<WumpersEntity>> WUMPERS = MOBLIST.register("wumper",
+			() -> EntityType.Builder.of(WumpersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":wumper"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> WUMPERS_SPAWN_EGG = ITEMS.register("wumper_spawn_egg",
+			() -> new DeferredSpawnEggItem(WUMPERS, 0x03a9f4, 0xbd66a6, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<SignalmanEvilEntity>> SIGNALMAN_EVIL = MOBLIST.register("signalman_evil",
+			() -> EntityType.Builder.of(SignalmanEvilEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":signalman_evil"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> SIGNALMAN_EVIL_SPAWN_EGG = ITEMS.register("signalman_evil_spawn_egg",
+			() -> new DeferredSpawnEggItem(SIGNALMAN_EVIL, 0x1323af, 0xffffff, new Item.Properties()));
+
+	//22 Gingaman
 	public static final DeferredHolder<EntityType<?>, EntityType<YartotsEntity>> YARTOTS = MOBLIST.register("yartots",
             () -> EntityType.Builder.of(YartotsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":yartots"));
     
     public static final DeferredItem<DeferredSpawnEggItem> YARTOTS_SPAWN_EGG = ITEMS.register("yartots_spawn_egg",
             () -> new DeferredSpawnEggItem(YARTOTS, 0xde7002, 0x2e1100, new Item.Properties()));
 
-    //33 Shinkenger
+	public static final DeferredHolder<EntityType<?>, EntityType<BlackKnightEntity>> BLACK_KNIGHT = MOBLIST.register("black_knight",
+			() -> EntityType.Builder.of(BlackKnightEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":black_knight"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> BLACK_KNIGHT_SPAWN_EGG = ITEMS.register("black_knight_spawn_egg",
+			() -> new DeferredSpawnEggItem(BLACK_KNIGHT, 0x0b0b0b, 0xff9900, new Item.Properties()));
+
+	//33 Shinkenger
 	public static final DeferredHolder<EntityType<?>, EntityType<NanashisEntity>> NANASHIS = MOBLIST.register("nanashi",
             () -> EntityType.Builder.of(NanashisEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":nanashi"));
     

@@ -4,7 +4,6 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseExplosiveItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
@@ -116,44 +115,35 @@ public class GorangerItems {
     		() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"midoranger",MIDO_STAR,GORANGER_HELMET,GORANGER_CHESTPLATE,GORANGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 
 	public static final DeferredItem<SwordItem> RED_BUTE = ITEMS.register("red_bute",
-			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<PickaxeItem> DRILL_BUTE = ITEMS.register("drill_bute",
 			() -> new BasePickaxeItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
 	public static final DeferredItem<BaseBlasterItem> SILVER_SHOT = ITEMS.register("silver_shot",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	
 	public static final DeferredItem<BaseBlasterItem> BLUE_CHERRY = ITEMS.register("blue_cherry",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
 	public static final DeferredItem<BaseBlasterItem> ULTRA_BLUE_CHERRY = ITEMS.register("ultra_blue_cherry",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	
 	public static final DeferredItem<SwordItem> KI_STICKER = ITEMS.register("ki_sticker",
-			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<SwordItem> KI_STICKER_SHORT = ITEMS.register("ki_sticker_short",
-			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<Item> YTC = ITEMS.register("ytc",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GORANGER));
 	
 	public static final DeferredItem<BaseThrowableItem> MOMO_CARD = ITEMS.register("momo_card",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsShuriken().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
 	public static final DeferredItem<BaseExplosiveItem> EARRING_BOMB = ITEMS.register("earring_bomb",
 			() -> new BaseExplosiveItem(new Item.Properties(), 1).AddToTabList(RangerTabs.GORANGER));
-	
 	public static final DeferredItem<Item> MOMO_MIRROR = ITEMS.register("momo_mirror",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<BaseBlasterItem> MIDO_PUNCHER = ITEMS.register("mido_puncher",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
 	public static final DeferredItem<BaseThrowableItem> MIDOMERANG = ITEMS.register("midomerang",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
-	
 	public static final DeferredItem<BaseThrowableItem> NEW_MIDOMERANG = ITEMS.register("new_midomerang",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 

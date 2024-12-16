@@ -4,7 +4,6 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseShieldItem;
@@ -35,7 +34,10 @@ public class MobsItems {
 
 	public static final DeferredItem<SwordItem> UNGLER_LANCE = ITEMS.register("ungler_lance",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
-    
+
+	public static final DeferredItem<SwordItem> WUMPERS_SWORD = ITEMS.register("wumpers_sword",
+			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
 	public static final DeferredItem<SwordItem> YARTOTS_SABER = ITEMS.register("yartots_saber",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
     
@@ -44,7 +46,6 @@ public class MobsItems {
     
 	public static final DeferredItem<SwordItem> DRUNN_SPEAR = ITEMS.register("drunn_spear",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
-    
     public static final DeferredItem<BaseShieldItem> DRUNN_SHIELD = ITEMS.register("drunn_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 

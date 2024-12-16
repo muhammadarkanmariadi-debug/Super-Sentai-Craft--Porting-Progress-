@@ -9,7 +9,6 @@ import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.items.GingamanItems;
 import com.liasdan.supersentaicraft.items.RyusoulgerItems;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;

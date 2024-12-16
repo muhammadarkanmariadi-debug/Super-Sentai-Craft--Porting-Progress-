@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -22,6 +23,8 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,9 +34,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.*;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -58,6 +63,7 @@ public class BaseBlasterItem extends BowItem {
 	private Boolean CK = false;
 	private Boolean DFB = false;
 	private Boolean Changer = false;
+	private Boolean Charged = false;
 	
 	public BaseBlasterItem(Tier toolTier, int Atk, float Spd, Properties prop) {
 		super(prop.durability(toolTier.getUses()).attributes(SwordItem.createAttributes(Tiers.DIAMOND, Atk, Spd)));
@@ -119,6 +125,15 @@ public class BaseBlasterItem extends BowItem {
 						fireball.setDeltaMovement( fireball.getDeltaMovement().add(vec3.x*3, vec3.y*3, vec3.z*3));
 						player.level().addFreshEntity(fireball);
 						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
+					}
+
+					if (Charged) {
+						if (get_mode(stack)<30) set_mode(stack,get_mode(stack)+1);
+						else if (get_mode(stack)==30) {
+							player.addEffect(new MobEffectInstance(EffectCore.EXPLOSIONSHOT, 40, 2,true,false));
+						}
+
+						this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, 3, 1.0F, true, (LivingEntity)null);
 					}
 
 					else this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, 3, 1.0F, true, (LivingEntity)null);
@@ -204,6 +219,30 @@ public class BaseBlasterItem extends BowItem {
 	public BaseBlasterItem isChanger(Item item) {
 		ChangerItem = item;
 		Changer = true;
+		return this;
+	}
+
+	public static void set_mode(ItemStack itemstack, int flag)
+	{
+		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
+		}
+		CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+		tag.putInt("item_mode", flag);
+	}
+
+	public static int get_mode (ItemStack itemstack)
+	{
+		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) return  0;
+		else{
+			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+			return tag.getInt("item_mode");
+		}
+	}
+
+	public BaseBlasterItem IsChargeWeapon() {
+		Charged = true;
+		SuperSentaiCraftCore.CHARGED_WEAPON.add(this);
 		return this;
 	}
 

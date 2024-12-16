@@ -7,7 +7,6 @@ import com.liasdan.supersentaicraft.items.gingaman.BullRiotItem;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
@@ -102,23 +101,19 @@ public class GingamanItems {
     public static final DeferredItem<Item> RED_GINGA_BRACE = ITEMS.register("red_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_red",RED_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(RED_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> GREEN_GINGA_BRACE = ITEMS.register("green_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_green",GREEN_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(GREEN_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> BLUE_GINGA_BRACE = ITEMS.register("blue_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_blue",BLUE_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(BLUE_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> YELLOW_GINGA_BRACE = ITEMS.register("yellow_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_yellow",YELLOW_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(YELLOW_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> PINK_GINGA_BRACE = ITEMS.register("pink_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_pink",PINK_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(PINK_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
+
     public static final DeferredItem<Item> BLACK_KNIGHT_BULL_RIOT = ITEMS.register("black_knight_bull_riot",
     		() -> new BullRiotItem(ArmorMaterials.DIAMOND,"black_knight",BLACK_KNIGHT_CORE,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
     		.AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
@@ -128,31 +123,23 @@ public class GingamanItems {
     
     public static final DeferredItem<SwordItem> KIBA_CUTTER = ITEMS.register("kiba_cutter",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<BaseBlasterItem> KIBA_SHOT = ITEMS.register("kiba_shot",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-	
     public static final DeferredItem<SwordItem> KIBA_CLAW = ITEMS.register("kiba_claw",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<SwordItem> KIBA_KNIFE = ITEMS.register("kiba_knife",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-    
     public static final DeferredItem<BaseBlasterItem> KIBA_ARROW = ITEMS.register("kiba_arrow",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_RED = ITEMS.register("beast_attack_rod_red",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_GREEN = ITEMS.register("beast_attack_rod_green",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_BLUE = ITEMS.register("beast_attack_rod_blue",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_YELLOW = ITEMS.register("beast_attack_rod_yellow",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
-	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_PINK = ITEMS.register("beast_attack_rod_pink",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	

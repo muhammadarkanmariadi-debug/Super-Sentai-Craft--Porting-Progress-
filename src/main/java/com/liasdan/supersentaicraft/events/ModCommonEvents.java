@@ -4,9 +4,7 @@ import java.util.Objects;
 
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
-import com.liasdan.supersentaicraft.entity.boss.GaisoulgEntity;
-import com.liasdan.supersentaicraft.entity.boss.GedouShinkenRedEntity;
-import com.liasdan.supersentaicraft.entity.boss.RyusoulMoriaEntity;
+import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 
 import net.minecraft.client.Minecraft;
@@ -108,7 +106,11 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.UNGLERS.get(), UnglersEntity.setAttributes().build());
 
+		event.put(MobsCore.WUMPERS.get(), WumpersEntity.setAttributes().build());
+		event.put(MobsCore.SIGNALMAN_EVIL.get(), SignalmanEvilEntity.setAttributes().build());
+
 		event.put(MobsCore.YARTOTS.get(), YartotsEntity.setAttributes().build());
+		event.put(MobsCore.BLACK_KNIGHT.get(), BlackKnightEntity.setAttributes().build());
 
 		event.put(MobsCore.NANASHIS.get(), NanashisEntity.setAttributes().build());
 		event.put(MobsCore.GEDOU_SHINKEN_RED.get(), GedouShinkenRedEntity.setAttributes().build());
@@ -127,6 +129,8 @@ public class ModCommonEvents {
 		event.register(MobsCore.MACHINEMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.UNGLERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.WUMPERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.YARTOTS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

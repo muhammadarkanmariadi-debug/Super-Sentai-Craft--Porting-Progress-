@@ -19,7 +19,12 @@
         {
           "type": "minecraft:item",
           "name": "supersentaicraft:sun_vulcan_logo",
-          "count": 2
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
         }
       ]
     },

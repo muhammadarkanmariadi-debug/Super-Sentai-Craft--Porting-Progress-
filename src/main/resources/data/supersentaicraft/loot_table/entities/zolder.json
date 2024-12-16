@@ -27,7 +27,12 @@
         {
           "type": "minecraft:item",
           "name": "supersentaicraft:goranger_logo",
-          "count": 2
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
         }
       ]
     },

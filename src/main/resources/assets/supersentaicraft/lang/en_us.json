@@ -16,62 +16,62 @@
 "entity.supersentaicraft.zolder":"Zolders",
 "item.supersentaicraft.zolder_spawn_egg":"Zolders Spawn Egg",
 
-"entity.supersentaicraft.CrimersMob":"Crimers",
+"entity.supersentaicraft.crimer":"Crimers",
 "item.supersentaicraft.crimer_spawn_egg":"Crimers Spawn Egg",
 
-"entity.supersentaicraft.CutmenMob":"Cutmen",
+"entity.supersentaicraft.cutmen":"Cutmen",
 
-"entity.supersentaicraft.DustlersMob":"Dustlers",
+"entity.supersentaicraft.dustler":"Dustlers",
 
-"entity.supersentaicraft.MachinemenMob":"Machinemen",
+"entity.supersentaicraft.machineman":"Machinemen",
 "item.supersentaicraft.machineman_spawn_egg":"Machinemen Spawn Egg",
 
-"entity.supersentaicraft.SpotmenMob":"Spotmen",
+"entity.supersentaicraft.spotman":"Spotmen",
 
-"entity.supersentaicraft.MechaclonesMob":"Mechaclones",
+"entity.supersentaicraft.mechaclone":"Mechaclones",
 
-"entity.supersentaicraft.BioHunterSilvaMob":"Bio Hunter Silva",
+"entity.supersentaicraft.bio_hunter_silva":"Bio Hunter Silva",
 
-"entity.supersentaicraft.ZolohsMob":"Zolohs",
+"entity.supersentaicraft.zoloh":"Zolohs",
 
 "entity.supersentaicraft.ungler":"Ungler Soldiers",
 "item.supersentaicraft.ungler_spawn_egg":"Ungler Soldiers Spawn Egg",
 
-"entity.supersentaicraft.JimmersMob":"Jimmers",
-"entity.supersentaicraft.DoctorKempMob":"Doctor Kemp",
-"entity.supersentaicraft.DoctorMazendaMob":"Doctor Mazenda",
-"entity.supersentaicraft.DoctorObularMob":"Doctor Obular",
+"entity.supersentaicraft.jimmer":"Jimmers",
+"entity.supersentaicraft.doctor_kemp":"Doctor Kemp",
+"entity.supersentaicraft.doctor_mazenda":"Doctor Mazenda",
+"entity.supersentaicraft.doctor_obular":"Doctor Obular",
 
-"entity.supersentaicraft.UlarsMob":"Ular Soldiers",
-"entity.supersentaicraft.UlarCaptainMob":"Ular Captain",
+"entity.supersentaicraft.ular":"Ular Soldiers",
+"entity.supersentaicraft.ular_captain":"Ular Captain",
 
-"entity.supersentaicraft.GrinamsMob":"Grinam Soldiers",
+"entity.supersentaicraft.grinam":"Grinam Soldiers",
 
-"entity.supersentaicraft.GolemsMob1":"Golem Soldiers",
-"entity.supersentaicraft.GolemsMob2":"Golem Soldiers",
-"entity.supersentaicraft.DoraSphinxMob":"Dora Sphinx",
-"entity.supersentaicraft.PumpkinRapperMob":"Pumpkin Rapper",
-"entity.supersentaicraft.DragonRangerMob":"Dragon Ranger",
+"entity.supersentaicraft.golem":"Golem Soldiers",
+"entity.supersentaicraft.dora_sphinx":"Dora Sphinx",
+"entity.supersentaicraft.pumpkin_rapper":"Pumpkin Rapper",
+"entity.supersentaicraft.dragon_ranger":"Dragon Ranger",
 
-"entity.supersentaicraft.CotpotrosMob":"Cotpotros",
+"entity.supersentaicraft.cotpotros":"Cotpotros",
 
-"entity.supersentaicraft.DorodorosMob":"Dorodoros",
+"entity.supersentaicraft.dorodoros":"Dorodoros",
 
-"entity.supersentaicraft.WumpersBlueMob":"Combatant Wumpers (Blue)",
-"entity.supersentaicraft.WumpersGreenMob":"Combatant Wumpers (Green)",
-"entity.supersentaicraft.WumpersPinkMob":"Combatant Wumpers (Pink)",
-"entity.supersentaicraft.WumpersWhiteMob":"Combatant Wumpers (White)",
-"entity.supersentaicraft.SignalmanEvilMob":"Signalman (Evil)",
+"entity.supersentaicraft.wumper":"Combatant Wumpers",
+"entity.supersentaicraft.signalman_evil":"Signalman (Evil)",
+"item.supersentaicraft.wumper_spawn_egg":"Combatant Wumpers Spawn Egg",
+"item.supersentaicraft.signalman_evil_spawn_egg":"Signalman (Evil) Spawn Egg",
 
-"entity.supersentaicraft.KunekunesMob":"Soldiers Kunekune",
+"entity.supersentaicraft.kunekune":"Soldiers Kunekune",
 
 "entity.supersentaicraft.yartots":"Seamen Yartots",
+"entity.supersentaicraft.black_knight":"Black Knight (Bull Black)",
 "item.supersentaicraft.yartots_spawn_egg":"Seamen Yartots Spawn Egg",
+"item.supersentaicraft.black_knight_spawn_egg":"Black Knight (Bull Black) Spawn Egg",
 
-"entity.supersentaicraft.ImpsMob":"Familiars Imps",
+"entity.supersentaicraft.imp":"Familiars Imps",
 
-"entity.supersentaicraft.OrgettesMob":"Orgettes",
-"entity.supersentaicraft.RoukiMob":"Duke Org Rouki",
+"entity.supersentaicraft.orgettes":"Orgettes",
+"entity.supersentaicraft.rouki":"Duke Org Rouki",
 
 "entity.supersentaicraft.BarmiasBlackMob":"Barmia Soldiers (Black)",
 "entity.supersentaicraft.BarmiasWhiteMob":"Barmia Soldiers (White)",
@@ -191,6 +191,8 @@
 "item.supersentaicraft.ano_hammer":"AnoHammer",
 
 //01 Goranger
+"tab.supersentaicraft.goranger": "Himitsu Sentai Goranger",
+
 "item.supersentaicraft.goranger_logo":"Goranger Logo",
 "block.supersentaicraft.goranger_ore":"Goranger Ore",
 
@@ -232,6 +234,8 @@
 "item.supersentaicraft.new_midomerang":"New Midomerang",
 
 //02 JAKQ
+"tab.supersentaicraft.jakq": "J.A.K.Q. Dengekitai",
+
 "item.supersentaicraft.blank_card":"Blank Card",
 "item.supersentaicraft.jakq_logo":"J.A.K.Q. Logo",
 "block.supersentaicraft.jakq_ore":"J.A.K.Q. Ore",
@@ -260,6 +264,8 @@
 "item.supersentaicraft.big_baton":"Big Baton",
 
 //03 Battle Fever
+"tab.supersentaicraft.battle_fever": "Battle Fever J",
+
 "item.supersentaicraft.battle_fever_logo":"Battle Fever Logo",
 "block.supersentaicraft.battle_fever_ore":"Battle Fever Ore",
 
@@ -300,6 +306,8 @@
 "item.supersentaicraft.battle_shield":"Battle Shield",
 
 //04 Denziman
+"tab.supersentaicraft.denziman": "Denshi Sentai Denziman",
+
 "item.supersentaicraft.empty_denzi_ring":"Empty Denzi Ring",
 "item.supersentaicraft.denziman_logo":"Denziman Logo",
 "block.supersentaicraft.denziman_ore":"Denziman Ore",
@@ -338,6 +346,8 @@
 "item.supersentaicraft.denzi_ball":"Denzi Ball",
 
 //05 Sun Vulcan
+"tab.supersentaicraft.sun_vulcan": "Taiyou Sentai Sun Vulcan",
+
 "item.supersentaicraft.sun_vulcan_logo":"Sun Vulcan Logo",
 "block.supersentaicraft.sun_vulcan_ore":"Sun Vulcan Ore",
 
@@ -368,6 +378,8 @@
 "item.supersentaicraft.vul_hand":"VulHand",
 
 //06 Goggle V
+"tab.supersentaicraft.goggle_v": "Dai Sentai Goggle-V",
+
 "item.supersentaicraft.goggle_v_logo":"Goggle V Logo",
 "block.supersentaicraft.goggle_v_ore":"Goggle V Ore",
 
@@ -403,9 +415,13 @@
 "item.supersentaicraft.pink_ribbon":"Pink Ribbon",
 
 //07 Dynaman
+"tab.supersentaicraft.dynaman": "Kagaku Sentai Dynaman",
+
 "item.supersentaicraft.dynaman_logo":"Dynaman Logo",
 
 //08 Bioman
+"tab.supersentaicraft.bioman": "Choudenshi Bioman",
+
 "item.supersentaicraft.bioman_logo":"Bioman Logo",
 "block.supersentaicraft.bioman_ore":"Bioman Ore",
 
@@ -437,9 +453,13 @@
 "item.supersentaicraft.bi_buster":"Bi Buster",
 
 //09 Changeman
+"tab.supersentaicraft.changeman": "Dengeki Sentai Changeman",
+
 "item.supersentaicraft.changeman_logo":"Changeman Logo",
 
 //10 Flashman
+"tab.supersentaicraft.flashman": "Choushinsei Flashman",
+
 "item.supersentaicraft.flashman_logo":"Flashman Logo",
 "block.supersentaicraft.flashman_ore":"Flashman Ore",
 
@@ -468,6 +488,8 @@
 "item.supersentaicraft.prism_boots":"Prism Boots",
 
 //11 Maskman
+"tab.supersentaicraft.maskman": "Hikari Sentai Maskman",
+
 "item.supersentaicraft.maskman_logo":"Maskman Logo",
 "block.supersentaicraft.maskman_ore":"Maskman Ore",
 
@@ -498,6 +520,8 @@
 "item.supersentaicraft.masky_ribbon":"Masky Ribbon",
 
 //12 Liveman
+"tab.supersentaicraft.liveman": "Choujuu Sentai Liveman",
+
 "item.supersentaicraft.liveman_logo":"Liveman Logo",
 "item.supersentaicraft.liveman_circuit":"Liveman Circuit",
 
@@ -527,6 +551,8 @@
 "item.supersentaicraft.sai_cutter":"Sai Cutter",
 
 //13 Turboranger
+"tab.supersentaicraft.turboranger": "Kousoku Sentai Turboranger",
+
 "item.supersentaicraft.turboranger_logo":"Turboranger Logo",
 "block.supersentaicraft.turboranger_ore":"Turboranger Ore",
 
@@ -556,9 +582,13 @@
 "item.supersentaicraft.turbo_laser_w":"Turbo Laser (W Stick Combo)",
 
 //14 Fiveman
+"tab.supersentaicraft.fiveman": "Chikyuu Sentai Fiveman",
+
 "item.supersentaicraft.fiveman_logo":"Fiveman Logo",
 
 //15 Jetman
+"tab.supersentaicraft.jetman": "Choujin Sentai Jetman",
+
 "item.supersentaicraft.birdonic_wave":"Birdonic Wave",
 "item.supersentaicraft.jetman_logo":"Jetman Logo",
 "block.supersentaicraft.jetman_ore":"Jetman Ore",
@@ -589,6 +619,8 @@
 "item.supersentaicraft.smash_bomber":"Smash Bomber",
 
 //16 Zyuranger
+"tab.supersentaicraft.zyuranger": "Kyouryuu Sentai Zyuranger",
+
 "item.supersentaicraft.zyuranger_medal":"Zyuranger Medal",
 "block.supersentaicraft.zyuranger_ore": "Zyuranger Ore",
 
@@ -625,6 +657,8 @@
 "item.supersentaicraft.hellfriede":"Devil Sword Hellfriede",
 
 //17 Dairanger
+"tab.supersentaicraft.dairanger": "Gosei Sentai Dairanger",
+
 "item.supersentaicraft.dairanger_logo":"Dairanger Logo",
 "block.supersentaicraft.dairanger_ore":"Dairanger Ore",
 
@@ -663,6 +697,8 @@
 "item.supersentaicraft.byakkoshinken":"Byakkoshinken",
 
 //18 Kakuranger
+"tab.supersentaicraft.kakuranger": "Ninja Sentai Kakuranger",
+
 "item.supersentaicraft.kakuranger_logo":"Kakuranger Logo",
 
 "item.supersentaicraft.kakuranger_head":"Kakuranger Helmet",
@@ -701,9 +737,13 @@
 "item.supersentaicraft.samurai_javelin":"Samurai Javelin",
 
 //19 Ohranger
+"tab.supersentaicraft.ohranger": "Chouriki Sentai Ohranger",
+
 "item.supersentaicraft.ohranger_logo":"Ohranger Logo",
 
 //20 Carranger
+"tab.supersentaicraft.carranger": "Gekisou Sentai Carranger",
+
 "item.supersentaicraft.carranger_logo":"Carranger Logo",
 "block.supersentaicraft.carranger_ore":"Carranger Ore",
 
@@ -743,6 +783,8 @@
 "item.supersentaicraft.signaizer":"Signaizer",
 
 //21 Megaranger
+"tab.supersentaicraft.megaranger": "Denji Sentai Megaranger",
+
 "item.supersentaicraft.megaranger_logo":"Megaranger Logo",
 "block.supersentaicraft.megaranger_ore":"Megaranger Ore",
 
@@ -782,6 +824,8 @@
 "item.supersentaicraft.capture_sniper":"Capture Sniper",
 
 //22 Gingaman
+"tab.supersentaicraft.gingaman": "Seijuu Sentai Gingaman",
+
 "item.supersentaicraft.gingaman_logo":"Gingaman Logo",
 "block.supersentaicraft.gingaman_ore":"Gingaman Ore",
 "block.supersentaicraft.deepslate_gingaman_ore":"Deepslate Gingaman Ore",
@@ -819,6 +863,8 @@
 "item.supersentaicraft.bull_riot":"Bull Riot",
 
 //23 GoGo-V
+"tab.supersentaicraft.gogo_v": "Kyuukyuu Sentai GoGo-V",
+
 "item.supersentaicraft.gogo_v_logo":"GoGo-V Logo",
 "block.supersentaicraft.gogo_v_ore":"GoGo-V Ore",
 
@@ -876,9 +922,13 @@
 "item.supersentaicraft.zeek_blaster":"Zeek Blaster",
 
 //24 Timeranger
+"tab.supersentaicraft.timeranger": "Mirai Sentai Timeranger",
+
 "item.supersentaicraft.timeranger_logo":"Timeranger Logo",
 
 //25 Gaoranger
+"tab.supersentaicraft.gaoranger": "Hyakujuu Sentai Gaoranger",
+
 "item.supersentaicraft.empty_gao_jewel":"Empty Gao Jewel",
 "item.supersentaicraft.gaoranger_logo":"Gaoranger Logo",
 "block.supersentaicraft.gaoranger_ore":"Gaoranger Ore",
@@ -970,11 +1020,15 @@
 "item.supersentaicraft.ligator_blade_blue_moon":"Ligator Blade (Blue Moon)",
 
 //26 Hurricaneger
+"tab.supersentaicraft.hurricaneger": "Ninpuu Sentai Hurricaneger",
+
 "item.supersentaicraft.hurricaneger_logo":"Hurricaneger Logo",
 
 "item.supersentaicraft.shurikens_bat":"Shuriken's Bat",
 
 //27 Abaranger
+"tab.supersentaicraft.abaranger": "Bakuryuu Sentai Abaranger",
+
 "item.supersentaicraft.abaranger_logo":"Abaranger Logo",
 "block.supersentaicraft.abaranger_ore":"Abaranger Ore",
 
@@ -1038,6 +1092,8 @@
 "item.supersentaicraft.chasmo_shield":"Chasmo Shield",
 
 //28 Dekaranger
+"tab.supersentaicraft.dekaranger": "Tokusou Sentai Dekaranger",
+
 "item.supersentaicraft.dekaranger_badge":"Dekaranger Badge",
 "block.supersentaicraft.dekaranger_ore":"Dekaranger Ore",
 "block.supersentaicraft.dekaranger_nether_ore":"Dekaranger Nether Ore",
@@ -1098,6 +1154,8 @@
 "item.supersentaicraft.battlizer_sword":"Battlizer Sword",
 
 //29 Magiranger
+"tab.supersentaicraft.magiranger": "Mahou Sentai Magiranger",
+
 "item.supersentaicraft.magiranger_logo":"Magiranger Logo",
 
 "item.supersentaicraft.magi_stick_red":"MagiStick (MagiRed)",
@@ -1107,6 +1165,8 @@
 "item.supersentaicraft.magi_stick_green":"MagiStick (MagiGreen)",
 
 //30 Boukenger
+"tab.supersentaicraft.boukenger": "GoGo Sentai Boukenger",
+
 "item.supersentaicraft.boukenger_logo":"Boukenger Logo",
 "block.supersentaicraft.boukenger_ore":"Boukenger Ore",
 
@@ -1142,6 +1202,8 @@
 "item.supersentaicraft.dual_crusher_mixer":"Dual Crusher",
 
 //31 Gekiranger
+"tab.supersentaicraft.gekiranger": "Juuken Sentai Gekiranger",
+
 "item.supersentaicraft.gekiranger_logo":"Gekiranger Logo",
 "block.supersentaicraft.gekiranger_ore":"Gekiranger Ore",
 
@@ -1182,6 +1244,8 @@
 "item.supersentaicraft.virtuous_beast_sword":"Virtuous Beast Sword",
 
 //32 Go-Onger
+"tab.supersentaicraft.go_onger": "Engine Sentai Go-Onger",
+
 "item.supersentaicraft.blank_engine_soul":"Blank Engine Soul",
 "item.supersentaicraft.go_onger_logo":"Go-Onger Logo",
 "block.supersentaicraft.go_onger_ore":"Go-Onger Ore",
@@ -1247,6 +1311,8 @@
 "item.supersentaicraft.enjin_ken":"EnjinKen (Engine Sword)",
 
 //33 Shinkenger
+"tab.supersentaicraft.shinkenger": "Samurai Sentai Shinkenger",
+
 "item.supersentaicraft.common_disk":"Kyoutsu (Common) Disk",
 "item.supersentaicraft.shinkenger_logo":"Shinkenger Logo",
 "block.supersentaicraft.shinkenger_ore":"Shinkenger Ore",
@@ -1287,12 +1353,18 @@
 "item.supersentaicraft.kyoryumaru_sakanamaru":"Kyoryumaru",
 
 //34 Goseiger
+"tab.supersentaicraft.goseiger": "Tensou Sentai Goseiger",
+
 "item.supersentaicraft.goseiger_logo":"Goseiger Logo",
 
 //35 Gokaiger
+"tab.supersentaicraft.gokaiger": "Kaizoku Sentai Gokaiger",
+
 "item.supersentaicraft.gokaiger_logo":"Gokaiger Logo",
 
 //36 Go-Busters
+"tab.supersentaicraft.go_busters": "Tokumei Sentai Go-Busters",
+
 "item.supersentaicraft.enetron":"Enetron",
 "item.supersentaicraft.blank_animal_disk":"Blank Animal Disk",
 "item.supersentaicraft.go_busters_logo":"Go-Busters Logo",
@@ -1341,6 +1413,8 @@
 "item.supersentaicraft.lio_attache":"Lio Attaché",
 
 //36-37 Akibaranger
+"tab.supersentaicraft.akibaranger": "Hikounin Sentai Akibaranger",
+
 "item.supersentaicraft.akibaranger_logo":"Akibaranger Logo",
 "item.supersentaicraft.akibaranger_head":"Akibaranger Helmet",
 "item.supersentaicraft.akibaranger_torso":"Akibaranger Chestplate",
@@ -1365,6 +1439,8 @@
 "item.supersentaicraft.munyu_moe_zubakyun":"Munyu Moe Zubakyun",
 
 //37 Kyoryuger
+"tab.supersentaicraft.kyoryuger": "Zyuden Sentai Kyoryuger",
+
 "item.supersentaicraft.blank_zyudenchi":"Blank Zyudenchi",
 "item.supersentaicraft.kyoryuger_logo":"Kyoryuger Logo",
 "block.supersentaicraft.zyudenchi_charger":"Zyudenchi Charger Block",
@@ -1512,6 +1588,8 @@
 "item.supersentaicraft.chaos_calibur":"Chaos Calibur",
 
 //38 ToQger
+"tab.supersentaicraft.toqger": "Ressha Sentai ToQger",
+
 "item.supersentaicraft.blank_ressha":"Blank Ressha",
 "item.supersentaicraft.toqger_logo":"ToQger Logo",
 "block.supersentaicraft.toqger_ore":"ToQger Ore",
@@ -1558,9 +1636,13 @@
 "item.supersentaicraft.daikaiten_cannon":"Daikaiten Cannon",
 
 //39 Ninninger
+"tab.supersentaicraft.ninninger": "Shuriken Sentai Ninninger",
+
 "item.supersentaicraft.ninninger_logo":"Ninninger Logo",
 
 //40 Zyuohger
+"tab.supersentaicraft.zyuohger": "Doubutsu Sentai Zyuohger",
+
 "item.supersentaicraft.king_s_credential":"King's Credential",
 "item.supersentaicraft.zyuohger_logo":"Zyuohger Logo",
 "block.supersentaicraft.zyuohger_ore":"Zyuohger Ore",
@@ -1598,6 +1680,8 @@
 "item.supersentaicraft.zyuoh_the_rod":"Zyuoh The GunRod",
 
 //41 Kyuranger
+"tab.supersentaicraft.kyuranger": "Uchuu Sentai Kyuranger",
+
 "item.supersentaicraft.kyuranger_logo":"Kyuranger Logo",
 "item.supersentaicraft.blank_kyutama":"Blank Kyutama",
 "block.supersentaicraft.kyuranger_ore":"Kyuranger Ore",
@@ -1763,6 +1847,8 @@
 "item.supersentaicraft.dark_kyu_sickle":"Dark Kyu Sickle",
 
 //42 Lupinranger VS Patranger
+"tab.supersentaicraft.lupat": "Lupinranger VS Patranger",
+
 "item.supersentaicraft.blank_striker":"Blank Striker",
 "item.supersentaicraft.lupinranger_logo":"Lupinranger Logo",
 "item.supersentaicraft.patranger_logo":"Patranger Logo",
@@ -1820,6 +1906,8 @@
 "item.supersentaicraft.blade_boomerang":"Blade Boomerang",
 
 //43 Ryusoulger
+"tab.supersentaicraft.ryusoulger": "Kishiryuu Sentai Ryusoulger",
+
 "item.supersentaicraft.blank_ryusoul":"Blank Ryusoul",
 "item.supersentaicraft.ryusoul":"Blank Ryusoul",
 "item.supersentaicraft.ryusoulger_logo":"Ryusoulger Logo",
@@ -1905,6 +1993,8 @@
 "item.supersentaicraft.ryusoul_calibur":"Ryusoul Calibur",
 
 //44 Kirameiger
+"tab.supersentaicraft.kirameiger": "Mashin Sentai Kirameiger",
+
 "item.supersentaicraft.kirameiger_logo":"Kirameiger Logo",
 "item.supersentaicraft.blue_diamond":"Blue Diamond",
 "block.supersentaicraft.kirameiger_ore":"Kirameiger Ore",
@@ -1945,6 +2035,8 @@
 "item.supersentaicraft.yellow_stone_hammer":"Yellow Stone Hammer",
 
 //45 Zenkaiger
+"tab.supersentaicraft.zenkaiger": "Kikai Sentai Zenkaiger",
+
 "item.supersentaicraft.zenkaiger_logo":"Zenkaiger Logo",
 "item.supersentaicraft.blank_sentai_gear":"Blank Sentai Gear",
 "item.supersentaicraft.blank_dark_sentai_gear":"Blank Dark Sentai Gear",
@@ -2175,6 +2267,8 @@
 "item.supersentaicraft.white_ribbon":"White Ribbon",
 
 //46 DonBrothers
+"tab.supersentaicraft.don_brothers": "Avatarou Sentai DonBrothers",
+
 "item.supersentaicraft.don_brothers_logo":"DonBrothers Logo",
 "item.supersentaicraft.blank_avatarou_gear":"Blank Avatarou Gear",
 
@@ -2317,6 +2411,15 @@
 "item.supersentaicraft.condor_sword":"Condor Arrow (Twin Blade)",
 "item.supersentaicraft.kage_spear":"Kage Spear",
 
+//47 King-Ohger
+"tab.supersentaicraft.king_ohger": "Ohsama Sentai King-Ohger",
+
+//48 Boonboomger
+"tab.supersentaicraft.boonboomger": "Bakuage Sentai Boonboomger",
+
+//49 Gozyuger
+"tab.supersentaicraft.gozyuger": "No.1 Sentai Gozyuger",
+
 //?? Kawarimono Team
 "item.supersentaicraft.kawarimono_head":"Kawarimono Helmet",
 "item.supersentaicraft.kawarimono_torso":"Kawarimono Chestplate",
@@ -2368,6 +2471,9 @@
 "item.supersentaicraft.putotyra_key":"OOO PuToTyra Key",
 
 //Misc
+"tab.supersentaicraft.misc": "Ranger Items",
+"tab.supersentaicraft.block": "Ranger Blocks",
+
 "item.supersentaicraft.mecha_gear":"Mecha Gear",
 "block.supersentaicraft.mecha_ore":"Mecha Ore",
 "block.supersentaicraft.mecha_topia_ore":"Mecha Ore (Super Sentai Topia)",

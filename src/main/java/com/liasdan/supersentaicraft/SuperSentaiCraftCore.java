@@ -10,7 +10,8 @@ import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.events.ModCommonEvents;
 import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
+import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
+import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
@@ -53,6 +54,8 @@ public class SuperSentaiCraftCore {
 
 	public static List<Item> MULTI_WEAPON_ITEM= new ArrayList<Item>();
 
+	public static List<Item> CHARGED_WEAPON= new ArrayList<Item>();
+
 	public static List<Item> FORM_WEAPON_ITEM= new ArrayList<Item>();
 
 	public SuperSentaiCraftCore(IEventBus modEventBus, ModContainer modContainer) {
@@ -73,6 +76,7 @@ public class SuperSentaiCraftCore {
 		JAKQItems.register(modEventBus);
 		SunVulcanItems.register(modEventBus);
 		MaskmanItems.register(modEventBus);
+		CarrangerItems.register(modEventBus);
 		GingamanItems.register(modEventBus);
 		ShinkengerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
@@ -135,7 +139,14 @@ public class SuperSentaiCraftCore {
 
 			for (int i = 0; i < MULTI_WEAPON_ITEM.size(); i++) {
 				ItemProperties.register(MULTI_WEAPON_ITEM.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
-					return BaseDualSwordItem.get_mode($itemStack);
+					return BaseSwordItem.get_mode($itemStack);
+				});
+			}
+
+			for (int i = 0; i < CHARGED_WEAPON.size(); i++) {
+				ItemProperties.register(CHARGED_WEAPON.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
+					if (BaseBlasterItem.get_mode($itemStack) == 30) return 1;
+					return 0;
 				});
 			}
 
@@ -148,11 +159,11 @@ public class SuperSentaiCraftCore {
 						ItemStack belt = p_174637_.getItemBySlot(EquipmentSlot.FEET);
 						if (p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof GingaBraceItem) {
 							if (p_174635_.getItem() == GingamanItems.JUUGEKIBOU_RED.get()||p_174635_.getItem() == GingamanItems.JUUGEKIBOU_GREEN.get()||p_174635_.getItem() == GingamanItems.JUUGEKIBOU_BLUE.get()||p_174635_.getItem() == GingamanItems.JUUGEKIBOU_YELLOW.get()||p_174635_.getItem() == GingamanItems.JUUGEKIBOU_PINK.get()) {
-								if (GingaBraceItem.get_Form_Item(belt, 1).getBeltTex()=="beast_armor_shine_belt") return p_174637_.getUseItem() != p_174635_ ? 2.0F : 3.0F;
+								if (GingaBraceItem.get_Form_Item(belt, 2).getBeltTex()=="beast_armor_shine_belt") return p_174637_.getUseItem() != p_174635_ ? 2.0F : 3.0F;
 								else return p_174637_.getUseItem() != p_174635_ ? 0.0F : 1.0F;
 							}
 							if (p_174635_.getItem() == GingamanItems.SEIJUUKEN.get()) {
-								if (GingaBraceItem.get_Form_Item(belt, 1).getBeltTex()=="beast_armor_shine_belt") return 1;
+								if (GingaBraceItem.get_Form_Item(belt, 2).getBeltTex()=="beast_armor_shine_belt") return 1;
 								else return 0;
 							}
 						}
@@ -193,7 +204,11 @@ public class SuperSentaiCraftCore {
 
 			event.registerEntityRenderer(MobsCore.UNGLERS.get(), BasicEntityRenderer::new);
 
+			event.registerEntityRenderer(MobsCore.WUMPERS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.SIGNALMAN_EVIL.get(), BasicEntityRenderer::new);
+
 			event.registerEntityRenderer(MobsCore.YARTOTS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.BLACK_KNIGHT.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.NANASHIS.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.GEDOU_SHINKEN_RED.get(), BasicEntityRenderer::new);

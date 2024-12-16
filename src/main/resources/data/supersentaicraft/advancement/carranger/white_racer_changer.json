@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:white_racer_changer"
+    },
+    "title": "Tiramisu, Konjac, Mille-Feuille!",
+    "description": "Obtain White Racer Changer",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:carranger/accel_changer",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:white_racer_changer"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

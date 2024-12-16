@@ -8,7 +8,6 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.events.ModClientEvents;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseShieldItem;
@@ -357,23 +356,18 @@ public class RyusoulgerItems {
     public static final DeferredItem<Item> RED_RYUSOUL_CHANGER = ITEMS.register("red_ryusoul_changer",
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_red",RED_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(RED_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> BLUE_RYUSOUL_CHANGER = ITEMS.register("blue_ryusoul_changer",
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_blue",BLUE_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(BLUE_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> PINK_RYUSOUL_CHANGER = ITEMS.register("pink_ryusoul_changer",
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_pink",PINK_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(PINK_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> GREEN_RYUSOUL_CHANGER = ITEMS.register("green_ryusoul_changer",
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_green",GREEN_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(GREEN_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> BLACK_RYUSOUL_CHANGER = ITEMS.register("black_ryusoul_changer",
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_black",BLACK_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(BLACK_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> GOLD_MOSA_CHANGER = ITEMS.register("gold_mosa_changer",
     		() -> new MosaChangerItem(ArmorMaterials.DIAMOND,"ryusoul_gold",GOLD_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(GOLD_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
@@ -381,11 +375,9 @@ public class RyusoulgerItems {
     public static final DeferredItem<Item> GAISOULG_CHANGER = ITEMS.register("gaisorg_changer",
     		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"gaisoulg",GAI_SOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(GAI_SOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> BROWN_CHANGER = ITEMS.register("brown_changer",
     		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_brown",BROWN_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(BROWN_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<Item> MORIA_RYUSOUL_CHANGER = ITEMS.register("moria_ryusoul_changer",
     		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_moria",RED_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(RED_RYUSOUL).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
@@ -395,22 +387,18 @@ public class RyusoulgerItems {
     
     public static final DeferredItem<BaseBlasterItem> MOSA_CHANGER = ITEMS.register("mosa_changer",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<SwordItem> MOSA_BLADE = ITEMS.register("mosa_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<BaseBlasterItem> MOSA_BREAKER = ITEMS.register("mosa_breaker",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> GAISOUL_KEN = ITEMS.register("gaisoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<BaseShieldItem> GAISOUL_SHIELD = ITEMS.register("gaisoul_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> BROWN_RYUSOUL_KEN = ITEMS.register("brown_ryusoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    
     public static final DeferredItem<BaseShieldItem> BROWN_RYUSOUL_SHIELD = ITEMS.register("brown_ryusoul_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     

@@ -16,7 +16,12 @@
         {
           "type": "minecraft:item",
           "name": "supersentaicraft:common_disk",
-          "count": 5
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 5
+            }
+          ]
         }
       ]
     }

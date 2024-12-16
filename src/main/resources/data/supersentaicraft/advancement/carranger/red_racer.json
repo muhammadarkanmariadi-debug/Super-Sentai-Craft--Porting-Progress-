@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_accel_changer"
+    },
+    "title": "Red Racer!",
+    "description": "Change into Red Racer",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:carranger/carranger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

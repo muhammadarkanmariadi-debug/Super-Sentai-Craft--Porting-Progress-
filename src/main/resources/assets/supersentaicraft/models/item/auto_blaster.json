@@ -1,5 +1,4 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/handheld",
   "textures": {
     "layer0": "supersentaicraft:item/auto_blaster"
@@ -13,5 +12,4 @@
             "model": "supersentaicraft:item/auto_punisher"
         }
     ]
-  }
 }

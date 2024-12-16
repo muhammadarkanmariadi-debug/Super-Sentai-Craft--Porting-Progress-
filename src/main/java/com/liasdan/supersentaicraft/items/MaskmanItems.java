@@ -4,7 +4,6 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
@@ -78,40 +77,30 @@ public class MaskmanItems {
     
     public static final DeferredItem<Item> RED_MASKING_BRACE = ITEMS.register("red_masking_brace",
     		() -> new MaskingBraceItem(ArmorMaterials.DIAMOND,"red_mask",RED_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> BLACK_MASKING_BRACE = ITEMS.register("black_masking_brace",
     		() -> new MaskingBraceItem(ArmorMaterials.DIAMOND,"black_mask",BLACK_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> BLUE_MASKING_BRACE = ITEMS.register("blue_masking_brace",
     		() -> new MaskingBraceItem(ArmorMaterials.DIAMOND,"blue_mask",BLUE_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> YELLOW_MASKING_BRACE = ITEMS.register("yellow_masking_brace",
     		() -> new MaskingBraceItem(ArmorMaterials.DIAMOND,"yellow_mask",YELLOW_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> PINK_MASKING_BRACE = ITEMS.register("pink_masking_brace",
     		() -> new MaskingBraceItem(ArmorMaterials.DIAMOND,"pink_mask",PINK_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<Item> X1_MASKING_BRACE = ITEMS.register("x1_masking_brace",
     		() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"x1_mask",X1_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     
     public static final DeferredItem<BaseBlasterItem> LASER_MAGNUM = ITEMS.register("laser_magnum",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-	
     public static final DeferredItem<SwordItem> LASER_MAGNUM_SWORD = ITEMS.register("laser_magnum_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     
     public static final DeferredItem<SwordItem> MASKY_BLADE = ITEMS.register("masky_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<SwordItem> MASKY_ROD = ITEMS.register("masky_rod",
-			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-	
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     public static final DeferredItem<SwordItem> MASKY_TONFA = ITEMS.register("masky_tonfa",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<BaseThrowableItem> MASKY_ROTOR = ITEMS.register("masky_rotor",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsShuriken().AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
-    
     public static final DeferredItem<SwordItem> MASKY_RIBBON = ITEMS.register("masky_ribbon",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
 

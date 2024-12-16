@@ -30,39 +30,43 @@ public class RangerTabs {
 	
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> GorangerTab = CREATIVE_MODE_TABS.register("ssc001", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(GorangerItems.GORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_goranger_items.png"))
-			.title(Component.literal("Himistsu Sentai Goranger")).build());
+					.title(Component.translatable("tab.supersentaicraft.goranger")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> JAKQTab = CREATIVE_MODE_TABS.register("ssc002", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(JAKQItems.JAKQ_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_jakq_items.png"))
-					.title(Component.literal("J.A.K.Q. Dengekitai")).build());
+					.title(Component.translatable("tab.supersentaicraft.jakq")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> SunVulcanTab = CREATIVE_MODE_TABS.register("ssc005", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(SunVulcanItems.SUN_VULCAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_sun_vulcan_items.png"))
-					.title(Component.literal("Taiyou Sentai Sun Vulcan")).build());
+					.title(Component.translatable("tab.supersentaicraft.sun_vulcan")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MaskmanTab = CREATIVE_MODE_TABS.register("ssc011", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(MaskmanItems.MASKMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_maskman_items.png"))
-			.title(Component.literal("Hikari Sentai Maskman")).build());
-    
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> GingamanTab = CREATIVE_MODE_TABS.register("ssc022", () ->
+					.title(Component.translatable("tab.supersentaicraft.maskman")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> CarrangerTab = CREATIVE_MODE_TABS.register("ssc020", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(CarrangerItems.CARRANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_carranger_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.carranger")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GingamanTab = CREATIVE_MODE_TABS.register("ssc022", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(GingamanItems.GINGAMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gingaman_items.png"))
-			.title(Component.literal("Seijuu Sentai Gingaman")).build());
+					.title(Component.translatable("tab.supersentaicraft.gingaman")).build());
 
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> ShinkengerTab = CREATIVE_MODE_TABS.register("ssc033", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(ShinkengerItems.SHINKENGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_shinkenger_items.png"))
-			.title(Component.literal("Samurai Sentai Shinkenger")).build());
+					.title(Component.translatable("tab.supersentaicraft.shinkenger")).build());
     
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> RyusoulgerTab = CREATIVE_MODE_TABS.register("ssc044", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(RyusoulgerItems.RYUSOULGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_ryusoulger_items.png"))
-			.title(Component.literal("Kishiryu Sentai Ryusoulger")).build());
+					.title(Component.translatable("tab.supersentaicraft.ryusoulger")).build());
 
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.SUPER_SENTAI_LOGO.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
-    		.title(Component.literal("Misc Sentai Items")).build());
+					.title(Component.translatable("tab.supersentaicraft.misc")).build());
     
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(RangerBlocks.RYUSOULGER_ORE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
-    		.title(Component.literal("Misc Sentai Blocks")).build());
+					.title(Component.translatable("tab.supersentaicraft.block")).build());
     
     public static List<Item> GORANGER= new ArrayList<Item>();
 
@@ -71,6 +75,8 @@ public class RangerTabs {
 	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
 
 	public static List<Item> MASKMAN= new ArrayList<Item>();
+
+	public static List<Item> CARRANGER= new ArrayList<Item>();
     
     public static List<Item> GINGAMAN= new ArrayList<Item>();
     
@@ -116,6 +122,13 @@ public class RangerTabs {
 			}
 
 		}
+		else if(event.getTab() == RangerTabs.CarrangerTab.get()) {
+			for (int i = 0; i < RangerTabs.CARRANGER.size(); i++)
+			{
+				event.accept( RangerTabs.CARRANGER.get(i));
+			}
+
+		}
 		else if(event.getTab() == RangerTabs.GingamanTab.get()) {
 			for (int i = 0; i < RangerTabs.GINGAMAN.size(); i++)
 			{
@@ -147,7 +160,11 @@ public class RangerTabs {
 
 			event.accept(MobsCore.UNGLERS_SPAWN_EGG);
 
+			event.accept(MobsCore.WUMPERS_SPAWN_EGG);
+			event.accept(MobsCore.SIGNALMAN_EVIL_SPAWN_EGG);
+
 			event.accept(MobsCore.YARTOTS_SPAWN_EGG);
+			event.accept(MobsCore.BLACK_KNIGHT_SPAWN_EGG);
 
 			event.accept(MobsCore.NANASHIS_SPAWN_EGG);
 			event.accept(MobsCore.GEDOU_SHINKEN_RED_SPAWN_EGG);
