@@ -21,14 +21,6 @@ public class RangerBlocks {
 	
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SuperSentaiCraftCore.MODID);
 	
-	public static final DeferredBlock<Block> GINGAMAN_ORE = registerBlock("gingaman_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
-
-	public static final DeferredBlock<Block> DEEPSLATE_GINGAMAN_ORE = registerBlock("deepslate_gingaman_ore",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
-	
 	public static final DeferredBlock<Block> SHINKENGER_ORE = registerBlock("shinkenger_ore",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
