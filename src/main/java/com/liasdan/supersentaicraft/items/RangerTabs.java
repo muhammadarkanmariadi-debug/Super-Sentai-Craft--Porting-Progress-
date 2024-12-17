@@ -52,7 +52,11 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(GingamanItems.GINGAMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gingaman_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.gingaman")).build());
 
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> ShinkengerTab = CREATIVE_MODE_TABS.register("ssc033", () ->
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GaorangerTab = CREATIVE_MODE_TABS.register("ssc025", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(GaorangerItems.GAORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gaoranger_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.gaoranger")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> ShinkengerTab = CREATIVE_MODE_TABS.register("ssc033", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(ShinkengerItems.SHINKENGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_shinkenger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.shinkenger")).build());
     
@@ -79,6 +83,8 @@ public class RangerTabs {
 	public static List<Item> CARRANGER= new ArrayList<Item>();
     
     public static List<Item> GINGAMAN= new ArrayList<Item>();
+
+	public static List<Item> GAORANGER= new ArrayList<Item>();
     
     public static List<Item> SHINKENGER= new ArrayList<Item>();
     
@@ -133,6 +139,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.GINGAMAN.size(); i++)
 			{
 				event.accept( RangerTabs.GINGAMAN.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.GaorangerTab.get()) {
+			for (int i = 0; i < RangerTabs.GAORANGER.size(); i++)
+			{
+				event.accept( RangerTabs.GAORANGER.get(i));
 			}
 
 		}

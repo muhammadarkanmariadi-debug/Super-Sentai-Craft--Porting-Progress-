@@ -78,6 +78,7 @@ public class SuperSentaiCraftCore {
 		MaskmanItems.register(modEventBus);
 		CarrangerItems.register(modEventBus);
 		GingamanItems.register(modEventBus);
+		GaorangerItems.register(modEventBus);
 		ShinkengerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
 
