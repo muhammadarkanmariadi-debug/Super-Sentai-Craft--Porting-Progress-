@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:gaoranger_logo"
+    },
+    "title": "Hyakujuu Sentai Gaoranger",
+    "description": "Change into each member of Gaoranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_g_phone"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_g_phone"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_g_phone"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_g_phone"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:white_g_phone"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gaoranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gaoranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gaoranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:g_brace_phone"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

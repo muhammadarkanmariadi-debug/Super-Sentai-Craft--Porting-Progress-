@@ -106,7 +106,7 @@ public class CarrangerItems {
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND, "vrv_master",VRV_MASTER_BADGE,CARRANGER_HELMET,CARRANGER_CHESTPLATE,CARRANGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 
 	public static final DeferredItem<BaseBlasterItem> AUTO_BLASTER = ITEMS.register("auto_blaster",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).IsChargeWeapon().AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsChargeWeapon().AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 	public static final DeferredItem<SwordItem> VI_BLADE = ITEMS.register("vi_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 

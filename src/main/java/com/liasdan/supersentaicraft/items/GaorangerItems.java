@@ -86,28 +86,67 @@ public class GaorangerItems {
     public static final DeferredItem<SwordItem> JUUOUKEN = ITEMS.register("beast_king_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
 
+	public static final DeferredItem<SwordItem> JUUOUKEN_LION = ITEMS.register("lion_beast_king_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> JUUOUKEN_EAGLE = ITEMS.register("eagle_beast_king_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> JUUOUKEN_SHARK = ITEMS.register("shark_beast_king_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> JUUOUKEN_BISON = ITEMS.register("bison_beast_king_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> JUUOUKEN_TIGER = ITEMS.register("tiger_beast_king_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> LION_FANG = ITEMS.register("lion_fang",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> LION_FANG_CLAW = ITEMS.register("lion_fang_claw",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> LION_FANG_CLAW1 = ITEMS.register("lion_fang_claw1",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<BaseBlasterItem> GAO_MANE_BUSTER = ITEMS.register("gao_mane_buster",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsChargeWeapon().AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> EAGLE_SWORD = ITEMS.register("eagle_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> SHARK_CUTTER = ITEMS.register("shark_cutter",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> BISON_AXE = ITEMS.register("bison_axe",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> TIGER_BATON = ITEMS.register("tiger_baton",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> HAJA_HYAKUJUUKEN = ITEMS.register("evil_crushing_hundred_beast_sword",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
 	public static final DeferredItem<BaseBlasterItem> GAO_HUSTLER_ROD = ITEMS.register("gao_hustler_rod",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
 
-//	public static final DeferredItem<Item> SUN_VULCAN_ROBO = ITEMS.register("sun_vulcan_robo",
-//			() -> new RangerFormChangeItem(new Item.Properties(),0,"","sun_vulcan_robo", "blank",
-//					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false),
-//					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
-//					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-//					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
-//					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)));
-//
-//	public static final DeferredItem<Item> SUN_VULCAN_ROBO_BOOTS = ITEMS.register("sun_vulcan_robo_boots",
-//            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.BOOTS, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
-//    public static final DeferredItem<Item> SUN_VULCAN_ROBO_LEGGINGS = ITEMS.register("sun_vulcan_robo_legs",
-//            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
-//    public static final DeferredItem<Item> SUN_VULCAN_ROBO_CHESTPLATE = ITEMS.register("sun_vulcan_robo_torso",
-//            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
-//
-//    public static final DeferredItem<Item> SUN_VULCAN_ROBO_HELMET = ITEMS.register("sun_vulcan_robo_head",
-//            () -> new MechaGattaiItem(ArmorMaterials.NETHERITE,"sun_vulcan_robo",SUN_VULCAN_ROBO,SUN_VULCAN_ROBO_CHESTPLATE,SUN_VULCAN_ROBO_LEGGINGS,SUN_VULCAN_ROBO_BOOTS, new Item.Properties())
-//					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
-//
+	public static final DeferredItem<BaseBlasterItem> FALCON_SUMMONER = ITEMS.register("falcon_summoner",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsChargeWeapon().AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<Item> GAO_KING = ITEMS.register("gao_king",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_king", "blank",
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)));
+
+	public static final DeferredItem<Item> GAO_KING_BOOTS = ITEMS.register("gao_king_boots",
+            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.BOOTS, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+    public static final DeferredItem<Item> GAO_KING_LEGGINGS = ITEMS.register("gao_king_legs",
+            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+    public static final DeferredItem<Item> GAO_KING_CHESTPLATE = ITEMS.register("gao_king_torso",
+            () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+
+    public static final DeferredItem<Item> GAO_KING_HELMET = ITEMS.register("gao_king_head",
+            () -> new MechaGattaiItem(ArmorMaterials.NETHERITE,"gao_king",GAO_KING,GAO_KING_CHESTPLATE,GAO_KING_LEGGINGS,GAO_KING_BOOTS, new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+
 //    public static final DeferredItem<SwordItem> TAIYO_KEN = ITEMS.register("taiyo_ken",
 //			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
 //    public static final DeferredItem<BaseShieldItem> VUL_SHIELD = ITEMS.register("vul_shield",
