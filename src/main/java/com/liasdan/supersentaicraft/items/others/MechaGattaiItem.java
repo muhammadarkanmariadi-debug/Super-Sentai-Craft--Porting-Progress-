@@ -41,6 +41,8 @@ public class MechaGattaiItem extends MechaArmorItem{
 	public int Num_Base_Form_Item = 1;
 	public String BELT_TEXT;
 
+	public int Unlimited_Textures = 0;
+
 
 	public MechaGattaiItem (Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item>torso, DeferredItem<Item> legs, DeferredItem<Item> boot, Properties properties)
 	{
@@ -109,6 +111,12 @@ public class MechaGattaiItem extends MechaArmorItem{
 		return this;
 	}
 
+	public MechaGattaiItem Add_Extra_Base_Form_Items(DeferredItem<Item> item,DeferredItem<Item> item2,DeferredItem<Item> item3,DeferredItem<Item> item4) {
+		Extra_Base_Form_Item= Lists.newArrayList((RangerFormChangeItem)item.get(),(RangerFormChangeItem)item2.get(),(RangerFormChangeItem)item3.get(),(RangerFormChangeItem)item4.get());
+		Num_Base_Form_Item=5;
+		return this;
+	}
+
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName)
 	{
 
@@ -119,12 +127,16 @@ public class MechaGattaiItem extends MechaArmorItem{
 			if (((MechaGattaiItem)itemstack.getItem()).BELT_TEXT==null) {
 				belt = get_Form_Item(itemstack,1).getBeltTex();
 			}
-			return "belts/"+belt;
+			return belt;
 		}
 		else return riderName+get_Form_Item(itemstack,1).getFormName(fly);
 
 	}
 
+	public String getUnlimitedTextures(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName ,int num)
+	{
+		return "blank";
+	}
 
 	public ResourceLocation getModelResource(ItemStack itemstack,MechaArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
@@ -163,7 +175,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 	{
 	}
 
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {
 
 		switch (currentSlot) {
 		case FEET ->{ 

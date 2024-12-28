@@ -59,6 +59,16 @@ public class BaseItem extends Item {
 		return this;
 	}
 
+	public BaseItem AddToList(List<Item> TabList, int num) {
+		for (int i = 0; i < num; i++)
+		{
+			TabList.add(this);
+		}
+		return this;
+	}
 
-
+	public BaseItem AddToList(List<Item> TabList) {
+		TabList.add(this);
+		return this;
+	}
 }

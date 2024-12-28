@@ -1,10 +1,12 @@
 package com.liasdan.supersentaicraft.items.client;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.others.MechaArmorItem;
 import com.liasdan.supersentaicraft.items.others.MechaGattaiItem;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -17,6 +19,18 @@ public class MechaArmorRenderer extends GeoArmorRenderer<MechaArmorItem> {
     
         super(new MechaArmorModel(livingEntity, equipmentSlot));
         RIDER =  livingEntity;
+
+		if (livingEntity.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+			if (belt.Unlimited_Textures!=0&equipmentSlot==EquipmentSlot.FEET){
+				for (int n = 0; n < belt.Unlimited_Textures; n++) {
+					{
+						addRenderLayer(new MechaRenderLayer<>(this, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/armor/mecha/"+
+								belt.getUnlimitedTextures(livingEntity.getItemBySlot(EquipmentSlot.HEAD), equipmentSlot, RIDER, belt.Rider, n + 1)+".png")));
+					}
+				}
+			}
+
+		}
     }
     
     
@@ -24,37 +38,15 @@ public class MechaArmorRenderer extends GeoArmorRenderer<MechaArmorItem> {
 	protected void applyBoneVisibilityBySlot(EquipmentSlot currentSlot) {
 		setAllVisible(false);
 
-		if (RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem) {
-			MechaGattaiItem BELT = ((MechaGattaiItem)RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem()); 
-		
-				setBoneVisible(this.head, BELT.getPartsForSlot(currentSlot,"head"));
-				setBoneVisible(this.body,  BELT.getPartsForSlot(currentSlot,"body"));
-				setBoneVisible(this.rightArm,  BELT.getPartsForSlot(currentSlot,"rightArm"));
-				setBoneVisible(this.leftArm,  BELT.getPartsForSlot(currentSlot,"leftArm"));
-				setBoneVisible(this.rightLeg,  BELT.getPartsForSlot(currentSlot,"rightLeg"));
-				setBoneVisible(this.leftLeg,  BELT.getPartsForSlot(currentSlot,"leftLeg"));
-
-			
-		}else {
-			
-			switch (currentSlot) {
-			case HEAD ->{ 
-				setBoneVisible(this.head, true);
-			}
-			case CHEST -> {
-				setBoneVisible(this.body, true);
-				setBoneVisible(this.rightArm, true);
-				setBoneVisible(this.leftArm, true);
-			}
-			case LEGS -> {
-				setBoneVisible(this.rightLeg, true);
-				setBoneVisible(this.leftLeg, true);
-			}
-			case FEET -> {
-			}
-			default -> {}
-		}
-	
+		if (currentSlot == EquipmentSlot.HEAD) {
+			setBoneVisible(this.body, true);
+		} else if (RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem BELT && BELT.isTransformed(RIDER)) {
+			setBoneVisible(this.head, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"head"));
+			setBoneVisible(this.body, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"body"));
+			setBoneVisible(this.rightArm, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"rightArm"));
+			setBoneVisible(this.leftArm, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"leftArm"));
+			setBoneVisible(this.rightLeg, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"rightLeg"));
+			setBoneVisible(this.leftLeg, BELT.getPartsForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD),currentSlot,"leftLeg"));
 		}
 	}
 

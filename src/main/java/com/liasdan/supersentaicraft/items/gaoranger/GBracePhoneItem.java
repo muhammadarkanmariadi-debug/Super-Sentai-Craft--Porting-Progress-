@@ -1,4 +1,4 @@
-package com.liasdan.supersentaicraft.items.gaoranger.goranger;
+package com.liasdan.supersentaicraft.items.gaoranger;
 
 import com.liasdan.supersentaicraft.items.GaorangerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
