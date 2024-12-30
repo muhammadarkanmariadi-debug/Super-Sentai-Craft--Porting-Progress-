@@ -64,16 +64,29 @@ public class MobsCore {
 
 	//22 Gingaman
 	public static final DeferredHolder<EntityType<?>, EntityType<YartotsEntity>> YARTOTS = MOBLIST.register("yartots",
-            () -> EntityType.Builder.of(YartotsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":yartots"));
-    
-    public static final DeferredItem<DeferredSpawnEggItem> YARTOTS_SPAWN_EGG = ITEMS.register("yartots_spawn_egg",
-            () -> new DeferredSpawnEggItem(YARTOTS, 0xde7002, 0x2e1100, new Item.Properties()));
+			() -> EntityType.Builder.of(YartotsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":yartots"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> YARTOTS_SPAWN_EGG = ITEMS.register("yartots_spawn_egg",
+			() -> new DeferredSpawnEggItem(YARTOTS, 0xde7002, 0x2e1100, new Item.Properties()));
 
 	public static final DeferredHolder<EntityType<?>, EntityType<BlackKnightEntity>> BLACK_KNIGHT = MOBLIST.register("black_knight",
 			() -> EntityType.Builder.of(BlackKnightEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":black_knight"));
 
 	public static final DeferredItem<DeferredSpawnEggItem> BLACK_KNIGHT_SPAWN_EGG = ITEMS.register("black_knight_spawn_egg",
 			() -> new DeferredSpawnEggItem(BLACK_KNIGHT, 0x0b0b0b, 0xff9900, new Item.Properties()));
+
+	//25 Gaoranger
+	public static final DeferredHolder<EntityType<?>, EntityType<OrgettesEntity>> ORGETTES = MOBLIST.register("orgettes",
+			() -> EntityType.Builder.of(OrgettesEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":orgettes"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> ORGETTES_SPAWN_EGG = ITEMS.register("orgettes_spawn_egg",
+			() -> new DeferredSpawnEggItem(ORGETTES, 0x334a33, 0x8a1e34, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<DukeOrgRoukiEntity>> DUKE_ORG_ROUKI = MOBLIST.register("duke_org_rouki",
+			() -> EntityType.Builder.of(DukeOrgRoukiEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":duke_org_rouki"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> DUKE_ORG_ROUKI_SPAWN_EGG = ITEMS.register("duke_org_rouki_spawn_egg",
+			() -> new DeferredSpawnEggItem(DUKE_ORG_ROUKI, 0x0b0b0b, 0x7d7d7d, new Item.Properties()));
 
 	//33 Shinkenger
 	public static final DeferredHolder<EntityType<?>, EntityType<NanashisEntity>> NANASHIS = MOBLIST.register("nanashi",
@@ -88,7 +101,7 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> GEDOU_SHINKEN_RED_SPAWN_EGG = ITEMS.register("gedou_shinken_red_spawn_egg",
             () -> new DeferredSpawnEggItem(GEDOU_SHINKEN_RED, 0x0f0f0f, 0xf00000, new Item.Properties()));
 
-    //33 Shinkenger
+    //44 Ryusoulger
 	public static final DeferredHolder<EntityType<?>, EntityType<DrunnsEntity>> DRUNNS = MOBLIST.register("drunn",
             () -> EntityType.Builder.of(DrunnsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":drunn"));
     

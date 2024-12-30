@@ -1,6 +1,9 @@
 {
 	"replace": false,
 	"values": [
+	"supersentaicraft:mecha_nether_ore",
+	"supersentaicraft:gaoranger_ore",
+	"supersentaicraft:deepslate_gaoranger_ore",
 	"supersentaicraft:shinkenger_ore",
 	"supersentaicraft:deepslate_shinkenger_ore",
 	"supersentaicraft:ryusoulger_ore",

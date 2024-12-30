@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gaoranger/yellow_g_phone",
+      "supersentaicraft:gaoranger/eagle_sword",
+      "supersentaicraft:gaoranger/eagle_beast_king_sword"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:gao_eagle_jewel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

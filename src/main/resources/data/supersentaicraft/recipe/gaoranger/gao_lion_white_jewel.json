@@ -6,8 +6,7 @@
       "item": "supersentaicraft:gao_lion_jewel"
     },
 	{
-	  "item": "minecraft:dye",
-	  "data": 15
+	  "item": "minecraft:white_dye"
     }
   ],
   "result": {

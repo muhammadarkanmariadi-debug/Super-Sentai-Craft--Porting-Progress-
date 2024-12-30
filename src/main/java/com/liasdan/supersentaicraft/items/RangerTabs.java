@@ -179,6 +179,9 @@ public class RangerTabs {
 			event.accept(MobsCore.YARTOTS_SPAWN_EGG);
 			event.accept(MobsCore.BLACK_KNIGHT_SPAWN_EGG);
 
+			event.accept(MobsCore.ORGETTES_SPAWN_EGG);
+			event.accept(MobsCore.DUKE_ORG_ROUKI_SPAWN_EGG);
+
 			event.accept(MobsCore.NANASHIS_SPAWN_EGG);
 			event.accept(MobsCore.GEDOU_SHINKEN_RED_SPAWN_EGG);
 

@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:empty_gao_jewel",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:mikazukiken"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:flute_knife"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gao_wolf_jewel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gao_ligator_jewel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gao_hammerhead_jewel"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gaoranger/mecha/gao_king_torso",
+      "supersentaicraft:gaoranger/mecha/gao_king_legs",
+      "supersentaicraft:gaoranger/mecha/gao_king_boots"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:mecha_gear"
+          }
+        ]
+      }
+    },
+    "has_logo2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:empty_gao_jewel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo",
+      "has_logo2"
+    ]
+  ]
+}

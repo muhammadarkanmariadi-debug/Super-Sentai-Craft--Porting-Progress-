@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:gao_king_head"
+    },
+    "title": "Hyakujuu Gattai! GaoKing!",
+    "description": "Combine into GaoKing",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gaoranger/gaoranger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gao_king_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gao_king_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gao_king_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:gao_king_boots"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

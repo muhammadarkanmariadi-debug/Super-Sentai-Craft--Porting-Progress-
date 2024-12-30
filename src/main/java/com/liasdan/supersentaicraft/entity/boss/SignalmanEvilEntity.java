@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 
 public class SignalmanEvilEntity extends BaseFootsoldierEntity {
 
-    private final ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(Component.translatable(getDisplayName().getString()).withStyle(ChatFormatting.BLUE), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS));
+    private final ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(Component.translatable(getDisplayName().getString()).withStyle(ChatFormatting.WHITE), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS));
 
     public SignalmanEvilEntity(EntityType<? extends BaseFootsoldierEntity> type, Level level) {
         super(type, level);

@@ -2,10 +2,7 @@ package com.liasdan.supersentaicraft.items;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
-import com.liasdan.supersentaicraft.items.gaoranger.GBracePhoneItem;
-import com.liasdan.supersentaicraft.items.gaoranger.GPhoneItem;
-import com.liasdan.supersentaicraft.items.gaoranger.GaoHunterItem;
-import com.liasdan.supersentaicraft.items.gaoranger.GaoKingItem;
+import com.liasdan.supersentaicraft.items.gaoranger.*;
 import com.liasdan.supersentaicraft.items.others.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -33,6 +30,11 @@ public class GaorangerItems {
     
 	public static final DeferredItem<Item> EMPTY_GAO_JEWEL = ITEMS.register("empty_gao_jewel",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GAORANGER));
+
+	public static final DeferredItem<Item> UNFINISHED_GAO_GOD_JEWEL = ITEMS.register("unfinished_gao_god_jewel",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GAORANGER));
+	public static final DeferredItem<Item> EMPTY_GAO_GOD_JEWEL = ITEMS.register("empty_gao_god_jewel",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_LION_JEWEL_KING = ITEMS.register("gao_lion_jewel_king",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_king","blank",
@@ -160,6 +162,24 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
 					.ChangeBeltModel("geo/gao_hunter.geo.json").addAlternative(GAO_LIGATOR_JEWEL_BLUE_MOON.get()).AddToTabList(RangerTabs.GAORANGER));
+
+	public static final DeferredItem<Item> GAO_LIGATOR_JEWEL_BLUE_MOON_EVIL = ITEMS.register("gao_ligator_jewel_blue_moon_evil",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_evil","gao_hunter_blue_moon", "ligator_blade_blue_moon",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false)).ChangeBeltModel("geo/gao_hunter.geo.json"));
+
+	public static final DeferredItem<Item> GAO_LIGATOR_JEWEL_EVIL = ITEMS.register("gao_ligator_jewel_evil",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_evil","gao_hunter", "ligator_blade",
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).ChangeBeltModel("geo/gao_hunter.geo.json"));
 
 	public static final DeferredItem<Item> GAO_RHINOS_JEWEL = ITEMS.register("gao_rhinos_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_striker","gao_king","blank",
@@ -323,6 +343,11 @@ public class GaorangerItems {
 
 	public static final DeferredItem<BaseBlasterItem> FALCON_SUMMONER = ITEMS.register("falcon_summoner",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsChargeWeapon().AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+
+	public static final DeferredItem<SwordItem> MIKAZUKIKEN = ITEMS.register("mikazukiken",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
+	public static final DeferredItem<SwordItem> FLUTE_KNIFE = ITEMS.register("flute_knife",
+			() -> new FluteKnifeItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
 
 	public static final DeferredItem<Item> GAO_KING_BOOTS = ITEMS.register("gao_king_boots",
             () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.BOOTS, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));

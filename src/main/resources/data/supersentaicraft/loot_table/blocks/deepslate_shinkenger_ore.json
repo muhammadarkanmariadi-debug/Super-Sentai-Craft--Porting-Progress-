@@ -2,7 +2,6 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 0,
       "bonus_rolls": 0,
       "entries": [
         {
@@ -10,167 +9,190 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "supersentaicraft:deepslate_shinkenger_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
-              ]
+              ],
+              "name": "supersentaicraft:deepslate_shinkenger_ore"
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1
     },
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 16,
-          "name": "supersentaicraft:common_disk",
+          "weight": 25,
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:common_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:shishi_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:shishi_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:ryuu_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:ryuu_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:kame_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:kame_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:kuma_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:kuma_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "supersentaicraft:saru_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:saru_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "supersentaicraft:sushi_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:sushi_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "supersentaicraft:super_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:super_disk"
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "supersentaicraft:hyper_disk",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "supersentaicraft:hyper_disk"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:enchantments": [
+                  {
+                    "enchantments": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     }
   ],
-  "random_sequence": "supersentaicraft:deepslate_shinkenger_ore"
+  "random_sequence": "supersentaicraft:blocks/deepslate_shinkenger_ore"
 }

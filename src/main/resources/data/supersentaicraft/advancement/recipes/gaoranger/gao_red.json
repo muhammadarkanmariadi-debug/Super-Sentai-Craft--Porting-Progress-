@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gaoranger/red_g_phone",
+      "supersentaicraft:gaoranger/lion_beast_king_sword",
+      "supersentaicraft:gaoranger/lion_fang",
+      "supersentaicraft:gaoranger/lion_fang_claw",
+      "supersentaicraft:gaoranger/lion_fang_claw1",
+      "supersentaicraft:gaoranger/gao_mane_buster"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:gao_lion_jewel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

@@ -71,7 +71,9 @@
 "entity.supersentaicraft.imp":"Familiars Imps",
 
 "entity.supersentaicraft.orgettes":"Orgettes",
-"entity.supersentaicraft.rouki":"Duke Org Rouki",
+"entity.supersentaicraft.duke_org_rouki":"Duke Org Rouki",
+"item.supersentaicraft.orgettes_spawn_egg":"Orgettes Spawn Egg",
+"item.supersentaicraft.duke_org_rouki_spawn_egg":"Duke Org Rouki Spawn Egg",
 
 "entity.supersentaicraft.BarmiasBlackMob":"Barmia Soldiers (Black)",
 "entity.supersentaicraft.BarmiasWhiteMob":"Barmia Soldiers (White)",
@@ -932,6 +934,7 @@
 "item.supersentaicraft.empty_gao_jewel":"Empty Gao Jewel",
 "item.supersentaicraft.gaoranger_logo":"Gaoranger Logo",
 "block.supersentaicraft.gaoranger_ore":"Gaoranger Ore",
+"block.supersentaicraft.deepslate_gaoranger_ore":"Deepslate Gaoranger Ore",
 
 "item.supersentaicraft.gaoranger_head":"Gaoranger Helmet",
 "item.supersentaicraft.gaoranger_torso":"Gaoranger Chestplate",
@@ -2475,7 +2478,7 @@
 "tab.supersentaicraft.block": "Ranger Blocks",
 
 "item.supersentaicraft.mecha_gear":"Mecha Gear",
-"block.supersentaicraft.mecha_ore":"Mecha Ore",
+"block.supersentaicraft.mecha_nether_ore":"Mecha Nether Ore",
 "block.supersentaicraft.mecha_topia_ore":"Mecha Ore (Super Sentai Topia)",
 
 "item.supersentaicraft.hachibungi":"Octant",

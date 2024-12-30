@@ -1,0 +1,70 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gaoranger/mecha/gao_king_head",
+      "supersentaicraft:gaoranger/mecha/fin_blade"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:red_g_phone"
+          }
+        ]
+      }
+    },
+    "has_item2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:yellow_g_phone"
+          }
+        ]
+      }
+    },
+    "has_item3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blue_g_phone"
+          }
+        ]
+      }
+    },
+    "has_item4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:black_g_phone"
+          }
+        ]
+      }
+    },
+    "has_item5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:white_g_phone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item",
+      "has_item2",
+      "has_item3",
+      "has_item4",
+      "has_item5"
+    ]
+  ]
+}

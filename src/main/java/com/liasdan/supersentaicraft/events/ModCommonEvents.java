@@ -112,6 +112,9 @@ public class ModCommonEvents {
 		event.put(MobsCore.YARTOTS.get(), YartotsEntity.setAttributes().build());
 		event.put(MobsCore.BLACK_KNIGHT.get(), BlackKnightEntity.setAttributes().build());
 
+		event.put(MobsCore.ORGETTES.get(), OrgettesEntity.setAttributes().build());
+		event.put(MobsCore.DUKE_ORG_ROUKI.get(), DukeOrgRoukiEntity.setAttributes().build());
+
 		event.put(MobsCore.NANASHIS.get(), NanashisEntity.setAttributes().build());
 		event.put(MobsCore.GEDOU_SHINKEN_RED.get(), GedouShinkenRedEntity.setAttributes().build());
 
@@ -133,6 +136,8 @@ public class ModCommonEvents {
 		event.register(MobsCore.WUMPERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.YARTOTS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.ORGETTES.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.NANASHIS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
