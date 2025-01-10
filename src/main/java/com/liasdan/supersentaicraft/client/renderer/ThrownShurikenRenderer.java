@@ -20,6 +20,7 @@ public class ThrownShurikenRenderer<T extends Entity & ItemSupplier> extends Ent
 	   private final ItemRenderer itemRenderer;
 	   private final float scale;
 	   private final boolean fullBright;
+	private float rotation;
 
 	   public ThrownShurikenRenderer(EntityRendererProvider.Context p_174416_, float p_174417_, boolean p_174418_) {
 	      super(p_174416_);
@@ -38,12 +39,16 @@ public class ThrownShurikenRenderer<T extends Entity & ItemSupplier> extends Ent
 
 	   public void render(T p_116085_, float p_116086_, float p_116087_, PoseStack p_116088_, MultiBufferSource p_116089_, int p_116090_) {
 	      if (p_116085_.tickCount >= 2 || !(this.entityRenderDispatcher.camera.getEntity().distanceToSqr(p_116085_) < 12.25D)) {
+			  rotation += 10.0f;
+			  if(rotation >= 360) {
+				  rotation = 0;
+			  }
 	         p_116088_.pushPose();
 	         p_116088_.scale(this.scale, this.scale, this.scale);
 	         p_116088_.mulPose(this.entityRenderDispatcher.cameraOrientation());
-	         p_116088_.mulPose(Axis.YP.rotationDegrees(90.0F));
+	         p_116088_.mulPose(Axis.YP.rotationDegrees(rotation));
 	         p_116088_.mulPose(Axis.XP.rotationDegrees(90.0F));
-	         this.itemRenderer.renderStatic(p_116085_.getItem(), ItemDisplayContext.GROUND, p_116090_, OverlayTexture.NO_OVERLAY, p_116088_, p_116089_, p_116085_.level(), p_116085_.getId());
+	         this.itemRenderer.renderStatic(p_116085_.getItem(), ItemDisplayContext.GUI, p_116090_, OverlayTexture.NO_OVERLAY, p_116088_, p_116089_, p_116085_.level(), p_116085_.getId());
 	         p_116088_.popPose();
 	         super.render(p_116085_, p_116086_, p_116087_, p_116088_, p_116089_, p_116090_);
 	      }

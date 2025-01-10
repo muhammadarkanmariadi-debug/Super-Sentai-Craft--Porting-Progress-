@@ -24,7 +24,8 @@ public class RangerFormChangeItem extends BaseItem {
 	private List<MobEffectInstance> potionEffectList;
 	private int BELT;
 	private List<Item> NEEDITEM = new ArrayList<Item>();
-	public String RIDER_NAME;
+	protected String RANGER_NAME;
+	protected String OVERRIDE_RANGER_NAME;
 	private String BELT_TEX;
 	private String UPDATED_MODEL;
 	private String UPDATED_BELT;
@@ -32,6 +33,7 @@ public class RangerFormChangeItem extends BaseItem {
 	private Boolean FLYING_TEXT = false;
 	public Item SHIFT_ITEM = Items.APPLE;
 	public Item SWITCH_ITEM;
+	protected Boolean RESET_FORM = false;
 	public List<RangerFormChangeItem> alternative = new ArrayList<RangerFormChangeItem>();
 	public RangerFormChangeItem alsoChange2ndSlot;
 	public String[] compatibilityList= new String[] {""};
@@ -44,14 +46,14 @@ public class RangerFormChangeItem extends BaseItem {
 	private RangerFormChangeItem NEED_FORM_SLOT_4;
 
 
-	public RangerFormChangeItem( Properties properties,int belt,String formName,String ridername,String beltTex, MobEffectInstance... effects) {
+	public RangerFormChangeItem( Properties properties,int belt,String formName,String rangername,String beltTex, MobEffectInstance... effects) {
 		super( properties);
 
 		potionEffectList = Lists.newArrayList(effects);
 		FORM_NAME = formName;
 		BELT_TEX = beltTex;
 		BELT = belt;
-		RIDER_NAME = ridername;
+		RANGER_NAME = rangername;
 	}
 
 	public List<MobEffectInstance> getPotionEffectList() {
@@ -82,6 +84,10 @@ public class RangerFormChangeItem extends BaseItem {
 		return "geo/rangerbelt.geo.json";
 	}
 
+	public String getRangerName(String name) {
+		return (OVERRIDE_RANGER_NAME!=null ? OVERRIDE_RANGER_NAME : name);
+	}
+
 	public String get_FlyingModel() {
 		return FLYING_MODEL;
 	}
@@ -103,6 +109,11 @@ public class RangerFormChangeItem extends BaseItem {
 		UPDATED_BELT=beltmodel;
 		return this;
 	}
+
+	public RangerFormChangeItem ChangeRangerName(String name) {
+		OVERRIDE_RANGER_NAME=name;
+		return this;
+	}
 	
 	public RangerFormChangeItem ChangeSlot(int slot) {
 		Slot=slot;
@@ -117,6 +128,11 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public RangerFormChangeItem addAlternative( Item item) {
 		alternative.add((RangerFormChangeItem) item);
+		return this;
+	}
+
+	public RangerFormChangeItem BackToBase() {
+		RESET_FORM=true;
 		return this;
 	}
 
@@ -143,13 +159,13 @@ public class RangerFormChangeItem extends BaseItem {
 		return this;
 	}
 
-	public BaseItem AddNeedItemList(List<Item> needChangerItem) {
+	public RangerFormChangeItem AddNeedItemList(List<Item> needChangerItem) {
 		needItemList=needChangerItem;
 		HAS_NEED_ITEM_LIST=true;
 		return this;
 	}
 	
-	public BaseItem AddCompatibilityList(String[] List) {
+	public RangerFormChangeItem AddCompatibilityList(String[] List) {
 		 compatibilityList=List;
 		return this;
 	}
@@ -171,7 +187,7 @@ public class RangerFormChangeItem extends BaseItem {
 		if (this == OtherItems.BLANK_FORM.get()) {
 			return true;
 		}
-		if(belt.Rider!=RIDER_NAME&!iscompatible(belt.Rider)) {
+		if(belt.Rider!=RANGER_NAME&!iscompatible(belt.Rider)) {
 			return false;
 		}
 		if ( !NEEDITEM.isEmpty()) {
@@ -203,7 +219,7 @@ public class RangerFormChangeItem extends BaseItem {
 		if (this == OtherItems.BLANK_FORM.get()) {
 			return true;
 		}
-		if(belt.Rider!=RIDER_NAME&!iscompatible(belt.Rider)) {
+		if(belt.Rider!=RANGER_NAME&!iscompatible(belt.Rider)) {
 			return false;
 		}
 		if ( !NEEDITEM.isEmpty()) {
@@ -243,6 +259,8 @@ public class RangerFormChangeItem extends BaseItem {
 				((RangerFormChangeItem)SHIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
 			}
 			else if (CanChange(p_41129_,belt,BELT)) {
+				if (RESET_FORM)RangerChangerItem.reset_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET));
+
 				if (alsoChange2ndSlot !=null)RangerChangerItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
 
 				if (SWITCH_ITEM!=null&RangerChangerItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), Slot)==this) RangerChangerItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, Slot);

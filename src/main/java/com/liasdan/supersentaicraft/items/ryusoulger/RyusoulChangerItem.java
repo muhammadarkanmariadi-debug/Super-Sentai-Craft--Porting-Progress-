@@ -33,7 +33,8 @@ public class RyusoulChangerItem extends RangerChangerItem{
 		
 		if (equipmentSlot == EquipmentSlot.FEET) {
 				if (rider.getMainHandItem().getItem()==RyusoulgerItems.RYUSOUL_KEN.get()) {
-					belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
+					if (get_Form_Item(itemstack,1).getBeltTex()=="lupinranger_belt") belt = "lupinranger_belt";
+					else belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
 				}
 				else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {
 					belt = get_Form_Item(itemstack,1).getBeltTex();
@@ -42,11 +43,10 @@ public class RyusoulChangerItem extends RangerChangerItem{
 		}
 		else if (equipmentSlot == EquipmentSlot.HEAD) {
 			if (get_Form_Item(itemstack,2).getFormName(fly)=="") return "blank";
-			else if (get_Form_Item(itemstack,2).getFormName(fly)=="_max")  return rangerName+get_Form_Item(itemstack,2).getFormName(fly);
 			else return get_Form_Item(itemstack,2).getFormName(fly);
 		}
 		
-		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
+		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);
 	}
 	
 	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {

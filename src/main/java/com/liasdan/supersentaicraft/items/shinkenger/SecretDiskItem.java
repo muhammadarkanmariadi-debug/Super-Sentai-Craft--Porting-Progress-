@@ -30,6 +30,9 @@ public class SecretDiskItem extends RangerFormChangeItem {
 				((RangerFormChangeItem)SHIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
 			}
 			else if (CanChange(p_41129_,belt,BELT)) {
+				if (alsoChange2ndSlot !=null)RangerChangerItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
+				if (RESET_FORM)RangerChangerItem.reset_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET));
+
 				if (this == ShinkengerItems.HYPER_DISK.get())
 				{
 					if (belt==ShinkengerItems.SUSHI_CHANGER.get())

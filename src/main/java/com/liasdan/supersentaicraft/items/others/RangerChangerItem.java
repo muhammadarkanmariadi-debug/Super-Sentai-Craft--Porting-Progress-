@@ -117,7 +117,7 @@ public class RangerChangerItem extends RangerArmorItem{
 			}
 			return "belts/"+belt;
 		}
-		else return riderName+get_Form_Item(itemstack,1).getFormName(fly);
+		else return get_Form_Item(itemstack,1).getRangerName(riderName)+get_Form_Item(itemstack,1).getFormName(fly);
 
 	}
 
@@ -134,6 +134,18 @@ public class RangerChangerItem extends RangerArmorItem{
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
 	}
 
+	public static void reset_Form_Item(ItemStack  itemstack)
+	{
+		if(itemstack.getItem() instanceof RangerChangerItem belt){
+			if (belt.Num_Base_Form_Item!=1) {
+				for (int n = 0; n < belt.Num_Base_Form_Item-1; n++)
+				{
+					set_Form_Item( itemstack,belt.Extra_Base_Form_Item.get(n),2+n);
+				}
+			}
+			set_Form_Item(itemstack,belt.Base_Form_Item,1);
+		}
+	}
 
 	public static void set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
@@ -206,6 +218,11 @@ public class RangerChangerItem extends RangerArmorItem{
 		}
 
 		return Base_Form_Item;
+	}
+
+	public RangerChangerItem CanChangeTexture() {
+		SuperSentaiCraftCore.CHANGE_CHANGER_TEXTURE.add(this);
+		return this;
 	}
 
 

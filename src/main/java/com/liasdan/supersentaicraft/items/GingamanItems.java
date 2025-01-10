@@ -39,7 +39,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> GREEN_GINGA_MEDAL = ITEMS.register("green_ginga_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ginga_green","gingaman_belt",
@@ -48,7 +48,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 2,true,false))
-            .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> BLUE_GINGA_MEDAL = ITEMS.register("blue_ginga_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ginga_blue","gingaman_belt",
@@ -56,7 +56,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> YELLOW_GINGA_MEDAL = ITEMS.register("yellow_ginga_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ginga_yellow","gingaman_belt",
@@ -64,7 +64,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> PINK_GINGA_MEDAL = ITEMS.register("pink_ginga_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ginga_pink","gingaman_belt",
@@ -72,7 +72,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeSlot(1).ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> BLACK_KNIGHT_CORE = ITEMS.register("black_knight_core",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","black_knight","black_knight_belt",
@@ -100,19 +100,19 @@ public class GingamanItems {
     
     public static final DeferredItem<Item> RED_GINGA_BRACE = ITEMS.register("red_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_red",RED_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
-    		.Add_Extra_Base_Form_Items(RED_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+    		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<Item> GREEN_GINGA_BRACE = ITEMS.register("green_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_green",GREEN_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
-    		.Add_Extra_Base_Form_Items(GREEN_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+    		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<Item> BLUE_GINGA_BRACE = ITEMS.register("blue_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_blue",BLUE_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
-    		.Add_Extra_Base_Form_Items(BLUE_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+    		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<Item> YELLOW_GINGA_BRACE = ITEMS.register("yellow_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_yellow",YELLOW_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
-    		.Add_Extra_Base_Form_Items(YELLOW_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+    		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<Item> PINK_GINGA_BRACE = ITEMS.register("pink_ginga_brace",
     		() -> new GingaBraceItem(ArmorMaterials.DIAMOND,"ginga_pink",PINK_GINGA_MEDAL,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
-    		.Add_Extra_Base_Form_Items(PINK_GINGA_MEDAL).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+    		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 
     public static final DeferredItem<Item> BLACK_KNIGHT_BULL_RIOT = ITEMS.register("black_knight_bull_riot",
     		() -> new BullRiotItem(ArmorMaterials.DIAMOND,"black_knight",BLACK_KNIGHT_CORE,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())

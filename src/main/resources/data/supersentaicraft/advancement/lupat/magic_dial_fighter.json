@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:magic_dial_fighter"
+    },
+    "title": "#28: Fight on your Birthday too",
+    "description": "Use Magic Dial Fighter",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:lupat/scissor_dial_fighter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_vs_changer",
+                "supersentaicraft:blue_vs_changer",
+                "supersentaicraft:yellow_vs_changer",
+                "supersentaicraft:ichigou_vs_changer",
+                "supersentaicraft:nigou_vs_changer",
+                "supersentaicraft:sangou_vs_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex2:\"supersentaicraft:magic_dial_fighter\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

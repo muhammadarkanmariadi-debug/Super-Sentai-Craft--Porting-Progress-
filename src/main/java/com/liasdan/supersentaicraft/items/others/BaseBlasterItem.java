@@ -126,8 +126,7 @@ public class BaseBlasterItem extends BowItem {
 						player.level().addFreshEntity(fireball);
 						stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 					}
-
-					if (Charged) {
+					else if (Charged) {
 						if (get_mode(stack)<30) set_mode(stack,get_mode(stack)+1);
 						else if (get_mode(stack)==30) {
 							player.addEffect(new MobEffectInstance(EffectCore.EXPLOSIONSHOT, 40, 2,true,false));

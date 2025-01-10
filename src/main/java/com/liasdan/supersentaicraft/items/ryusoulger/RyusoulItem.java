@@ -1,6 +1,7 @@
 package com.liasdan.supersentaicraft.items.ryusoulger;
 
 import com.liasdan.supersentaicraft.items.RyusoulgerItems;
+import com.liasdan.supersentaicraft.items.lupatranger.VSChangerItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
 
@@ -30,6 +31,9 @@ public class RyusoulItem extends RangerFormChangeItem {
 				((RangerFormChangeItem)SHIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
 			}
 			else if (CanChange(p_41129_,belt,BELT)) {
+				if (RESET_FORM)RangerChangerItem.reset_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET));
+				if (alsoChange2ndSlot !=null)RangerChangerItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
+
 				if (this == RyusoulgerItems.MAX_RYUSOUL.get())
 				{
 					if (p_41129_.getItemBySlot(EquipmentSlot.OFFHAND).getItem()==RyusoulgerItems.MAX_RYUSOUL_CHANGER.get())
@@ -37,16 +41,12 @@ public class RyusoulItem extends RangerFormChangeItem {
 						if (BELT.getItem() == RyusoulgerItems.RED_RYUSOUL_CHANGER.get()) RangerChangerItem.set_Form_Item(BELT,this, Slot);
 					}
 				}
-				else if (this == RyusoulgerItems.NOBLESSE.get() | this == RyusoulgerItems.RED_RYUSOUL.get() | this == RyusoulgerItems.BLUE_RYUSOUL.get() | this == RyusoulgerItems.PINK_RYUSOUL.get()
-						| this == RyusoulgerItems.GREEN_RYUSOUL.get() | this == RyusoulgerItems.BLACK_RYUSOUL.get())
-				{
-					RangerChangerItem.set_Form_Item(BELT,this, Slot);
-				}
 				else if (BELT.getItem() == RyusoulgerItems.RED_RYUSOUL_CHANGER.get() | 
 						BELT.getItem() == RyusoulgerItems.BLUE_RYUSOUL_CHANGER.get() | 
 						BELT.getItem() == RyusoulgerItems.PINK_RYUSOUL_CHANGER.get() |	
 						BELT.getItem() == RyusoulgerItems.GREEN_RYUSOUL_CHANGER.get() | 
-						BELT.getItem() == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get()) {
+						BELT.getItem() == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get() |
+						BELT.getItem() instanceof VSChangerItem) {
 					
 					if (p_41129_.getItemBySlot(EquipmentSlot.OFFHAND).getItem()==RyusoulgerItems.RYUSOUL_KEN.get())
 					{

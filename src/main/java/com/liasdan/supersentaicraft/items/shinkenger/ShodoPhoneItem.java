@@ -48,7 +48,6 @@ public class ShodoPhoneItem extends RangerChangerItem{
 		}
 		else if (equipmentSlot == EquipmentSlot.HEAD) {
 			if (get_Form_Item(itemstack,2).getFormName(fly)=="") return "blank";
-			else if (get_Form_Item(itemstack,2).getFormName(fly)=="_gedou") return rangerName+get_Form_Item(itemstack,2).getFormName(fly);
 			else return get_Form_Item(itemstack,2).getFormName(fly);
 		}
 		

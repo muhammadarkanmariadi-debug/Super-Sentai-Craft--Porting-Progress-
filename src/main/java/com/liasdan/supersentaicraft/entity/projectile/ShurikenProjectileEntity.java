@@ -45,4 +45,8 @@ public class ShurikenProjectileEntity extends ThrowableItemProjectile{
 			this.discard();
 		}
 	}
+
+	protected double getDefaultGravity() {
+		return 0.003;
+	}
 }

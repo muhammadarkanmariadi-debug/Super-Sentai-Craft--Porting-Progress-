@@ -4,6 +4,7 @@
 	"textures": {
 		"layer0": "supersentaicraft:item/vs_changer"
 	},
+	"gui_light": "front",
 	"overrides": [
 		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/red_vs_changer"},
 		{"predicate": {"pull": 2}, "model": "supersentaicraft:item/blue_vs_changer"},
@@ -44,10 +45,14 @@
 		},
 		"ground": {
 			"translation": [0, 2, 0],
-			"scale": [0.5, 0.5, 0.5]
+			"scale": [1, 1, 0.5]
+		},
+		"gui": {
+			"scale": [2, 2, 1]
 		},
 		"fixed": {
-			"rotation": [0, 180, 0]
+			"rotation": [0, 180, 0],
+			"scale": [2, 2, 1]
 		}
 	},
 	"_comment": "Generated using MiningMark48's JSON Generator."

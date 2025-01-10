@@ -4,6 +4,9 @@
 	"textures": {
 		"layer0": "supersentaicraft:item/lupin_x_changer"
 	},
+	"overrides": [
+		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/patran_x_changer"}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0, -90, 55],

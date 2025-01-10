@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:siren_striker"
+    },
+    "title": "#38: Collection From Space",
+    "description": "Change into Super Lupin X",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:lupat/patren_ugou",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:lupin_x_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:siren_striker_x\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

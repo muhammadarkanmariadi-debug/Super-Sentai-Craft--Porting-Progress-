@@ -116,7 +116,7 @@ public class GaorangerItems {
 	public static final DeferredItem<Item> GAO_ELEPHANT_JEWEL = ITEMS.register("gao_elephant_jewel",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GAORANGER));
 
-	public static final DeferredItem<Item> GAO_GIRRAFE_JEWEL = ITEMS.register("gao_giraffe_jewel",
+	public static final DeferredItem<Item> GAO_GIRAFFE_JEWEL = ITEMS.register("gao_giraffe_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_giraffe","gao_king","blank",
 					new MobEffectInstance(EffectCore.SLASH, 40, 3,true,false),
 					new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false))
@@ -372,7 +372,7 @@ public class GaorangerItems {
 
 	public static final DeferredItem<Item> GAO_ICARUS_HELMET = ITEMS.register("gao_icarus_head",
 			() -> new GaoKingItem(ArmorMaterials.NETHERITE,"gao_icarus",GAO_FALCON_JEWEL,GAO_KING_CHESTPLATE,GAO_KING_LEGGINGS,GAO_KING_BOOTS, new Item.Properties())
-					.Add_Extra_Base_Form_Items(GAO_GIRRAFE_JEWEL,GAO_DEERS_JEWEL,GAO_RHINOS_JEWEL).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+					.Add_Extra_Base_Form_Items(GAO_GIRAFFE_JEWEL,GAO_DEERS_JEWEL,GAO_RHINOS_JEWEL).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
 
 	public static final DeferredItem<Item> GAO_GOD_HELMET = ITEMS.register("gao_god_head",
 			() -> new GaoKingItem(ArmorMaterials.NETHERITE,"gao_god",GAO_LEON_JEWEL,GAO_KING_CHESTPLATE,GAO_KING_LEGGINGS,GAO_KING_BOOTS, new Item.Properties())

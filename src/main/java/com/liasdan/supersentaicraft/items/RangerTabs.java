@@ -59,8 +59,12 @@ public class RangerTabs {
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> ShinkengerTab = CREATIVE_MODE_TABS.register("ssc033", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(ShinkengerItems.SHINKENGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_shinkenger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.shinkenger")).build());
-    
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> RyusoulgerTab = CREATIVE_MODE_TABS.register("ssc044", () ->
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> LuPatRangerTab = CREATIVE_MODE_TABS.register("ssc043", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(LuPatRangerItems.LUPATRANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_lupat_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.lupat")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> RyusoulgerTab = CREATIVE_MODE_TABS.register("ssc044", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(RyusoulgerItems.RYUSOULGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_ryusoulger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.ryusoulger")).build());
 
@@ -87,8 +91,10 @@ public class RangerTabs {
 	public static List<Item> GAORANGER= new ArrayList<Item>();
     
     public static List<Item> SHINKENGER= new ArrayList<Item>();
-    
-    public static List<Item> RYUSOULGER= new ArrayList<Item>();
+
+	public static List<Item> LUPATRANGER= new ArrayList<Item>();
+
+	public static List<Item> RYUSOULGER= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     
@@ -153,6 +159,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.SHINKENGER.size(); i++)
 			{
 				event.accept( RangerTabs.SHINKENGER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.LuPatRangerTab.get()) {
+			for (int i = 0; i < RangerTabs.LUPATRANGER.size(); i++)
+			{
+				event.accept( RangerTabs.LUPATRANGER.get(i));
 			}
 
 		}

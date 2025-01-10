@@ -14,7 +14,8 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
 public class WeaponProjectileEntity extends ThrowableItemProjectile{
-	
+	private float rotation;
+
 	public WeaponProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
 		super(pEntityType, pLevel);
 	}
@@ -36,7 +37,7 @@ public class WeaponProjectileEntity extends ThrowableItemProjectile{
 	      super.onHitEntity(p_37404_);
 	      Entity entity = p_37404_.getEntity();
 	      entity.hurt(this.damageSources().thrown(this, this.getOwner()), (float)7);
-	   }
+	}
 
 	protected void onHit(HitResult p_37406_) {
 		super.onHit(p_37406_);
@@ -44,5 +45,9 @@ public class WeaponProjectileEntity extends ThrowableItemProjectile{
 			this.level().broadcastEntityEvent(this, (byte)3);
 			this.discard();
 		}
+	}
+
+	protected double getDefaultGravity() {
+		return 0.003;
 	}
 }
