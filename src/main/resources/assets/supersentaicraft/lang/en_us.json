@@ -121,7 +121,8 @@
 "entity.supersentaicraft.GaruBikeMob":"Garu Bike",
 "entity.supersentaicraft.ExAidMob":"Kamen Rider Ex-Aid",
 
-"entity.supersentaicraft.PordermenMob":"Porderman",
+"entity.supersentaicraft.porderman":"Pordermen",
+"item.supersentaicraft.porderman_spawn_egg":"Pordermen Spawn Egg",
 
 "entity.supersentaicraft.drunn":"Drunn Soldiers",
 "entity.supersentaicraft.gaisoulg":"Gaisoulg",
@@ -1856,7 +1857,8 @@
 "item.supersentaicraft.lupat_logo":"Lupinranger VS Patranger Logo",
 "item.supersentaicraft.lupinranger_logo":"Lupinranger Logo",
 "item.supersentaicraft.patranger_logo":"Patranger Logo",
-"block.supersentaicraft.vs_vehicle_ore":"Lupinranger VS Patranger Ore",
+"block.supersentaicraft.lupat_ore":"Lupinranger VS Patranger Ore",
+"block.supersentaicraft.deepslate_lupat_ore":"Deepslate Lupinranger VS Patranger Ore",
 
 "item.supersentaicraft.lupat_head":"Lupinranger VS Patranger Helmet",
 "item.supersentaicraft.lupat_torso":"Lupinranger VS Patranger Chestplate",

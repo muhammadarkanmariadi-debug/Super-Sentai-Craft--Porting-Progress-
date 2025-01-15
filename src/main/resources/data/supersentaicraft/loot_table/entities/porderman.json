@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:red_dial_fighter",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:ichigou_trigger_machine",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blue_dial_fighter",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:nigou_trigger_machine",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:yellow_dial_fighter",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:sangou_trigger_machine",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:silver_x_train"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gold_x_train"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blank_striker",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blank_striker"
+        }
+      ]
+    }
+  ]
+}

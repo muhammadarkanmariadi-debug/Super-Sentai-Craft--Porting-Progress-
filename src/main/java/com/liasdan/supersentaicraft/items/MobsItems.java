@@ -46,7 +46,10 @@ public class MobsItems {
 
 	public static final DeferredItem<SwordItem> NANASHI_DAO = ITEMS.register("nanashi_dao",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
-    
+
+	public static final DeferredItem<SwordItem> PORDERMAN_SWORD = ITEMS.register("porderman_sword",
+			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
 	public static final DeferredItem<SwordItem> DRUNN_SPEAR = ITEMS.register("drunn_spear",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
     public static final DeferredItem<BaseShieldItem> DRUNN_SHIELD = ITEMS.register("drunn_shield",

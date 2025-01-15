@@ -1,10 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "lupatranger",
+  "group": "lupat",
   "pattern": [
-    "aaa",
     "a a",
-	"a a"
+    "aaa",
+	"aaa"
   ],
   "key": {
     "a": {
@@ -12,6 +12,6 @@
     }
   },
   "result": {
-    "id": "supersentaicraft:lupat_legs"
+    "id": "supersentaicraft:lupat_torso"
   }
 }

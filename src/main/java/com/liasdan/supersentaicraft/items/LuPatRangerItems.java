@@ -203,6 +203,9 @@ public class LuPatRangerItems {
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 5,true,false))
 					.ChangeSlot(2).BackToBase().AddCompatibilityList(PATRENSOUL).addAlternative(SIREN_STRIKER_X.get()).AddToTabList(RangerTabs.LUPATRANGER));
 
+	public static final DeferredItem<Item> UNFINISHED_LUPIN_MAGNUM = ITEMS.register("unfinished_lupin_magnum",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER));
+
 	public static final DeferredItem<Item> LUPATRANGER_HELMET = ITEMS.register("lupat_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
     public static final DeferredItem<Item> LUPATRANGER_CHESTPLATE = ITEMS.register("lupat_torso",

@@ -101,7 +101,15 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> GEDOU_SHINKEN_RED_SPAWN_EGG = ITEMS.register("gedou_shinken_red_spawn_egg",
             () -> new DeferredSpawnEggItem(GEDOU_SHINKEN_RED, 0x0f0f0f, 0xf00000, new Item.Properties()));
 
-    //44 Ryusoulger
+	//42 LuPat
+	public static final DeferredHolder<EntityType<?>, EntityType<PordermenEntity>> PORDERMEN = MOBLIST.register("porderman",
+			() -> EntityType.Builder.of(PordermenEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":porderman"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> PORDERMEN_SPAWN_EGG = ITEMS.register("porderman_spawn_egg",
+			() -> new DeferredSpawnEggItem(PORDERMEN, 0x369e86, 0xe8e8e7, new Item.Properties()));
+
+
+	//43 Ryusoulger
 	public static final DeferredHolder<EntityType<?>, EntityType<DrunnsEntity>> DRUNNS = MOBLIST.register("drunn",
             () -> EntityType.Builder.of(DrunnsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":drunn"));
     
