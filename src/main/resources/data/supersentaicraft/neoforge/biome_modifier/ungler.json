@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "#supersentaicraft:wet",
+  "biomes": "supersentaicraft:swamp",
   "spawners": {
     "type": "supersentaicraft:ungler",
     "weight": 15,

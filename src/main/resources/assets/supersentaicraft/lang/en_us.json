@@ -1,9 +1,9 @@
 {
 "effect.supersentaicraft.flying":"Flying",
 "effect.supersentaicraft.fire_punch":"Fire Punch",
-"effect.supersentaicraft.punch":"Punch Boost",
-"effect.supersentaicraft.big":"Big",
-"effect.supersentaicraft.slash":"Slash Boost",
+"effect.supersentaicraft.punch":"Punch",
+"effect.supersentaicraft.big":"Giant",
+"effect.supersentaicraft.slash":"Slash",
 "effect.supersentaicraft.fire_slash":"Fire Slash",
 "effect.supersentaicraft.fire_shot":"Fire Shot",
 "effect.supersentaicraft.shot_boost":"Shot Boost",
@@ -12,6 +12,19 @@
 "effect.supersentaicraft.sneakboost":"Sneak Boost",
 "effect.supersentaicraft.waterboost":"Water Boost",
 "effect.supersentaicraft.frost_walker":"Frost Walker",
+"effect.supersentaicraft.smoke":"Smoke",
+
+"effect.supersentaicraft.boost":"Boost",
+"effect.supersentaicraft.anti_poison":"Anti Poison",
+"effect.supersentaicraft.small":"Shrink",
+  "effect.supersentaicraft.explosion_punch":"Explosive Punch",
+  "effect.supersentaicraft.reflect":"Reflect",
+  "effect.supersentaicraft.explosion_shot":"Explosive Shot",
+  "effect.supersentaicraft.thunder_shot":"Thunder Shot",
+  "effect.supersentaicraft.thunder_punch":"Thunder Punch",
+  "effect.supersentaicraft.flat":"Flatten",
+  "effect.supersentaicraft.stretch":"Stretch",
+  "effect.supersentaicraft.wide":"Wide",
 
 "entity.supersentaicraft.zolder":"Zolders",
 "item.supersentaicraft.zolder_spawn_egg":"Zolders Spawn Egg",
@@ -145,6 +158,7 @@
 "entity.supersentaicraft.DonMurasameMob":"Don Murasame",
 
 "item.supersentaicraft.super_sentai_logo":"Super Sentai Logo",
+"item.supersentaicraft.super_sentai_book":"Super Sentai Encyclopedia",
 
 //00 Mobs Weapon
 "item.supersentaicraft.zolders_sword":"Zolders Sword",

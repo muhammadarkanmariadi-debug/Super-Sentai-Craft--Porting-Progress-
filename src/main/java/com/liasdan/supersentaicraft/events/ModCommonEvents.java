@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.events;
 
+import java.util.List;
 import java.util.Objects;
 
 import com.liasdan.supersentaicraft.effect.EffectCore;
@@ -7,13 +8,21 @@ import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 
+import com.liasdan.supersentaicraft.items.OtherItems;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
@@ -92,7 +101,15 @@ public class ModCommonEvents {
 
 		@SubscribeEvent
 		public void addCustomTrades(VillagerTradesEvent event) {
+			if (event.getType() == VillagerProfession.LIBRARIAN) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(OtherItems.SUPER_SENTAI_BOOK.get(), 1);
+				int villagerLevel = 1;
 
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemCost(Items.EMERALD, 2),
+						stack, 10, 8, 0.02F));
+			}
 		}
 	}
 

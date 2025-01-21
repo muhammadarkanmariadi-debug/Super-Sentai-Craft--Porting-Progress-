@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "#supersentaicraft:dry",
+  "biomes": "supersentaicraft:savanna",
   "spawners": {
     "type": "supersentaicraft:porderman",
     "weight": 15,

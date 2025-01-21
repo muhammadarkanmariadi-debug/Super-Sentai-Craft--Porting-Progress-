@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "#supersentaicraft:normal",
+  "biomes": "supersentaicraft:plains",
   "spawners": {
     "type": "supersentaicraft:wumper",
     "weight": 15,

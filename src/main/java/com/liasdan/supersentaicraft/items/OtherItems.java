@@ -3,13 +3,7 @@ package com.liasdan.supersentaicraft.items;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseItem;
-import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
-import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
+import com.liasdan.supersentaicraft.items.others.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -40,6 +34,9 @@ public class OtherItems {
 			() -> new RangerFormChangeItem(new Item.Properties(), 0, "", "", "blank",
 					new MobEffectInstance(EffectCore.BIG, 40, 2,true,false))
 					.addSwitchForm(BLANK_FORM.get()).AddCompatibilityList(SentaiRobo).AddToTabList(RangerTabs.MISC));
+
+	public static final DeferredItem<Item> SUPER_SENTAI_BOOK = ITEMS.register("super_sentai_book",
+			() -> new SuperSentaiBookItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
