@@ -37,7 +37,7 @@
        
         {
             "predicate": {
-                "pull": 1
+                "change": 1
             },
             "model": "supersentaicraft:item/beast_attack_rod_red_gun"
         },

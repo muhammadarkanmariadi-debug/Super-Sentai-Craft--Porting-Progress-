@@ -51,7 +51,6 @@ public class GedouShinkenRedEntity extends BaseFootsoldierEntity {
     public void tick() {
     	super.tick();
     	RangerChangerItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), ShinkengerItems.GEDOU_DISK.get(), 1);
-    	RangerChangerItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), ShinkengerItems.GEDOU_DISK.get(), 2);
     }
 
 

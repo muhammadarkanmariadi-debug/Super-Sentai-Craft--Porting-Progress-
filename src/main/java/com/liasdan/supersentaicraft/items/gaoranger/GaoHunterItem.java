@@ -46,15 +46,23 @@ public class GaoHunterItem extends MechaGattaiItem {
 			else if (!this.isTransformed(rider)) {
 				belt = "blank";
 			}
-			else if (((MechaGattaiItem)itemstack.getItem()).BELT_TEXT==null) {
-				belt = get_Form_Item(itemstack,1).getBeltTex();
+			else if (rangerName == "gao_hunter") {
+				belt = "ligator_blade";
 			}
+			else if (rangerName == "gao_hunter_blue_moon") {
+				belt = "ligator_blade_blue_moon";
+			}
+			else belt = "blank";
 			return belt;
 		}
 
 		if (equipmentSlot == EquipmentSlot.FEET) return get_Form_Item(itemstack,2).getFormName(fly);
 		else if (equipmentSlot == EquipmentSlot.CHEST) return get_Form_Item(itemstack,3).getFormName(fly);
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
+	}
+
+	public ResourceLocation getBeltModelResource(ItemStack itemstack,MechaArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/gao_hunter.geo.json");
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {

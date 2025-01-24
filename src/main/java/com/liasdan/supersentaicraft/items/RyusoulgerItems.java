@@ -39,8 +39,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class RyusoulgerItems {
 
-	public static String[] RYUSOULGERS= new String[] {"ryusoul_red","ryusoul_blue","ryusoul_pink","ryusoul_green","ryusoul_black","ryusoul_gold","gaisoulg","ryusoul_brown","ryusoul_moria"};
-	public static String[] LUPATRANGER= new String[] {"lupin_red","lupin_blue","lupin_yellow","patren_1gou","patren_2gou","patren_3gou"};
+	public static String[] RYUSOULGERS= new String[] {"ryusoul_red","ryusoul_blue","ryusoul_pink","ryusoul_green","ryusoul_black","ryusoul_gold","gaisoulg","ryusoul_brown","ryusoul_moria","lupin_red","lupin_blue","lupin_yellow","patren_1gou","patren_2gou","patren_3gou"};
+	public static String[] RYUSOULGER= new String[] {"ryusoul_red","ryusoul_blue","ryusoul_pink","ryusoul_green","ryusoul_black","ryusoul_gold"};
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
@@ -93,7 +93,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltchangerweapon.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GOLD_RYUSOUL = ITEMS.register("gold_ryusoul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_gold","ryusoul_gold_belt",
+            () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_gold","ryusoul_gold_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -101,7 +101,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GAI_SOUL = ITEMS.register("gai_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","gaisoulg","blank",
+            () -> new RangerFormChangeItem(new Item.Properties(),0,"","gaisoulg","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
@@ -109,7 +109,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BROWN_RYUSOUL = ITEMS.register("brown_ryusoul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_brown","blank",
+            () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_brown","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
@@ -120,125 +120,125 @@ public class RyusoulgerItems {
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_tsuyo_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> NOBI_SOUL = ITEMS.register("nobi_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_nobi_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> OMO_SOUL = ITEMS.register("omo_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_omo_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> HAYA_SOUL = ITEMS.register("haya_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_haya_soul","","blank",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KATA_SOUL = ITEMS.register("kata_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kata_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KIKE_SOUL = ITEMS.register("kike_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kike_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KUSA_SOUL = ITEMS.register("kusa_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kusa_soul","","blank",
             		new MobEffectInstance(EffectCore.SMOKE, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MIE_SOUL = ITEMS.register("mie_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_mie_soul","","blank",
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MUKIMUKI_SOUL = ITEMS.register("mukimuki_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_mukimuki_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> CHIISA_SOUL = ITEMS.register("chiisa_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_chiisa_soul","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SMALL, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MABUSHI_SOUL = ITEMS.register("mabushi_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_mabushi_soul","","blank",
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MIST_SOUL = ITEMS.register("mist_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_mist_soul","","blank",
             		new MobEffectInstance(EffectCore.SMOKE, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KARU_SOUL = ITEMS.register("karu_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_karu_soul","","blank",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> GYAKU_SOUL = ITEMS.register("gyaku_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_gyaku_soul","","blank",
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.SATURATION, 40, 3,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KOTAE_SOUL = ITEMS.register("kotae_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kotae_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MIGAKE_SOUL = ITEMS.register("migake_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_migake_soul","","blank",
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KUNKUN_SOUL = ITEMS.register("kunkun_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kunkun_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> PUKUPUKU_SOUL = ITEMS.register("pukupuku_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_pukupuku_soul","","blank",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KAKURE_SOUL = ITEMS.register("kakure_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kakure_soul","","blank",
             		new MobEffectInstance(MobEffects.INVISIBILITY, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> FUE_SOUL = ITEMS.register("fue_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_fue_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> NEMU_SOUL = ITEMS.register("nemu_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_nemu_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MAWARI_SOULD = ITEMS.register("mawari_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_mawari_soul","","blank",
             		new MobEffectInstance(MobEffects.CONFUSION, 40, 2,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> KAWAKI_SOUL = ITEMS.register("kawaki_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kawaki_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> YAWARAKA_SOUL = ITEMS.register("yawaraka_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_yawaraka_soul","","blank")
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddCompatibilityList(LUPATRANGER).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MERAMERA_SOUL = ITEMS.register("meramera_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_meramera","","blank",
@@ -335,7 +335,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 5,true,false))
-            .ChangeSlot(2).BackToBase().ChangeModel("geo/noblesse.geo.json"));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGER).ChangeModel("geo/noblesse.geo.json"));
     
 	public static final DeferredItem<Item> SHIAWASE_SOUL = ITEMS.register("shiawase_soul",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));

@@ -56,6 +56,15 @@ public class RangerFormChangeItem extends BaseItem {
 		RANGER_NAME = rangername;
 	}
 
+	public RangerFormChangeItem( Properties properties,int belt,String formName,String rangername, MobEffectInstance... effects) {
+		super( properties);
+
+		potionEffectList = Lists.newArrayList(effects);
+		FORM_NAME = formName;
+		BELT = belt;
+		RANGER_NAME = rangername;
+	}
+
 	public List<MobEffectInstance> getPotionEffectList() {
 		return potionEffectList;
 	}

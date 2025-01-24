@@ -28,7 +28,7 @@ public class OtherItems {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
 
 	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","",""));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","blank"));
 
 	public static final DeferredItem<Item> SUPER_SENTAI_LOGO = ITEMS.register("super_sentai_logo",
 			() -> new RangerFormChangeItem(new Item.Properties(), 0, "", "", "blank",

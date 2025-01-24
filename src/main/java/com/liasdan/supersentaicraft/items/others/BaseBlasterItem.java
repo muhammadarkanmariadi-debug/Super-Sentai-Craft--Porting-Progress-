@@ -184,6 +184,12 @@ public class BaseBlasterItem extends BowItem {
 		return this;
 	}
 
+	public BaseBlasterItem IsChargeWeapon() {
+		SuperSentaiCraftCore.CHARGED_WEAPON.add(this);
+		Charged = true;
+		return this;
+	}
+
 	public BaseBlasterItem setProjectileLargeFireball(int blast) {
 		LFB=true;
 		LFBB=blast;
@@ -237,12 +243,6 @@ public class BaseBlasterItem extends BowItem {
 			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 			return tag.getInt("item_mode");
 		}
-	}
-
-	public BaseBlasterItem IsChargeWeapon() {
-		Charged = true;
-		SuperSentaiCraftCore.CHARGED_WEAPON.add(this);
-		return this;
 	}
 
 	public static ItemAttributeModifiers createAttributes(Tier tier, int attackDamage, float attackSpeed) {

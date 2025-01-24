@@ -47,7 +47,7 @@
        
         {
             "predicate": {
-                "pull": 1
+                "change": 1
             },
             "model": "supersentaicraft:item/houou_blade_shield_1"
         }

@@ -3,15 +3,7 @@ package com.liasdan.supersentaicraft.items;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseExplosiveItem;
-import com.liasdan.supersentaicraft.items.others.BaseItem;
-import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
-import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.BaseThrowableItem;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
+import com.liasdan.supersentaicraft.items.others.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -115,7 +107,7 @@ public class GorangerItems {
     		() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"midoranger",MIDO_STAR,GORANGER_HELMET,GORANGER_CHESTPLATE,GORANGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 
 	public static final DeferredItem<SwordItem> RED_BUTE = ITEMS.register("red_bute",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<PickaxeItem> DRILL_BUTE = ITEMS.register("drill_bute",
 			() -> new BasePickaxeItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> SILVER_SHOT = ITEMS.register("silver_shot",
@@ -127,9 +119,9 @@ public class GorangerItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	
 	public static final DeferredItem<SwordItem> KI_STICKER = ITEMS.register("ki_sticker",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<SwordItem> KI_STICKER_SHORT = ITEMS.register("ki_sticker_short",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<Item> YTC = ITEMS.register("ytc",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GORANGER));
 	

@@ -11,10 +11,7 @@ import com.liasdan.supersentaicraft.events.ModCommonEvents;
 import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
 import com.liasdan.supersentaicraft.items.lupatranger.VSChangerItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
+import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
@@ -129,7 +126,7 @@ public class SuperSentaiCraftCore {
 			NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 
 			for (int i = 0; i < SWORD_GUN_ITEM.size(); i++) {
-				ItemProperties.register(SWORD_GUN_ITEM.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
+				ItemProperties.register(SWORD_GUN_ITEM.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
 					if ($entity == null) {
 						return 0.0F;
 					} else {
@@ -146,20 +143,20 @@ public class SuperSentaiCraftCore {
 			}
 
 			for (int i = 0; i < MULTI_WEAPON_ITEM.size(); i++) {
-				ItemProperties.register(MULTI_WEAPON_ITEM.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
-					return BaseSwordItem.get_mode($itemStack);
+				ItemProperties.register(MULTI_WEAPON_ITEM.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
+					return BaseDualSwordItem.get_mode($itemStack);
 				});
 			}
 
 			for (int i = 0; i < CHARGED_WEAPON.size(); i++) {
-				ItemProperties.register(CHARGED_WEAPON.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
+				ItemProperties.register(CHARGED_WEAPON.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
 					if (BaseBlasterItem.get_mode($itemStack) == 30) return 1;
 					return 0;
 				});
 			}
 
 			for (int i = 0; i < FORM_WEAPON_ITEM.size(); i++) {
-				ItemProperties.register(FORM_WEAPON_ITEM.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
+				ItemProperties.register(FORM_WEAPON_ITEM.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
 					if ($entity == null) {
 						return 0.0F;
 					}
@@ -230,7 +227,7 @@ public class SuperSentaiCraftCore {
 			}
 
 			for (int i = 0; i < CHANGE_CHANGER_TEXTURE.size(); i++) {
-				ItemProperties.register(CHANGE_CHANGER_TEXTURE.get(i), ResourceLocation.parse("pull"), ($itemStack, $level, $entity, $seed) -> {
+				ItemProperties.register(CHANGE_CHANGER_TEXTURE.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
 					if ($entity == null) {
 						return 0.0F;
 					} else {

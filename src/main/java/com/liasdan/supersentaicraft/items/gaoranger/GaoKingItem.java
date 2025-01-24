@@ -58,9 +58,10 @@ public class GaoKingItem extends MechaGattaiItem {
 			if (!this.isTransformed(rider)) {
 				belt = "blank";
 			}
-			else if (((MechaGattaiItem)itemstack.getItem()).BELT_TEXT==null) {
-				belt = get_Form_Item(itemstack,1).getBeltTex();
+			else if (rangerName == "gao_icarus") {
+				belt = "gao_icarus_wings";
 			}
+			else belt = "blank";
 			return belt;
 		}
 
@@ -69,6 +70,11 @@ public class GaoKingItem extends MechaGattaiItem {
 		else if (equipmentSlot == EquipmentSlot.LEGS) return get_Form_Item(itemstack,4).getFormName(fly);
 
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
+	}
+
+	public ResourceLocation getBeltModelResource(ItemStack itemstack,MechaArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		if (this == GaorangerItems.GAO_ICARUS_HELMET.get()) return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/rangerwingbelt.geo.json");
+		else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {

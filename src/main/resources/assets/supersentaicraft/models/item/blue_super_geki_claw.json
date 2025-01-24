@@ -8,7 +8,7 @@
        
         {
             "predicate": {
-                "pull": 1
+                "change": 1
             },
             "model": "supersentaicraft:item/blue_super_geki_claw_on"
         }

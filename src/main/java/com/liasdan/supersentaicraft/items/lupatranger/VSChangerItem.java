@@ -1,6 +1,8 @@
 package com.liasdan.supersentaicraft.items.lupatranger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.items.LuPatRangerItems;
+import com.liasdan.supersentaicraft.items.RyusoulgerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
@@ -34,6 +36,10 @@ public class VSChangerItem extends RangerChangerItem{
 		}
 		else if (equipmentSlot == EquipmentSlot.HEAD) {
 			if (get_Form_Item(itemstack,2).getFormName(fly)=="") return "blank";
+			else if (get_Form_Item(itemstack,2).getFormName(fly)=="lupat_scissor") {
+				if (rider.getMainHandItem().getItem()== LuPatRangerItems.BLADE_BOOMERANG.get()) return "blank";
+				else return get_Form_Item(itemstack,2).getFormName(fly);
+			}
 			else if (get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_tsuyo_soul"|
 					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_nobi_soul"|
 					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_omo_soul"|

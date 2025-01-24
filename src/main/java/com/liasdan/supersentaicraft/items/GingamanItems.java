@@ -144,7 +144,7 @@ public class GingamanItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	
     public static final DeferredItem<BaseBlasterItem> BULL_RIOT = ITEMS.register("bull_riot",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).isChanger(BLACK_KNIGHT_BULL_RIOT.get()).AddToTabList(SuperSentaiCraftCore.SWORD_GUN_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).isChanger(BLACK_KNIGHT_BULL_RIOT.get()).IsSwordGun().AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

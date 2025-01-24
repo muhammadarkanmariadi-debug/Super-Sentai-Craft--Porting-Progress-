@@ -30,18 +30,14 @@ public class RyusoulCaliburItem extends BaseSwordItem {
 
 		if (BELT.getItem() instanceof RangerChangerItem belt) {
 			
-			if (belt!=RyusoulgerItems.GAISOULG_CHANGER.get() | belt!=RyusoulgerItems.BROWN_CHANGER.get() | belt!=RyusoulgerItems.MORIA_RYUSOUL_CHANGER.get())
+			if (this==RyusoulgerItems.RYUSOUL_CALIBUR.get())
 			{
-				if (this==RyusoulgerItems.RYUSOUL_CALIBUR.get())
+				if (p_41129_.isShiftKeyDown())
 				{
-					if (p_41129_.isShiftKeyDown())
-					{
-						if (RangerChangerItem.get_Form_Item(BELT, 2).getFormName(false)=="ryusoul_noblesse") ((RangerFormChangeItem)belt.Base_Form_Item).use(p_41128_, p_41129_, p_41130_);
-						else ((RangerFormChangeItem)RyusoulgerItems.NOBLESSE.get()).use(p_41128_, p_41129_, p_41130_);
+					if (RangerChangerItem.get_Form_Item(BELT, 2).getFormName(false)=="ryusoul_noblesse") ((RangerFormChangeItem)belt.Base_Form_Item).use(p_41128_, p_41129_, p_41130_);
+					else ((RangerFormChangeItem)RyusoulgerItems.NOBLESSE.get()).use(p_41128_, p_41129_, p_41130_);
 						
-					}
 				}
-				
 			}
 		}
 		return InteractionResultHolder.sidedSuccess(itemstack, p_41128_.isClientSide());

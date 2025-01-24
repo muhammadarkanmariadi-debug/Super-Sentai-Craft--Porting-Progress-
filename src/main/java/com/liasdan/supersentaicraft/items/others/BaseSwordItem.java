@@ -17,9 +17,6 @@ import net.minecraft.world.level.Level;
 public class BaseSwordItem extends SwordItem {
 
 	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
-
-	private Boolean Dual = false;
-	private Boolean Triple = false;
 	
 	public BaseSwordItem(Tier toolTier, int Atk, float Spd, Properties prop) {
 		super(toolTier, prop.attributes(SwordItem.createAttributes(Tiers.DIAMOND, Atk, Spd)));
@@ -39,63 +36,4 @@ public class BaseSwordItem extends SwordItem {
 		TabList.add(this);
 		return this;
 	}
-
-	public InteractionResultHolder<ItemStack> use(Level p_41128_, Player p_41129_, InteractionHand p_41130_) {
-
-		ItemStack itemstack = p_41129_.getItemInHand(p_41130_);
-
-		if (p_41129_.isShiftKeyDown()) {
-			if (Triple) {
-				if (get_mode(itemstack)==1) {
-					set_mode(itemstack,2);
-				}
-				else if (get_mode(itemstack)==2) {
-					set_mode(itemstack,0);
-				}
-				else {
-					set_mode(itemstack,1);
-				}
-			}
-			else if (Dual) {
-				if (get_mode(itemstack)==1) {
-					set_mode(itemstack,0);
-				}
-				else {
-					set_mode(itemstack,1);
-				}
-			}
-		}
-		return InteractionResultHolder.sidedSuccess(itemstack, p_41128_.isClientSide());
-	}
-
-	public static void set_mode(ItemStack itemstack, int flag)
-	{
-		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
-			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
-		}
-		CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-		tag.putInt("item_mode", flag);
-	}
-
-	public static int get_mode (ItemStack itemstack)
-	{
-		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) return  0;
-		else{
-			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-			return tag.getInt("item_mode");
-		}
-	}
-
-	public BaseSwordItem IsDualWeapon() {
-		Dual = true;
-		SuperSentaiCraftCore.MULTI_WEAPON_ITEM.add(this);
-		return this;
-	}
-
-	public BaseSwordItem IsTripleWeapon() {
-		Triple = true;
-		SuperSentaiCraftCore.MULTI_WEAPON_ITEM.add(this);
-		return this;
-	}
-
 }

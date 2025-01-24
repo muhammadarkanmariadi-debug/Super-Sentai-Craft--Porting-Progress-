@@ -3,14 +3,7 @@ package com.liasdan.supersentaicraft.items;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseItem;
-import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
-import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.BaseThrowableItem;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
+import com.liasdan.supersentaicraft.items.others.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -96,7 +89,7 @@ public class MaskmanItems {
     public static final DeferredItem<SwordItem> MASKY_BLADE = ITEMS.register("masky_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     public static final DeferredItem<SwordItem> MASKY_ROD = ITEMS.register("masky_rod",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     public static final DeferredItem<SwordItem> MASKY_TONFA = ITEMS.register("masky_tonfa",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     public static final DeferredItem<BaseThrowableItem> MASKY_ROTOR = ITEMS.register("masky_rotor",

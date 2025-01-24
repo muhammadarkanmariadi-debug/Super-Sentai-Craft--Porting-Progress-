@@ -31,7 +31,7 @@
        
         {
             "predicate": {
-                "pull": 1
+                "change": 1
             },
             "model": "supersentaicraft:item/metal_dark_seiza_blaster"
         }

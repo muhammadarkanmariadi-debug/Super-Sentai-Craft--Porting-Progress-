@@ -1,10 +1,7 @@
 package com.liasdan.supersentaicraft.items.ryusoulger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.items.GorangerItems;
-import com.liasdan.supersentaicraft.items.MaskmanItems;
-import com.liasdan.supersentaicraft.items.RyusoulgerItems;
-import com.liasdan.supersentaicraft.items.ShinkengerItems;
+import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
@@ -43,6 +40,10 @@ public class RyusoulChangerItem extends RangerChangerItem{
 		}
 		else if (equipmentSlot == EquipmentSlot.HEAD) {
 			if (get_Form_Item(itemstack,2).getFormName(fly)=="") return "blank";
+			else if (get_Form_Item(itemstack,2).getFormName(fly)=="lupat_scissor") {
+				if (rider.getMainHandItem().getItem()== LuPatRangerItems.BLADE_BOOMERANG.get()) return "blank";
+				else return get_Form_Item(itemstack,2).getFormName(fly);
+			}
 			else return get_Form_Item(itemstack,2).getFormName(fly);
 		}
 		

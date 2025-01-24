@@ -242,11 +242,11 @@ public class LuPatRangerItems {
 			() -> new XChangerItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).isChanger(LUPAT_X_CHANGER.get()).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 
 	public static final DeferredItem<SwordItem> LUPIN_SWORD = ITEMS.register("lupin_sword",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 	public static final DeferredItem<SwordItem> PAT_MEGABO = ITEMS.register("pat_megabo",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 	public static final DeferredItem<SwordItem> X_ROD_SWORD = ITEMS.register("x_rod_sword",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 
 	public static final DeferredItem<BaseShieldItem> SCISSOR_SHIELD = ITEMS.register("scissor_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));

@@ -3,15 +3,7 @@ package com.liasdan.supersentaicraft.items;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseExplosiveItem;
-import com.liasdan.supersentaicraft.items.others.BaseItem;
-import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
-import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.BaseThrowableItem;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
+import com.liasdan.supersentaicraft.items.others.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -101,7 +93,7 @@ public class JAKQItems {
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.JAKQ).ChangeRepairItem(BLANK_CARD.get()));
     
     public static final DeferredItem<SwordItem> CLUB_MEGATON = ITEMS.register("club_megaton",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 8, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.JAKQ).ChangeRepairItem(BLANK_CARD.get()));
+			() -> new BaseDualSwordItem(Tiers.DIAMOND, 8, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.JAKQ).ChangeRepairItem(BLANK_CARD.get()));
     
     public static final DeferredItem<SwordItem> BIG_BATON = ITEMS.register("big_baton",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.JAKQ).ChangeRepairItem(BLANK_CARD.get()));

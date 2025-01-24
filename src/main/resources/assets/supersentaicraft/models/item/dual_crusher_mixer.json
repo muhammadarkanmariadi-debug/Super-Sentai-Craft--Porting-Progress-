@@ -8,7 +8,7 @@
        
         {
             "predicate": {
-                "pull": 1
+                "change": 1
             },
             "model": "supersentaicraft:item/dual_crusher_drill"
         }
