@@ -92,11 +92,12 @@ public class SunVulcanItems {
             () -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
     
     public static final DeferredItem<Item> SUN_VULCAN_ROBO_HELMET = ITEMS.register("sun_vulcan_robo_head",
-            () -> new MechaGattaiItem(ArmorMaterials.NETHERITE,"sun_vulcan_robo",SUN_VULCAN_ROBO,SUN_VULCAN_ROBO_CHESTPLATE,SUN_VULCAN_ROBO_LEGGINGS,SUN_VULCAN_ROBO_BOOTS, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+            () -> new MechaGattaiItem(ArmorMaterials.NETHERITE,"sun_vulcan_robo",SUN_VULCAN_ROBO,SUN_VULCAN_ROBO_CHESTPLATE,SUN_VULCAN_ROBO_LEGGINGS,SUN_VULCAN_ROBO_BOOTS, new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
     
     public static final DeferredItem<SwordItem> TAIYO_KEN = ITEMS.register("taiyo_ken",
-			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));    
-    public static final DeferredItem<BaseShieldItem> VUL_SHIELD = ITEMS.register("vul_shield",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+    public static final DeferredItem<Item> VUL_SHIELD = ITEMS.register("vul_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));   
     public static final DeferredItem<SwordItem> VUL_TONFA = ITEMS.register("vul_tonfa",
 			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));

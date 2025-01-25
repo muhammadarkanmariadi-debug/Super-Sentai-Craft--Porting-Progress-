@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-	"supersentaicraft:mecha_nether_ore"
+	"supersentaicraft:mecha_nether_ore",
+	"supersentaicraft:deepslate_mecha_ore"
 	]
 }

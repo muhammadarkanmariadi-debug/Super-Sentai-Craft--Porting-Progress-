@@ -41,9 +41,9 @@ public class GaoKingItem extends MechaGattaiItem {
 	{
 		boolean fly = rider instanceof Player player && player.getAbilities().flying;
 
-		if(num==2) return get_Form_Item(itemstack,2).getFormName(fly);
-		else if(num==3) return get_Form_Item(itemstack,3).getFormName(fly);
-		else if(num==4) return get_Form_Item(itemstack,4).getFormName(fly);
+		if(num==2) return get_Form_Item(itemstack,3).getFormName(fly);
+		else if(num==3) return get_Form_Item(itemstack,4).getFormName(fly);
+		else if(num==4) return get_Form_Item(itemstack,5).getFormName(fly);
 
 		return riderName+get_Form_Item(itemstack,1).getFormName(fly);
 	}
@@ -65,16 +65,11 @@ public class GaoKingItem extends MechaGattaiItem {
 			return belt;
 		}
 
-		if (equipmentSlot == EquipmentSlot.FEET) return get_Form_Item(itemstack,2).getFormName(fly);
-		else if (equipmentSlot == EquipmentSlot.CHEST) return get_Form_Item(itemstack,3).getFormName(fly);
-		else if (equipmentSlot == EquipmentSlot.LEGS) return get_Form_Item(itemstack,4).getFormName(fly);
+		if (equipmentSlot == EquipmentSlot.FEET) return get_Form_Item(itemstack,3).getFormName(fly);
+		else if (equipmentSlot == EquipmentSlot.CHEST) return get_Form_Item(itemstack,4).getFormName(fly);
+		else if (equipmentSlot == EquipmentSlot.LEGS) return get_Form_Item(itemstack,5).getFormName(fly);
 
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
-	}
-
-	public ResourceLocation getBeltModelResource(ItemStack itemstack,MechaArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
-		if (this == GaorangerItems.GAO_ICARUS_HELMET.get()) return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/rangerwingbelt.geo.json");
-		else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {

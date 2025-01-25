@@ -28,12 +28,12 @@ public class OtherItems {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
 
 	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","blank"));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","",""));
 
 	public static final DeferredItem<Item> SUPER_SENTAI_LOGO = ITEMS.register("super_sentai_logo",
-			() -> new RangerFormChangeItem(new Item.Properties(), 0, "", "", "blank",
+			() -> new RangerFormChangeItem(new Item.Properties(), 0, "", "", "",
 					new MobEffectInstance(EffectCore.BIG, 40, 2,true,false))
-					.addSwitchForm(BLANK_FORM.get()).AddCompatibilityList(SentaiRobo).AddToTabList(RangerTabs.MISC));
+					.ChangeSlot(2).addSwitchForm(BLANK_FORM.get()).AddCompatibilityList(SentaiRobo).AddToTabList(RangerTabs.MISC));
 
 	public static final DeferredItem<Item> SUPER_SENTAI_BOOK = ITEMS.register("super_sentai_book",
 			() -> new SuperSentaiBookItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));

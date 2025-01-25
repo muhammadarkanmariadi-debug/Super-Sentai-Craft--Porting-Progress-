@@ -248,7 +248,7 @@ public class LuPatRangerItems {
 	public static final DeferredItem<SwordItem> X_ROD_SWORD = ITEMS.register("x_rod_sword",
 			() -> new BaseDualSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 
-	public static final DeferredItem<BaseShieldItem> SCISSOR_SHIELD = ITEMS.register("scissor_shield",
+	public static final DeferredItem<Item> SCISSOR_SHIELD = ITEMS.register("scissor_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 	public static final DeferredItem<SwordItem> BLADE_BOOMERANG = ITEMS.register("blade_boomerang",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));

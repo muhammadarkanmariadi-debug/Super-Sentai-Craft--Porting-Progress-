@@ -421,12 +421,12 @@ public class RyusoulgerItems {
     
     public static final DeferredItem<SwordItem> GAISOUL_KEN = ITEMS.register("gaisoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    public static final DeferredItem<BaseShieldItem> GAISOUL_SHIELD = ITEMS.register("gaisoul_shield",
+    public static final DeferredItem<Item> GAISOUL_SHIELD = ITEMS.register("gaisoul_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> BROWN_RYUSOUL_KEN = ITEMS.register("brown_ryusoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
-    public static final DeferredItem<BaseShieldItem> BROWN_RYUSOUL_SHIELD = ITEMS.register("brown_ryusoul_shield",
+    public static final DeferredItem<Item> BROWN_RYUSOUL_SHIELD = ITEMS.register("brown_ryusoul_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> MAX_RYUSOUL_CHANGER = ITEMS.register("max_ryusoul_changer",

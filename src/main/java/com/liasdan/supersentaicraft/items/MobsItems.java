@@ -52,7 +52,7 @@ public class MobsItems {
 
 	public static final DeferredItem<SwordItem> DRUNN_SPEAR = ITEMS.register("drunn_spear",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
-    public static final DeferredItem<BaseShieldItem> DRUNN_SHIELD = ITEMS.register("drunn_shield",
+    public static final DeferredItem<Item> DRUNN_SHIELD = ITEMS.register("drunn_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 
 	public static void register(IEventBus eventBus) {
