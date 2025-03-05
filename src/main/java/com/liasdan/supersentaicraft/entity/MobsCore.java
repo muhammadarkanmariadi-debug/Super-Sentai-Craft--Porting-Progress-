@@ -26,7 +26,7 @@ public class MobsCore {
             () -> EntityType.Builder.of(ZoldersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":zolder"));
     
     public static final DeferredItem<DeferredSpawnEggItem> ZOLDERS_SPAWN_EGG = ITEMS.register("zolder_spawn_egg",
-            () -> new DeferredSpawnEggItem(ZOLDERS, 0x121212, 0xa1a1a1, new Item.Properties()));
+            () -> new DeferredSpawnEggItem(ZOLDERS,0xffffff, 0x151515, new Item.Properties()));
 
 	//02 JAKQ
 	public static final DeferredHolder<EntityType<?>, EntityType<CrimersEntity>> CRIMERS = MOBLIST.register("crimer",

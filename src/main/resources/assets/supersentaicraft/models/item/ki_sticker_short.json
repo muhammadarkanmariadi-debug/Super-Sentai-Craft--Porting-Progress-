@@ -14,7 +14,7 @@
         },
 		{
             "predicate": {
-                "pull": 2
+                "change": 2
             },
             "model": "supersentaicraft:item/ki_sticker_short_scissors"
         }

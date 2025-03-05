@@ -5,7 +5,7 @@
 		"layer0": "supersentaicraft:item/masky_rod"
 	},
 	"overrides": [
-		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/masky_rod_staff"}
+		{"predicate": {"change": 1}, "model": "supersentaicraft:item/masky_rod_staff"}
 	],
 	"display": {
 		"thirdperson_righthand": {

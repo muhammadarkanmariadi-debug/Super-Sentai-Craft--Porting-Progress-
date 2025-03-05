@@ -5,8 +5,8 @@
 		"layer0": "supersentaicraft:item/red_bute"
 	},
 	"overrides": [
-		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/spear_bute"},
-		{"predicate": {"pull": 2}, "model": "supersentaicraft:item/red_hunter"}
+		{"predicate": {"change": 1}, "model": "supersentaicraft:item/spear_bute"},
+		{"predicate": {"change": 2}, "model": "supersentaicraft:item/red_hunter"}
 	],
 	"display": {
 		"thirdperson_righthand": {

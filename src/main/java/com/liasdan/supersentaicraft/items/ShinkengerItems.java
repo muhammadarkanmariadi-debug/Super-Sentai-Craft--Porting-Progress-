@@ -87,7 +87,7 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
 	public static final DeferredItem<Item> INROMARU = ITEMS.register("inromaru",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));

@@ -5,7 +5,7 @@
 		"layer0": "supersentaicraft:item/pat_megabo"
 	},
 	"overrides": [
-		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/pat_megabo_megaphone"}
+		{"predicate": {"change": 1}, "model": "supersentaicraft:item/pat_megabo_megaphone"}
 	],
 	"display": {
 		"thirdperson_righthand": {

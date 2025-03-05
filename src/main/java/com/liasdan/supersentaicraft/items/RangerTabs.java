@@ -68,7 +68,11 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(RyusoulgerItems.RYUSOULGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_ryusoulger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.ryusoulger")).build());
 
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GozyugerTab = CREATIVE_MODE_TABS.register("ssc050", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(GozyugerItems.GOZYUGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gozyuger_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.gozyuger")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.SUPER_SENTAI_LOGO.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.misc")).build());
     
@@ -77,27 +81,22 @@ public class RangerTabs {
 					.title(Component.translatable("tab.supersentaicraft.block")).build());
     
     public static List<Item> GORANGER= new ArrayList<Item>();
-
 	public static List<Item> JAKQ= new ArrayList<Item>();
-
 	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
 
 	public static List<Item> MASKMAN= new ArrayList<Item>();
 
 	public static List<Item> CARRANGER= new ArrayList<Item>();
-    
     public static List<Item> GINGAMAN= new ArrayList<Item>();
 
 	public static List<Item> GAORANGER= new ArrayList<Item>();
-    
     public static List<Item> SHINKENGER= new ArrayList<Item>();
 
 	public static List<Item> LUPATRANGER= new ArrayList<Item>();
-
 	public static List<Item> RYUSOULGER= new ArrayList<Item>();
+	public static List<Item> GOZYUGER= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
-    
     public static List<Block> BLOCKS= new ArrayList<Block>();
 
 	public static void register(IEventBus eventBus) {
@@ -173,6 +172,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.RYUSOULGER.size(); i++)
 			{
 				event.accept( RangerTabs.RYUSOULGER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.GozyugerTab.get()) {
+			for (int i = 0; i < RangerTabs.GOZYUGER.size(); i++)
+			{
+				event.accept( RangerTabs.GOZYUGER.get(i));
 			}
 
 		}

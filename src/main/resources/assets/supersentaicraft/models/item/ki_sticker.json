@@ -5,8 +5,8 @@
 		"layer0": "supersentaicraft:item/ki_sticker"
 	},
 	"overrides": [
-		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/ki_sticker_paper"},
-		{"predicate": {"pull": 2}, "model": "supersentaicraft:item/ki_sticker_scissors"}
+		{"predicate": {"change": 1}, "model": "supersentaicraft:item/ki_sticker_paper"},
+		{"predicate": {"change": 2}, "model": "supersentaicraft:item/ki_sticker_scissors"}
 	],
 	"display": {
 		"thirdperson_righthand": {

@@ -5,7 +5,7 @@
 		"layer0": "supersentaicraft:item/x_rod_sword"
 	},
 	"overrides": [
-		{"predicate": {"pull": 1}, "model": "supersentaicraft:item/x_rod_sword_rod"}
+		{"predicate": {"change": 1}, "model": "supersentaicraft:item/x_rod_sword_rod"}
 	],
 	"display": {
 		"thirdperson_righthand": {
