@@ -3,13 +3,12 @@
   "textures": {
     "layer0": "supersentaicraft:item/auto_blaster"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/auto_punisher"
-        }
-    ]
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/auto_punisher"
+    }
+  ]
 }

@@ -1,17 +1,15 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/handheld",
   "textures": {
     "layer0": "supersentaicraft:item/geartlinger"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/geartlinger_super"
-        }
-    ]
-  }
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/geartlinger_super"
+    }
+  ]
+}
 }

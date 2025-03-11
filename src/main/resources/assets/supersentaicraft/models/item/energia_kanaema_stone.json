@@ -1,17 +1,15 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/generated",
   "textures": {
     "layer0": "supersentaicraft:item/energia_kanaema_stone"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/drained_kanaema_stone"
-        }
-    ]
-  }
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/drained_kanaema_stone"
+    }
+  ]
+}
 }

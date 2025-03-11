@@ -1,17 +1,15 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/handheld",
   "textures": {
     "layer0": "supersentaicraft:item/gabutyra_de_carnival"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/gabutyra_de_carnival_gun"
-        }
-    ]
-  }
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/gabutyra_de_carnival_gun"
+    }
+  ]
+}
 }

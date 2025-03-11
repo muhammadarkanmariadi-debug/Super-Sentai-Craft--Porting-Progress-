@@ -1,16 +1,14 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/handheld",
   "textures": {
     "layer0": "supersentaicraft:item/gao_mane_buster"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/gao_mane_buster_final"
-        }
-    ]
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/gao_mane_buster_final"
+    }
+  ]
 }

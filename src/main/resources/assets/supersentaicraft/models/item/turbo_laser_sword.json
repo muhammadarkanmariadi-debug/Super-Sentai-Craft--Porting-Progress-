@@ -1,17 +1,15 @@
 {
-  "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/handheld",
   "textures": {
     "layer0": "supersentaicraft:item/turbo_laser_sword"
   },
-    "overrides": [
-       
-        {
-            "predicate": {
-                "change": 1
-            },
-            "model": "supersentaicraft:item/turbo_laser_gun"
-        }
-    ]
-  }
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/turbo_laser_gun"
+    }
+  ]
+}
 }
