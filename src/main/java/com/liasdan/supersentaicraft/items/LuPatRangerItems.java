@@ -102,7 +102,7 @@ public class LuPatRangerItems {
 			() -> new VSVehicleItem(new Item.Properties(),0,"lupat_gold","lupin_red","blank",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
-					.ChangeSlot(2).AddCompatibilityList(LUPAT));
+					.ChangeSlot(2).BackToBase().AddCompatibilityList(LUPAT));
 
 	public static final DeferredItem<Item> X_TRAIN_GOLD = ITEMS.register("gold_x_train",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","lupin_x","lupinranger_belt",
