@@ -52,9 +52,6 @@ public class BaseThrowableItem extends SwordItem {
 		}
 	      
 		pPlayer.awardStat(Stats.ITEM_USED.get(this));
-		if (!pPlayer.getAbilities().instabuild) {
-			itemstack.shrink(1);
-		}
 
 		return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
 	}

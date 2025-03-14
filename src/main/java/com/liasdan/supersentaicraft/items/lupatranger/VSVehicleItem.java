@@ -41,7 +41,7 @@ public class VSVehicleItem extends RangerFormChangeItem {
 						BELT.getItem() == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get() |
 						BELT.getItem() == RyusoulgerItems.GOLD_MOSA_CHANGER.get()) {
 					
-					if (p_41129_.getItemBySlot(EquipmentSlot.OFFHAND).getItem()==LuPatRangerItems.VS_CHANGER.get())
+					if (p_41129_.getInventory().countItem(LuPatRangerItems.VS_CHANGER.get())!=0)
 					{
 						RangerChangerItem.set_Form_Item(BELT,this, Slot);
 					}

@@ -50,15 +50,21 @@ public class RyusoulItem extends RangerFormChangeItem {
 						BELT.getItem() == RyusoulgerItems.BLUE_RYUSOUL_CHANGER.get() | 
 						BELT.getItem() == RyusoulgerItems.PINK_RYUSOUL_CHANGER.get() |	
 						BELT.getItem() == RyusoulgerItems.GREEN_RYUSOUL_CHANGER.get() | 
-						BELT.getItem() == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get() |
-						BELT.getItem() == LuPatRangerItems.RED_VS_CHANGER.get() |
+						BELT.getItem() == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get()) {
+					
+					if (p_41129_.getItemBySlot(EquipmentSlot.OFFHAND).getItem()==RyusoulgerItems.RYUSOUL_KEN.get())
+					{
+						RangerChangerItem.set_Form_Item(BELT,this, Slot);
+					}
+				}
+				else if (BELT.getItem() == LuPatRangerItems.RED_VS_CHANGER.get() |
 						BELT.getItem() == LuPatRangerItems.BLUE_VS_CHANGER.get() |
 						BELT.getItem() == LuPatRangerItems.YELLOW_VS_CHANGER.get() |
 						BELT.getItem() == LuPatRangerItems.ICHIGOU_VS_CHANGER.get() |
 						BELT.getItem() == LuPatRangerItems.NIGOU_VS_CHANGER.get() |
 						BELT.getItem() == LuPatRangerItems.SANGOU_VS_CHANGER.get()) {
-					
-					if (p_41129_.getItemBySlot(EquipmentSlot.OFFHAND).getItem()==RyusoulgerItems.RYUSOUL_KEN.get())
+
+					if (p_41129_.getInventory().countItem(RyusoulgerItems.RYUSOUL_KEN.get())!=0)
 					{
 						RangerChangerItem.set_Form_Item(BELT,this, Slot);
 					}

@@ -45,8 +45,6 @@ public class ZoonzoomShokaBlasterItem extends BaseBlasterItem {
 	}
 
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-		super.use(level,player,hand);
-
 		ItemStack itemstack = player.getItemInHand(hand);
 		ItemStack BELT = player.getItemBySlot(EquipmentSlot.FEET);
 
@@ -64,6 +62,14 @@ public class ZoonzoomShokaBlasterItem extends BaseBlasterItem {
 				}
 			}
 		}
-		return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
+
+		boolean flag = !player.getProjectile(itemstack).isEmpty();
+		InteractionResultHolder<ItemStack> ret = EventHooks.onArrowNock(itemstack, level, player, hand, flag);
+
+		if (ret != null) return ret;
+		else {
+			player.startUsingItem(hand);
+			return InteractionResultHolder.consume(itemstack);
+		}
 	}
 }

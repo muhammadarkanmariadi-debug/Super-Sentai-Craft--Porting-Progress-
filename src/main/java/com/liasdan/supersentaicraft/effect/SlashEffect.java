@@ -16,13 +16,17 @@ public class SlashEffect extends MobEffect {
 	}
 
 	@Override
+	public boolean shouldApplyEffectTickThisTick(int tickCount, int amplifier) {
+		return true;
+	}
+
+	@Override
 	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 		if (!pLivingEntity.level().isClientSide()) {
 
 			if (pLivingEntity.getMainHandItem().getItem() instanceof SwordItem) {
-				pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, pAmplifier,true,false));
+				pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, pAmplifier+3,true,false));
 			}
-
 
 		}
 		return true;
