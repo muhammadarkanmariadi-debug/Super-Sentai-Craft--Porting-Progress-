@@ -93,7 +93,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltchangerweapon.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GOLD_RYUSOUL = ITEMS.register("gold_ryusoul",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_gold","ryusoul_gold_belt",
+            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_gold","ryusoul_gold_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -101,7 +101,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GAI_SOUL = ITEMS.register("gai_soul",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"","gaisoulg","blank",
+            () -> new RyusoulItem(new Item.Properties(),0,"","gaisoulg","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
@@ -109,7 +109,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BROWN_RYUSOUL = ITEMS.register("brown_ryusoul",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_brown","blank",
+            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_brown","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),

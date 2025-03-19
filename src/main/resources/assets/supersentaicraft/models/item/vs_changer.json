@@ -8,91 +8,91 @@
   "overrides": [
     {
       "predicate": {
-        "pull": 1
+        "change": 1
       },
       "model": "supersentaicraft:item/red_vs_changer"
     },
     {
       "predicate": {
-        "pull": 2
+        "change": 2
       },
       "model": "supersentaicraft:item/blue_vs_changer"
     },
     {
       "predicate": {
-        "pull": 3
+        "change": 3
       },
       "model": "supersentaicraft:item/yellow_vs_changer"
     },
     {
       "predicate": {
-        "pull": 4
+        "change": 4
       },
       "model": "supersentaicraft:item/ichigou_vs_changer"
     },
     {
       "predicate": {
-        "pull": 5
+        "change": 5
       },
       "model": "supersentaicraft:item/nigou_vs_changer"
     },
     {
       "predicate": {
-        "pull": 6
+        "change": 6
       },
       "model": "supersentaicraft:item/sangou_vs_changer"
     },
     {
       "predicate": {
-        "pull": 7
+        "change": 7
       },
       "model": "supersentaicraft:item/jackpot_vs_changer"
     },
     {
       "predicate": {
-        "pull": 8
+        "change": 8
       },
       "model": "supersentaicraft:item/good_vs_changer"
     },
     {
       "predicate": {
-        "pull": 9
+        "change": 9
       },
       "model": "supersentaicraft:item/scissor_vs_changer"
     },
     {
       "predicate": {
-        "pull": 10
+        "change": 10
       },
       "model": "supersentaicraft:item/crane_vs_changer"
     },
     {
       "predicate": {
-        "pull": 11
+        "change": 11
       },
       "model": "supersentaicraft:item/magic_vs_changer"
     },
     {
       "predicate": {
-        "pull": 12
+        "change": 12
       },
       "model": "supersentaicraft:item/splash_vs_changer"
     },
     {
       "predicate": {
-        "pull": 13
+        "change": 13
       },
       "model": "supersentaicraft:item/victory_vs_changer"
     },
     {
       "predicate": {
-        "pull": 14
+        "change": 14
       },
       "model": "supersentaicraft:item/siren_vs_changer"
     },
     {
       "predicate": {
-        "pull": 15
+        "change": 15
       },
       "model": "supersentaicraft:item/gold_vs_changer"
     }

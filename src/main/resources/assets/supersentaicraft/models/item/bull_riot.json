@@ -7,7 +7,7 @@
   "overrides": [
     {
       "predicate": {
-        "pull": 1
+        "change": 1
       },
       "model": "supersentaicraft:item/bull_riot_gun"
     }

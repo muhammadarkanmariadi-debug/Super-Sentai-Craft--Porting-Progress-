@@ -12,7 +12,7 @@
     },
     {
       "predicate": {
-        "pull": 6
+        "change": 6
       },
       "model": "supersentaicraft:item/chouzetsu_ninja_ichibantou"
     }

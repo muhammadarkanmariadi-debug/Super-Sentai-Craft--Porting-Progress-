@@ -235,6 +235,18 @@
 "item.supersentaicraft.momoranger_manga":"Goranger Manga",
 "item.supersentaicraft.midoranger_manga":"Goranger Manga",
 
+"supersentaicraft:aka_star.form":"Ranger: §cAkaranger",
+"supersentaicraft:ao_star.form":"Ranger: §9Aoranger",
+"supersentaicraft:ki_star.form":"Ranger: §eKiranger",
+"supersentaicraft:momo_star.form":"Ranger: §dMomoranger",
+"supersentaicraft:mido_star.form":"Ranger: §2Midoranger",
+
+"supersentaicraft:goranger_manga.form":"Ranger: §cAkaranger (Manga ver.)",
+"supersentaicraft:aoranger_manga.form":"Ranger: §9Aoranger (Manga ver.)",
+"supersentaicraft:kiranger_manga.form":"Ranger: §eKiranger (Manga ver.)",
+"supersentaicraft:momoranger_manga.form":"Ranger: §dMomoranger (Manga ver.)",
+"supersentaicraft:midoranger_manga.form":"Ranger: §2Midoranger (Manga ver.)",
+
 "item.supersentaicraft.red_bute":"Red Bute",
 "item.supersentaicraft.drill_bute":"Drill Bute",
 "item.supersentaicraft.silver_shot":"Silver Shot",
@@ -527,6 +539,13 @@
 "item.supersentaicraft.yellow_aura_power":"Yellow Aura Power",
 "item.supersentaicraft.pink_aura_power":"Pink Aura Power",
 "item.supersentaicraft.x1_aura_power":"X1 Aura Power",
+
+"supersentaicraft:red_aura_power.form":"Ranger: §cRed Mask",
+"supersentaicraft:black_aura_power.form":"Ranger: §8Black Mask",
+"supersentaicraft:blue_aura_power.form":"Ranger: §9Blue Mask",
+"supersentaicraft:yellow_aura_power.form":"Ranger: §eYellow Mask",
+"supersentaicraft:pink_aura_power.form":"Ranger: §dPink Mask",
+"supersentaicraft:x1_aura_power.form":"Ranger: §2X1 Mask",
 
 "item.supersentaicraft.laser_magnum":"Laser Magnum",
 "item.supersentaicraft.laser_magnum_sword":"Laser Magnum (Sword)",
@@ -851,11 +870,11 @@
 "item.supersentaicraft.gingaman_torso":"Gingaman Chestplate",
 "item.supersentaicraft.gingaman_legs":"Gingaman Leggings",
 
-"item.supersentaicraft.red_ginga_brace":"Ginga Brace (GingaRed)",
-"item.supersentaicraft.green_ginga_brace":"Ginga Brace (GingaGreen)",
-"item.supersentaicraft.blue_ginga_brace":"Ginga Brace (GingaBlue)",
-"item.supersentaicraft.yellow_ginga_brace":"Ginga Brace (GingaYellow)",
-"item.supersentaicraft.pink_ginga_brace":"Ginga Brace (GingaPink)",
+"item.supersentaicraft.red_ginga_brace":"Ginga Brace (Ginga Red)",
+"item.supersentaicraft.green_ginga_brace":"Ginga Brace (Ginga Green)",
+"item.supersentaicraft.blue_ginga_brace":"Ginga Brace (Ginga Blue)",
+"item.supersentaicraft.yellow_ginga_brace":"Ginga Brace (Ginga Yellow)",
+"item.supersentaicraft.pink_ginga_brace":"Ginga Brace (Ginga Pink)",
 "item.supersentaicraft.black_knight_bull_riot":"Bull Riot (Black Knight)",
 
 "item.supersentaicraft.red_ginga_medal":"Red Ginga Medal",
@@ -865,6 +884,14 @@
 "item.supersentaicraft.pink_ginga_medal":"Pink Ginga Medal",
 "item.supersentaicraft.lights_of_ginga":"Lights of Ginga",
 "item.supersentaicraft.black_knight_core":"Black Knight Core",
+
+"supersentaicraft:red_ginga_medal.form":"Ranger: §cGinga Red",
+"supersentaicraft:green_ginga_medal.form":"Ranger: §aGinga Green",
+"supersentaicraft:blue_ginga_medal.form":"Ranger: §9Ginga Blue",
+"supersentaicraft:yellow_ginga_medal.form":"Ranger: §eGinga Yellow",
+"supersentaicraft:pink_ginga_medal.form":"Ranger: §dGinga Pink",
+"supersentaicraft:lights_of_ginga.form":"§6JuuSouKou (Beast Armor Shine)",
+"supersentaicraft:black_knight_core.form":"Extra Hero: §8Black Knight",
 
 "item.supersentaicraft.starbeast_sword":"SeijuuKen (Starbeast Sword)",
 "item.supersentaicraft.kiba_cutter":"Kiba Cutter",
@@ -1358,6 +1385,16 @@
 "item.supersentaicraft.super_disk":"Super Disk",
 "item.supersentaicraft.hyper_disk":"Hyper Disk",
 "item.supersentaicraft.gedou_disk":"Gedou Disk",
+
+"supersentaicraft:shishi_disk.form":"§cShinken Red",
+"supersentaicraft:ryuu_disk.form":"§9Shinken Blue",
+"supersentaicraft:kame_disk.form":"§dShinken Pink",
+"supersentaicraft:kuma_disk.form":"§2Shinken Green",
+"supersentaicraft:saru_disk.form":"§eShinken Yellow",
+"supersentaicraft:sushi_disk.form":"§6Shinken Gold",
+"supersentaicraft:super_disk.form":"Super",
+"supersentaicraft:hyper_disk.form":"§4Hyper",
+"supersentaicraft:gedou_disk.form":"§8Gedou §cShinken Red",
 
 "item.supersentaicraft.shinkenmaru":"Shinkenmaru",
 "item.supersentaicraft.rekka_daizantou":"Rekka Daizantou",

@@ -12,13 +12,13 @@
     },
     {
       "predicate": {
-        "pull": 2
+        "change": 2
       },
       "model": "supersentaicraft:item/geardalinger_super"
     },
     {
       "predicate": {
-        "pull": 3
+        "change": 3
       },
       "model": "supersentaicraft:item/geardalinger_gun_super"
     }

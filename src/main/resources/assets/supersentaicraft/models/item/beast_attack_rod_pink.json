@@ -101,13 +101,13 @@
     },
     {
       "predicate": {
-        "pull": 2
+        "change": 2
       },
       "model": "supersentaicraft:item/flashing_beast_attack_rod_pink"
     },
     {
       "predicate": {
-        "pull": 3
+        "change": 3
       },
       "model": "supersentaicraft:item/flashing_beast_attack_rod_pink_gun"
     }

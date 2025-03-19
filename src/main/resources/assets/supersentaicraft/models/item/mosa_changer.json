@@ -12,7 +12,7 @@
     },
     {
       "predicate": {
-        "pull": 2
+        "change": 2
       },
       "model": "supersentaicraft:item/mosa_changer_biribiri"
     }

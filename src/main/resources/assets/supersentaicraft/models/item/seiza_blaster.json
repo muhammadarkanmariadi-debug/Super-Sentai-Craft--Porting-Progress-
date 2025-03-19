@@ -82,103 +82,103 @@
     },
     {
       "predicate": {
-        "pull": 2
+        "change": 2
       },
       "model": "supersentaicraft:item/orange_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 3
+        "change": 3
       },
       "model": "supersentaicraft:item/blue_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 4
+        "change": 4
       },
       "model": "supersentaicraft:item/gold_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 5
+        "change": 5
       },
       "model": "supersentaicraft:item/black_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 6
+        "change": 6
       },
       "model": "supersentaicraft:item/silver_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 7
+        "change": 7
       },
       "model": "supersentaicraft:item/green_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 8
+        "change": 8
       },
       "model": "supersentaicraft:item/pink_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 9
+        "change": 9
       },
       "model": "supersentaicraft:item/yellow_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 10
+        "change": 10
       },
       "model": "supersentaicraft:item/sky_blue_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 11
+        "change": 11
       },
       "model": "supersentaicraft:item/ikkakuju_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 12
+        "change": 12
       },
       "model": "supersentaicraft:item/pegasus_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 13
+        "change": 13
       },
       "model": "supersentaicraft:item/ya_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 14
+        "change": 14
       },
       "model": "supersentaicraft:item/taiyou_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 15
+        "change": 15
       },
       "model": "supersentaicraft:item/tsuki_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 16
+        "change": 16
       },
       "model": "supersentaicraft:item/saiko_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 17
+        "change": 17
       },
       "model": "supersentaicraft:item/dark_silver_seiza_blaster"
     },
     {
       "predicate": {
-        "pull": 18
+        "change": 18
       },
       "model": "supersentaicraft:item/dark_red_seiza_blaster"
     }
