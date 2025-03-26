@@ -41,6 +41,7 @@ public class RyusoulgerItems {
 
 	public static String[] RYUSOULGERS= new String[] {"ryusoul_red","ryusoul_blue","ryusoul_pink","ryusoul_green","ryusoul_black","ryusoul_gold","gaisoulg","ryusoul_brown","ryusoul_moria","lupin_red","lupin_blue","lupin_yellow","patren_1gou","patren_2gou","patren_3gou"};
 	public static String[] RYUSOULGER= new String[] {"ryusoul_red","ryusoul_blue","ryusoul_pink","ryusoul_green","ryusoul_black","ryusoul_gold"};
+	public static String[] OTHERS=new String[] {"gaisoulg","ryusoul_brown","ryusoul_moria"};
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
@@ -306,7 +307,16 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.PUNCH, 40, 5,true,false))
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
-    
+
+	public static final DeferredItem<Item> HIEHIE_SOUL_2 = ITEMS.register("hiehie_soul_2",
+			() -> new RyusoulItem(new Item.Properties(),0,"","","blank",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.FROSTWALKER, 40, 5,true,false))
+			.ChangeSlot(2).BackToBase().AddCompatibilityList(OTHERS));
+
 	public static final DeferredItem<Item> HIEHIE_SOUL = ITEMS.register("hiehie_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_hiehie","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
@@ -315,7 +325,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 5,true,false),
             		new MobEffectInstance(EffectCore.FROSTWALKER, 40, 5,true,false))
-            .ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
+			.addAlternative(HIEHIE_SOUL_2.get()).ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGER).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> MAX_RYUSOUL = ITEMS.register("max_ryusoul",
             () -> new RyusoulItem(new Item.Properties(),0,"_max","ryusoul_red","ryusoul_red_belt",
