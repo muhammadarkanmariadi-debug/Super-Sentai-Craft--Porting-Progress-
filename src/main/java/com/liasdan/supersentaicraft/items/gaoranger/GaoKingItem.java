@@ -3,6 +3,7 @@ package com.liasdan.supersentaicraft.items.gaoranger;
 import com.google.common.collect.Lists;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.GaorangerItems;
+import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.ShinkengerItems;
 import com.liasdan.supersentaicraft.items.others.MechaArmorItem;
 import com.liasdan.supersentaicraft.items.others.MechaGattaiItem;
@@ -12,6 +13,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -21,6 +23,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -34,6 +37,23 @@ public class GaoKingItem extends MechaGattaiItem {
 	public GaoKingItem(Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item> torso, DeferredItem<Item> legs, DeferredItem<Item> boot, Properties properties) {
 		super(material, rider, baseFormItem, torso, legs, boot, properties);
 		Unlimited_Textures=4;
+		Has_basic_belt_info=false;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+
+		Item formItem = this.get_Form_Item(stack, 1);
+		Item formItem2 = this.get_Form_Item(stack, 3);
+		Item formItem3 = this.get_Form_Item(stack, 4);
+		Item formItem4 = this.get_Form_Item(stack, 5);
+
+		if (formItem2== OtherItems.BLANK_FORM.get()) tooltipComponents.add(Component.literal(Component.translatable(formItem.toString() + ".form").getString()));
+		else {
+			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem2.toString() + ".form").getString()
+					+ " " + Component.translatable(formItem.toString() + ".form").getString()));
+		}
+		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
 
 	@Override

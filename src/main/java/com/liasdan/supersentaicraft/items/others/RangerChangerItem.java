@@ -32,7 +32,7 @@ public class RangerChangerItem extends RangerArmorItem{
 	public Item TORSO;
 	public Item LEGS; 
 	public int Num_Base_Form_Item = 1;
-	public String BELT_TEXT;;
+	public String BELT_TEXT;
 
 	public Boolean Has_basic_belt_info = true;
 	public Boolean Show_belt_form_info = true;

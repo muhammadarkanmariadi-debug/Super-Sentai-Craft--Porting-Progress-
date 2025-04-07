@@ -103,7 +103,12 @@ public class GozyugerItems {
 					.ChangeModel("geo/rangerwing1.geo.json").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> ZYURANGER_RING = ITEMS.register("zyuranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","tyranno_ranger","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> DAIRANGER_RING = ITEMS.register("dairanger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -144,7 +149,13 @@ public class GozyugerItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> ABARANGER_RING = ITEMS.register("abaranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_tyranno","gozyuger_belt_abaranger",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false))
+			.ChangeRangerName("aba_red").ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> DEKARANGER_RING = ITEMS.register("dekaranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -153,7 +164,10 @@ public class GozyugerItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> BOUKENGER_RING = ITEMS.register("boukenger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","don_momotarou","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GEKIRANGER_RING = ITEMS.register("gekiranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -174,7 +188,13 @@ public class GozyugerItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> KYORYUGER_RING = ITEMS.register("kyoryuger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_eagle","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
+			.ChangeRangerName("kyoryu_red_gozyu").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> TOQGER_RING = ITEMS.register("toqger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -216,11 +236,12 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
 
 	public static final DeferredItem<Item> DONBROTHERS_RING = ITEMS.register("donbrothers_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","don_momotarou","gozyuger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_wolf","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.addSwitchForm(DONBROTHERS_RING_GOZYU.get()).AddToTabList(RangerTabs.GOZYUGER));
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
+			.ChangeRangerName("don_momotarou").addSwitchForm(DONBROTHERS_RING_GOZYU.get()).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> KING_OHGER_RING = ITEMS.register("king_ohger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","kuwagata_ohger","gozyuger_belt",
@@ -260,6 +281,8 @@ public class GozyugerItems {
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"don_momotarou",DONBROTHERS_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> RYUSOUL_RED_TEGA_SWORD_SILVER = ITEMS.register("ryusoul_red_tega_sword_silver",
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"ryusoul_red",RYUSOULGER_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+	public static final DeferredItem<Item> TYRANNO_RANGER_TEGA_SWORD_SILVER = ITEMS.register("tyranno_ranger_tega_sword_silver",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"tyranno_ranger",ZYURANGER_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 
 	public static final DeferredItem<SwordItem> TEGA_SWORD = ITEMS.register("tega_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
