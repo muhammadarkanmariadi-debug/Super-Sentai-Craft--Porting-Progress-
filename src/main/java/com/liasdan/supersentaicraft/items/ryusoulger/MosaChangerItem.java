@@ -63,27 +63,43 @@ public class MosaChangerItem extends RangerChangerItem{
 				if (rider.getMainHandItem().getItem()== LuPatRangerItems.BLADE_BOOMERANG.get()) return "blank";
 				else return get_Form_Item(itemstack,2).getFormName(fly);
 			}
-			if (get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_meramera"&
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_biribiri" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_kurayami" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_kagayaki" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_cosmo" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_dosshin" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_hiehie" &
-					get_Form_Item(itemstack,2).getFormName(fly)!="ryusoul_noblesse") return "blank";
+			else if (get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_tsuyo_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_nobi_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_omo_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_haya_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kata_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kike_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kusa_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_mie_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_mukimuki_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_chiisa_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_mabushi_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_mist_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_karu_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_gyaku_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kotae_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_migake_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kunkun_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_pukupuku_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kakure_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_fue_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_nemu_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_mawari_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_kawaki_soul"|
+					get_Form_Item(itemstack,2).getFormName(fly)=="ryusoul_yawaraka_soul") return "blank";
 			else return get_Form_Item(itemstack,2).getFormName(fly);
 		}
 		
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
 	}
-	
+
 	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		int num = 1;
 		if (slot == EquipmentSlot.HEAD)num=2;
-		
+
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
-		}else   
+		}else
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
 
 	}
