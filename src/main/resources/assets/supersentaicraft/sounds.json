@@ -1,0 +1,18 @@
+{
+  "susume_goranger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:susume_goranger",
+        "stream": true
+      }
+    ]
+  },
+  "samurai_sentai_shinkenger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:samurai_sentai_shinkenger",
+        "stream": true
+      }
+    ]
+  }
+}

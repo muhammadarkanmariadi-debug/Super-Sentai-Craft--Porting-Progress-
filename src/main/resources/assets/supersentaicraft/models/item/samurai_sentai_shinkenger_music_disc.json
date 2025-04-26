@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/samurai_sentai_shinkenger_music_disc"
+  }
+}

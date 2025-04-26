@@ -226,6 +226,10 @@ public class RangerTabs {
 			{
 				event.accept( RangerTabs.MISC.get(i));
 			}
+
+			event.accept(OtherItems.SUSUME_GORANGER_MUSIC_DISC);
+
+			event.accept(OtherItems.SAMURAI_SENTAI_SHINKENGER_MUSIC_DISC);
 		}
 		else if(event.getTab() == RangerTabs.BlockTab.get()) {
 			for (int i = 0; i < RangerTabs.BLOCKS.size(); i++)

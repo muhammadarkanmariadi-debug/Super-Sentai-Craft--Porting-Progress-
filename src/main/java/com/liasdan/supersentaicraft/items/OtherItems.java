@@ -5,6 +5,7 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
 import com.liasdan.supersentaicraft.items.others.*;
 
+import com.liasdan.supersentaicraft.sounds.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorItem;
@@ -37,6 +38,12 @@ public class OtherItems {
 
 	public static final DeferredItem<Item> SUPER_SENTAI_BOOK = ITEMS.register("super_sentai_book",
 			() -> new SuperSentaiBookItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
+
+	public static final DeferredItem<Item> SUSUME_GORANGER_MUSIC_DISC = ITEMS.register("susume_goranger_music_disc",
+			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SUSUME_GORANGER_KEY).stacksTo(1)));
+
+	public static final DeferredItem<Item> SAMURAI_SENTAI_SHINKENGER_MUSIC_DISC = ITEMS.register("samurai_sentai_shinkenger_music_disc",
+			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SAMURAI_SENTAI_SHINKENGER_KEY).stacksTo(1)));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

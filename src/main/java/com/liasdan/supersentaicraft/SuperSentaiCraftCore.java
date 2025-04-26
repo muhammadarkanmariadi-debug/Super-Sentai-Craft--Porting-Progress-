@@ -15,6 +15,7 @@ import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
+import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -71,6 +72,7 @@ public class SuperSentaiCraftCore {
 		// Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
 		NeoForge.EVENT_BUS.register(this);
 		EffectCore.register(modEventBus);
+		ModSounds.register(modEventBus);
 
 		OtherItems.register(modEventBus);
 
