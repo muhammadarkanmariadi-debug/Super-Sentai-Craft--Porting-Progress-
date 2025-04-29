@@ -1,6 +1,7 @@
 package com.liasdan.supersentaicraft.items;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.blocks.machine.BoonboomCarProgrammer;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.boonboomger.ZoonzoomShokaBlasterItem;
 import com.liasdan.supersentaicraft.items.gozyuger.TegaSwordItem;
@@ -27,48 +28,51 @@ public class BoonboomgerItems {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.BOONBOOMGER));
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_OFFROAD = ITEMS.register("boonboom_offroad",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_blue","boonboomger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.BOONBOOMGER));
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_WAGON = ITEMS.register("boonboom_wagon",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_pink","boonboomger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.BOONBOOMGER));
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_PATCAR_1 = ITEMS.register("boonboom_patcar_1",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_black","boonboomger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_black","boonboomger_belt_2",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.BOONBOOMGER));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_PATCAR_2 = ITEMS.register("boonboom_patcar_2",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER));
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,15));
 
 	public static final DeferredItem<Item> BOONBOOM_SHOVEL = ITEMS.register("boonboom_shovel",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_orange","boonboomger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_orange","boonboomger_belt_2",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.BOONBOOMGER));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_DOZER = ITEMS.register("boonboom_dozer",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER));
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,15));
 
 	public static final DeferredItem<Item> BYUNBYUM_MACH = ITEMS.register("byunbyum_mach",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_violet","bun_violet_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.BOONBOOMGER));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,20));
 
 	public static final DeferredItem<Item> BUN_BLACK_110 = ITEMS.register("bun_black_110",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"_110","bun_black","boonboomger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_110","bun_black","boonboomger_belt_2",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
@@ -94,7 +98,7 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
 
 	public static final DeferredItem<Item> CHAMPION_CHANGER_2 = ITEMS.register("champion_changer_2",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"_champion","bun_black","boonboomger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_champion","bun_black","boonboomger_belt_2",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
@@ -105,7 +109,7 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.AddCompatibilityList(new String[] {"bun_blue","bun_pink"}).addAlternative(CHAMPION_CHANGER_2.get()).ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.BOONBOOMGER));
+			.AddCompatibilityList(new String[] {"bun_blue","bun_pink"}).addAlternative(CHAMPION_CHANGER_2.get()).AddToTabList(RangerTabs.BOONBOOMGER));
 	
 	public static final DeferredItem<Item> BOONBOOMGER_HELMET = ITEMS.register("boonboomger_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).ChangeRepairItem(BOONBOOM_TRAILER.get()));

@@ -155,7 +155,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false))
-			.ChangeRangerName("aba_red").ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("aba_red").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> DEKARANGER_RING = ITEMS.register("dekaranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -221,7 +221,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.ChangeRangerName("ryusoul_red").ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("ryusoul_red").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> KIRAMEIGER_RING = ITEMS.register("kirameiger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
@@ -255,7 +255,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.ChangeRangerName("bun_red").ChangeBeltModel("geo/rangerbeltchanger.geo.json").AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("bun_red").AddToTabList(RangerTabs.GOZYUGER));
 	
 	public static final DeferredItem<Item> GOZYUGER_HELMET = ITEMS.register("gozyuger_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
