@@ -140,6 +140,8 @@ public class ModCommonEvents {
 		event.put(MobsCore.DRUNNS.get(), DrunnsEntity.setAttributes().build());
 		event.put(MobsCore.GAISOULG.get(), GaisoulgEntity.setAttributes().build());
 		event.put(MobsCore.RYUSOUL_MORIA.get(), RyusoulMoriaEntity.setAttributes().build());
+
+		event.put(MobsCore.NEJIRETTAS.get(), NejirettasEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent
@@ -163,5 +165,7 @@ public class ModCommonEvents {
 		event.register(MobsCore.PORDERMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.DRUNNS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.NEJIRETTAS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 }

@@ -17,6 +17,7 @@ import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RenderLivingEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -120,6 +122,56 @@ public class SuperSentaiCraftCore {
 	@SubscribeEvent
 	public void onServerStarting(ServerStartingEvent event)
 	{
+	}
+
+	@SubscribeEvent
+	public void addRenderLivingEvent(RenderLivingEvent.Pre event) {
+
+		if (event.getRenderer().getModel()instanceof PlayerModel model){
+			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
+				if (belt.isTransformed(event.getEntity())) {
+					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
+						model.head.visible = false;
+						model.hat.visible = false;
+					}
+					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Arms()) {
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+					}
+					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Legs()){
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+					}
+
+					model.leftSleeve.visible = false;
+					model.rightSleeve.visible = false;
+					model.leftPants.visible = false;
+					model.rightPants.visible = false;
+
+					model.body.visible = false;
+					model.jacket.visible = false;
+				}
+			}
+		}
+
+		float size = 1;
+		boolean Tall = event.getEntity().hasEffect(EffectCore.STRETCH);
+
+		if (event.getEntity().hasEffect(EffectCore.STRETCH)) {
+			size = size + ((event.getEntity().getEffect(EffectCore.STRETCH).getAmplifier()) +1f);
+		}
+
+		float size2 = event.getEntity().hasEffect(EffectCore.STRETCH) ? 1 : size;
+
+		if (event.getEntity().hasEffect(EffectCore.FLAT)) {
+			size2 = 0.04f;
+		}
+		float size3 = event.getEntity().hasEffect(EffectCore.STRETCH) ? 1 : size;
+		if (event.getEntity().hasEffect(EffectCore.WIDE)) {
+			size2 = (float) (size2 * 3);
+			size3 = (float) (size3 * 3);
+		}
+		event.getPoseStack().scale(size3, size, size2);
 	}
 
 	// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -273,6 +325,8 @@ public class SuperSentaiCraftCore {
 			event.registerEntityRenderer(MobsCore.DRUNNS.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.GAISOULG.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.RYUSOUL_MORIA.get(), BasicEntityRenderer::new);
+
+			event.registerEntityRenderer(MobsCore.NEJIRETTAS.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.EXPLOSIVE_PROJECTILE.get(), ThrownItemRenderer::new);
 			event.registerEntityRenderer(MobsCore.WEAPON_PROJECTILE.get(), ThrownWeaponRenderer::new);

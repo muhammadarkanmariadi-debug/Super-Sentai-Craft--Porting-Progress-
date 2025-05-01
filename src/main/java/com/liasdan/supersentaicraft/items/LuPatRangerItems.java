@@ -254,7 +254,7 @@ public class LuPatRangerItems {
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 
 	public static final DeferredItem<BaseBlasterItem> LUPIN_MAGNUM = ITEMS.register("lupin_magnum",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).setProjectileFireball().AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.SMALL_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.LUPATRANGER).ChangeRepairItem(BLANK_STRIKER.get()));
 
 	public static final DeferredItem<Item> PATREN_X_CHANGER = ITEMS.register("patran_x_changer",
 			() -> new BaseItem(new Item.Properties()));

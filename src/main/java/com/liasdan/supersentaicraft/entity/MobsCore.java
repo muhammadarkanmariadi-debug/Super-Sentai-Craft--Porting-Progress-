@@ -127,8 +127,15 @@ public class MobsCore {
     
     public static final DeferredItem<DeferredSpawnEggItem> RYUSOUL_MORIA_SPAWN_EGG = ITEMS.register("ryusoul_moria_spawn_egg",
             () -> new DeferredSpawnEggItem(RYUSOUL_MORIA, 0x795548, 0x416e26, new Item.Properties()));
- 
-    
+
+	//48 Boonboomger
+	public static final DeferredHolder<EntityType<?>, EntityType<NejirettasEntity>> NEJIRETTAS = MOBLIST.register("nejiretta",
+			() -> EntityType.Builder.of(NejirettasEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":nejiretta"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> NEJIRETTAS_SPAWN_EGG = ITEMS.register("nejiretta_spawn_egg",
+			() -> new DeferredSpawnEggItem(NEJIRETTAS, 0xebebeb, 0xbd9629, new Item.Properties()));
+
+
 	public static final DeferredHolder<EntityType<?>, EntityType<ExplosiveProjectileEntity>> EXPLOSIVE_PROJECTILE =
 			MOBLIST.register("explosive_projectile",() -> EntityType.Builder.<ExplosiveProjectileEntity>of(ExplosiveProjectileEntity::new, MobCategory.MISC)
 					.sized(1F, 1F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":explosive_projectile"));

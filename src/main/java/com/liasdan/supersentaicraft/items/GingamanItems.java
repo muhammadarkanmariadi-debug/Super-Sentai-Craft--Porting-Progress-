@@ -133,15 +133,15 @@ public class GingamanItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_RED = ITEMS.register("beast_attack_rod_red",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_GREEN = ITEMS.register("beast_attack_rod_green",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_BLUE = ITEMS.register("beast_attack_rod_blue",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_YELLOW = ITEMS.register("beast_attack_rod_yellow",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     public static final DeferredItem<BaseBlasterItem> JUUGEKIBOU_PINK = ITEMS.register("beast_attack_rod_pink",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	
     public static final DeferredItem<BaseBlasterItem> BULL_RIOT = ITEMS.register("bull_riot",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).isChanger(BLACK_KNIGHT_BULL_RIOT.get()).IsSwordGun().AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));

@@ -221,6 +221,8 @@ public class RangerTabs {
 			event.accept(MobsCore.DRUNNS_SPAWN_EGG);
 			event.accept(MobsCore.GAISOULG_SPAWN_EGG);
 			event.accept(MobsCore.RYUSOUL_MORIA_SPAWN_EGG);
+
+			event.accept(MobsCore.NEJIRETTAS_SPAWN_EGG);
 			
 			for (int i = 0; i < RangerTabs.MISC.size(); i++)
 			{

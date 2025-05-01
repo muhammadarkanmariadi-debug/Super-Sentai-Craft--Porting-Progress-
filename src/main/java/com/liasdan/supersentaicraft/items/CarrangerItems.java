@@ -62,7 +62,8 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddToTabList(RangerTabs.CARRANGER));
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+			.SetShowFace().SetShowLegs().SetShowArms().AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> SIGNALMAN_BADGE = ITEMS.register("signalman_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","signalman","blank",
@@ -115,7 +116,7 @@ public class CarrangerItems {
 	public static final DeferredItem<BaseBlasterItem> MUFFLER_GUN = ITEMS.register("muffler_gun",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> ENGINE_CANNON = ITEMS.register("engine_cannon",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 	public static final DeferredItem<SwordItem> SIDE_KNUCKLE = ITEMS.register("side_knuckle",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> BUMPER_BOW = ITEMS.register("bumper_bow",
@@ -124,7 +125,7 @@ public class CarrangerItems {
 	public static final DeferredItem<BaseBlasterItem> NAVIC_SHOT = ITEMS.register("navic_shot",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> NAVIC_BLASTER = ITEMS.register("navic_blaster",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).KeepDifItem(NAVIC_SHOT.get()).AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));
 
 	public static final DeferredItem<BaseBlasterItem> SIGNAIZER = ITEMS.register("signaizer",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RangerTabs.CARRANGER).ChangeRepairItem(CARRANGER_LOGO.get()));

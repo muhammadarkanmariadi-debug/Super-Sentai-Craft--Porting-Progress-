@@ -82,14 +82,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.addAlternative(BUN_BLACK_110.get()).ChangeBeltModel("geo/rangerbeltchanger.geo.json"));
+			.addAlternative(BUN_BLACK_110.get()));
 
 	public static final DeferredItem<Item> BUN_RED_119 = ITEMS.register("bun_red_119",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_119","bun_red","boonboomger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.addAlternative(BUN_BLUE_007.get()).ChangeBeltModel("geo/rangerbeltchanger.geo.json"));
+			.addAlternative(BUN_BLUE_007.get()));
 
 	public static final DeferredItem<Item> CHAMPION_CHANGER_3 = ITEMS.register("champion_changer_3",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_champion","bun_violet","bun_violet_belt",

@@ -45,6 +45,10 @@ public class RangerFormChangeItem extends BaseItem {
 	private RangerFormChangeItem NEED_FORM_SLOT_3;
 	private RangerFormChangeItem NEED_FORM_SLOT_4;
 
+	private Boolean SET_SHOW_FACE = false;
+	private Boolean SET_SHOW_ARMS = false;
+	private Boolean SET_SHOW_LEGS = false;
+
 
 	public RangerFormChangeItem( Properties properties,int belt,String formName,String rangername,String beltTex, MobEffectInstance... effects) {
 		super( properties);
@@ -93,6 +97,18 @@ public class RangerFormChangeItem extends BaseItem {
 		return "geo/rangerbelt.geo.json";
 	}
 
+	public Boolean get_Show_Face() {
+		return SET_SHOW_FACE;
+	}
+
+	public Boolean get_Show_Arms() {
+		return SET_SHOW_ARMS;
+	}
+
+	public Boolean get_Show_Legs() {
+		return SET_SHOW_LEGS;
+	}
+
 	public String getRangerName(String name) {
 		return (OVERRIDE_RANGER_NAME!=null ? OVERRIDE_RANGER_NAME : name);
 	}
@@ -116,6 +132,21 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public RangerFormChangeItem ChangeBeltModel(String beltmodel) {
 		UPDATED_BELT=beltmodel;
+		return this;
+	}
+
+	public RangerFormChangeItem SetShowFace() {
+		SET_SHOW_FACE = true;
+		return this;
+	}
+
+	public RangerFormChangeItem SetShowArms() {
+		SET_SHOW_ARMS = true;
+		return this;
+	}
+
+	public RangerFormChangeItem SetShowLegs() {
+		SET_SHOW_LEGS = true;
 		return this;
 	}
 

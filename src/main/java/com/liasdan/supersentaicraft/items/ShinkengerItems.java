@@ -165,12 +165,12 @@ public class ShinkengerItems {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
     public static final DeferredItem<SwordItem> SUPER_SHINKENMARU = ITEMS.register("super_shinkenmaru",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).KeepDifItem(SHINKENMARU.get()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     
     public static final DeferredItem<SwordItem> KYORYUMARU = ITEMS.register("kyoryumaru",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).KeepDifItem(SHINKENMARU.get()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     public static final DeferredItem<SwordItem> KYORYUMARU_SAKANAMARU = ITEMS.register("kyoryumaru_sakanamaru",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).ChangeRepairItem(KYOUTSU_DISK.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).KeepDifItem(SAKANAMARU.get()).ChangeRepairItem(KYOUTSU_DISK.get()));
     
     public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
