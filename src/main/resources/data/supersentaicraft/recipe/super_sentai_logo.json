@@ -1,16 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "super_sentai",
-  "ingredients": [
-	{
-      "item": "supersentaicraft:mecha_gear"
-    },
-	{
-      "item": "minecraft:paper",
-	  "data": 0
-    }
-  ],
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "supersentaicraft:blanks"
+  },
   "result": {
     "id": "supersentaicraft:super_sentai_logo"
-  }
+  },
+  "experience": 5,
+  "cookingtime": 200
 }

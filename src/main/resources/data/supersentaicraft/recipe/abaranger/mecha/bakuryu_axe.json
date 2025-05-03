@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "max_ohja",
   "pattern": [
-    "ama",
+    "aaa",
     "cbd",
 	"aea"
   ],
@@ -20,10 +20,7 @@
       "item": "supersentaicraft:max_ptera_dino_guts"
     },
 	"e": {
-      "item": "minecraft:diamond_sword"
-    },
-	"m": {
-      "item": "supersentaicraft:mecha_gear"
+      "item": "supersentaicraft:base_mecha_sword"
     }
   },
   "result": {

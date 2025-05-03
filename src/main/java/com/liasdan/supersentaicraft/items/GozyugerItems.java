@@ -53,6 +53,13 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
 
+	public static final DeferredItem<Item> TEGA_JUNE_RING = ITEMS.register("tega_june_ring",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","ring_hunter_garyudo","blank",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+	 		.ChangeModel("geo/black_knight.geo.json").AddToTabList(RangerTabs.GOZYUGER));
+
 	public static final DeferredItem<Item> GORANGER_RING = ITEMS.register("goranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
 
@@ -274,6 +281,9 @@ public class GozyugerItems {
 			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_eagle",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> UNICORN_TEGA_SWORD = ITEMS.register("unicorn_tega_sword",
 			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_unicorn",GOZYU_UNICORN_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+
+	public static final DeferredItem<Item> GARYUDO_TEGA_JUNE = ITEMS.register("garyudo_tega_june",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"ring_hunter_garyudo",TEGA_JUNE_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 
 	public static final DeferredItem<Item> KUWAGATA_OHGER_TEGA_SWORD_SILVER = ITEMS.register("kuwagata_ohger_tega_sword_silver",
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"kuwagata_ohger",KING_OHGER_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));

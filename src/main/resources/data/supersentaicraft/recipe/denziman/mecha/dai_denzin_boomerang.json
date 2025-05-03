@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "dai_denzin",
   "pattern": [
-    "cmd",
+    "cad",
     "ebf",
 	"aga"
   ],
@@ -26,10 +26,7 @@
       "item": "supersentaicraft:pink_denzi_gem"
     },
 	"g": {
-      "item": "minecraft:diamond_sword"
-    },
-	"m": {
-      "item": "supersentaicraft:mecha_gear"
+      "item": "supersentaicraft:base_mecha_sword"
     }
   },
   "result": {

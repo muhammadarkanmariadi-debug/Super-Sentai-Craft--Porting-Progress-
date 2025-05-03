@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "battle_fever_robo",
   "pattern": [
-    "ama",
+    "aaa",
     "aba",
 	"aca"
   ],
@@ -14,10 +14,7 @@
       "item": "supersentaicraft:japan_badge"
     },
 	"c": {
-      "item": "minecraft:diamond_sword"
-    },
-	"m": {
-      "item": "supersentaicraft:mecha_gear"
+      "item": "supersentaicraft:base_mecha_sword"
     }
   },
   "result": {

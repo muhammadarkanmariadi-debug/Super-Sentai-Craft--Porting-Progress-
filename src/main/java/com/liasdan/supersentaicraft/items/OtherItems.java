@@ -25,7 +25,13 @@ public class OtherItems {
 	public static String[] SentaiRobo = new String[] {"sun_vulcan_robo","gao_king","gao_muscle","gao_hunter","gao_hunter_blue_moon",
 			"gao_icarus","gao_god","gao_knight"};
 
+	public static final DeferredItem<Item> BASE_SWORD = ITEMS.register("base_sword",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
+
 	public static final DeferredItem<Item> MECHA_GEAR = ITEMS.register("mecha_gear",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
+
+	public static final DeferredItem<Item> BASE_MECHA_SWORD = ITEMS.register("base_mecha_sword",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));
 
 	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",

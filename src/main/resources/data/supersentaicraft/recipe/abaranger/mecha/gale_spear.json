@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "killer_oh",
   "pattern": [
-    "ama",
+    "aaa",
     "aba",
 	"aca"
   ],
@@ -14,10 +14,7 @@
       "item": "supersentaicraft:top_dino_guts"
     },
 	"c": {
-      "item": "minecraft:diamond_sword"
-    },
-	"m": {
-      "item": "supersentaicraft:mecha_gear"
+      "item": "supersentaicraft:base_mecha_sword"
     }
   },
   "result": {

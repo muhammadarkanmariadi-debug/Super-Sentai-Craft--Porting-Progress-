@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "sun_vulcan_robo",
   "pattern": [
-    "ama",
+    "aaa",
     "cbd",
 	"aea"
   ],
@@ -20,10 +20,7 @@
       "item": "supersentaicraft:vul_panther_medal"
     },
 	"e": {
-      "item": "minecraft:diamond_sword"
-    },
-	"m": {
-      "item": "supersentaicraft:mecha_gear"
+      "item": "supersentaicraft:base_mecha_sword"
     }
   },
   "result": {
