@@ -1,8 +1,11 @@
 package com.liasdan.supersentaicraft.items.gozyuger;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.GorangerItems;
+import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorMaterial;
@@ -33,6 +36,16 @@ public class TegaSwordItem extends RangerChangerItem{
 		else if (equipmentSlot == EquipmentSlot.HEAD) return rangerName+"_armor";
 
 		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);
+	}
+
+	public ResourceLocation getModelResource(ItemStack itemstack, RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		int num = 1;
+
+		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
+		}else
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+
 	}
 
 	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
