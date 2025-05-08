@@ -261,8 +261,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2,true,false))
-			.ChangeModel("geo/zyuoh_gorilla.geo.json").ChangeRangerName("zyuoh_gorilla"));
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2,true,false)).ChangeRangerName("zyuoh_gorilla"));
 
 	public static final DeferredItem<Item> ZYUOHGER_RING = ITEMS.register("zyuohger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -334,15 +333,20 @@ public class GozyugerItems {
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
     
     public static final DeferredItem<Item> WOLF_TEGA_SWORD = ITEMS.register("wolf_tega_sword",
-    		() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_wolf",GOZYU_WOLF_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+    		() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_wolf",GOZYU_WOLF_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> LEON_TEGA_SWORD = ITEMS.register("leon_tega_sword",
-			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_leon",GOZYU_LEON_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_leon",GOZYU_LEON_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> TYRANNO_TEGA_SWORD = ITEMS.register("tyranno_tega_sword",
-			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_tyranno",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_tyranno",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> EAGLE_TEGA_SWORD = ITEMS.register("eagle_tega_sword",
-			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_eagle",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_eagle",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> UNICORN_TEGA_SWORD = ITEMS.register("unicorn_tega_sword",
-			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_unicorn",GOZYU_UNICORN_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
+			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_unicorn",GOZYU_UNICORN_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 
 	public static final DeferredItem<Item> GARYUDO_TEGA_JUNE = ITEMS.register("garyudo_tega_june",
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"ring_hunter_garyudo",TEGA_JUNE_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));

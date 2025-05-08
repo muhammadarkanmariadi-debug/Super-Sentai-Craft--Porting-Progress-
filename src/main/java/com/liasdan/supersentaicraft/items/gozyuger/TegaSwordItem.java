@@ -38,8 +38,9 @@ public class TegaSwordItem extends RangerChangerItem{
 		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);
 	}
 
-	public ResourceLocation getModelResource(ItemStack itemstack, RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		int num = 1;
+		if (slot == EquipmentSlot.HEAD)num=2;
 
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
