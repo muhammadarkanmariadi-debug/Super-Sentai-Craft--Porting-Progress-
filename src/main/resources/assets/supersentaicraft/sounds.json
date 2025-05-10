@@ -7,6 +7,14 @@
       }
     ]
   },
+  "taiyou_sentai_sun_vulcan": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:taiyou_sentai_sun_vulcan",
+        "stream": true
+      }
+    ]
+  },
   "samurai_sentai_shinkenger": {
     "sounds": [
       {

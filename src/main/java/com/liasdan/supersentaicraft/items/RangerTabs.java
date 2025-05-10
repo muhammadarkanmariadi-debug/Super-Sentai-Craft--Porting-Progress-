@@ -231,6 +231,8 @@ public class RangerTabs {
 
 			event.accept(OtherItems.SUSUME_GORANGER_MUSIC_DISC);
 
+			event.accept(OtherItems.TAIYOU_SENTAI_SUN_VULCAN_MUSIC_DISC);
+
 			event.accept(OtherItems.SAMURAI_SENTAI_SHINKENGER_MUSIC_DISC);
 		}
 		else if(event.getTab() == RangerTabs.BlockTab.get()) {

@@ -301,7 +301,8 @@ public class GozyugerItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_gozyu","universe_senshi","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).ChangeRangerName("don_momotarou_gozyu"));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			.ChangeRangerName("don_momotarou"));
 
 	public static final DeferredItem<Item> DONBROTHERS_RING = ITEMS.register("donbrothers_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -342,7 +343,7 @@ public class GozyugerItems {
 			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_tyranno",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
 					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> EAGLE_TEGA_SWORD = ITEMS.register("eagle_tega_sword",
-			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_eagle",GOZYU_TYRANNO_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
+			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_eagle",GOZYU_EAGLE_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())
 					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GOZYUGER).ChangeRepairItem(GOZYUGER_RING.get()));
 	public static final DeferredItem<Item> UNICORN_TEGA_SWORD = ITEMS.register("unicorn_tega_sword",
 			() -> new TegaSwordItem(ArmorMaterials.DIAMOND,"gozyu_unicorn",GOZYU_UNICORN_RING,GOZYUGER_HELMET,GOZYUGER_CHESTPLATE,GOZYUGER_LEGGINGS,new Item.Properties())

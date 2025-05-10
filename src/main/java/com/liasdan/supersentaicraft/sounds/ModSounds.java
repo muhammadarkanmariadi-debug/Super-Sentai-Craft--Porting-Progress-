@@ -19,6 +19,9 @@ public class ModSounds {
     public static final Supplier<SoundEvent> SUSUME_GORANGER = registerSoundEvent("susume_goranger");
     public static final ResourceKey<JukeboxSong> SUSUME_GORANGER_KEY = createSong("susume_goranger");
 
+    public static final Supplier<SoundEvent> TAIYOU_SENTAI_SUN_VULCAN = registerSoundEvent("taiyou_sentai_sun_vulcan");
+    public static final ResourceKey<JukeboxSong> TAIYOU_SENTAI_SUN_VULCAN_KEY = createSong("taiyou_sentai_sun_vulcan");
+
     public static final Supplier<SoundEvent> SAMURAI_SENTAI_SHINKENGER = registerSoundEvent("samurai_sentai_shinkenger");
     public static final ResourceKey<JukeboxSong> SAMURAI_SENTAI_SHINKENGER_KEY = createSong("samurai_sentai_shinkenger");
 
