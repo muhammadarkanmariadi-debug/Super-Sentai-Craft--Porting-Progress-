@@ -1,0 +1,31 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:boonboom_trailer"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:boonboomger/boonboomger_head",
+      "supersentaicraft:boonboomger/boonboomger_torso",
+      "supersentaicraft:boonboomger/boonboomger_legs",
+      "supersentaicraft:boonboomger/boonboomger_logo",
+      "supersentaicraft:boonboomger/boonboom_handle_sword",
+      "supersentaicraft:boonboomger/boonboom_change_axe",
+      "supersentaicraft:boonboomger/unfinished_champion_carrier"
+    ]
+  }
+}

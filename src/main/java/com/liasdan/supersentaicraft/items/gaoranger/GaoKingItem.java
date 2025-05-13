@@ -37,23 +37,6 @@ public class GaoKingItem extends MechaGattaiItem {
 	public GaoKingItem(Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item> torso, DeferredItem<Item> legs, DeferredItem<Item> boot, Properties properties) {
 		super(material, rider, baseFormItem, torso, legs, boot, properties);
 		Unlimited_Textures=4;
-		Has_basic_belt_info=false;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-
-		Item formItem = this.get_Form_Item(stack, 1);
-		Item formItem2 = this.get_Form_Item(stack, 3);
-		Item formItem3 = this.get_Form_Item(stack, 4);
-		Item formItem4 = this.get_Form_Item(stack, 5);
-
-		if (formItem2== OtherItems.BLANK_FORM.get()) tooltipComponents.add(Component.literal(Component.translatable(formItem.toString() + ".form").getString()));
-		else {
-			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem2.toString() + ".form").getString()
-					+ " " + Component.translatable(formItem.toString() + ".form").getString()));
-		}
-		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
 
 	@Override

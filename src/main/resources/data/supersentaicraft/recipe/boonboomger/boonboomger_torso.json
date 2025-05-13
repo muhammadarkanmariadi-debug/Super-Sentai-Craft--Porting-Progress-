@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boonboomger",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:boonboomger_torso"
+  }
+}

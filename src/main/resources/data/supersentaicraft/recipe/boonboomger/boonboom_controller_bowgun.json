@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bun_violet",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    },
+    "b": {
+      "item": "supersentaicraft:byunbyum_mach"
+    },
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:boonboom_controller_bowgun"
+  }
+}

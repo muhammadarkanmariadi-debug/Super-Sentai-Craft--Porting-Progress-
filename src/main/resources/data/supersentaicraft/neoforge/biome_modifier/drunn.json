@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "supersentaicraft:snowy_taiga",
+  "biomes": "#supersentaicraft:cold",
   "spawners": {
     "type": "supersentaicraft:drunn",
     "weight": 15,

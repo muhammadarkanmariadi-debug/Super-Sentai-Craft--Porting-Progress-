@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bun_red_119",
+  "pattern": [
+    "aaa",
+    "bad",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    },
+    "b": {
+      "item": "supersentaicraft:boonboom_shoubousha"
+    },
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    },
+    "d": {
+      "item": "supersentaicraft:boonboom_leo_rescue"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:zoonzoom_shoka_blaster"
+  }
+}

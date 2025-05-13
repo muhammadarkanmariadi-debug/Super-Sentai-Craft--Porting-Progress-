@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:violet_boonboom_controller"
+    },
+    "title": "Boonboom Change!",
+    "description": "Obtain Bun Violet's Boonboom Controller",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/boonboom_booster",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:violet_boonboom_controller"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

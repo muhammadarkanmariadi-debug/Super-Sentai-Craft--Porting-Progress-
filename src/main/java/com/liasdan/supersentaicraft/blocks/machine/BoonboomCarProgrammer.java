@@ -13,7 +13,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -70,7 +69,7 @@ public class BoonboomCarProgrammer extends MachineBlock {
         return PushReaction.PUSH_ONLY;
      }
 
-     private Item getgashatDrop(int num) {
+     private Item getCarDrop(int num) {
  		Random generator = new Random();
  			int rand = generator.nextInt(BOONBOOM_CAR.size());
  			return BOONBOOM_CAR.get(rand);
@@ -82,7 +81,12 @@ public class BoonboomCarProgrammer extends MachineBlock {
 
 		if (!level.isClientSide()) {
 			if (player.getItemInHand(hand).getItem() == BoonboomgerItems.BOONBOOM_TRAILER.get()) {
-				process(player, level, pos, hand,  getgashatDrop(0));
+				process(player, level, pos, hand, getCarDrop(0));
+				return ItemInteractionResult.SUCCESS;
+			}
+			else if (player.getItemInHand(hand).getItem() == BoonboomgerItems.CHAMPION_CARRIER.get()) {
+				process(player, level, pos, hand, BoonboomgerItems.CHAMPION_CARRIER_OFF.get());
+				process(player, level, pos, hand, BoonboomgerItems.CHAMPION_CHANGER.get());
 				return ItemInteractionResult.SUCCESS;
 			}
 		}

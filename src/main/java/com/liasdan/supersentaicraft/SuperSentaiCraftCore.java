@@ -152,6 +152,30 @@ public class SuperSentaiCraftCore {
 					model.jacket.visible = false;
 				}
 			}
+			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+				if (belt.isTransformed(event.getEntity())) {
+					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Face()) {
+						model.head.visible = false;
+						model.hat.visible = false;
+					}
+					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Arms()) {
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+					}
+					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Legs()){
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+					}
+
+					model.leftSleeve.visible = false;
+					model.rightSleeve.visible = false;
+					model.leftPants.visible = false;
+					model.rightPants.visible = false;
+
+					model.body.visible = false;
+					model.jacket.visible = false;
+				}
+			}
 		}
 
 		float size = 1;

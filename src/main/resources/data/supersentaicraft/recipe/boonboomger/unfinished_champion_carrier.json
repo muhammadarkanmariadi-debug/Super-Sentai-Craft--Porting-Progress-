@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "boonboomger",
+  "ingredients": [
+    {
+      "item": "supersentaicraft:boonboom_patcar_2"
+    },
+    {
+      "item": "supersentaicraft:boonboom_dozer"
+    },
+    {
+      "item": "supersentaicraft:boonboom_racing"
+    },
+    {
+      "item": "supersentaicraft:boonboom_classic"
+    },
+    {
+      "item": "supersentaicraft:boonboom_marine"
+    },
+    {
+      "item": "supersentaicraft:boonboom_safari"
+    },
+    {
+      "item": "supersentaicraft:boonboom_shoubousha"
+    },
+    {
+      "item": "supersentaicraft:boonboom_leo_rescue"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:unfinished_champion_carrier"
+  }
+}

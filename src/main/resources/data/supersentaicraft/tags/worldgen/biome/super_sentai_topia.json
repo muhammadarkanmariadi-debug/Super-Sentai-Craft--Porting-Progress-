@@ -3,6 +3,7 @@
     "supersentaicraft:plains",
     "supersentaicraft:swamp",
     "supersentaicraft:snowy_taiga",
-    "supersentaicraft:savanna"
+    "supersentaicraft:savanna",
+    "#minecraft:is_overworld"
   ]
 }

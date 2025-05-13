@@ -202,7 +202,6 @@ public class MechaGattaiItem extends MechaArmorItem{
 
 	public static RangerFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT)
 	{
-
 		MechaGattaiItem belt = (MechaGattaiItem)itemstack.getItem();
 		RangerFormChangeItem Base_Form_Item = belt.Base_Form_Item;
 

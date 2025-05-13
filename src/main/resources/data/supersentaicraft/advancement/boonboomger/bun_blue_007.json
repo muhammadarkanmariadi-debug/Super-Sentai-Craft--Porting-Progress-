@@ -1,0 +1,48 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zoonzoom_shoka_blaster"
+    },
+    "title": "Bakuage 22: Lion's Flaming Fury",
+    "description": "Change into Bun Blue 007",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/bun_red_119",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_boonboom_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:bun_blue_007\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

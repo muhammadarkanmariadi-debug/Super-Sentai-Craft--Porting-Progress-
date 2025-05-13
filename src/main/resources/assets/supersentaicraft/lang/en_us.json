@@ -206,6 +206,8 @@
   "item.supersentaicraft.jimmers_hatchet": "Jimmers Hatchet",
   "item.supersentaicraft.ano_hammer": "AnoHammer",
 
+  "item.supersentaicraft.mufflambo": "Mufflambo",
+
   //01 Goranger
   "tab.supersentaicraft.goranger": "Himitsu Sentai Goranger",
 
@@ -812,14 +814,14 @@
   "item.supersentaicraft.signalman_badge": "Signalman Badge",
   "item.supersentaicraft.vrv_master_badge": "VRV Master Badge",
 
-  "supersentaicraft:red_racer_badge": "Ranger: §cRed Racer",
-  "supersentaicraft:blue_racer_badge": "Ranger: §9Blue Racer",
-  "supersentaicraft:green_racer_badge": "Ranger: §2Green Racer",
-  "supersentaicraft:yellow_racer_badge": "Ranger: §eYellow Racer",
-  "supersentaicraft:pink_racer_badge": "Ranger: §dPink Racer",
-  "supersentaicraft:white_racer_badge": "Ranger Wannabe: White Racer",
-  "supersentaicraft:signalman_badge": "Extra Hero: §1Signalman",
-  "supersentaicraft:vrv_master_badge": "Extra Hero: §8VRV Master",
+  "supersentaicraft:red_racer_badge.form": "Ranger: §cRed Racer",
+  "supersentaicraft:blue_racer_badge.form": "Ranger: §9Blue Racer",
+  "supersentaicraft:green_racer_badge.form": "Ranger: §2Green Racer",
+  "supersentaicraft:yellow_racer_badge.form": "Ranger: §eYellow Racer",
+  "supersentaicraft:pink_racer_badge.form": "Ranger: §dPink Racer",
+  "supersentaicraft:white_racer_badge.form": "Ranger Wannabe: White Racer",
+  "supersentaicraft:signalman_badge.form": "Extra Hero: §1Signalman",
+  "supersentaicraft:vrv_master_badge.form": "Extra Hero: §8VRV Master",
 
   "item.supersentaicraft.auto_blaster": "Auto Blaster",
   "item.supersentaicraft.auto_punisher": "Auto Punisher",
@@ -1048,21 +1050,20 @@
   "item.supersentaicraft.gao_lion_white_jewel": "GaoLion Jewel (White)",
   "item.supersentaicraft.gao_ape_jewel": "GaoApe Jewel",
 
-  "supersentaicraft.gao_giraffe_jewel.form": "Spear",
-  "supersentaicraft.gao_bear_jewel.form": "Knuckle",
-  "supersentaicraft.gao_polar_jewel.form": "Knuckle",
-  "supersentaicraft.gao_hammerhead_jewel.form": "Hammerhead",
-  "supersentaicraft.gao_deers_jewel.form": "Cross Horn",
+  "supersentaicraft:gao_lion_jewel_king.form": "Sentai Robo: GaoKing",
+  "supersentaicraft:gao_gorilla_jewel.form": "Sentai Robo: GaoMuscle",
+  "supersentaicraft:gao_ligator_jewel.form": "Sentai Robo: GaoHunter Justice",
+  "supersentaicraft:gao_ligator_jewel_evil.form": "Sentai Robo: GaoHunter Evil",
+  "supersentaicraft:gao_ligator_jewel_blue_moon.form": "Sentai Robo: GaoHunter Blue Moon",
+  "supersentaicraft:gao_ligator_jewel_evil_blue_moon.form": "Sentai Robo: GaoHunter Blue Moon Evil",
+  "supersentaicraft:gao_falcon_jewel.form": "Sentai Robo: GaoIcarus",
+  "supersentaicraft:gao_leon_jewel.form": "Sentai Robo: GaoGod",
+  "supersentaicraft:gao_kong_jewel.form": "Sentai Robo: GaoKnight",
 
-  "supersentaicraft.gao_sawshark_jewel.form": "Sawshark",
-  "supersentaicraft.gao_buffalo_jewel.form": "Buffalo",
-  "supersentaicraft.gao_jaguar_jewel.form": "Jaguar",
-
-  "supersentaicraft.gao_panda_jewel.form": "Knuckle",
-  "supersentaicraft.gao_lion_blue_jewel.form": "GaoLion Jewel (Blue)",
-  "supersentaicraft.gao_lion_black_jewel.form": "GaoLion Jewel (Black)",
-  "supersentaicraft.gao_lion_white_jewel.form": "GaoLion Jewel (White)",
-  "supersentaicraft.gao_ape_jewel.form": "GaoApe Jewel",
+  "supersentaicraft:gao_lion_blue_jewel.form": "Sentai Robo: GaoKing (Blue GaoLion)",
+  "supersentaicraft:gao_lion_black_jewel.form": "Sentai Robo: GaoKing (Black GaoLion)",
+  "supersentaicraft:gao_lion_white_jewel.form": "Sentai Robo: GaoKing (White GaoLion)",
+  "supersentaicraft:gao_ape_jewel.form": "Sentai Robo: GaoKnight (GaoApe)",
 
   "item.supersentaicraft.unfinished_gao_god_jewel": "Unfinished GaoGod Jewel",
   "item.supersentaicraft.empty_gao_god_jewel": "Empty GaoGod Jewel",
@@ -1990,6 +1991,24 @@
   "item.supersentaicraft.siren_striker": "Siren Striker",
   "item.supersentaicraft.unfinished_lupin_magnum": "Unfinished Lupin Magnum",
 
+  "supersentaicraft:red_dial_fighter.form": "§cLupin Red",
+  "supersentaicraft:blue_dial_fighter.form": "§9Lupin Blue",
+  "supersentaicraft:yellow_dial_fighter.form": "§eLupin Yellow",
+  "supersentaicraft:ichigou_trigger_machine.form": "§cPatren 1gou",
+  "supersentaicraft:nigou_trigger_machine.form": "§aPatren 2gou",
+  "supersentaicraft:sangou_trigger_machine.form": "§dPatren 3gou",
+  "supersentaicraft:silver_x_train.form": "Ranger: §7Lupin X",
+  "supersentaicraft:gold_x_train.form": "Ranger: §6Patren X",
+  "supersentaicraft:good_striker.form": "§dPat§cren U§agou",
+  "supersentaicraft:jackpot_striker.form": "§9Lupi§cn Tric§eolor",
+  "supersentaicraft:scissor_dial_fighter.form": "Kaitou Boost: §8Scissors Dial Fighter",
+  "supersentaicraft:magic_dial_fighter.form": "Kaitou Boost: Magic Dial Fighter",
+  "supersentaicraft:victory_striker_x.form": "Ranger: §7Super §6Patren X",
+  "supersentaicraft:crane_trigger_machine.form": "Keisatsu Boost: §eTrigger Machine Crane",
+  "supersentaicraft:splash_trigger_machine.form": "Keisatsu Boost: §cTrigger Machine Splash",
+  "supersentaicraft:siren_striker.form": "§6Super",
+  "supersentaicraft:siren_striker_x.form": "Ranger: §6Super §7Lupin X",
+
   "item.supersentaicraft.vs_changer": "VS Changer",
   "item.supersentaicraft.x_changer": "X Changer",
   "item.supersentaicraft.lupin_sword": "Lupin Sword",
@@ -2555,6 +2574,8 @@
   //48 Boonboomger
   "tab.supersentaicraft.boonboomger": "Bakuage Sentai Boonboomger",
 
+  "block.supersentaicraft.boonboom_car_programmer": "Boonboom Car Programmer",
+
   "item.supersentaicraft.boonboomger_logo":"Boonboomger Logo",
   "item.supersentaicraft.boonboom_trailer":"Boonboom Trailer",
 
@@ -2576,11 +2597,46 @@
   "item.supersentaicraft.boonboom_patcar_2":"Boonboom PatCar 2",
   "item.supersentaicraft.boonboom_shovel":"Boonboom Shovel",
   "item.supersentaicraft.boonboom_dozer":"Boonboom Dozer",
+
+  "item.supersentaicraft.boonboom_racing":"Boonboom Racing",
+  "item.supersentaicraft.boonboom_classic":"Boonboom Classic",
+  "item.supersentaicraft.boonboom_marine":"Boonboom Marine",
+  "item.supersentaicraft.boonboom_safari":"Boonboom Safari",
+
   "item.supersentaicraft.byunbyum_mach":"Byunbyum Mach",
+  "item.supersentaicraft.boonboom_shoubousha":"Boonboom Shoubousha",
+  "item.supersentaicraft.boonboom_leo_rescue":"Boonboom Leo Rescue",
+
+  "item.supersentaicraft.champion_changer":"Champion Changer",
+  "item.supersentaicraft.unfinished_champion_carrier":"Unfinished Champion Carrier",
+  "item.supersentaicraft.champion_carrier_off":"Champion Carrier (without Champion Changer)",
+  "item.supersentaicraft.champion_carrier":"Champion Carrier",
+
+  "item.supersentaicraft.boonboom_super_car_bakuage":"Boonboom Super Car (Bakuage Mode ver.)",
+  "item.supersentaicraft.boonboom_offroad_ghost":"Boonboom Offroad Ghost",
+  "item.supersentaicraft.boonboom_patcar_1_justice_white":"Boonboom PatCar 1 (Justice White ver.)",
+  "item.supersentaicraft.boonboom_racing_cool_blue":"Boonboom Racing (Cool Blue ver.)",
+  "item.supersentaicraft.boonboom_classic_cool_blue":"Boonboom Classic (Cool Blue ver.)",
+  "item.supersentaicraft.boonboom_safari_wild_white":"Boonboom Safari (Wild White ver.)",
+  "item.supersentaicraft.boonboom_suiso_car":"Boonboom SuisoCar",
+
+  "supersentaicraft:boonboom_super_car.form":"Ranger: §cBun Red",
+  "supersentaicraft:boonboom_offroad.form":"Ranger: §9Bun Blue",
+  "supersentaicraft:boonboom_wagon.form":"Ranger: §dBun Pink",
+  "supersentaicraft:boonboom_patcar_1.form":"Ranger: §8Bun Black",
+  "supersentaicraft:boonboom_shovel.form":"Ranger: §6Bun Orange",
+
+  "supersentaicraft:byunbyum_mach.form":"Ranger: §5Bun Violet",
+
+  "supersentaicraft:bun_red_119.form":"Ranger: §cBun Red 119",
+  "supersentaicraft:bun_blue_007.form":"Ranger: §9Bun Blue 007",
+  "supersentaicraft:bun_black_110.form":"Ranger: §8Bun Black 110",
+
+  "supersentaicraft:champion_changer_3.form":"Ranger: §5Champion Bun Violet",
 
   "item.supersentaicraft.boonboom_handle_sword":"Boonboom Handle",
   "item.supersentaicraft.boonboom_change_axe":"Boonboom Change Axe",
-  "item.supersentaicraft.boonboom_controller_arrow":"Boonboom Controller",
+  "item.supersentaicraft.boonboom_controller_bowgun":"Boonboom Controller",
   "item.supersentaicraft.zoonzoom_shoka_blaster":"Zoonzoom Shoka Blaster",
 
   //49 Gozyuger
@@ -2599,15 +2655,17 @@
   "item.supersentaicraft.eagle_tega_sword":"Tega Sword (Gozyu Eagle)",
   "item.supersentaicraft.unicorn_tega_sword":"Tega Sword (Gozyu Unicorn)",
 
-  "item.supersentaicraft.kuwagata_ohger_tega_sword_silver":"Tega Sword (Kuwagata Ohger)",
-  "item.supersentaicraft.don_momotarou_tega_sword_silver":"Tega Sword (Don Momotarou)",
-  "item.supersentaicraft.ryusoul_red_tega_sword_silver":"Tega Sword (Ryusoul Red)",
+  "item.supersentaicraft.garyudo_tega_june":"Tega June (Ring Hunter Garyudo)",
+
+  "item.supersentaicraft.universe_tega_sword_silver":"Tega Sword (Universe Senshi)",
 
   "item.supersentaicraft.gozyu_wolf_ring":"Gozyu Wolf Ring",
   "item.supersentaicraft.gozyu_leon_ring":"Gozyu Leon Ring",
   "item.supersentaicraft.gozyu_tyranno_ring":"Gozyu Tyranno Ring",
   "item.supersentaicraft.gozyu_eagle_ring":"Gozyu Eagle Ring",
   "item.supersentaicraft.gozyu_unicorn_ring":"Gozyu Unicorn Ring",
+
+  "item.supersentaicraft.tega_june_ring":"Tega June Ring",
 
   "item.supersentaicraft.goranger_ring":"Goranger Ring",
   "item.supersentaicraft.jakq_ring":"J.A.K.Q. Ring",
@@ -2662,6 +2720,10 @@
   "item.supersentaicraft.donbrothers_ring":"DonBrothers Ring",
   "item.supersentaicraft.king_ohger_ring":"King-Ohger Ring",
   "item.supersentaicraft.boonboomger_ring":"Boonboomger Ring",
+
+  "item.supersentaicraft.tega_sword":"Tega Sword",
+  "item.supersentaicraft.tega_june":"Tega June",
+  "item.supersentaicraft.tega_sword_silver":"Tega Sword",
 
   //?? Kawarimono Team
   "item.supersentaicraft.kawarimono_head": "Kawarimono Helmet",
@@ -2726,7 +2788,24 @@
   "item.supersentaicraft.hachibungi": "Octant",
   "item.supersentaicraft.rokubungi": "Sextant",
   "item.supersentaicraft.compass_kyu": "Chalkboard Compass",
-  "item.supersentaicraft.jyogi": "Ruler"
+  "item.supersentaicraft.jyogi": "Ruler",
 
-  //"item.supersentaicraft.":"",
+  //Music Disc
+  "item.supersentaicraft.susume_goranger_music_disc": "Susume! Gorenger Music Disc",
+  "item.supersentaicraft.susume_goranger.desc": "HosephHoestar - Susume! Goranger",
+  "item.supersentaicraft.susume_goranger_music_disc.desc": "HosephHoestar - Susume! Goranger",
+
+  "item.supersentaicraft.taiyou_sentai_sun_vulcan_music_disc": "Taiyou Sentai Sun Vulcan Music Disc",
+  "item.supersentaicraft.taiyou_sentai_sun_vulcan.desc": "HosephHoestar - Taiyou Sentai Sun Vulcan",
+  "item.supersentaicraft.taiyou_sentai_sun_vulcan_music_disc.desc": "HosephHoestar - Taiyou Sentai Sun Vulcan",
+
+  "item.supersentaicraft.samurai_sentai_shinkenger_music_disc": "Samurai Sentai Shinkenger Music Disc",
+  "item.supersentaicraft.samurai_sentai_shinkenger.desc": "HosephHoestar - Samurai Sentai Shinkenger ",
+  "item.supersentaicraft.samurai_sentai_shinkenger_music_disc.desc": "HosephHoestar - Samurai Sentai Shinkenger ",
+
+  "item.supersentaicraft._music_disc": " Music Disc",
+  "item.supersentaicraft..desc": "HosephHoestar - ",
+  "item.supersentaicraft._music_disc.desc": "HosephHoestar - ",
+
+  "item.supersentaicraft.":""
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "boonboomger",
+  "ingredients": [
+    {
+      "item": "supersentaicraft:unfinished_champion_carrier"
+    },
+    {
+      "item": "supersentaicraft:boonboom_offroad"
+    },
+    {
+      "item": "supersentaicraft:boonboom_wagon"
+    },
+    {
+      "item": "supersentaicraft:boonboom_patcar_1"
+    },
+    {
+      "item": "supersentaicraft:boonboom_shovel"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:champion_carrier"
+  }
+}
