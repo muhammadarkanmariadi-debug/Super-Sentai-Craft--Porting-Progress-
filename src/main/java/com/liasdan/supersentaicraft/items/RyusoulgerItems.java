@@ -324,7 +324,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 5,true,false),
-            		new MobEffectInstance(EffectCore.FROSTWALKER, 40, 5,true,false))
+            		new MobEffectInstance(EffectCore.FROSTWALKER, 40, 0,true,false))
 			.addAlternative(HIEHIE_SOUL_2.get()).ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGER).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> MAX_RYUSOUL = ITEMS.register("max_ryusoul",

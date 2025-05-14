@@ -32,13 +32,13 @@ public class BoonboomChangerItem extends RangerChangerItem{
 		Item formItem = this.get_Form_Item(stack, 1);
 
 		if (formItem== BoonboomgerItems.CHAMPION_CHANGER.get()) {
-			if (this == BoonboomgerItems.RED_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.literal("Ranger: §cChampion Bun Red"));
-			if (this == BoonboomgerItems.BLUE_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.literal("Ranger: §9Champion Bun Blue"));
-			if (this == BoonboomgerItems.PINK_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.literal("Ranger: §dChampion Bun Pink"));
+			if (this == BoonboomgerItems.RED_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:champion_bun_red.form"));
+			if (this == BoonboomgerItems.BLUE_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:champion_bun_blue.form"));
+			if (this == BoonboomgerItems.PINK_BOONBOOM_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:champion_bun_pink.form"));
 		}
 		else if (formItem== BoonboomgerItems.CHAMPION_CHANGER_2.get()) {
-			if (this == BoonboomgerItems.BLACK_BOONBOOM_BOOSTER.get()) tooltipComponents.add(Component.literal("Ranger: §8Champion Bun Black"));
-			if (this == BoonboomgerItems.ORANGE_BOONBOOM_BOOSTER.get()) tooltipComponents.add(Component.literal("Ranger: §6Champion Bun Orange"));
+			if (this == BoonboomgerItems.BLACK_BOONBOOM_BOOSTER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:champion_bun_black.form"));
+			if (this == BoonboomgerItems.ORANGE_BOONBOOM_BOOSTER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:champion_bun_orange.form"));
 		}
 		else {
 			tooltipComponents.add(Component.translatable(formItem.toString() + ".form"));

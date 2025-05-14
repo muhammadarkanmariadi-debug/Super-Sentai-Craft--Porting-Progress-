@@ -9,6 +9,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.CustomData;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -109,7 +110,7 @@ public class RangerChangerItem extends RangerArmorItem{
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName)
 	{
 
-		boolean fly = !rider.onGround();
+		boolean fly = rider instanceof Player player && player.getAbilities().flying;
 
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			String belt = ((RangerChangerItem)itemstack.getItem()).BELT_TEXT;
@@ -124,6 +125,9 @@ public class RangerChangerItem extends RangerArmorItem{
 
 
 	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel());
+		}
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
 	}
 	

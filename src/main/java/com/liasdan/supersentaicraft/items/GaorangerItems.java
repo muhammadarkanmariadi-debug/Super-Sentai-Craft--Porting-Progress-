@@ -52,9 +52,6 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
 					.addAlternative(GAO_LION_JEWEL_KING.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
-	public static final DeferredItem<Item> GAO_EAGLE_JEWEL_KING = ITEMS.register("gao_eagle_jewel_king",
-			() -> new BaseItem(new Item.Properties()));
-
 	public static final DeferredItem<Item> GAO_EAGLE_JEWEL = ITEMS.register("gao_eagle_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_yellow","gao_yellow_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),

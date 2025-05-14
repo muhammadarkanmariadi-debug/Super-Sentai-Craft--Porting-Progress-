@@ -36,7 +36,7 @@
                 "supersentaicraft:red_shodophone"
               ],
               "predicates": {
-                "minecraft:custom_data": "{slot_tex2:\"supersentaicraft:gedou_disk\"}"
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:gedou_disk\"}"
               }
             }
           }

@@ -156,6 +156,9 @@
   "entity.supersentaicraft.NoutoMob": "Nouto",
   "entity.supersentaicraft.DonMurasameMob": "Don Murasame",
 
+  "entity.supersentaicraft.nejiretta": "Nejirettas",
+  "item.supersentaicraft.nejiretta_spawn_egg": "Nejirettas Spawn Egg",
+
   "item.supersentaicraft.super_sentai_logo": "Super Sentai Logo",
   "item.supersentaicraft.super_sentai_book": "Super Sentai Encyclopedia",
 
@@ -1060,10 +1063,36 @@
   "supersentaicraft:gao_leon_jewel.form": "Sentai Robo: GaoGod",
   "supersentaicraft:gao_kong_jewel.form": "Sentai Robo: GaoKnight",
 
-  "supersentaicraft:gao_lion_blue_jewel.form": "Sentai Robo: GaoKing (Blue GaoLion)",
-  "supersentaicraft:gao_lion_black_jewel.form": "Sentai Robo: GaoKing (Black GaoLion)",
-  "supersentaicraft:gao_lion_white_jewel.form": "Sentai Robo: GaoKing (White GaoLion)",
-  "supersentaicraft:gao_ape_jewel.form": "Sentai Robo: GaoKnight (GaoApe)",
+  "supersentaicraft:gao_spear.form": " §6Spear",
+  "supersentaicraft:gao_double_knuckle.form": " §fDouble §8Knuckle",
+  "supersentaicraft:gao_knuckle_r.form": " §fKnuckle",
+  "supersentaicraft:gao_knuckle_l.form": " §8Knuckle",
+  "supersentaicraft:gao_striker.form": " §9Striker",
+  "supersentaicraft:gao_another_arm.form": " §5Another §7Arm",
+  "supersentaicraft:gao_cross_horn.form": " §aCross Horn",
+  "supersentaicraft:gao_another_foot_arm.form": " §5Another §8Foot & §7Arm",
+
+  "supersentaicraft:gao_lion_blue_jewel.form": "Body: §bGaoLion (Blue ver.)",
+  "supersentaicraft:gao_lion_black_jewel.form": "Body: §8GaoLion (Black ver.)",
+  "supersentaicraft:gao_lion_white_jewel.form": "Body: GaoLion (White ver.)",
+  "supersentaicraft:gao_ape_jewel.form": "Body: §7GaoApe",
+
+  "supersentaicraft:gao_shark_jewel_king.form": "Right Arm: §9GaoShark",
+  "supersentaicraft:gao_bison_jewel_king.form": "Legs: §8GaoBison",
+  "supersentaicraft:gao_bison_jewel_others.form": "Legs: §8GaoBison & §eGaoEagle",
+  "supersentaicraft:gao_tiger_jewel_king.form": "Left Arm: GaoTiger",
+  "supersentaicraft:gao_wolf_jewel_king.form": "Left Arm: §7GaoWolf",
+  "supersentaicraft:gao_giraffe_jewel.form": "Right Arm: §6GaoGiraffe",
+  "supersentaicraft:gao_bear_jewel.form": "Left Arm: §8GaoBear",
+  "supersentaicraft:gao_polar_jewel.form": "Right Arm: GaoPolar",
+  "supersentaicraft:gao_hammerhead_jewel.form": "Right Arm: §5GaoHammerhead",
+  "supersentaicraft:gao_rhinos_jewel.form": "Legs: §9GaoRhinos & §5GaoMadillo",
+  "supersentaicraft:gao_madillo_jewel.form": "Legs: §9GaoRhinos & §5GaoMadillo",
+  "supersentaicraft:gao_deers_jewel.form": "Left Arm: §aGaoDeers",
+  "supersentaicraft:gao_sawshark_jewel.form": "Right Arm: §6GaoSawshark",
+  "supersentaicraft:gao_buffalo_jewel.form": "Legs: §6GaoBuffalo",
+  "supersentaicraft:gao_jaguar_jewel.form": "Left Arm: §6GaoJaguar",
+  "supersentaicraft:gao_panda_jewel.form": "Right Arm: GaoPanda",
 
   "item.supersentaicraft.unfinished_gao_god_jewel": "Unfinished GaoGod Jewel",
   "item.supersentaicraft.empty_gao_god_jewel": "Empty GaoGod Jewel",
@@ -2003,6 +2032,9 @@
   "supersentaicraft:jackpot_striker.form": "§9Lupi§cn Tric§eolor",
   "supersentaicraft:scissor_dial_fighter.form": "Kaitou Boost: §8Scissors Dial Fighter",
   "supersentaicraft:magic_dial_fighter.form": "Kaitou Boost: Magic Dial Fighter",
+  "supersentaicraft:super_lupin_red.form": "Ranger: §7Super §cLupin Red",
+  "supersentaicraft:super_lupin_blue.form": "Ranger: §7Super §9Lupin Blue",
+  "supersentaicraft:super_lupin_yellow.form": "Ranger: §7Super §eLupin Yellow",
   "supersentaicraft:victory_striker_x.form": "Ranger: §7Super §6Patren X",
   "supersentaicraft:crane_trigger_machine.form": "Keisatsu Boost: §eTrigger Machine Crane",
   "supersentaicraft:splash_trigger_machine.form": "Keisatsu Boost: §cTrigger Machine Splash",
@@ -2632,6 +2664,11 @@
   "supersentaicraft:bun_blue_007.form":"Ranger: §9Bun Blue 007",
   "supersentaicraft:bun_black_110.form":"Ranger: §8Bun Black 110",
 
+  "supersentaicraft:champion_bun_red.form":"Ranger: §cChampion Bun Red",
+  "supersentaicraft:champion_bun_blue.form":"Ranger: §9Champion Bun Blue",
+  "supersentaicraft:champion_bun_pink.form":"Ranger: §dChampion Bun Pink",
+  "supersentaicraft:champion_bun_black.form":"Ranger: §8Champion Bun Black",
+  "supersentaicraft:champion_bun_orange.form":"Ranger: §6Champion Bun Orange",
   "supersentaicraft:champion_changer_3.form":"Ranger: §5Champion Bun Violet",
 
   "item.supersentaicraft.boonboom_handle_sword":"Boonboom Handle",
@@ -2780,6 +2817,9 @@
   //Misc
   "tab.supersentaicraft.misc": "Ranger Items",
   "tab.supersentaicraft.block": "Ranger Blocks",
+
+  "item.supersentaicraft.base_sword": "Base Sword",
+  "item.supersentaicraft.base_mecha_sword": "Base Mecha Sword",
 
   "item.supersentaicraft.mecha_gear": "Mecha Gear",
   "block.supersentaicraft.mecha_nether_ore": "Mecha Nether Ore",

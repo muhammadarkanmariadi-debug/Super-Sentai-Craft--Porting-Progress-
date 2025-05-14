@@ -37,6 +37,57 @@ public class GaoKingItem extends MechaGattaiItem {
 	public GaoKingItem(Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item> torso, DeferredItem<Item> legs, DeferredItem<Item> boot, Properties properties) {
 		super(material, rider, baseFormItem, torso, legs, boot, properties);
 		Unlimited_Textures=4;
+		Has_basic_belt_info=false;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+
+		Item formItem = this.get_Form_Item(stack, 1);
+		Item formItem2 = this.get_Form_Item(stack, 3);
+		Item formItem3 = this.get_Form_Item(stack, 4);
+		Item formItem4 = this.get_Form_Item(stack, 5);
+
+		String right_arm = "";
+		String left_arm = "";
+		String legs = "";
+
+		if (this == GaorangerItems.GAO_KING_HELMET.get()) {
+			if (formItem2 == GaorangerItems.GAO_HAMMERHEAD_JEWEL.get() & formItem3 == GaorangerItems.GAO_WOLF_JEWEL_KING.get())
+				right_arm = "supersentaicraft:gao_another_arm.form";
+			if (formItem2 == GaorangerItems.GAO_GIRAFFE_JEWEL.get())
+				right_arm = "supersentaicraft:gao_spear.form";
+			if ((formItem2 == GaorangerItems.GAO_POLAR_JEWEL.get() | formItem2 == GaorangerItems.GAO_PANDA_JEWEL.get()) & formItem3 == GaorangerItems.GAO_BEAR_JEWEL.get())
+				right_arm = "supersentaicraft:gao_double_knuckle.form";
+			else if (formItem2 == GaorangerItems.GAO_POLAR_JEWEL.get() | formItem2 == GaorangerItems.GAO_PANDA_JEWEL.get())
+				right_arm = "supersentaicraft:gao_knuckle_r.form";
+			else if (formItem3 == GaorangerItems.GAO_BEAR_JEWEL.get())
+				left_arm = "supersentaicraft:gao_knuckle_l.form";
+			if (formItem3 == GaorangerItems.GAO_DEERS_JEWEL.get())
+				left_arm = "supersentaicraft:gao_cross_horn.form";
+			if ((formItem4 == GaorangerItems.GAO_MADILLO_JEWEL.get() | formItem4 == GaorangerItems.GAO_RHINOS_JEWEL.get()))
+				legs = "supersentaicraft:gao_striker.form";
+		}
+		else if (this == GaorangerItems.GAO_MUSCLE_HELMET.get()) {
+			if (formItem2 == GaorangerItems.GAO_GIRAFFE_JEWEL.get())
+				right_arm = "supersentaicraft:gao_spear.form";
+			if (formItem3 == GaorangerItems.GAO_DEERS_JEWEL.get())
+				left_arm = "supersentaicraft:gao_cross_horn.form";
+			if ((formItem4 == GaorangerItems.GAO_MADILLO_JEWEL.get() | formItem4 == GaorangerItems.GAO_RHINOS_JEWEL.get()))
+				legs = "supersentaicraft:gao_striker.form";
+		}
+		else if (this == GaorangerItems.GAO_ICARUS_HELMET.get()) {
+			if (formItem2 == GaorangerItems.GAO_HAMMERHEAD_JEWEL.get() & formItem3 == GaorangerItems.GAO_WOLF_JEWEL_KING.get() & formItem4 == GaorangerItems.GAO_BISON_JEWEL_KING.get())
+				right_arm = "supersentaicraft:gao_another_foot_arm.form";
+		}
+
+		tooltipComponents.add(Component.literal(Component.translatable(formItem.toString() + ".form").getString()
+				+ Component.translatable(legs).getString() + Component.translatable(right_arm).getString() + Component.translatable(left_arm).getString()));
+		tooltipComponents.add(Component.literal(Component.translatable(formItem2.toString() + ".form").getString()));
+		tooltipComponents.add(Component.literal(Component.translatable(formItem3.toString() + ".form").getString()));
+		tooltipComponents.add(Component.literal(Component.translatable(formItem4.toString() + ".form").getString()));
+
+		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
 
 	@Override
