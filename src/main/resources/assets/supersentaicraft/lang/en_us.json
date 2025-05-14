@@ -1072,10 +1072,14 @@
   "supersentaicraft:gao_cross_horn.form": " §aCross Horn",
   "supersentaicraft:gao_another_foot_arm.form": " §5Another §8Foot & §7Arm",
 
-  "supersentaicraft:gao_lion_blue_jewel.form": "Body: §bGaoLion (Blue ver.)",
-  "supersentaicraft:gao_lion_black_jewel.form": "Body: §8GaoLion (Black ver.)",
-  "supersentaicraft:gao_lion_white_jewel.form": "Body: GaoLion (White ver.)",
-  "supersentaicraft:gao_ape_jewel.form": "Body: §7GaoApe",
+  "supersentaicraft:gao_lion_blue_jewel.form": "Sentai Robo: GaoKing",
+  "supersentaicraft:gao_lion_black_jewel.form": "Sentai Robo: GaoKing",
+  "supersentaicraft:gao_lion_white_jewel.form": "Sentai Robo: GaoKing",
+  "supersentaicraft:gao_ape_jewel.form": "Sentai Robo: GaoKnight",
+  "supersentaicraft:gao_lion_blue.form": "Body: §bGaoLion (Blue ver.)",
+  "supersentaicraft:gao_lion_black.form": "Body: §8GaoLion (Black ver.)",
+  "supersentaicraft:gao_lion_white.form": "Body: GaoLion (White ver.)",
+  "supersentaicraft:gao_ape.form": "Body: §7GaoApe",
 
   "supersentaicraft:gao_shark_jewel_king.form": "Right Arm: §9GaoShark",
   "supersentaicraft:gao_bison_jewel_king.form": "Legs: §8GaoBison",

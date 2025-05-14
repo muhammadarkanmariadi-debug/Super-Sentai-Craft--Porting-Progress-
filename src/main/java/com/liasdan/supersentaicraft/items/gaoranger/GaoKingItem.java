@@ -48,6 +48,7 @@ public class GaoKingItem extends MechaGattaiItem {
 		Item formItem3 = this.get_Form_Item(stack, 4);
 		Item formItem4 = this.get_Form_Item(stack, 5);
 
+		String body = "";
 		String right_arm = "";
 		String left_arm = "";
 		String legs = "";
@@ -67,8 +68,14 @@ public class GaoKingItem extends MechaGattaiItem {
 				left_arm = "supersentaicraft:gao_cross_horn.form";
 			if ((formItem4 == GaorangerItems.GAO_MADILLO_JEWEL.get() | formItem4 == GaorangerItems.GAO_RHINOS_JEWEL.get()))
 				legs = "supersentaicraft:gao_striker.form";
+			if (formItem == GaorangerItems.GAO_LION_JEWEL_BLACK.get())
+				body = "supersentaicraft:gao_lion_black.form";
+			if (formItem == GaorangerItems.GAO_LION_JEWEL_BLUE.get())
+				body = "supersentaicraft:gao_lion_blue.form";
+			if (formItem == GaorangerItems.GAO_LION_JEWEL_WHITE.get())
+				body = "supersentaicraft:gao_lion_white.form";
 		}
-		else if (this == GaorangerItems.GAO_MUSCLE_HELMET.get()) {
+		if (this == GaorangerItems.GAO_MUSCLE_HELMET.get()) {
 			if (formItem2 == GaorangerItems.GAO_GIRAFFE_JEWEL.get())
 				right_arm = "supersentaicraft:gao_spear.form";
 			if (formItem3 == GaorangerItems.GAO_DEERS_JEWEL.get())
@@ -76,17 +83,21 @@ public class GaoKingItem extends MechaGattaiItem {
 			if ((formItem4 == GaorangerItems.GAO_MADILLO_JEWEL.get() | formItem4 == GaorangerItems.GAO_RHINOS_JEWEL.get()))
 				legs = "supersentaicraft:gao_striker.form";
 		}
-		else if (this == GaorangerItems.GAO_ICARUS_HELMET.get()) {
+		if (this == GaorangerItems.GAO_ICARUS_HELMET.get()) {
 			if (formItem2 == GaorangerItems.GAO_HAMMERHEAD_JEWEL.get() & formItem3 == GaorangerItems.GAO_WOLF_JEWEL_KING.get() & formItem4 == GaorangerItems.GAO_BISON_JEWEL_KING.get())
 				right_arm = "supersentaicraft:gao_another_foot_arm.form";
+		}
+		if (this == GaorangerItems.GAO_KNIGHT_HELMET.get()) {
+			if (formItem == GaorangerItems.GAO_APE_JEWEL.get())
+				body = "supersentaicraft:gao_ape.form";
 		}
 
 		tooltipComponents.add(Component.literal(Component.translatable(formItem.toString() + ".form").getString()
 				+ Component.translatable(legs).getString() + Component.translatable(right_arm).getString() + Component.translatable(left_arm).getString()));
+		if (body != "") tooltipComponents.add(Component.literal(Component.translatable(body).getString()));
 		tooltipComponents.add(Component.literal(Component.translatable(formItem2.toString() + ".form").getString()));
 		tooltipComponents.add(Component.literal(Component.translatable(formItem3.toString() + ".form").getString()));
 		tooltipComponents.add(Component.literal(Component.translatable(formItem4.toString() + ".form").getString()));
-
 		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
 
