@@ -315,7 +315,8 @@ public class RangerFormChangeItem extends BaseItem {
 				}
 			}
 		}
-		else if (MECHA.getItem() instanceof MechaGattaiItem belt) {
+
+		if (MECHA.getItem() instanceof MechaGattaiItem belt) {
 
 			if (SHIFT_ITEM instanceof RangerFormChangeItem& p_41129_.isShiftKeyDown()) {
 				((RangerFormChangeItem)SHIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
