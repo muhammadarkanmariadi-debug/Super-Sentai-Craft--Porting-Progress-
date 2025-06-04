@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "supersentaicraft:mob_sword"
+  },
+  "result": {
+    "id": "supersentaicraft:base_sword"
+  },
+  "experience": 5,
+  "cookingtime": 200
+}

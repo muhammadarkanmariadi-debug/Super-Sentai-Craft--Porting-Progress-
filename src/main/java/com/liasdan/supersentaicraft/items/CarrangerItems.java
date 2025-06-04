@@ -63,7 +63,7 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.SetShowFace().SetShowLegs().SetShowArms().AddToTabList(RangerTabs.CARRANGER));
+			.SetShowFace().SetShowUnder().AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> SIGNALMAN_BADGE = ITEMS.register("signalman_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","signalman","blank",

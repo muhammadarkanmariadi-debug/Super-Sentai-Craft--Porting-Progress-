@@ -58,9 +58,10 @@ public class MechaGattaiItem extends MechaArmorItem{
 	}
 
 	public boolean isTransformed(LivingEntity player) {
-		return BOOTS.asItem()==player.getItemBySlot(EquipmentSlot.FEET).getItem()
-				&&TORSO.asItem()==player.getItemBySlot(EquipmentSlot.CHEST).getItem()
-				&&LEGS.asItem()==player.getItemBySlot(EquipmentSlot.LEGS).getItem();
+		return player.getItemBySlot(EquipmentSlot.FEET).getItem()==BOOTS.asItem()
+				&&player.getItemBySlot(EquipmentSlot.CHEST).getItem()==TORSO.asItem()
+				&&player.getItemBySlot(EquipmentSlot.LEGS).getItem()==LEGS.asItem()
+				&&player.getItemBySlot(EquipmentSlot.HEAD).getItem()==this;
 	}
 
 	@Override

@@ -46,8 +46,7 @@ public class RangerFormChangeItem extends BaseItem {
 	private RangerFormChangeItem NEED_FORM_SLOT_4;
 
 	private Boolean SET_SHOW_FACE = false;
-	private Boolean SET_SHOW_ARMS = false;
-	private Boolean SET_SHOW_LEGS = false;
+	private Boolean SET_SHOW_UNDER = false;
 
 
 	public RangerFormChangeItem( Properties properties,int belt,String formName,String rangername,String beltTex, MobEffectInstance... effects) {
@@ -101,12 +100,8 @@ public class RangerFormChangeItem extends BaseItem {
 		return SET_SHOW_FACE;
 	}
 
-	public Boolean get_Show_Arms() {
-		return SET_SHOW_ARMS;
-	}
-
-	public Boolean get_Show_Legs() {
-		return SET_SHOW_LEGS;
+	public Boolean get_Show_Under() {
+		return SET_SHOW_UNDER;
 	}
 
 	public String getRangerName(String name) {
@@ -140,13 +135,8 @@ public class RangerFormChangeItem extends BaseItem {
 		return this;
 	}
 
-	public RangerFormChangeItem SetShowArms() {
-		SET_SHOW_ARMS = true;
-		return this;
-	}
-
-	public RangerFormChangeItem SetShowLegs() {
-		SET_SHOW_LEGS = true;
+	public RangerFormChangeItem SetShowUnder() {
+		SET_SHOW_UNDER = true;
 		return this;
 	}
 

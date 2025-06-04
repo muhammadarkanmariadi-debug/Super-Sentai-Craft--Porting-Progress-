@@ -133,48 +133,85 @@ public class SuperSentaiCraftCore {
 					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
 						model.head.visible = false;
 						model.hat.visible = false;
+					}else{
+						model.head.visible = true;
+						model.hat.visible = true;
 					}
-					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Arms()) {
-						model.leftArm.visible = false;
-						model.rightArm.visible = false;
-					}
-					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Legs()){
+					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Under()){
 						model.leftLeg.visible = false;
 						model.rightLeg.visible = false;
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+						model.body.visible = false;
+					}else{
+						model.leftLeg.visible = true;
+						model.rightLeg.visible = true;
+						model.leftArm.visible = true;
+						model.rightArm.visible = true;
+						model.body.visible = true;
 					}
-
 					model.leftSleeve.visible = false;
 					model.rightSleeve.visible = false;
 					model.leftPants.visible = false;
 					model.rightPants.visible = false;
-
-					model.body.visible = false;
 					model.jacket.visible = false;
+				}else{
+					model.head.visible = true;
+					model.hat.visible = true;
+					model.leftLeg.visible = true;
+					model.rightLeg.visible = true;
+					model.leftArm.visible = true;
+					model.rightArm.visible = true;
+					model.body.visible = true;
+					model.leftSleeve.visible = true;
+					model.rightSleeve.visible = true;
+					model.leftPants.visible = true;
+					model.rightPants.visible = true;
+					model.jacket.visible = true;
 				}
 			}
-			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+			else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
 				if (belt.isTransformed(event.getEntity())) {
-					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Face()) {
-						model.head.visible = false;
-						model.hat.visible = false;
-					}
-					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Arms()) {
-						model.leftArm.visible = false;
-						model.rightArm.visible = false;
-					}
-					if (!MechaGattaiItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.HEAD), 1).get_Show_Legs()){
-						model.leftLeg.visible = false;
-						model.rightLeg.visible = false;
-					}
-
+					model.head.visible = false;
+					model.hat.visible = false;
+					model.leftLeg.visible = false;
+					model.rightLeg.visible = false;
+					model.leftArm.visible = false;
+					model.rightArm.visible = false;
+					model.body.visible = false;
 					model.leftSleeve.visible = false;
 					model.rightSleeve.visible = false;
 					model.leftPants.visible = false;
 					model.rightPants.visible = false;
-
-					model.body.visible = false;
 					model.jacket.visible = false;
+				}else{
+					model.head.visible = true;
+					model.hat.visible = true;
+					model.leftLeg.visible = true;
+					model.rightLeg.visible = true;
+					model.leftArm.visible = true;
+					model.rightArm.visible = true;
+					model.body.visible = true;
+					model.leftSleeve.visible = true;
+					model.rightSleeve.visible = true;
+					model.leftPants.visible = true;
+					model.rightPants.visible = true;
+					model.jacket.visible = true;
 				}
+			}
+			else {
+				model.head.visible = true;
+				model.hat.visible = true;
+				model.leftLeg.visible = true;
+				model.rightLeg.visible = true;
+				model.leftArm.visible = true;
+				model.rightArm.visible = true;
+				model.body.visible = true;
+				model.leftSleeve.visible = true;
+				model.rightSleeve.visible = true;
+				model.leftPants.visible = true;
+				model.rightPants.visible = true;
+				model.jacket.visible = true;
 			}
 		}
 
