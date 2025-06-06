@@ -36,6 +36,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RenderLivingEvent;
+import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -172,7 +173,22 @@ public class SuperSentaiCraftCore {
 						model.rightPants.visible = true;
 						model.jacket.visible = true;
 					}
-				} else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+				} else {
+					model.head.visible = true;
+					model.hat.visible = true;
+					model.leftLeg.visible = true;
+					model.rightLeg.visible = true;
+					model.leftArm.visible = true;
+					model.rightArm.visible = true;
+					model.body.visible = true;
+					model.leftSleeve.visible = true;
+					model.rightSleeve.visible = true;
+					model.leftPants.visible = true;
+					model.rightPants.visible = true;
+					model.jacket.visible = true;
+				}
+
+				if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
 					if (belt.isTransformed(event.getEntity())) {
 						model.head.visible = false;
 						model.hat.visible = false;
@@ -235,6 +251,11 @@ public class SuperSentaiCraftCore {
 			size3 = (float) (size3 * 3);
 		}
 		event.getPoseStack().scale(size3, size, size2);
+	}
+
+	@SubscribeEvent
+	public void addRenderPlayerEvent(RenderPlayerEvent.Pre event) {
+
 	}
 
 	// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
