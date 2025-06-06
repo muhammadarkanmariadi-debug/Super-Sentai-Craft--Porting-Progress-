@@ -22,6 +22,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -66,6 +67,7 @@ public class SuperSentaiCraftCore {
 	public SuperSentaiCraftCore(IEventBus modEventBus, ModContainer modContainer) {
 		// Register the commonSetup method for modloading
 		modEventBus.addListener(this::commonSetup);
+		NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 		NeoForge.EVENT_BUS.register(new ModCommonEvents.CommonEvents());
 		NeoForge.EVENT_BUS.register(new ModCommonEvents.EventHandler());
 
@@ -127,35 +129,78 @@ public class SuperSentaiCraftCore {
 	@SubscribeEvent
 	public void addRenderLivingEvent(RenderLivingEvent.Pre event) {
 
-		if (event.getRenderer().getModel()instanceof PlayerModel model){
-			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
-				if (belt.isTransformed(event.getEntity())) {
-					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
-						model.head.visible = false;
-						model.hat.visible = false;
-					}else{
+		if (event.getEntity() instanceof Player) {
+			if (event.getRenderer().getModel() instanceof PlayerModel model) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
+					if (belt.isTransformed(event.getEntity())) {
+						if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
+							model.head.visible = false;
+							model.hat.visible = false;
+						} else {
+							model.head.visible = true;
+							model.hat.visible = true;
+						}
+						if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Under()) {
+							model.leftLeg.visible = false;
+							model.rightLeg.visible = false;
+							model.leftArm.visible = false;
+							model.rightArm.visible = false;
+							model.body.visible = false;
+						} else {
+							model.leftLeg.visible = true;
+							model.rightLeg.visible = true;
+							model.leftArm.visible = true;
+							model.rightArm.visible = true;
+							model.body.visible = true;
+						}
+						model.leftSleeve.visible = false;
+						model.rightSleeve.visible = false;
+						model.leftPants.visible = false;
+						model.rightPants.visible = false;
+						model.jacket.visible = false;
+					} else {
 						model.head.visible = true;
 						model.hat.visible = true;
-					}
-					if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Under()){
-						model.leftLeg.visible = false;
-						model.rightLeg.visible = false;
-						model.leftArm.visible = false;
-						model.rightArm.visible = false;
-						model.body.visible = false;
-					}else{
 						model.leftLeg.visible = true;
 						model.rightLeg.visible = true;
 						model.leftArm.visible = true;
 						model.rightArm.visible = true;
 						model.body.visible = true;
+						model.leftSleeve.visible = true;
+						model.rightSleeve.visible = true;
+						model.leftPants.visible = true;
+						model.rightPants.visible = true;
+						model.jacket.visible = true;
 					}
-					model.leftSleeve.visible = false;
-					model.rightSleeve.visible = false;
-					model.leftPants.visible = false;
-					model.rightPants.visible = false;
-					model.jacket.visible = false;
-				}else{
+				} else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+					if (belt.isTransformed(event.getEntity())) {
+						model.head.visible = false;
+						model.hat.visible = false;
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+						model.body.visible = false;
+						model.leftSleeve.visible = false;
+						model.rightSleeve.visible = false;
+						model.leftPants.visible = false;
+						model.rightPants.visible = false;
+						model.jacket.visible = false;
+					} else {
+						model.head.visible = true;
+						model.hat.visible = true;
+						model.leftLeg.visible = true;
+						model.rightLeg.visible = true;
+						model.leftArm.visible = true;
+						model.rightArm.visible = true;
+						model.body.visible = true;
+						model.leftSleeve.visible = true;
+						model.rightSleeve.visible = true;
+						model.leftPants.visible = true;
+						model.rightPants.visible = true;
+						model.jacket.visible = true;
+					}
+				} else {
 					model.head.visible = true;
 					model.hat.visible = true;
 					model.leftLeg.visible = true;
@@ -169,49 +214,6 @@ public class SuperSentaiCraftCore {
 					model.rightPants.visible = true;
 					model.jacket.visible = true;
 				}
-			}
-			else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
-				if (belt.isTransformed(event.getEntity())) {
-					model.head.visible = false;
-					model.hat.visible = false;
-					model.leftLeg.visible = false;
-					model.rightLeg.visible = false;
-					model.leftArm.visible = false;
-					model.rightArm.visible = false;
-					model.body.visible = false;
-					model.leftSleeve.visible = false;
-					model.rightSleeve.visible = false;
-					model.leftPants.visible = false;
-					model.rightPants.visible = false;
-					model.jacket.visible = false;
-				}else{
-					model.head.visible = true;
-					model.hat.visible = true;
-					model.leftLeg.visible = true;
-					model.rightLeg.visible = true;
-					model.leftArm.visible = true;
-					model.rightArm.visible = true;
-					model.body.visible = true;
-					model.leftSleeve.visible = true;
-					model.rightSleeve.visible = true;
-					model.leftPants.visible = true;
-					model.rightPants.visible = true;
-					model.jacket.visible = true;
-				}
-			}
-			else {
-				model.head.visible = true;
-				model.hat.visible = true;
-				model.leftLeg.visible = true;
-				model.rightLeg.visible = true;
-				model.leftArm.visible = true;
-				model.rightArm.visible = true;
-				model.body.visible = true;
-				model.leftSleeve.visible = true;
-				model.rightSleeve.visible = true;
-				model.leftPants.visible = true;
-				model.rightPants.visible = true;
-				model.jacket.visible = true;
 			}
 		}
 
@@ -240,7 +242,6 @@ public class SuperSentaiCraftCore {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 
 			for (int i = 0; i < SWORD_GUN_ITEM.size(); i++) {
 				ItemProperties.register(SWORD_GUN_ITEM.get(i), ResourceLocation.parse("change"), ($itemStack, $level, $entity, $seed) -> {
