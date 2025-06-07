@@ -137,7 +137,7 @@ public class SuperSentaiCraftCore {
 			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof ArmorItem belt) {
 				if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
 					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).getUnsafe();
-					if (tag.getBoolean("Transformed")) {
+					if (tag.getBoolean("Changed")) {
 						if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
 							if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
 								model.head.visible = false;
@@ -214,10 +214,25 @@ public class SuperSentaiCraftCore {
 					}
 				}
 			}
-			else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ArmorItem belt) {
+			else {
+				model.head.visible = true;
+				model.hat.visible = true;
+				model.leftLeg.visible = true;
+				model.rightLeg.visible = true;
+				model.leftArm.visible = true;
+				model.rightArm.visible = true;
+				model.body.visible = true;
+				model.leftSleeve.visible = true;
+				model.rightSleeve.visible = true;
+				model.leftPants.visible = true;
+				model.rightPants.visible = true;
+				model.jacket.visible = true;
+			}
+
+			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ArmorItem belt) {
 				if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
 					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).getUnsafe();
-					if (tag.getBoolean("Transformed")) {
+					if (tag.getBoolean("Changed")) {
 						if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem) {
 							model.head.visible = false;
 							model.hat.visible = false;

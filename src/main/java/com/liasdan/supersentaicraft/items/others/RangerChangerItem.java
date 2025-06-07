@@ -65,11 +65,11 @@ public class RangerChangerItem extends RangerArmorItem{
 
 			if (stack.has(DataComponents.CUSTOM_DATA)) {
 				CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-				if (tag.getBoolean("Update_form")) OnformChange(stack, player, tag);
-				if (!isTransformed(player)) tag.putBoolean("Update_form", true);
+				if (tag.getBoolean("Update_form")&&slotId==36) OnformChange(stack, player, tag);
+				if (!isTransformed(player)||slotId!=36) tag.putBoolean("Update_form", true);
 
-				if (!isTransformed(player)) tag.putBoolean("Transformed", false);
-				if (isTransformed(player)) tag.putBoolean("Transformed", true);
+				if (!isTransformed(player)) tag.putBoolean("Changed", false);
+				if (isTransformed(player)) tag.putBoolean("Changed", true);
 			}
 			else {
 				set_Update_Form(stack);
@@ -234,28 +234,18 @@ public class RangerChangerItem extends RangerArmorItem{
 		return false;
 	}
 
-	public static RangerFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT)
-	{
+	public static RangerFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT) {
 
-		RangerChangerItem belt = (RangerChangerItem)itemstack.getItem();
-		RangerFormChangeItem Base_Form_Item = belt.Base_Form_Item;
+		RangerChangerItem belt = (RangerChangerItem) itemstack.getItem();
+		RangerFormChangeItem Base_Form_Item = (SLOT>=2 ? belt.Extra_Base_Form_Item.get(SLOT-2) : belt.Base_Form_Item);
 
-		if (SLOT == 2) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(0);
-		}else if (SLOT == 3) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(1);
-		}else if (SLOT == 4) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(2);
-		}
-
-		if (itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+		if (itemstack.has(DataComponents.CUSTOM_DATA)) {
 			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 			ResourceLocation Used_Form_Item = ResourceLocation.parse(tag.getString("slot_tex" + SLOT));
 			if (BuiltInRegistries.ITEM.get(Used_Form_Item) instanceof RangerFormChangeItem formItem) {
 				return formItem;
 			}
 		}
-
 		return Base_Form_Item;
 	}
 
