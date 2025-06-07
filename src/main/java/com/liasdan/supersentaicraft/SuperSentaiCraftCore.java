@@ -20,9 +20,12 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -130,66 +133,58 @@ public class SuperSentaiCraftCore {
 	@SubscribeEvent
 	public void addRenderLivingEvent(RenderLivingEvent.Pre event) {
 
-		if (event.getEntity() instanceof Player) {
-			if (event.getRenderer().getModel() instanceof PlayerModel model) {
-				if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
-					if (belt.isTransformed(event.getEntity())) {
-						if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
+		if (event.getRenderer().getModel() instanceof PlayerModel model) {
+			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof ArmorItem belt) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
+					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).getUnsafe();
+					if (tag.getBoolean("Transformed")) {
+						if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
+							if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Face()) {
+								model.head.visible = false;
+								model.hat.visible = false;
+							}
+							else {
+								model.head.visible = true;
+								model.hat.visible = true;
+							}
+							if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Under()) {
+								model.leftLeg.visible = false;
+								model.rightLeg.visible = false;
+								model.leftArm.visible = false;
+								model.rightArm.visible = false;
+								model.body.visible = false;
+							}
+							else {
+								model.leftLeg.visible = true;
+								model.rightLeg.visible = true;
+								model.leftArm.visible = true;
+								model.rightArm.visible = true;
+								model.body.visible = true;
+							}
+							model.leftSleeve.visible = false;
+							model.rightSleeve.visible = false;
+							model.leftPants.visible = false;
+							model.rightPants.visible = false;
+							model.jacket.visible = false;
+						}
+						else {
 							model.head.visible = false;
 							model.hat.visible = false;
-						} else {
-							model.head.visible = true;
-							model.hat.visible = true;
-						}
-						if (!RangerChangerItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_Show_Under()) {
 							model.leftLeg.visible = false;
 							model.rightLeg.visible = false;
 							model.leftArm.visible = false;
 							model.rightArm.visible = false;
 							model.body.visible = false;
-						} else {
-							model.leftLeg.visible = true;
-							model.rightLeg.visible = true;
-							model.leftArm.visible = true;
-							model.rightArm.visible = true;
-							model.body.visible = true;
+							model.leftSleeve.visible = false;
+							model.rightSleeve.visible = false;
+							model.leftPants.visible = false;
+							model.rightPants.visible = false;
+							model.jacket.visible = false;
 						}
-						model.leftSleeve.visible = false;
-						model.rightSleeve.visible = false;
-						model.leftPants.visible = false;
-						model.rightPants.visible = false;
-						model.jacket.visible = false;
-					} else {
-						model.head.visible = true;
-						model.hat.visible = true;
-						model.leftLeg.visible = true;
-						model.rightLeg.visible = true;
-						model.leftArm.visible = true;
-						model.rightArm.visible = true;
-						model.body.visible = true;
-						model.leftSleeve.visible = true;
-						model.rightSleeve.visible = true;
-						model.leftPants.visible = true;
-						model.rightPants.visible = true;
-						model.jacket.visible = true;
 					}
-				} else {
-					model.head.visible = true;
-					model.hat.visible = true;
-					model.leftLeg.visible = true;
-					model.rightLeg.visible = true;
-					model.leftArm.visible = true;
-					model.rightArm.visible = true;
-					model.body.visible = true;
-					model.leftSleeve.visible = true;
-					model.rightSleeve.visible = true;
-					model.leftPants.visible = true;
-					model.rightPants.visible = true;
-					model.jacket.visible = true;
 				}
-
-				if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
-					if (belt.isTransformed(event.getEntity())) {
+				if (!(event.getEntity() instanceof Player) & event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
+					if (((RangerChangerItem) event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem()).isTransformed(event.getEntity())) {
 						model.head.visible = false;
 						model.hat.visible = false;
 						model.leftLeg.visible = false;
@@ -202,7 +197,8 @@ public class SuperSentaiCraftCore {
 						model.leftPants.visible = false;
 						model.rightPants.visible = false;
 						model.jacket.visible = false;
-					} else {
+					}
+					else {
 						model.head.visible = true;
 						model.hat.visible = true;
 						model.leftLeg.visible = true;
@@ -216,20 +212,86 @@ public class SuperSentaiCraftCore {
 						model.rightPants.visible = true;
 						model.jacket.visible = true;
 					}
-				} else {
-					model.head.visible = true;
-					model.hat.visible = true;
-					model.leftLeg.visible = true;
-					model.rightLeg.visible = true;
-					model.leftArm.visible = true;
-					model.rightArm.visible = true;
-					model.body.visible = true;
-					model.leftSleeve.visible = true;
-					model.rightSleeve.visible = true;
-					model.leftPants.visible = true;
-					model.rightPants.visible = true;
-					model.jacket.visible = true;
 				}
+			}
+			else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ArmorItem belt) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
+					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).getUnsafe();
+					if (tag.getBoolean("Transformed")) {
+						if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem) {
+							model.head.visible = false;
+							model.hat.visible = false;
+							model.leftLeg.visible = false;
+							model.rightLeg.visible = false;
+							model.leftArm.visible = false;
+							model.rightArm.visible = false;
+							model.body.visible = false;
+							model.leftSleeve.visible = false;
+							model.rightSleeve.visible = false;
+							model.leftPants.visible = false;
+							model.rightPants.visible = false;
+							model.jacket.visible = false;
+						}
+						else {
+							model.head.visible = false;
+							model.hat.visible = false;
+							model.leftLeg.visible = false;
+							model.rightLeg.visible = false;
+							model.leftArm.visible = false;
+							model.rightArm.visible = false;
+							model.body.visible = false;
+							model.leftSleeve.visible = false;
+							model.rightSleeve.visible = false;
+							model.leftPants.visible = false;
+							model.rightPants.visible = false;
+							model.jacket.visible = false;
+						}
+					}
+				}
+				if (!(event.getEntity() instanceof Player) & event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem) {
+					if (((MechaGattaiItem) event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem()).isTransformed(event.getEntity())) {
+						model.head.visible = false;
+						model.hat.visible = false;
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+						model.body.visible = false;
+						model.leftSleeve.visible = false;
+						model.rightSleeve.visible = false;
+						model.leftPants.visible = false;
+						model.rightPants.visible = false;
+						model.jacket.visible = false;
+					}
+					else {
+						model.head.visible = true;
+						model.hat.visible = true;
+						model.leftLeg.visible = true;
+						model.rightLeg.visible = true;
+						model.leftArm.visible = true;
+						model.rightArm.visible = true;
+						model.body.visible = true;
+						model.leftSleeve.visible = true;
+						model.rightSleeve.visible = true;
+						model.leftPants.visible = true;
+						model.rightPants.visible = true;
+						model.jacket.visible = true;
+					}
+				}
+			}
+			else {
+				model.head.visible = true;
+				model.hat.visible = true;
+				model.leftLeg.visible = true;
+				model.rightLeg.visible = true;
+				model.leftArm.visible = true;
+				model.rightArm.visible = true;
+				model.body.visible = true;
+				model.leftSleeve.visible = true;
+				model.rightSleeve.visible = true;
+				model.leftPants.visible = true;
+				model.rightPants.visible = true;
+				model.jacket.visible = true;
 			}
 		}
 

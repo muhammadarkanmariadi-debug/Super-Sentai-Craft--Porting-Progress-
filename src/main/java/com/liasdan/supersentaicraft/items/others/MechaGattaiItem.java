@@ -69,16 +69,25 @@ public class MechaGattaiItem extends MechaArmorItem{
 
 		if (entity instanceof LivingEntity player) {
 
-			if (stack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+			if (stack.has(DataComponents.CUSTOM_DATA)) {
 				CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 				if (tag.getBoolean("Update_form")) OnformChange(stack, player, tag);
+				if (!isTransformed(player)) tag.putBoolean("Update_form", true);
+
+				if (!isTransformed(player)) tag.putBoolean("Transformed", false);
+				if (isTransformed(player)) tag.putBoolean("Transformed", true);
+			}
+			else {
+				set_Update_Form(stack);
 			}
 
-			if (isTransformed(player) && player.getItemBySlot(EquipmentSlot.HEAD) == stack) {
+			if (isTransformed(player)) {
 				for (int n = 0; n < Num_Base_Form_Item; n++) {
-					List<MobEffectInstance> potionEffectList = get_Form_Item(player.getItemBySlot(EquipmentSlot.HEAD), n + 1).getPotionEffectList();
-					for (int i = 0; i < potionEffectList.size(); i++) {
-						player.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(), potionEffectList.get(i).getDuration(), potionEffectList.get(i).getAmplifier(), true, false));
+					RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.HEAD), n + 1);
+
+					List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
+					for (MobEffectInstance effect : potionEffectList) {
+						player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
 					}
 				}
 			}
@@ -86,8 +95,22 @@ public class MechaGattaiItem extends MechaArmorItem{
 	}
 
 	public void OnformChange(ItemStack itemstack, LivingEntity player,CompoundTag  tag) {
-		player.setInvisible(false);
-		tag.putBoolean("Update_form", false);
+		if(isTransformed(player)) {
+			OnTransformation(itemstack,player);
+			Consumer<CompoundTag> data = form -> {
+				form.putBoolean("Update_form", false);
+			};
+			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
+		}
+
+	}
+
+	public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+		if(isTransformed(player) && !player.level().isClientSide()) {
+			for (int n = 0; n < Num_Base_Form_Item; n++) {
+				RangerFormChangeItem form = get_Form_Item(itemstack, n + 1);
+			}
+		}
 	}
 
 	public MechaGattaiItem Add_Extra_Base_Form_Items(DeferredItem<Item> item) {
@@ -152,24 +175,36 @@ public class MechaGattaiItem extends MechaArmorItem{
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
 	}
 
-
-	public static void set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
+	public static void set_Update_Form(ItemStack itemstack)
 	{
-		if (!itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+		if (!itemstack.has(DataComponents.CUSTOM_DATA)) {
 			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
 		}
-		if (itemstack.getItem() instanceof MechaGattaiItem changer) {
-			CompoundTag  tag = new CompoundTag();
+		if (itemstack.getItem() instanceof MechaGattaiItem) {
+			Consumer<CompoundTag> data = form -> {
+				form.putBoolean("Update_form", true);
+			};
+			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
+		}
+	}
+
+	public static void set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT) {
+		if (!itemstack.has(DataComponents.CUSTOM_DATA)) {
+			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
+		}
+		if (itemstack.getItem() instanceof MechaGattaiItem driver) {
+			CompoundTag tag = new CompoundTag();
 			Consumer<CompoundTag> data = form ->
 			{
-				form.putString("slot_tex"+SLOT, ITEM.toString());
-				form.putInt("slot"+SLOT, Item.getId(ITEM));
-				form.putBoolean("Update_form", true);
+				if (!form.getString("slot_tex" + SLOT).equals(ITEM.toString())) {
+					form.putString("slot_tex" + SLOT, ITEM.toString());
+					form.putBoolean("Update_form", true);
+				}
 			};
 
 			data.accept(tag);
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
-			changer.Extra_set_Form_Item(itemstack, ITEM, SLOT,tag);
+			driver.Extra_set_Form_Item(itemstack, ITEM, SLOT, tag);
 		}
 	}
 
