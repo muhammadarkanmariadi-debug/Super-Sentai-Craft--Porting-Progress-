@@ -74,8 +74,8 @@ public class MechaGattaiItem extends MechaArmorItem{
 				if (tag.getBoolean("Update_form")) OnformChange(stack, player, tag);
 				if (!isTransformed(player)) tag.putBoolean("Update_form", true);
 
-				if (!isTransformed(player)) tag.putBoolean("Transformed", false);
-				if (isTransformed(player)) tag.putBoolean("Transformed", true);
+				if (!isTransformed(player)) tag.putBoolean("Changed", false);
+				if (isTransformed(player)) tag.putBoolean("Changed", true);
 			}
 			else {
 				set_Update_Form(stack);
