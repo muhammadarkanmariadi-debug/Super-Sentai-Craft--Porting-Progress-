@@ -169,6 +169,25 @@ public class SuperSentaiCraftCore {
 					}
 				}
 			}
+			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ArmorItem belt) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
+					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).getUnsafe();
+					if (tag.getDouble("render_type2") != 0) {
+						model.head.visible = false;
+						model.hat.visible = false;
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+						model.body.visible = false;
+						model.leftSleeve.visible = false;
+						model.rightSleeve.visible = false;
+						model.leftPants.visible = false;
+						model.rightPants.visible = false;
+						model.jacket.visible = false;
+					}
+				}
+			}
 			else {
 				model.head.visible = true;
 				model.hat.visible = true;
