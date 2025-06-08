@@ -74,8 +74,8 @@ public class MechaGattaiItem extends MechaArmorItem{
 				if (tag.getBoolean("Update_form")) OnformChange(stack, player, tag);
 				if (!isTransformed(player)) tag.putBoolean("Update_form", true);
 
-				if (!isTransformed(player)) tag.putBoolean("Changed", false);
-				if (isTransformed(player)) tag.putBoolean("Changed", true);
+				if (isTransformed(player)) tag.putDouble("render_type", 1);
+				if (!isTransformed(player)) tag.putDouble("render_type", 0);
 			}
 			else {
 				set_Update_Form(stack);
@@ -183,6 +183,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 		if (itemstack.getItem() instanceof MechaGattaiItem) {
 			Consumer<CompoundTag> data = form -> {
 				form.putBoolean("Update_form", true);
+				form.putDouble("render_type", 1);
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
 		}
@@ -199,6 +200,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 				if (!form.getString("slot_tex" + SLOT).equals(ITEM.toString())) {
 					form.putString("slot_tex" + SLOT, ITEM.toString());
 					form.putBoolean("Update_form", true);
+					form.putDouble("render_type", 1);
 				}
 			};
 
