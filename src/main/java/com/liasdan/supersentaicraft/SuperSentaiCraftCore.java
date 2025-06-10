@@ -140,12 +140,11 @@ public class SuperSentaiCraftCore {
 					if (tag.getDouble("render_type") != 0) {
 						if (tag.getDouble("render_type") != 2) {
 							model.head.visible = false;
-							model.hat.visible = false;
 						}
 						else {
 							model.head.visible = true;
-							model.hat.visible = true;
 						}
+
 						if (tag.getDouble("render_type") != 3) {
 							model.leftLeg.visible = false;
 							model.rightLeg.visible = false;
@@ -161,6 +160,7 @@ public class SuperSentaiCraftCore {
 							model.rightArm.visible = true;
 							model.body.visible = true;
 						}
+
 						model.leftSleeve.visible = false;
 						model.rightSleeve.visible = false;
 						model.leftPants.visible = false;
