@@ -86,6 +86,7 @@ public class SuperSentaiCraftCore {
 
 		GorangerItems.register(modEventBus);
 		JAKQItems.register(modEventBus);
+		BattleFeverItems.register(modEventBus);
 		SunVulcanItems.register(modEventBus);
 		MaskmanItems.register(modEventBus);
 		CarrangerItems.register(modEventBus);

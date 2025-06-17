@@ -36,6 +36,10 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(JAKQItems.JAKQ_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_jakq_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.jakq")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> BattleFeverTab = CREATIVE_MODE_TABS.register("ssc003", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(BattleFeverItems.BATTLE_FEVER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_battle_fever_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.battle_fever")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> SunVulcanTab = CREATIVE_MODE_TABS.register("ssc005", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(SunVulcanItems.SUN_VULCAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_sun_vulcan_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.sun_vulcan")).build());
@@ -86,6 +90,7 @@ public class RangerTabs {
     
     public static List<Item> GORANGER= new ArrayList<Item>();
 	public static List<Item> JAKQ= new ArrayList<Item>();
+	public static List<Item> BATTLE_FEVER= new ArrayList<Item>();
 	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
 
 	public static List<Item> MASKMAN= new ArrayList<Item>();
@@ -121,6 +126,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.JAKQ.size(); i++)
 			{
 				event.accept( RangerTabs.JAKQ.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.BattleFeverTab.get()) {
+			for (int i = 0; i < RangerTabs.BATTLE_FEVER.size(); i++)
+			{
+				event.accept( RangerTabs.BATTLE_FEVER.get(i));
 			}
 
 		}
