@@ -70,6 +70,24 @@ public class BattleFeverItems {
     public static final DeferredItem<Item> AMERICA_BATTLECEIVER = ITEMS.register("america_battleceiver",
     		() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"miss_america",AMERICA_BADGE,BATTLE_FEVER_HELMET,BATTLE_FEVER_CHESTPLATE,BATTLE_FEVER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
 
+	public static final DeferredItem<SwordItem> COMMAND_BAT = ITEMS.register("command_bat",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
+	public static final DeferredItem<SwordItem> JAPAN_SPEAR = ITEMS.register("japan_spear",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
+	public static final DeferredItem<SwordItem> COSSACK_SAI = ITEMS.register("cossack_sai",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
+	public static final DeferredItem<SwordItem> FRANCE_FENCING_SWORD = ITEMS.register("france_fencing_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
+	public static final DeferredItem<SwordItem> KENYA_WHIP = ITEMS.register("kenya_whip",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
+	public static final DeferredItem<BaseThrowableItem> AMERICA_THROWING_KNIFE = ITEMS.register("america_throwing_knife",
+			() -> new BaseThrowableItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
