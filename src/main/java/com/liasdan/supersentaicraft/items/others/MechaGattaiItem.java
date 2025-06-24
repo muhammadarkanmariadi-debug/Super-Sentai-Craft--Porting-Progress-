@@ -64,6 +64,11 @@ public class MechaGattaiItem extends MechaArmorItem{
 				&&player.getItemBySlot(EquipmentSlot.HEAD).getItem()==this;
 	}
 
+	public static double getRenderType(ItemStack stack) {
+		double form_double = 1;
+		return form_double ;
+	}
+
 	@Override
 	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
 

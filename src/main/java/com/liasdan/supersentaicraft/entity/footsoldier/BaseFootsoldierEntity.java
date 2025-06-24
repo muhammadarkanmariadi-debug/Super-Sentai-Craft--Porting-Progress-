@@ -122,8 +122,7 @@ public class BaseFootsoldierEntity extends  Monster implements RangedAttackMob {
             int i = localdate.get(ChronoField.DAY_OF_MONTH);
             int j = localdate.get(ChronoField.MONTH_OF_YEAR);
             if (j == 6 && i == 22 && randomsource.nextFloat() < 0.25F) {
-                this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack( Items.APPLE));
-                this.armorDropChances[EquipmentSlot.HEAD.getIndex()] = 0.0F;
+                this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Items.APPLE));
             }
         }
         return spawnGroupData;

@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:japan_badge"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:cossack_badge"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:france_badge"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:kenya_badge"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:america_badge"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:battle_fever_logo",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:battle_fever_logo"
+        }
+      ]
+    }
+  ]
+}

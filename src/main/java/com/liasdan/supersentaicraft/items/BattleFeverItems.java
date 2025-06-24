@@ -135,6 +135,40 @@ public class BattleFeverItems {
 	public static final DeferredItem<BaseThrowableItem> AMERICA_THROWING_KNIFE = ITEMS.register("america_throwing_knife",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));
 
+	public static final DeferredItem<Item> BATTLE_FEVER_ROBO = ITEMS.register("battle_fever_robo",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","battle_fever_robo", "blank",
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)));
+
+	public static final DeferredItem<Item> BATTLE_FEVER_ROBO_BOOTS = ITEMS.register("battle_fever_robo_boots",
+			() -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.BOOTS, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<Item> BATTLE_FEVER_ROBO_LEGGINGS = ITEMS.register("battle_fever_robo_legs",
+			() -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<Item> BATTLE_FEVER_ROBO_CHESTPLATE = ITEMS.register("battle_fever_robo_torso",
+			() -> new MechaArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+
+	public static final DeferredItem<Item> BATTLE_FEVER_ROBO_HELMET = ITEMS.register("battle_fever_robo_head",
+			() -> new MechaGattaiItem(ArmorMaterials.NETHERITE,"battle_fever_robo",BATTLE_FEVER_ROBO,BATTLE_FEVER_ROBO_CHESTPLATE,BATTLE_FEVER_ROBO_LEGGINGS,BATTLE_FEVER_ROBO_BOOTS, new Item.Properties())
+					.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+
+	public static final DeferredItem<SwordItem> DENKOUKEN = ITEMS.register("denkouken",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<SwordItem> SWORD_FEVER = ITEMS.register("sword_fever",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<SwordItem> FEVER_AXE = ITEMS.register("fever_axe",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<SwordItem> STICK_ATTACKER = ITEMS.register("stick_attacker",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<SwordItem> ATTACK_LANCER = ITEMS.register("attack_lancer",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<SwordItem> CANE_KNOCKER = ITEMS.register("cane_knocker",
+			() -> new BaseSwordItem(Tiers.NETHERITE, 30, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+	public static final DeferredItem<Item> BATTLE_SHIELD = ITEMS.register("battle_shield",
+			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(OtherItems.MECHA_GEAR.get()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

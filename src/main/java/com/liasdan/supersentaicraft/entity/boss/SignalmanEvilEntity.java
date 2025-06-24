@@ -18,8 +18,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 
 import javax.annotation.Nullable;
+import java.time.LocalDate;
+import java.time.temporal.ChronoField;
 
 public class SignalmanEvilEntity extends BaseFootsoldierEntity {
 
@@ -28,7 +31,15 @@ public class SignalmanEvilEntity extends BaseFootsoldierEntity {
     public SignalmanEvilEntity(EntityType<? extends BaseFootsoldierEntity> type, Level level) {
         super(type, level);
         NAME="ld_signalman";
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CarrangerItems.CARRANGER_HELMET.get()));
+
+        LocalDate localdate = LocalDate.now();
+        int i = localdate.get(ChronoField.DAY_OF_MONTH);
+        int j = localdate.get(ChronoField.MONTH_OF_YEAR);
+        if (j == 6 && i == 22) {
+            this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Blocks.AIR));
+            this.armorDropChances[EquipmentSlot.HEAD.getIndex()] = 0.0F;
+        }
+        else this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CarrangerItems.CARRANGER_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CarrangerItems.CARRANGER_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CarrangerItems.CARRANGER_LEGGINGS.get()));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(CarrangerItems.SIGNAL_WHISTLE_EVIL.get()));
@@ -72,6 +83,6 @@ public class SignalmanEvilEntity extends BaseFootsoldierEntity {
                 .add(Attributes.MOVEMENT_SPEED,(double)0.2F)
                 .add(Attributes.ATTACK_DAMAGE, 15.0D)
                 .add(Attributes.ARMOR, 4.0D)
-                .add(Attributes.MAX_HEALTH, 250.0D);
+                .add(Attributes.MAX_HEALTH, 50.0D);
     }
 }

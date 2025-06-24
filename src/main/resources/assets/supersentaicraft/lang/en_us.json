@@ -32,7 +32,8 @@
   "entity.supersentaicraft.crimer": "Crimers",
   "item.supersentaicraft.crimer_spawn_egg": "Crimers Spawn Egg",
 
-  "entity.supersentaicraft.cutmen": "Cutmen",
+  "entity.supersentaicraft.cutman": "Cutmen",
+  "item.supersentaicraft.cutman_spawn_egg": "Cutmen Spawn Egg",
 
   "entity.supersentaicraft.dustler": "Dustlers",
 
@@ -349,6 +350,8 @@
   "item.supersentaicraft.battle_fever_robo_torso": "Battle Fever Robo Chestplate",
   "item.supersentaicraft.battle_fever_robo_legs": "Battle Fever Robo Leggings",
   "item.supersentaicraft.battle_fever_robo_boots": "Battle Fever Robo Boots",
+
+  "supersentaicraft:battle_fever_robo.form": "Sentai Robo: Battle Fever Robo",
 
   "item.supersentaicraft.denkouken": "DenkouKen (Lightning Sword)",
   "item.supersentaicraft.sword_fever": "Sword Fever",
