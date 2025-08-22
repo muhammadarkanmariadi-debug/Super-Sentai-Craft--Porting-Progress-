@@ -27,12 +27,7 @@ import com.liasdan.supersentaicraft.items.shinkenger.SushiChangerItem;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -94,7 +89,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GOLD_RYUSOUL = ITEMS.register("gold_ryusoul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_gold","ryusoul_gold_belt",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","ryusoul_gold","ryusoul_gold_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -102,7 +97,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GAI_SOUL = ITEMS.register("gai_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","gaisoulg","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","gaisoulg","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
@@ -110,7 +105,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BROWN_RYUSOUL = ITEMS.register("brown_ryusoul",
-            () -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_brown","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.RARE),0,"","ryusoul_brown","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
@@ -242,7 +237,7 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER).AddToTabList(BlankRyusoulItem.RYUSOUL, 1));
     
 	public static final DeferredItem<Item> MERAMERA_SOUL = ITEMS.register("meramera_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_meramera","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_meramera","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -252,7 +247,7 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BIRIBIRI_SOUL = ITEMS.register("biribiri_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_biribiri","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_biribiri","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
@@ -261,10 +256,10 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BYUBYU_SOUL = ITEMS.register("byubyu_soul",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));
+    		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> KURAYAMI_SOUL = ITEMS.register("kurayami_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kurayami","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_kurayami","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -275,7 +270,7 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> KAGAYAKI_SOUL = ITEMS.register("kagayaki_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_kagayaki","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_kagayaki","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -286,7 +281,7 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> COSMO_SOUL = ITEMS.register("cosmo_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_cosmo","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_cosmo","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
@@ -297,10 +292,10 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGERS).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> KANAE_SOUL = ITEMS.register("kanae_soul",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));
+    		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> DOSSHIN_SOUL = ITEMS.register("dosshin_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_dosshin","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_dosshin","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
@@ -318,7 +313,7 @@ public class RyusoulgerItems {
 			.ChangeSlot(2).BackToBase().AddCompatibilityList(OTHERS));
 
 	public static final DeferredItem<Item> HIEHIE_SOUL = ITEMS.register("hiehie_soul",
-            () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_hiehie","","blank",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"ryusoul_hiehie","","blank",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
@@ -328,7 +323,7 @@ public class RyusoulgerItems {
 			.addAlternative(HIEHIE_SOUL_2.get()).ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGER).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> MAX_RYUSOUL = ITEMS.register("max_ryusoul",
-            () -> new RyusoulItem(new Item.Properties(),0,"_max","ryusoul_red","ryusoul_red_belt",
+            () -> new RyusoulItem(new Item.Properties().rarity(Rarity.RARE),0,"_max","ryusoul_red","ryusoul_red_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
@@ -348,10 +343,10 @@ public class RyusoulgerItems {
             .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGER).ChangeModel("geo/noblesse.geo.json"));
     
 	public static final DeferredItem<Item> SHIAWASE_SOUL = ITEMS.register("shiawase_soul",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));
+    		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> YAMAMORI_SOUL = ITEMS.register("yamamori_soul",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));
+    		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));
 
 	public static final DeferredItem<Item> LUPIN_YELLOW_SOUL = ITEMS.register("lupin_yellow_soul",
 			() -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_pink","lupinranger_belt",
@@ -372,7 +367,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeRangerName("lupin_blue").addAlternative(LUPIN_YELLOW_SOUL.get()));
 
 	public static final DeferredItem<Item> LUPINRANGER_SOUL = ITEMS.register("lupinranger_soul",
-			() -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_red","lupinranger_belt",
+			() -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","ryusoul_red","lupinranger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -381,7 +376,7 @@ public class RyusoulgerItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeRangerName("lupin_red").addAlternative(LUPIN_BLUE_SOUL.get()).AddToTabList(RangerTabs.RYUSOULGER));
 
 	public static final DeferredItem<Item> UNFINISHED_RYUSOUL_CALIBUR = ITEMS.register("unfinished_ryusoul_calibur",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER));
+    		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));
     
     public static final DeferredItem<Item> RYUSOULGER_HELMET = ITEMS.register("ryusoulger_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
@@ -406,44 +401,44 @@ public class RyusoulgerItems {
     		() -> new RyusoulChangerItem(ArmorMaterials.DIAMOND,"ryusoul_black",BLACK_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> GOLD_MOSA_CHANGER = ITEMS.register("gold_mosa_changer",
-    		() -> new MosaChangerItem(ArmorMaterials.DIAMOND,"ryusoul_gold",GOLD_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
+    		() -> new MosaChangerItem(ArmorMaterials.DIAMOND,"ryusoul_gold",GOLD_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.UNCOMMON))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<Item> GAISOULG_CHANGER = ITEMS.register("gaisorg_changer",
-    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"gaisoulg",GAI_SOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
+    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"gaisoulg",GAI_SOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.UNCOMMON))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> BROWN_CHANGER = ITEMS.register("brown_changer",
-    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_brown",BROWN_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
+    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_brown",BROWN_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.RARE))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> MORIA_RYUSOUL_CHANGER = ITEMS.register("moria_ryusoul_changer",
-    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_moria",RED_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties())
+    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_moria",RED_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.RARE))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> RYUSOUL_KEN = ITEMS.register("ryusoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<BaseBlasterItem> MOSA_CHANGER = ITEMS.register("mosa_changer",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
 	public static final DeferredItem<SwordItem> MOSA_BLADE = ITEMS.register("mosa_blade",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<BaseBlasterItem> MOSA_BREAKER = ITEMS.register("mosa_breaker",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).KeepDifItem(MOSA_CHANGER.get()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties().rarity(Rarity.RARE)).KeepDifItem(MOSA_CHANGER.get()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> GAISOUL_KEN = ITEMS.register("gaisoul_ken",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> GAISOUL_SHIELD = ITEMS.register("gaisoul_shield",
-			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseShieldItem(new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> BROWN_RYUSOUL_KEN = ITEMS.register("brown_ryusoul_ken",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> BROWN_RYUSOUL_SHIELD = ITEMS.register("brown_ryusoul_shield",
-			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseShieldItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> MAX_RYUSOUL_CHANGER = ITEMS.register("max_ryusoul_changer",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.RARE)).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<BaseSwordItem> RYUSOUL_CALIBUR = ITEMS.register("ryusoul_calibur",
-			() -> new RyusoulCaliburItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new RyusoulCaliburItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties().rarity(Rarity.EPIC)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

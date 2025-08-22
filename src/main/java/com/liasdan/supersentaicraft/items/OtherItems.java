@@ -22,8 +22,8 @@ public class OtherItems {
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
 
-	public static String[] SentaiRobo = new String[] {"sun_vulcan_robo","gao_king","gao_muscle","gao_hunter","gao_hunter_blue_moon",
-			"gao_icarus","gao_god","gao_knight"};
+	public static String[] SentaiRobo = new String[] {"battle_fever_robo","sun_vulcan_robo","gao_king","gao_muscle","gao_hunter",
+			"gao_hunter_blue_moon","gao_icarus","gao_god","gao_knight"};
 
 	public static final DeferredItem<Item> BASE_SWORD = ITEMS.register("base_sword",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.MISC));

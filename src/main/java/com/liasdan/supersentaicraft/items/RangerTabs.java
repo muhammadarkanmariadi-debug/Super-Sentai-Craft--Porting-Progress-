@@ -48,6 +48,10 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(MaskmanItems.MASKMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_maskman_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.maskman")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> TurborangerTab = CREATIVE_MODE_TABS.register("ssc013", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(TurborangerItems.TURBORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_turboranger_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.turboranger")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> CarrangerTab = CREATIVE_MODE_TABS.register("ssc020", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(CarrangerItems.CARRANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_carranger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.carranger")).build());
@@ -94,11 +98,12 @@ public class RangerTabs {
 	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
 
 	public static List<Item> MASKMAN= new ArrayList<Item>();
-
+	public static List<Item> TURBORANGER= new ArrayList<Item>();
 	public static List<Item> CARRANGER= new ArrayList<Item>();
-    public static List<Item> GINGAMAN= new ArrayList<Item>();
 
+    public static List<Item> GINGAMAN= new ArrayList<Item>();
 	public static List<Item> GAORANGER= new ArrayList<Item>();
+
     public static List<Item> SHINKENGER= new ArrayList<Item>();
 
 	public static List<Item> LUPATRANGER= new ArrayList<Item>();
@@ -147,6 +152,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.MASKMAN.size(); i++)
 			{
 				event.accept( RangerTabs.MASKMAN.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.TurborangerTab.get()) {
+			for (int i = 0; i < RangerTabs.TURBORANGER.size(); i++)
+			{
+				event.accept( RangerTabs.TURBORANGER.get(i));
 			}
 
 		}

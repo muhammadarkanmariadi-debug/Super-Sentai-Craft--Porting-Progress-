@@ -9,6 +9,7 @@ import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 
 import com.liasdan.supersentaicraft.items.OtherItems;
+import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
@@ -31,12 +32,23 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 public class ModCommonEvents {
 
 	public static class EventHandler {
+
+		@SubscribeEvent
+		public void onEntityTick(EntityTickEvent.Post event) {
+			if (event.getEntity()instanceof LivingEntity entity){
+				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem belt){
+					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET),entity.level(),entity,36);
+					belt.giveEffects(entity);
+				}
+			}
+		}
 
 		@SubscribeEvent
 		public void addLivingDamageEvent(LivingDamageEvent.Post event) {

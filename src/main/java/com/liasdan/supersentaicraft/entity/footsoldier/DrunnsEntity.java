@@ -40,7 +40,7 @@ public class DrunnsEntity extends BaseFootsoldierEntity {
     					}
     				}
     			}
-        		if (this.random.nextInt(2) == 1) {
+        		else if (this.random.nextInt(2) == 1) {
     				BaseFootsoldierEntity boss = MobsCore.RYUSOUL_MORIA.get().create(this.level());
     				if (boss != null) {
     					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);

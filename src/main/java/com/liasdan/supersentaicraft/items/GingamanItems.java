@@ -16,12 +16,7 @@ import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -75,15 +70,15 @@ public class GingamanItems {
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
 	public static final DeferredItem<Item> BLACK_KNIGHT_CORE = ITEMS.register("black_knight_core",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"","black_knight","black_knight_belt",
+            () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","black_knight","black_knight_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
     public static final DeferredItem<Item> GINGA_NO_HIKARI = ITEMS.register("lights_of_ginga",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"_beast_armor_shine","ginga_red","beast_armor_shine_belt",
+            () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.RARE),0,"_beast_armor_shine","ginga_red","beast_armor_shine_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 4,true,false),
@@ -115,7 +110,7 @@ public class GingamanItems {
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 
     public static final DeferredItem<Item> BLACK_KNIGHT_BULL_RIOT = ITEMS.register("black_knight_bull_riot",
-    		() -> new BullRiotItem(ArmorMaterials.DIAMOND,"black_knight",BLACK_KNIGHT_CORE,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties())
+    		() -> new BullRiotItem(ArmorMaterials.DIAMOND,"black_knight",BLACK_KNIGHT_CORE,GINGAMAN_HELMET,GINGAMAN_CHESTPLATE,GINGAMAN_LEGGINGS,new Item.Properties().rarity(Rarity.UNCOMMON))
     		.AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
     
     public static final DeferredItem<SwordItem> SEIJUUKEN = ITEMS.register("starbeast_sword",
@@ -144,7 +139,7 @@ public class GingamanItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(SuperSentaiCraftCore.FORM_WEAPON_ITEM).AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 	
     public static final DeferredItem<BaseBlasterItem> BULL_RIOT = ITEMS.register("bull_riot",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).isChanger(BLACK_KNIGHT_BULL_RIOT.get()).IsSwordGun().AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).isChanger(BLACK_KNIGHT_BULL_RIOT.get()).IsSwordGun().AddToTabList(RangerTabs.GINGAMAN).ChangeRepairItem(GINGAMAN_LOGO.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

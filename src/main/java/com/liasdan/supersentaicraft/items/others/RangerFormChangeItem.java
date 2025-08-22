@@ -7,10 +7,14 @@ import java.util.List;
 import com.google.common.collect.Lists;
 import com.liasdan.supersentaicraft.items.OtherItems;
 
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -29,6 +33,7 @@ public class RangerFormChangeItem extends BaseItem {
 	private String BELT_TEX;
 	private String UPDATED_MODEL;
 	private String UPDATED_BELT;
+	private String UPDATED_ANIMATION;
 	private String FLYING_MODEL;
 	private Boolean FLYING_TEXT = false;
 	public Item SHIFT_ITEM = Items.APPLE;
@@ -96,6 +101,10 @@ public class RangerFormChangeItem extends BaseItem {
 		return "geo/rangerbelt.geo.json";
 	}
 
+	public String get_Animation() {
+		return (UPDATED_ANIMATION!=null ? "animations/"+UPDATED_ANIMATION : "animations/ranger.animation.json");
+	}
+
 	public Boolean get_Show_Face() {
 		return SET_SHOW_FACE;
 	}
@@ -122,6 +131,11 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public RangerFormChangeItem ChangeModel(String model) {
 		UPDATED_MODEL=model;
+		return this;
+	}
+
+	public RangerFormChangeItem ChangeAnimation(String animation) {
+		UPDATED_ANIMATION=animation;
 		return this;
 	}
 
@@ -329,6 +343,14 @@ public class RangerFormChangeItem extends BaseItem {
 
 		return InteractionResultHolder.sidedSuccess(itemstack, p_41128_.isClientSide());
 
+	}
+
+	public void OnTransformation(ItemStack itemstack, LivingEntity entity) {
+		if (entity.level() instanceof ServerLevel sl) {
+			sl.sendParticles(ParticleTypes.GUST,
+					entity.getX(), entity.getY() + 1.0,
+					entity.getZ(), 1, 0, 0, 0, 1);
+		}
 	}
 }
 

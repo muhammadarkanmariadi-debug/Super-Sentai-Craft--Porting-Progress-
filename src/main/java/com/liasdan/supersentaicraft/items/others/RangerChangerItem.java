@@ -66,33 +66,42 @@ public class RangerChangerItem extends RangerArmorItem{
 		return form_double ;
 	}
 
-	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+	public void beltTick(ItemStack stack, Level level, LivingEntity player, int slotId) {
+		if (stack.has(DataComponents.CUSTOM_DATA)) {
+			CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+			if (tag.getBoolean("Update_form")&&slotId==36) OnformChange(stack, player, tag);
+			if (!isTransformed(player)||slotId!=36) tag.putBoolean("Update_form", true);
 
-		if (entity instanceof LivingEntity player) {
+			if (isTransformed(player)) tag.putDouble("render_type", getRenderType(stack));
+			if (!isTransformed(player)) tag.putDouble("render_type", 0);
+			if (tag.getDouble("is_transforming")!=0) tag.putDouble("is_transforming", tag.getDouble("is_transforming")-1);
+			if (tag.getDouble("is_transforming")<0) tag.putDouble("is_transforming", 0);
 
-			if (stack.has(DataComponents.CUSTOM_DATA)) {
-				CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-				if (tag.getBoolean("Update_form")&&slotId==36) OnformChange(stack, player, tag);
-				if (!isTransformed(player)||slotId!=36) tag.putBoolean("Update_form", true);
+			//if (!level.isClientSide)player.sendSystemMessage(Component.literal("SlotID=" + slotId));
 
-				if (isTransformed(player)) tag.putDouble("render_type", getRenderType(stack));
-				if (!isTransformed(player)) tag.putDouble("render_type", 0);
-			}
-			else {
-				set_Update_Form(stack);
-			}
+		}else{
+			set_Update_Form(stack);
+		}
+	}
 
-			if (isTransformed(player)) {
-				for (int n = 0; n < Num_Base_Form_Item; n++) {
-					RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), n + 1);
 
-					List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
-					for (MobEffectInstance effect : potionEffectList) {
-						player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
-					}
+	public void giveEffects(LivingEntity player) {
+		if (isTransformed(player)) {
+			for (int n = 0; n < Num_Base_Form_Item; n++) {
+				RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), n + 1);
+				List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
+				for (MobEffectInstance effect : potionEffectList) {
+					player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
 				}
 			}
+		}
+	}
+
+	@Override
+	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+		if (entity instanceof LivingEntity player) {
+			beltTick(stack,level,player,slotId);
+			giveEffects(player);
 		}
 	}
 
@@ -111,6 +120,7 @@ public class RangerChangerItem extends RangerArmorItem{
 		if(isTransformed(player) && !player.level().isClientSide()) {
 			for (int n = 0; n < Num_Base_Form_Item; n++) {
 				RangerFormChangeItem form = get_Form_Item(itemstack, n + 1);
+				form.OnTransformation(itemstack, player);
 			}
 		}
 	}
@@ -167,7 +177,9 @@ public class RangerChangerItem extends RangerArmorItem{
 	}
 
 	public ResourceLocation getAnimationResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot) {
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
+
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_Animation());
+
 	}
 
 	public static void reset_Form_Item(ItemStack  itemstack)

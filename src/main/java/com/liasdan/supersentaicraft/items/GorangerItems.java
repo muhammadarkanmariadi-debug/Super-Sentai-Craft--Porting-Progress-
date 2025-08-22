@@ -7,12 +7,7 @@ import com.liasdan.supersentaicraft.items.others.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -80,7 +75,7 @@ public class GorangerItems {
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false)));
 	
 	public static final DeferredItem<Item> GORANGER_MANGA = ITEMS.register("goranger_manga",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","akaranger","akaranger_belt",
+            () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"_manga","akaranger","akaranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
@@ -116,7 +111,7 @@ public class GorangerItems {
 	public static final DeferredItem<BaseBlasterItem> BLUE_CHERRY = ITEMS.register("blue_cherry",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> ULTRA_BLUE_CHERRY = ITEMS.register("ultra_blue_cherry",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	
 	public static final DeferredItem<SwordItem> KI_STICKER = ITEMS.register("ki_sticker",
 			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsTripleWeapon().AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
@@ -137,7 +132,7 @@ public class GorangerItems {
 	public static final DeferredItem<BaseThrowableItem> MIDOMERANG = ITEMS.register("midomerang",
 			() -> new BaseThrowableItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 	public static final DeferredItem<BaseThrowableItem> NEW_MIDOMERANG = ITEMS.register("new_midomerang",
-			() -> new BaseThrowableItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
+			() -> new BaseThrowableItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.GORANGER).ChangeRepairItem(GORANGER_LOGO.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

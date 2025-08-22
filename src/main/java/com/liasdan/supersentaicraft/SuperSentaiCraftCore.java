@@ -15,6 +15,7 @@ import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
+import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
@@ -38,6 +39,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.RenderLivingEvent;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -89,6 +91,7 @@ public class SuperSentaiCraftCore {
 		BattleFeverItems.register(modEventBus);
 		SunVulcanItems.register(modEventBus);
 		MaskmanItems.register(modEventBus);
+		TurborangerItems.register(modEventBus);
 		CarrangerItems.register(modEventBus);
 		GingamanItems.register(modEventBus);
 		GaorangerItems.register(modEventBus);
@@ -105,6 +108,7 @@ public class SuperSentaiCraftCore {
 		MobsItems.register(modEventBus);
 		RangerTabs.register(modEventBus);
 		ModLootModifiers.register(modEventBus);
+		ModParticles.register(modEventBus);
 
 		// Register the item to a creative tab
 		modEventBus.addListener(this::addCreative);
@@ -464,6 +468,22 @@ public class SuperSentaiCraftCore {
 			event.registerEntityRenderer(MobsCore.EXPLOSIVE_PROJECTILE.get(), ThrownItemRenderer::new);
 			event.registerEntityRenderer(MobsCore.WEAPON_PROJECTILE.get(), ThrownWeaponRenderer::new);
 			event.registerEntityRenderer(MobsCore.SHURIKEN_PROJECTILE.get(), ThrownShurikenRenderer::new);
+		}
+
+		@SubscribeEvent
+		public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+			event.registerSpriteSet(ModParticles.WHITE_SPARK_PARTICLES.get(), WhiteSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.RED_SPARK_PARTICLES.get(), RedSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.BLUE_SPARK_PARTICLES.get(), BlueSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.GREEN_SPARK_PARTICLES.get(), GreenSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.DARK_GREEN_SPARK_PARTICLES.get(), DarkGreenSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.PURPLE_SPARK_PARTICLES.get(), PurpleSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.PINK_SPARK_PARTICLES.get(), PinkSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.YELLOW_SPARK_PARTICLES.get(), YellowSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.GOLD_SPARK_PARTICLES.get(), GoldSparkParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.BLACK_SPARK_PARTICLES.get(), BlackSparkParticles.Provider::new);
+
+			event.registerSpriteSet(ModParticles.GOZYUGER_PARTICLES.get(), GozyugerParticles.Provider::new);
 		}
 	}
 }

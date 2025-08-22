@@ -61,7 +61,8 @@ public class JAKQItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).ChangeModel("geo/black_knight.geo.json").AddToTabList(RangerTabs.JAKQ));
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.JAKQ));
 	
 	public static final DeferredItem<Item> JAKQ_HELMET = ITEMS.register("jakq_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.JAKQ).ChangeRepairItem(BLANK_CARD.get()));

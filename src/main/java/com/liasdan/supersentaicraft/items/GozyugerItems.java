@@ -5,8 +5,11 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
 import com.liasdan.supersentaicraft.items.gozyuger.TegaSwordItem;
 import com.liasdan.supersentaicraft.items.others.*;
+import com.liasdan.supersentaicraft.particle.ModParticles;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -29,39 +32,109 @@ public class GozyugerItems {
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_wolf","gozyuger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
+						player.getX(), player.getY()+1,
+						player.getZ(), 1, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOZYU_LEON_RING = ITEMS.register("gozyu_leon_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_leon","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 1, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOZYU_TYRANNO_RING = ITEMS.register("gozyu_tyranno_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_tyranno","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 1, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.YELLOW_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOZYU_EAGLE_RING = ITEMS.register("gozyu_eagle_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_eagle","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
-					new MobEffectInstance(EffectCore.FLYING, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
+					new MobEffectInstance(EffectCore.FLYING, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 1, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOZYU_UNICORN_RING = ITEMS.register("gozyu_unicorn_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gozyu_unicorn","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).AddToTabList(RangerTabs.GOZYUGER));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 1, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLACK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> TEGA_JUNE_RING = ITEMS.register("tega_june_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","ring_hunter_garyudo","blank",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-	 		.ChangeModel("geo/black_knight.geo.json").AddToTabList(RangerTabs.GOZYUGER));
+	 		.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GORANGER_RING = ITEMS.register("goranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
