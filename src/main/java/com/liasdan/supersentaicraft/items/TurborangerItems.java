@@ -13,10 +13,14 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class TurborangerItems {
 
+	public static String[] TURBORANGER = new String[] {"red_turbo","black_turbo","blue_turbo","yellow_turbo","pink_turbo"};
+
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
 	public static final DeferredItem<Item> TURBORANGER_LOGO = ITEMS.register("turboranger_logo",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_turbo","turboranger_belt",
+					new MobEffectInstance(MobEffects.WEAKNESS, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.TURBORANGER));
 
 	public static final DeferredItem<Item> RED_TURBO_LOGO = ITEMS.register("red_turbo_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","red_turbo","red_turbo_belt",

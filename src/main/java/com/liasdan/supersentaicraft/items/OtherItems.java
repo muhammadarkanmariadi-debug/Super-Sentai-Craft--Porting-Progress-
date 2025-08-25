@@ -51,6 +51,9 @@ public class OtherItems {
 	public static final DeferredItem<Item> TAIYOU_SENTAI_SUN_VULCAN_MUSIC_DISC = ITEMS.register("taiyou_sentai_sun_vulcan_music_disc",
 			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.TAIYOU_SENTAI_SUN_VULCAN_KEY).stacksTo(1)));
 
+	public static final DeferredItem<Item> HIKARI_SENTAI_MASKMAN_MUSIC_DISC = ITEMS.register("hikari_sentai_maskman_music_disc",
+			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.HIKARI_SENTAI_MASKMAN_KEY).stacksTo(1)));
+
 	public static final DeferredItem<Item> GAORANGER_HOERO_MUSIC_DISC = ITEMS.register("gaoranger_hoero_music_disc",
 			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.GAORANGER_HOERO_KEY).stacksTo(1)));
 

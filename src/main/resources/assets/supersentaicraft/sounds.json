@@ -15,6 +15,14 @@
       }
     ]
   },
+  "hikari_sentai_maskman": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:hikari_sentai_maskman",
+        "stream": true
+      }
+    ]
+  },
   "gaoranger_hoero": {
     "sounds": [
       {

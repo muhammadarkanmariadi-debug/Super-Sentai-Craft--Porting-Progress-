@@ -1,0 +1,8 @@
+{
+  "description": {
+    "translate": "item.supersentaicraft.hikari_sentai_maskman.desc"
+  },
+  "comparator_output": 15,
+  "length_in_seconds": 75,
+  "sound_event": "supersentaicraft:hikari_sentai_maskman"
+}

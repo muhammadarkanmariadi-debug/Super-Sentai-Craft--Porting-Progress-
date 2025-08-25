@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/hikari_sentai_maskman_music_disc"
+  }
+}
