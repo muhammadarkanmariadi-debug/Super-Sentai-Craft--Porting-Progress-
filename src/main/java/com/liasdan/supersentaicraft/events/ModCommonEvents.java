@@ -137,6 +137,9 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.UNGLERS.get(), UnglersEntity.setAttributes().build());
 
+		event.put(MobsCore.ULARS.get(), UlarsEntity.setAttributes().build());
+		event.put(MobsCore.ULAR_CAPTAIN.get(), UlarCaptainEntity.setAttributes().build());
+
 		event.put(MobsCore.WUMPERS.get(), WumpersEntity.setAttributes().build());
 		event.put(MobsCore.SIGNALMAN_EVIL.get(), SignalmanEvilEntity.setAttributes().build());
 
@@ -169,6 +172,8 @@ public class ModCommonEvents {
 		event.register(MobsCore.MACHINEMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.UNGLERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.ULARS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.WUMPERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

@@ -1,0 +1,85 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_turbo_brace"
+    },
+    "title": "Turboranger!",
+    "description": "Obtain any Turbo Brace",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:turboranger/turboranger",
+  "criteria": {
+    "ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:red_turbo_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:black_turbo_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:blue_turbo_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:yellow_turbo_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:pink_turbo_brace"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger",
+      "ranger2",
+      "ranger3",
+      "ranger4",
+      "ranger5"
+    ]
+  ]
+}

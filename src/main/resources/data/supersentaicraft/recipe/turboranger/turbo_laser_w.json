@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "turboranger",
+  "group": "pink_turbo",
   "ingredients": [
 	{
       "item": "supersentaicraft:w_stick"
     },
 	{
-      "item": "supersentaicraft:turbo_laser_sword"
+      "item": "supersentaicraft:turbo_laser_gun"
     }
   ],
   "result": {

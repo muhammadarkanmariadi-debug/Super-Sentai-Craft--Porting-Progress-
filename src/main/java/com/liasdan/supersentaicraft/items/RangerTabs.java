@@ -230,6 +230,9 @@ public class RangerTabs {
 
 			event.accept(MobsCore.UNGLERS_SPAWN_EGG);
 
+			event.accept(MobsCore.ULARS_SPAWN_EGG);
+			event.accept(MobsCore.ULAR_CAPTAIN_SPAWN_EGG);
+
 			event.accept(MobsCore.WUMPERS_SPAWN_EGG);
 			event.accept(MobsCore.SIGNALMAN_EVIL_SPAWN_EGG);
 
@@ -264,6 +267,8 @@ public class RangerTabs {
 			event.accept(OtherItems.GAORANGER_HOERO_MUSIC_DISC);
 
 			event.accept(OtherItems.SAMURAI_SENTAI_SHINKENGER_MUSIC_DISC);
+
+			event.accept(OtherItems.WINNER_GOZYUGER_MUSIC_DISC);
 		}
 		else if(event.getTab() == RangerTabs.BlockTab.get()) {
 			for (int i = 0; i < RangerTabs.BLOCKS.size(); i++)

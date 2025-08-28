@@ -18,9 +18,9 @@ public class TurborangerItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SuperSentaiCraftCore.MODID);
     
 	public static final DeferredItem<Item> TURBORANGER_LOGO = ITEMS.register("turboranger_logo",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_turbo","turboranger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powerless","red_turbo","turboranger_belt",
 					new MobEffectInstance(MobEffects.WEAKNESS, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.TURBORANGER));
+					new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1,true,false)).AddCompatibilityList(TURBORANGER).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.TURBORANGER));
 
 	public static final DeferredItem<Item> RED_TURBO_LOGO = ITEMS.register("red_turbo_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","red_turbo","red_turbo_belt",
@@ -75,21 +75,32 @@ public class TurborangerItems {
 	public static final DeferredItem<Item> PINK_TURBO_BRACE = ITEMS.register("pink_turbo_brace",
 			() -> new TurboBraceItem(ArmorMaterials.DIAMOND,"pink_turbo",PINK_TURBO_LOGO,TURBORANGER_HELMET,TURBORANGER_CHESTPLATE,TURBORANGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
 
-//    public static final DeferredItem<BaseBlasterItem> LASER_MAGNUM = ITEMS.register("laser_magnum",
-//			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//    public static final DeferredItem<SwordItem> LASER_MAGNUM_SWORD = ITEMS.register("laser_magnum_sword",
-//			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//
-//    public static final DeferredItem<SwordItem> MASKY_BLADE = ITEMS.register("masky_blade",
-//			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//    public static final DeferredItem<SwordItem> MASKY_ROD = ITEMS.register("masky_rod",
-//			() -> new BaseDualSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsDualWeapon().AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//    public static final DeferredItem<SwordItem> MASKY_TONFA = ITEMS.register("masky_tonfa",
-//			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//    public static final DeferredItem<BaseThrowableItem> MASKY_ROTOR = ITEMS.register("masky_rotor",
-//			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsShuriken().AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
-//    public static final DeferredItem<SwordItem> MASKY_RIBBON = ITEMS.register("masky_ribbon",
-//			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+    public static final DeferredItem<BaseBlasterItem> TURBO_LASER = ITEMS.register("turbo_laser_gun",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+    public static final DeferredItem<SwordItem> TURBO_LASER_SWORD = ITEMS.register("turbo_laser_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+
+	public static final DeferredItem<SwordItem> GT_SWORD = ITEMS.register("gt_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<SwordItem> T_HAMMER = ITEMS.register("t_hammer",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> J_GUN = ITEMS.register("j_gun",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> B_BOWGUN = ITEMS.register("b_bowgun",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<SwordItem> W_STICK = ITEMS.register("w_stick",
+			() -> new BaseThrowableItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+
+	public static final DeferredItem<BaseBlasterItem> TURBO_LASER_GT = ITEMS.register("turbo_laser_gt",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(TURBO_LASER.get()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> TURBO_LASER_T = ITEMS.register("turbo_laser_t",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(TURBO_LASER.get()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> TURBO_LASER_J = ITEMS.register("turbo_laser_j",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(TURBO_LASER.get()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> TURBO_LASER_B = ITEMS.register("turbo_laser_b",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(TURBO_LASER.get()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
+	public static final DeferredItem<BaseBlasterItem> TURBO_LASER_W = ITEMS.register("turbo_laser_w",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(TURBO_LASER.get()).AddToTabList(RangerTabs.TURBORANGER).ChangeRepairItem(TURBORANGER_LOGO.get()));
 
 
 	public static void register(IEventBus eventBus) {

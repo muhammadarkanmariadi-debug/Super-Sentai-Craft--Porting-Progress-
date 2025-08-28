@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "yellow_turbo",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:b_bowgun"
+    },
+	{
+      "item": "supersentaicraft:turbo_laser_gun"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:turbo_laser_b"
+  }
+}

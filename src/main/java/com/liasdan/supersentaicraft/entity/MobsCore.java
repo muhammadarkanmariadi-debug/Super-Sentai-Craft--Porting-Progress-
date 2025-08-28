@@ -56,6 +56,19 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> UNGLERS_SPAWN_EGG = ITEMS.register("ungler_spawn_egg",
 			() -> new DeferredSpawnEggItem(UNGLERS,0xffffff, 0x151515, new Item.Properties()));
 
+	//13 Turboranger
+	public static final DeferredHolder<EntityType<?>, EntityType<UlarsEntity>> ULARS = MOBLIST.register("ular",
+			() -> EntityType.Builder.of(UlarsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":ular"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> ULARS_SPAWN_EGG = ITEMS.register("ular_spawn_egg",
+			() -> new DeferredSpawnEggItem(ULARS,0xffffff, 0x151515, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<UlarCaptainEntity>> ULAR_CAPTAIN = MOBLIST.register("ular_captain",
+			() -> EntityType.Builder.of(UlarCaptainEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":ular_captain"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> ULAR_CAPTAIN_SPAWN_EGG = ITEMS.register("ular_captain_spawn_egg",
+			() -> new DeferredSpawnEggItem(ULAR_CAPTAIN,0xffffff, 0x151515, new Item.Properties()));
+
 	//20 Carranger
 	public static final DeferredHolder<EntityType<?>, EntityType<WumpersEntity>> WUMPERS = MOBLIST.register("wumper",
 			() -> EntityType.Builder.of(WumpersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":wumper"));

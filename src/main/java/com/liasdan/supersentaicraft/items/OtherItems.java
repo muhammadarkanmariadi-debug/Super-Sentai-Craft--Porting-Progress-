@@ -60,6 +60,9 @@ public class OtherItems {
 	public static final DeferredItem<Item> SAMURAI_SENTAI_SHINKENGER_MUSIC_DISC = ITEMS.register("samurai_sentai_shinkenger_music_disc",
 			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SAMURAI_SENTAI_SHINKENGER_KEY).stacksTo(1)));
 
+	public static final DeferredItem<Item> WINNER_GOZYUGER_MUSIC_DISC = ITEMS.register("winner_gozyuger_music_disc",
+			() -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.WINNER_GOZYUGER_KEY).stacksTo(1)));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

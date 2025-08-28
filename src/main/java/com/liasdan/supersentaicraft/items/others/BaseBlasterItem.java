@@ -40,6 +40,7 @@ public class BaseBlasterItem extends BowItem {
 	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
 	private Item Changer = null;
 	private Boolean Charged = false;
+	private Boolean SuperGun = false;
 	private static int LFBB = 1;
 	private Item craftingRemainingItem = null;
 
@@ -145,7 +146,13 @@ public class BaseBlasterItem extends BowItem {
 			if (projectile != BlasterProjectile.ARROW) {
 				projectile.fire(player, player.getLookAngle());
 				stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
-			} else {
+			}
+			if (SuperGun) {
+				ItemStack arrow = new ItemStack(Items.ARROW, 1);
+				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
+				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * 3.0F, 1.0F, true, (LivingEntity)null);
+			}
+			else {
 				if (Charged) {
 					if (get_mode(stack) < 30) set_mode(stack, get_mode(stack) + 1);
 					else if (get_mode(stack) == 30) {
@@ -209,6 +216,11 @@ public class BaseBlasterItem extends BowItem {
 
 	public BaseBlasterItem IsSwordGun() {
 		SuperSentaiCraftCore.SWORD_GUN_ITEM.add(this);
+		return this;
+	}
+
+	public BaseBlasterItem IsSuperGun() {
+		SuperGun = true;
 		return this;
 	}
 

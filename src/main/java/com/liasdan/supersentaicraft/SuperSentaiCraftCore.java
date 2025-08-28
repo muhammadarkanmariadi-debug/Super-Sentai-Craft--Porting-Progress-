@@ -445,6 +445,9 @@ public class SuperSentaiCraftCore {
 
 			event.registerEntityRenderer(MobsCore.UNGLERS.get(), BasicEntityRenderer::new);
 
+			event.registerEntityRenderer(MobsCore.ULARS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.ULAR_CAPTAIN.get(), BasicEntityRenderer::new);
+
 			event.registerEntityRenderer(MobsCore.WUMPERS.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.SIGNALMAN_EVIL.get(), BasicEntityRenderer::new);
 

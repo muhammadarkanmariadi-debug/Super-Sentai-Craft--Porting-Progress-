@@ -77,7 +77,7 @@ public class MaskmanItems {
     		() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"x1_mask",X1_AURA_POWER,MASKMAN_HELMET,MASKMAN_CHESTPLATE,MASKMAN_LEGGINGS,new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     
     public static final DeferredItem<BaseBlasterItem> LASER_MAGNUM = ITEMS.register("laser_magnum",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     public static final DeferredItem<SwordItem> LASER_MAGNUM_SWORD = ITEMS.register("laser_magnum_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MASKMAN).ChangeRepairItem(MASKMAN_LOGO.get()));
     

@@ -31,6 +31,9 @@ public class ModSounds {
     public static final Supplier<SoundEvent> SAMURAI_SENTAI_SHINKENGER = registerSoundEvent("samurai_sentai_shinkenger");
     public static final ResourceKey<JukeboxSong> SAMURAI_SENTAI_SHINKENGER_KEY = createSong("samurai_sentai_shinkenger");
 
+    public static final Supplier<SoundEvent> WINNER_GOZYUGER = registerSoundEvent("winner_gozyuger");
+    public static final ResourceKey<JukeboxSong> WINNER_GOZYUGER_KEY = createSong("winner_gozyuger");
+
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, name));
     }

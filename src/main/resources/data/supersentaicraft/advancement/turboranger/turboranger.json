@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:turboranger_logo"
+    },
+    "title": "Kousoku Sentai Turboranger",
+    "description": "Change into each member of Turboranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "red_turbo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "black_turbo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "blue_turbo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_turbo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "pink_turbo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

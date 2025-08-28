@@ -38,5 +38,13 @@
         "stream": true
       }
     ]
+  },
+  "winner_gozyuger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:winner_gozyuger",
+        "stream": true
+      }
+    ]
   }
 }

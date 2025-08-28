@@ -1,0 +1,8 @@
+{
+  "description": {
+    "translate": "item.supersentaicraft.winner_gozyuger.desc"
+  },
+  "comparator_output": 15,
+  "length_in_seconds": 87,
+  "sound_event": "supersentaicraft:winner_gozyuger"
+}

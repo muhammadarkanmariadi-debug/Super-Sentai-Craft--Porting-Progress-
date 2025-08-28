@@ -5,8 +5,11 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
 import com.liasdan.supersentaicraft.items.others.*;
 
+import com.liasdan.supersentaicraft.particle.ModParticles;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -24,31 +27,71 @@ public class GorangerItems {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}
             .ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> AO_STAR = ITEMS.register("ao_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","aoranger","aoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GORANGER));
+            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> KI_STAR = ITEMS.register("ki_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","kiranger","kiranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GORANGER));
+            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.YELLOW_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> MOMO_STAR = ITEMS.register("momo_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","momoranger","momoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GORANGER));
+            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.PINK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> MIDO_STAR = ITEMS.register("mido_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","midoranger","midoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.GORANGER));
+            		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GORANGER));
     
 	public static final DeferredItem<Item> AORANGER_MANGA = ITEMS.register("aoranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","aoranger","aoranger_belt",

@@ -57,6 +57,8 @@
 
   "entity.supersentaicraft.ular": "Ular Soldiers",
   "entity.supersentaicraft.ular_captain": "Ular Captain",
+  "item.supersentaicraft.ular_spawn_egg": "Ular Soldiers Spawn Egg",
+  "item.supersentaicraft.ular_captain_spawn_egg": "Ular Captain Spawn Egg",
 
   "entity.supersentaicraft.grinam": "Grinam Soldiers",
 
@@ -636,13 +638,25 @@
   "item.supersentaicraft.yellow_turbo_logo": "Yellow Turbo Logo",
   "item.supersentaicraft.pink_turbo_logo": "Pink Turbo Logo",
 
-  "item.supersentaicraft.turbo_laser_sword": "Turbo Laser",
+  "supersentaicraft:red_turbo_logo.form": "§cRed Turbo",
+  "supersentaicraft:black_turbo_logo.form": "§8Black Turbo",
+  "supersentaicraft:blue_turbo_logo.form": "§9Blue Turbo",
+  "supersentaicraft:yellow_turbo_logo.form": "§eYellow Turbo",
+  "supersentaicraft:pink_turbo_logo.form": "§dPink Turbo",
+
+  "supersentaicraft:turboranger_logo.form": "Powerless ",
+
+  "item.supersentaicraft.turbo_laser_gun": "Turbo Laser",
+  "item.supersentaicraft.turbo_laser_sword": "Turbo Laser (Sword)",
   "item.supersentaicraft.gt_sword": "GT Sword",
   "item.supersentaicraft.t_hammer": "T Hammer",
   "item.supersentaicraft.j_gun": "J Gun",
   "item.supersentaicraft.b_bowgun": "B Bowgun",
   "item.supersentaicraft.w_stick": "W Stick",
+  "item.supersentaicraft.turbo_laser_gt": "Turbo Laser (GT Sword Combo)",
+  "item.supersentaicraft.turbo_laser_t": "Turbo Laser (T Hammer Combo)",
   "item.supersentaicraft.turbo_laser_j": "Turbo Laser (J Gun Combo)",
+  "item.supersentaicraft.turbo_laser_b": "Turbo Laser (B Bowgun Combo)",
   "item.supersentaicraft.turbo_laser_w": "Turbo Laser (W Stick Combo)",
 
   //14 Fiveman
@@ -2862,13 +2876,21 @@
   "item.supersentaicraft.taiyou_sentai_sun_vulcan.desc": "HosephHoestar - Taiyou Sentai Sun Vulcan",
   "item.supersentaicraft.taiyou_sentai_sun_vulcan_music_disc.desc": "HosephHoestar - Taiyou Sentai Sun Vulcan",
 
+  "item.supersentaicraft.hikari_sentai_maskman_music_disc": "Hikari Sentai Maskman Music Disc",
+  "item.supersentaicraft.hikari_sentai_maskman.desc": "HosephHoestar - Hikari Sentai Maskman",
+  "item.supersentaicraft.hikari_sentai_maskman_music_disc.desc": "HosephHoestar - Hikari Sentai Maskman",
+
   "item.supersentaicraft.gaoranger_hoero_music_disc": "Gaoranger Hoero!! Music Disc",
   "item.supersentaicraft.gaoranger_hoero.desc": "HosephHoestar - Gaoranger Hoero!!",
   "item.supersentaicraft.gaoranger_hoero_music_disc.desc": "HosephHoestar - Gaoranger Hoero!!",
 
   "item.supersentaicraft.samurai_sentai_shinkenger_music_disc": "Samurai Sentai Shinkenger Music Disc",
-  "item.supersentaicraft.samurai_sentai_shinkenger.desc": "HosephHoestar - Samurai Sentai Shinkenger ",
-  "item.supersentaicraft.samurai_sentai_shinkenger_music_disc.desc": "HosephHoestar - Samurai Sentai Shinkenger ",
+  "item.supersentaicraft.samurai_sentai_shinkenger.desc": "HosephHoestar - Samurai Sentai Shinkenger",
+  "item.supersentaicraft.samurai_sentai_shinkenger_music_disc.desc": "HosephHoestar - Samurai Sentai Shinkenger",
+
+  "item.supersentaicraft.winner_gozyuger_music_disc": "WINNER! Gozyuger! Music Disc",
+  "item.supersentaicraft.winner_gozyuger.desc": "HosephHoestar - WINNER! Gozyuger!",
+  "item.supersentaicraft.winner_gozyuger_music_disc.desc": "HosephHoestar - WINNER! Gozyuger!",
 
   "item.supersentaicraft._music_disc": " Music Disc",
   "item.supersentaicraft..desc": "HosephHoestar - ",
