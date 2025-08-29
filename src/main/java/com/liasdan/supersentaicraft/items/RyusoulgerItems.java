@@ -422,7 +422,7 @@ public class RyusoulgerItems {
 	public static final DeferredItem<SwordItem> MOSA_BLADE = ITEMS.register("mosa_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<BaseBlasterItem> MOSA_BREAKER = ITEMS.register("mosa_breaker",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties().rarity(Rarity.RARE)).KeepDifItem(MOSA_CHANGER.get()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties().rarity(Rarity.RARE)).IsSuperGun().KeepDifItem(MOSA_CHANGER.get()).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> GAISOUL_KEN = ITEMS.register("gaisoul_ken",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON)).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
