@@ -60,6 +60,10 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(GingamanItems.GINGAMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gingaman_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.gingaman")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GoGoVTab = CREATIVE_MODE_TABS.register("ssc023", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(GoGoVItems.GOGO_V_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gogo_v_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.gogo_v")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GaorangerTab = CREATIVE_MODE_TABS.register("ssc025", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(GaorangerItems.GAORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gaoranger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.gaoranger")).build());
@@ -102,6 +106,7 @@ public class RangerTabs {
 	public static List<Item> CARRANGER= new ArrayList<Item>();
 
     public static List<Item> GINGAMAN= new ArrayList<Item>();
+	public static List<Item> GOGO_V= new ArrayList<Item>();
 	public static List<Item> GAORANGER= new ArrayList<Item>();
 
     public static List<Item> SHINKENGER= new ArrayList<Item>();
@@ -173,6 +178,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.GINGAMAN.size(); i++)
 			{
 				event.accept( RangerTabs.GINGAMAN.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.GoGoVTab.get()) {
+			for (int i = 0; i < RangerTabs.GOGO_V.size(); i++)
+			{
+				event.accept( RangerTabs.GOGO_V.get(i));
 			}
 
 		}

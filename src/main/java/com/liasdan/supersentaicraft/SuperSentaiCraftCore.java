@@ -90,12 +90,17 @@ public class SuperSentaiCraftCore {
 		JAKQItems.register(modEventBus);
 		BattleFeverItems.register(modEventBus);
 		SunVulcanItems.register(modEventBus);
+
 		MaskmanItems.register(modEventBus);
 		TurborangerItems.register(modEventBus);
 		CarrangerItems.register(modEventBus);
+
 		GingamanItems.register(modEventBus);
+		GoGoVItems.register(modEventBus);
 		GaorangerItems.register(modEventBus);
+
 		ShinkengerItems.register(modEventBus);
+
 		LuPatRangerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
 		BoonboomgerItems.register(modEventBus);

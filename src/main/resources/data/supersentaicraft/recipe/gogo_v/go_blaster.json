@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "gogo_v",
+  "group": "go_red",
   "pattern": [
     "aaa",
     "aba",
@@ -10,23 +10,9 @@
     "a": {
       "item": "supersentaicraft:gogo_v_logo"
     },
-	"b": [
-	  {
-	    "item": "supersentaicraft:go_red_badge"
-	  },
-	  {
-	    "item": "supersentaicraft:go_blue_badge"
-	  },
-	  {
-	    "item": "supersentaicraft:go_green_badge"
-	  },
-	  {
-	    "item": "supersentaicraft:go_yellow_badge"
-	  },
-	  {
-	    "item": "supersentaicraft:go_pink_badge"
-	  }
-	],
+	"b": {
+	  "item": "supersentaicraft:go_red_badge"
+	},
 	"c": {
       "item": "supersentaicraft:base_sword"
     }

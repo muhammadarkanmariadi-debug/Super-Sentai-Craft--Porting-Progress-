@@ -322,13 +322,10 @@ public class GaorangerItems {
 
 	public static final DeferredItem<SwordItem> EAGLE_SWORD = ITEMS.register("eagle_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
-
 	public static final DeferredItem<SwordItem> SHARK_CUTTER = ITEMS.register("shark_cutter",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
-
 	public static final DeferredItem<SwordItem> BISON_AXE = ITEMS.register("bison_axe",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
-
 	public static final DeferredItem<SwordItem> TIGER_BATON = ITEMS.register("tiger_baton",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GAORANGER).ChangeRepairItem(EMPTY_GAO_JEWEL.get()));
 

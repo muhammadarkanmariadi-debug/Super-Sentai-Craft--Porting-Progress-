@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "gogo_v",
+  "group": "go_red",
   "ingredients": [
 	{
       "item": "supersentaicraft:go_blaster"
