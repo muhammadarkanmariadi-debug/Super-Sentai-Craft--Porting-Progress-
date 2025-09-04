@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.items.gogo_v;
 
+import com.liasdan.supersentaicraft.items.GoGoVItems;
 import com.liasdan.supersentaicraft.items.TurborangerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
@@ -29,7 +30,11 @@ public class GoGoBraceItem extends RangerChangerItem{
 		boolean fly = !rider.onGround();
 		
 		if (equipmentSlot == EquipmentSlot.FEET) {
-				if (rider.getMainHandItem().getItem()== TurborangerItems.TURBO_LASER.get()) {
+				if (rider.getMainHandItem().getItem()== GoGoVItems.FIVE_LASER_RED.get()|
+						rider.getMainHandItem().getItem()== GoGoVItems.FIVE_LASER_BLUE.get()|
+						rider.getMainHandItem().getItem()== GoGoVItems.FIVE_LASER_GREEN.get()|
+						rider.getMainHandItem().getItem()== GoGoVItems.FIVE_LASER_YELLOW.get()|
+						rider.getMainHandItem().getItem()== GoGoVItems.FIVE_LASER_PINK.get()) {
 					belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
 				}
 				else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {

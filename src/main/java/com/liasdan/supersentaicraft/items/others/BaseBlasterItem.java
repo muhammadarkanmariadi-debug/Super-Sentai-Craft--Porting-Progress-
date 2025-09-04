@@ -143,11 +143,11 @@ public class BaseBlasterItem extends BowItem {
 				player.setItemSlot(EquipmentSlot.FEET, new ItemStack(Changer));
 				if (player.getItemBySlot(EquipmentSlot.OFFHAND).getItem() instanceof RangerFormChangeItem formItem) formItem.use(level, player, InteractionHand.OFF_HAND);
 			}
-			if (projectile != BlasterProjectile.ARROW) {
+			else if (projectile != BlasterProjectile.ARROW) {
 				projectile.fire(player, player.getLookAngle());
 				stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 			}
-			if (SuperGun) {
+			else if (SuperGun) {
 				ItemStack arrow = new ItemStack(Items.ARROW, 1);
 				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
 				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * 3.0F, 1.0F, true, (LivingEntity)null);

@@ -3,6 +3,7 @@ package com.liasdan.supersentaicraft.blocks;
 import java.util.function.Supplier;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.blocks.custom.LifeBird;
 import com.liasdan.supersentaicraft.blocks.machine.BoonboomCarProgrammer;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.RangerTabs;
@@ -63,6 +64,10 @@ public class RangerBlocks {
 	public static final DeferredBlock<Block> DEEPSLATE_RYUSOULGER_ORE = registerBlock("deepslate_ryusoulger_ore",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> LIFE_BIRD = registerBlock("life_bird",
+			() -> new LifeBird(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).dynamicShape(),Block.box(2, 0, 1, 14,10, 15)).AddToTabList(RangerTabs.BLOCKS));
 
 	public static final DeferredBlock<Block> BOONBOOM_CAR_PROGRAMMER = registerBlock("boonboom_car_programmer",
 			() -> new BoonboomCarProgrammer(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
