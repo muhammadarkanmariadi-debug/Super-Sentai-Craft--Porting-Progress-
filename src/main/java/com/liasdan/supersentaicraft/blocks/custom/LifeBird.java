@@ -2,11 +2,11 @@ package com.liasdan.supersentaicraft.blocks.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -17,15 +17,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
-public class LifeBird extends HorizontalDirectionalBlock {
+public class LifeBird extends Block {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-
-    public LifeBird(Properties properties, VoxelShape box) {
-        super(properties);
-    }
-
     public static VoxelShape SHAPE = Block.box(0, 0, 0, 16,16, 16);
+
+    public LifeBird(BlockBehaviour.Properties properties, VoxelShape shape) {
+        super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+        SHAPE =shape;
+    }
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
@@ -33,17 +34,12 @@ public class LifeBird extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return null;
+    public RenderShape getRenderShape(BlockState pState) {
+        return RenderShape.MODEL;
     }
 
     public static boolean isShapeFullBlock(VoxelShape p_49917_) {
         return false;
-    }
-
-    @Override
-    public RenderShape getRenderShape(BlockState pState) {
-        return RenderShape.MODEL;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_53681_) {
@@ -56,6 +52,10 @@ public class LifeBird extends HorizontalDirectionalBlock {
 
     public PushReaction getPistonPushReaction(BlockState p_53683_) {
         return PushReaction.PUSH_ONLY;
+    }
+
+    public BlockState rotate(BlockState p_48722_, Rotation p_48723_) {
+        return p_48722_.setValue(FACING, p_48723_.rotate(p_48722_.getValue(FACING)));
     }
 
     public LifeBird AddToTabList(List<Block> TabList) {

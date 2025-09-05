@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "supersentaicraft:item/wing_spreader",
@@ -7,7 +6,7 @@
 		"3": "supersentaicraft:item/claw_anchor",
 		"4": "supersentaicraft:item/tail_injector",
 		"5": "supersentaicraft:item/beak_driller",
-		"particle": "supersentaicraft:item/laser_grip"
+		"particle": "supersentaicraft:item/build_discharger"
 	},
 	"elements": [
 		{
@@ -467,15 +466,15 @@
 		},
 		{
 			"from": [7, 5.325, 10.7],
-			"to": [9, 7.325, 16.7],
+			"to": [9, 7.325, 15.7],
 			"rotation": {"angle": 45, "axis": "x", "origin": [7, 7.325, 7.7]},
 			"faces": {
 				"north": {"uv": [6, 7, 8, 9], "rotation": 180, "texture": "#2"},
-				"east": {"uv": [6, 13, 8, 7], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [6, 13, 8, 8], "rotation": 270, "texture": "#2"},
 				"south": {"uv": [6, 11, 8, 13], "rotation": 180, "texture": "#2"},
-				"west": {"uv": [6, 7, 8, 13], "rotation": 270, "texture": "#2"},
-				"up": {"uv": [6, 7, 8, 13], "texture": "#2"},
-				"down": {"uv": [6, 7, 8, 13], "texture": "#2"}
+				"west": {"uv": [6, 8, 8, 13], "rotation": 270, "texture": "#2"},
+				"up": {"uv": [6, 8, 8, 13], "texture": "#2"},
+				"down": {"uv": [6, 8, 8, 13], "texture": "#2"}
 			}
 		},
 		{
@@ -518,20 +517,98 @@
 			}
 		},
 		{
-			"from": [-6, 8.375, 3.825],
-			"to": [6, 8.375, 7.825],
+			"from": [-2, 8.375, 3.825],
+			"to": [5, 8.375, 4.825],
 			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
 			"faces": {
 				"north": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
 				"south": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
 				"west": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
-				"up": {"uv": [12, 12, 0, 16], "texture": "#1"},
-				"down": {"uv": [12, 16, 0, 12], "texture": "#1"}
+				"up": {"uv": [8, 12, 1, 13], "texture": "#1"},
+				"down": {"uv": [8, 13, 1, 12], "texture": "#1"}
 			}
 		},
 		{
-			"from": [10, 8.375, 3.825],
+			"from": [-4, 8.375, 4.825],
+			"to": [6, 8.375, 5.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [10, 13, 0, 14], "texture": "#1"},
+				"down": {"uv": [10, 14, 0, 13], "texture": "#1"}
+			}
+		},
+		{
+			"from": [-5, 8.375, 5.825],
+			"to": [6, 8.375, 6.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [11, 14, 0, 15], "texture": "#1"},
+				"down": {"uv": [11, 15, 0, 14], "texture": "#1"}
+			}
+		},
+		{
+			"from": [-6, 8.375, 6.825],
+			"to": [3, 8.375, 7.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [12, 5.5, 12, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [12, 15, 3, 16], "texture": "#1"},
+				"down": {"uv": [12, 16, 3, 15], "texture": "#1"}
+			}
+		},
+		{
+			"from": [11, 8.375, 3.825],
+			"to": [18, 8.375, 4.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [1, 12, 8, 13], "texture": "#1"},
+				"down": {"uv": [1, 13, 8, 12], "texture": "#1"}
+			}
+		},
+		{
+			"from": [10, 8.375, 4.825],
+			"to": [20, 8.375, 5.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 13, 10, 14], "texture": "#1"},
+				"down": {"uv": [0, 14, 10, 13], "texture": "#1"}
+			}
+		},
+		{
+			"from": [10, 8.375, 5.825],
+			"to": [21, 8.375, 6.825],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
+			"faces": {
+				"north": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 14, 11, 15], "texture": "#1"},
+				"down": {"uv": [0, 15, 11, 14], "texture": "#1"}
+			}
+		},
+		{
+			"from": [13, 8.375, 6.825],
 			"to": [22, 8.375, 7.825],
 			"rotation": {"angle": 45, "axis": "x", "origin": [8, 8.375, 7.325]},
 			"faces": {
@@ -539,8 +616,8 @@
 				"east": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
 				"south": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
 				"west": {"uv": [10.5, 5.5, 10.5, 5.5], "rotation": 180, "texture": "#1"},
-				"up": {"uv": [0, 12, 12, 16], "texture": "#1"},
-				"down": {"uv": [0, 16, 12, 12], "texture": "#1"}
+				"up": {"uv": [3, 15, 12, 16], "texture": "#1"},
+				"down": {"uv": [3, 16, 12, 15], "texture": "#1"}
 			}
 		},
 		{
@@ -633,7 +710,7 @@
 			"name": "wing_spreader",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"children": [36, 37, 38, 39, 40, 41, 42]
+			"children": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
 		}
 	]
 }

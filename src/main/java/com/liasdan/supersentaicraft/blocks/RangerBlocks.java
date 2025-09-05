@@ -67,12 +67,13 @@ public class RangerBlocks {
 
 	public static final DeferredBlock<Block> LIFE_BIRD = registerBlock("life_bird",
 			() -> new LifeBird(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-					.strength(5.0F, 6.0F).dynamicShape(),Block.box(2, 0, 1, 14,10, 15)).AddToTabList(RangerTabs.BLOCKS));
+					.strength(5.0F, 6.0F).dynamicShape().lightLevel((p_152632_) -> {
+						return 10;}),Block.box(4, 0, 4, 12,16, 12)).AddToTabList(RangerTabs.BLOCKS));
 
 	public static final DeferredBlock<Block> BOONBOOM_CAR_PROGRAMMER = registerBlock("boonboom_car_programmer",
 			() -> new BoonboomCarProgrammer(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).sound(SoundType.METAL).dynamicShape().lightLevel((p_152632_) -> {
-						return 10;}),Block.box(1, 0, 1, 14,14, 14)).AddToTabList(RangerTabs.BLOCKS));
+						return 10;}),Block.box(1, 0, 2, 14,16, 14)).AddToTabList(RangerTabs.BLOCKS));
 
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);
