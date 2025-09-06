@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.items.gogo_v;
 
+import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.others.BaseItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -25,6 +26,7 @@ public class VModeBraceItem extends BaseItem {
 
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,40,4,true,false));
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,40,4,true,false));
+                player.addEffect(new MobEffectInstance(EffectCore.PUNCH,40,4,true,false));
             }
         }
     }

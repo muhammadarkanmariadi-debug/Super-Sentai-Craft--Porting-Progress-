@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "gogo_v",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:claw_anchor"
+    },
+	{
+      "item": "supersentaicraft:build_discharger"
+    },
+	{
+      "item": "supersentaicraft:wing_spreader"
+    },
+	{
+      "item": "supersentaicraft:beak_driller"
+    },
+	{
+      "item": "supersentaicraft:tail_injector"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:life_bird_breaker_mode"
+  }
+}

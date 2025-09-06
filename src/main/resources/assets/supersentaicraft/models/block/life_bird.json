@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "supersentaicraft:item/wing_spreader",
@@ -6,6 +7,7 @@
 		"3": "supersentaicraft:item/claw_anchor",
 		"4": "supersentaicraft:item/tail_injector",
 		"5": "supersentaicraft:item/beak_driller",
+		"6": "supersentaicraft:item/laser_grip",
 		"particle": "supersentaicraft:item/build_discharger"
 	},
 	"elements": [
@@ -645,6 +647,58 @@
 				"up": {"uv": [8, 1, 9.95, 3], "texture": "#1"},
 				"down": {"uv": [8, 1, 9.95, 3], "texture": "#1"}
 			}
+		},
+		{
+			"from": [2, -0.525, 13.975],
+			"to": [5, 1.525, 16.025],
+			"rotation": {"angle": 0, "axis": "x", "origin": [3.5, 0.5, 15]},
+			"faces": {
+				"north": {"uv": [0, 4, 6, 8.05], "rotation": 180, "texture": "#6"},
+				"east": {"uv": [6, 0, 8.05, 2.05], "rotation": 270, "texture": "#6"},
+				"south": {"uv": [0, 4, 6, 8.05], "rotation": 180, "texture": "#6"},
+				"west": {"uv": [6, 0, 8.05, 2.05], "rotation": 90, "texture": "#6"},
+				"up": {"uv": [0, 0, 6, 4.05], "rotation": 180, "texture": "#6"},
+				"down": {"uv": [0, 0, 6, 4.05], "texture": "#6"}
+			}
+		},
+		{
+			"from": [4, 0.25, 13.475],
+			"to": [7, 0.75, 13.975],
+			"rotation": {"angle": 0, "axis": "x", "origin": [3.5, 0.5, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 3], "rotation": 90, "texture": "#6"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "rotation": 270, "texture": "#6"},
+				"south": {"uv": [0, 0, 0.5, 3], "rotation": 90, "texture": "#6"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "rotation": 90, "texture": "#6"},
+				"up": {"uv": [0, 0, 0.5, 3], "rotation": 270, "texture": "#6"},
+				"down": {"uv": [0, 0, 0.5, 3], "rotation": 90, "texture": "#6"}
+			}
+		},
+		{
+			"from": [2.15955, 0.25, 12.24979],
+			"to": [6.15955, 0.75, 12.74979],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [3.5, 0.5, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 4], "rotation": 90, "texture": "#6"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "rotation": 270, "texture": "#6"},
+				"south": {"uv": [0, 0, 0.5, 4], "rotation": 90, "texture": "#6"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "rotation": 90, "texture": "#6"},
+				"up": {"uv": [0, 0, 0.5, 4], "rotation": 270, "texture": "#6"},
+				"down": {"uv": [0, 0, 0.5, 4], "rotation": 90, "texture": "#6"}
+			}
+		},
+		{
+			"from": [2.80656, 0, 7.4588],
+			"to": [4.80656, 1, 14.4588],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [3.5, 0.5, 15]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 2], "rotation": 90, "texture": "#6"},
+				"east": {"uv": [5, 0, 6, 7], "rotation": 270, "texture": "#6"},
+				"south": {"uv": [6, 0, 7, 2], "rotation": 90, "texture": "#6"},
+				"west": {"uv": [5, 0, 6, 7], "rotation": 90, "texture": "#6"},
+				"up": {"uv": [6, 0, 8, 7], "rotation": 180, "texture": "#6"},
+				"down": {"uv": [6, 0, 8, 7], "texture": "#6"}
+			}
 		}
 	],
 	"gui_light": "front",
@@ -711,6 +765,12 @@
 			"origin": [8, 8, 8],
 			"color": 0,
 			"children": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+		},
+		{
+			"name": "laser_grip",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [49, 50, 51, 52]
 		}
 	]
 }

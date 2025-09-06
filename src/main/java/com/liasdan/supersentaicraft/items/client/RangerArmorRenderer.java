@@ -3,9 +3,11 @@ package com.liasdan.supersentaicraft.items.client;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class RangerArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
 	 
@@ -14,7 +16,12 @@ public class RangerArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
     public RangerArmorRenderer(LivingEntity livingEntity, EquipmentSlot equipmentSlot) {
     
         super(new RangerArmorModel(livingEntity, equipmentSlot));
-        RIDER =  livingEntity;
+
+		if (livingEntity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
+			if (belt.getGlowForSlot(livingEntity.getItemBySlot(EquipmentSlot.FEET), equipmentSlot,livingEntity))addRenderLayer(new AutoGlowingGeoLayer<>(this));
+		}
+
+		RIDER =  livingEntity;
     }
     
     

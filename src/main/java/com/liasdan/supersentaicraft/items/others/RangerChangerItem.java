@@ -182,6 +182,26 @@ public class RangerChangerItem extends RangerArmorItem{
 
 	}
 
+	public boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
+
+		if (isTransformed(livingEntity)){
+			switch (currentSlot) {
+				case HEAD ->{
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				case CHEST -> {
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				case LEGS -> {
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				default -> {}
+			}
+			return false;
+		}
+		return false;
+	}
+
 	public static void reset_Form_Item(ItemStack  itemstack)
 	{
 		if(itemstack.getItem() instanceof RangerChangerItem belt){

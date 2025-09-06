@@ -2,6 +2,8 @@ package com.liasdan.supersentaicraft.items;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.gogo_v.GoGoBraceItem;
+import com.liasdan.supersentaicraft.items.gogo_v.TailInjectorItem;
+import com.liasdan.supersentaicraft.items.gogo_v.VModeBraceItem;
 import com.liasdan.supersentaicraft.items.gogo_v.ZeekCrystalItem;
 import com.liasdan.supersentaicraft.items.others.*;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -58,7 +60,7 @@ public class GoGoVItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","zeek","zeek_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().ChangeBeltModel("geo/rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> JEANNE_CRYSTAL_FRAGMENT = ITEMS.register("jeanne_fragment",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","zeek_jeanne","blank",
@@ -90,6 +92,9 @@ public class GoGoVItems {
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"zeek_jeanne",JEANNE_CRYSTAL_FRAGMENT,GOGO_V_HELMET,GOGO_V_CHESTPLATE,GOGO_V_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
 	public static final DeferredItem<Item> RED_KYOKO_GOGO_BRACE = ITEMS.register("red_kyoko_gogo_brace",
 			() -> new GoGoBraceItem(ArmorMaterials.DIAMOND,"go_red_kyoko",GO_RED_BADGE_KYOKO,GOGO_V_HELMET,GOGO_V_CHESTPLATE,GOGO_V_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
+
+	public static final DeferredItem<Item> V_MODE_BRACE = ITEMS.register("v_mode_brace",
+			() -> new VModeBraceItem(new Item.Properties()).AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> LASER_GRIP_RED = ITEMS.register("laser_grip_red",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GOGO_V));
@@ -181,10 +186,10 @@ public class GoGoVItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
 	public static final DeferredItem<SwordItem> WING_SPREADER = ITEMS.register("wing_spreader",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
-	public static final DeferredItem<SwordItem> BEAK_DRILLER = ITEMS.register("beak_driller",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
+	public static final DeferredItem<PickaxeItem> BEAK_DRILLER = ITEMS.register("beak_driller",
+			() -> new BasePickaxeItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
 	public static final DeferredItem<BaseBlasterItem> TAIL_INJECTOR = ITEMS.register("tail_injector",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
+			() -> new TailInjectorItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));
 
 	public static final DeferredItem<BaseBlasterItem> LIFE_BIRD_BREAKER_MODE = ITEMS.register("life_bird_breaker_mode",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).AddToTabList(RangerTabs.GOGO_V).ChangeRepairItem(GOGO_V_LOGO.get()));

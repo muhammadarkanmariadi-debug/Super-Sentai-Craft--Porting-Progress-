@@ -44,6 +44,7 @@ public class RangerFormChangeItem extends BaseItem {
 	public String[] compatibilityList= new String[] {""};
 	private Boolean HAS_NEED_ITEM_LIST = false;
 	public List<Item> needItemList;
+	private Boolean IS_GLOWING = false;
 
 	private RangerFormChangeItem NEED_FORM_SLOT_1;
 	private RangerFormChangeItem NEED_FORM_SLOT_2;
@@ -113,6 +114,10 @@ public class RangerFormChangeItem extends BaseItem {
 		return SET_SHOW_UNDER;
 	}
 
+	public Boolean get_Is_Glowing() {
+		return IS_GLOWING;
+	}
+
 	public String getRangerName(String name) {
 		return (OVERRIDE_RANGER_NAME!=null ? OVERRIDE_RANGER_NAME : name);
 	}
@@ -126,6 +131,11 @@ public class RangerFormChangeItem extends BaseItem {
 	
 	public RangerFormChangeItem alsoChange2ndSlot(Item item) {
 		alsoChange2ndSlot=  (RangerFormChangeItem) item;
+		return this;
+	}
+
+	public RangerFormChangeItem IsGlowing() {
+		IS_GLOWING=true;
 		return this;
 	}
 

@@ -95,6 +95,13 @@ public class MobsCore {
 	public static final DeferredItem<DeferredSpawnEggItem> BLACK_KNIGHT_SPAWN_EGG = ITEMS.register("black_knight_spawn_egg",
 			() -> new DeferredSpawnEggItem(BLACK_KNIGHT,0xffffff, 0x151515, new Item.Properties()));
 
+	//23 GoGo-V
+	public static final DeferredHolder<EntityType<?>, EntityType<ImpsEntity>> IMPS = MOBLIST.register("imps",
+			() -> EntityType.Builder.of(ImpsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":imps"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> IMPS_SPAWN_EGG = ITEMS.register("imps_spawn_egg",
+			() -> new DeferredSpawnEggItem(IMPS,0xffffff, 0x151515, new Item.Properties()));
+
 	//25 Gaoranger
 	public static final DeferredHolder<EntityType<?>, EntityType<OrgettesEntity>> ORGETTES = MOBLIST.register("orgettes",
 			() -> EntityType.Builder.of(OrgettesEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":orgettes"));
