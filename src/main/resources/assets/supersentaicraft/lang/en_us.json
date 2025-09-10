@@ -1039,6 +1039,15 @@
   "item.supersentaicraft.go_blaster_hyper_yellow": "Go Blaster (Hyper Mode) (Go Yellow)",
   "item.supersentaicraft.go_blaster_hyper_pink": "Go Blaster (Hyper Mode) (Go Pink)",
 
+  "item.supersentaicraft.claw_anchor": "Claw Anchor",
+  "item.supersentaicraft.build_discharger": "Build Discharger",
+  "item.supersentaicraft.wing_spreader": "Wing Spreader",
+  "item.supersentaicraft.beak_driller": "Beak Driller",
+  "item.supersentaicraft.tail_injector": "Tail Injector",
+
+  "block.supersentaicraft.life_bird": "Life Bird",
+  "item.supersentaicraft.life_bird_breaker_mode": "Life Bird (Breaker Mode)",
+
   "item.supersentaicraft.zeek_sword": "Zeek Sword",
   "item.supersentaicraft.zeek_shot": "Zeek Shot",
   "item.supersentaicraft.zeek_blaster": "Zeek Blaster",

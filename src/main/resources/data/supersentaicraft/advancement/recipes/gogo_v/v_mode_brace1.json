@@ -1,0 +1,34 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gogo_v/go_blaster_hyper",
+      "supersentaicraft:gogo_v/go_blaster_hyper_blue",
+      "supersentaicraft:gogo_v/go_blaster_hyper_green",
+      "supersentaicraft:gogo_v/go_blaster_hyper_yellow",
+      "supersentaicraft:gogo_v/go_blaster_hyper_pink",
+      "supersentaicraft:gogo_v/go_blaster_hyper1",
+      "supersentaicraft:gogo_v/go_blaster_hyper_blue1",
+      "supersentaicraft:gogo_v/go_blaster_hyper_green1",
+      "supersentaicraft:gogo_v/go_blaster_hyper_yellow1",
+      "supersentaicraft:gogo_v/go_blaster_hyper_pink1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:v_mode_brace"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}
