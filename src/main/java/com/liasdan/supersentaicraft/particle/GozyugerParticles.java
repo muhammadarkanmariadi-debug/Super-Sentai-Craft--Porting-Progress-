@@ -10,13 +10,15 @@ public class GozyugerParticles extends TextureSheetParticle {
                               double xSpeed, double ySpeed, double zSpeed) {
         super(level, x, y, z, xSpeed, ySpeed, zSpeed);
 
-        this.friction = 0.75f;
+        this.friction = 0.0f;
         this.lifetime = 20;
         this.setSpriteFromAge(spriteSet);
 
         this.rCol = 1f;
         this.gCol = 1f;
         this.bCol = 1f;
+        this.hasPhysics = false;
+        this.gravity = 0.0F;
 
     }
 

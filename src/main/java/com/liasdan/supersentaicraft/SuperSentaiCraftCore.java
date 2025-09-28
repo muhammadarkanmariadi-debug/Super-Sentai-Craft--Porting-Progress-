@@ -219,6 +219,7 @@ public class SuperSentaiCraftCore {
 							model.body.visible = true;
 						}
 
+						model.hat.visible = false;
 						model.leftSleeve.visible = false;
 						model.rightSleeve.visible = false;
 						model.leftPants.visible = false;

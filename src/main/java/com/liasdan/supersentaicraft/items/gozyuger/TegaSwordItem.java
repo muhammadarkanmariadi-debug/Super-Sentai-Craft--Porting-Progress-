@@ -2,6 +2,7 @@ package com.liasdan.supersentaicraft.items.gozyuger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.GorangerItems;
+import com.liasdan.supersentaicraft.items.GozyugerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
@@ -33,7 +34,12 @@ public class TegaSwordItem extends RangerChangerItem{
 				}
 				return "belts/"+belt;
 		}
-		else if (equipmentSlot == EquipmentSlot.HEAD) return rangerName+"_armor";
+		else if (equipmentSlot == EquipmentSlot.HEAD) {
+            if (this == GozyugerItems.LEON_TEGA_SWORD.get())
+                if (get_Form_Item(itemstack,1) == GozyugerItems.GOZYU_LEON_RING.get()) return rangerName+"_armor";
+                else return rangerName+"_armor2";
+            else return rangerName+"_armor";
+        }
 
 		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);
 	}
