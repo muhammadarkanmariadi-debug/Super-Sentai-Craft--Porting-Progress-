@@ -181,12 +181,12 @@ public class GaorangerItems {
 	public static final DeferredItem<Item> GAO_RHINOS_JEWEL = ITEMS.register("gao_rhinos_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_striker","gao_king","blank",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false))
-					.ChangeSlot(5).AddCompatibilityList(ARMS).AddToList(GaoStriker).AddToTabList(RangerTabs.GAORANGER));
+					.ChangeSlot(5).AddCompatibilityList(LEGS).AddToList(GaoStriker).AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_MADILLO_JEWEL = ITEMS.register("gao_madillo_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_striker","gao_king","blank",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false))
-					.ChangeSlot(5).AddCompatibilityList(ARMS).AddToList(GaoStriker).AddToTabList(RangerTabs.GAORANGER));
+					.ChangeSlot(5).AddCompatibilityList(LEGS).AddToList(GaoStriker).AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_KONG_JEWEL = ITEMS.register("gao_kong_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_knight", "blank",
