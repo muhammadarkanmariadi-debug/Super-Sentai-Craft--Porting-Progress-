@@ -35,9 +35,9 @@ public class VSChangerItem extends RangerChangerItem{
 		Item formItem2 = this.get_Form_Item(stack, 2);
 
 		if (formItem==LuPatRangerItems.VICTORY_STRIKER.get()) {
-			if (this == LuPatRangerItems.RED_VS_CHANGER.get()) tooltipComponents.add(Component.literal("supersentaicraft:super_lupin_red.form"));
-			if (this == LuPatRangerItems.BLUE_VS_CHANGER.get()) tooltipComponents.add(Component.literal("supersentaicraft:super_lupin_blue.form"));
-			if (this == LuPatRangerItems.YELLOW_VS_CHANGER.get()) tooltipComponents.add(Component.literal("supersentaicraft:super_lupin_yellow.form"));
+			if (this == LuPatRangerItems.RED_VS_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_lupin_red.form"));
+			if (this == LuPatRangerItems.BLUE_VS_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_lupin_blue.form"));
+			if (this == LuPatRangerItems.YELLOW_VS_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_lupin_yellow.form"));
 		}
 		else if (formItem2==LuPatRangerItems.SIREN_STRIKER.get()) {
 			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem2.toString() + ".form").getString()

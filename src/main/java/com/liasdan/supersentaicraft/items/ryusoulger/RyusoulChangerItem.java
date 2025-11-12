@@ -33,7 +33,15 @@ public class RyusoulChangerItem extends RangerChangerItem{
 		Item formItem = this.get_Form_Item(stack, 1);
 		Item formItem2 = this.get_Form_Item(stack, 2);
 
-		if (formItem2==RyusoulgerItems.NOBLESSE.get()) {
+        if (formItem==LuPatRangerItems.VICTORY_STRIKER.get()) {
+            if (this == RyusoulgerItems.RED_RYUSOUL_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_red.form"));
+            if (this == RyusoulgerItems.BLUE_RYUSOUL_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_blue.form"));
+            if (this == RyusoulgerItems.PINK_RYUSOUL_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_pink.form"));
+            if (this == RyusoulgerItems.GREEN_RYUSOUL_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_green.form"));
+            if (this == RyusoulgerItems.BLACK_RYUSOUL_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_black.form"));
+            if (this == RyusoulgerItems.GOLD_MOSA_CHANGER.get()) tooltipComponents.add(Component.translatable("supersentaicraft:super_ryusoul_gold.form"));
+        }
+        else if (formItem2==RyusoulgerItems.NOBLESSE.get() | formItem2==LuPatRangerItems.SIREN_STRIKER.get()) {
 			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem2.toString() + ".form").getString()
 					+ " " + Component.translatable(formItem.toString() + ".form").getString()));
 		}
