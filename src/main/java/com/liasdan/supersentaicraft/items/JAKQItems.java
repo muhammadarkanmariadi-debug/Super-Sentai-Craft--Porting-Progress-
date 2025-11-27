@@ -32,28 +32,32 @@ public class JAKQItems {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.JAKQ));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.JAKQ));
 
 	public static final DeferredItem<Item> JACK_CARD = ITEMS.register("jack_card",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","dia_jack","jakq_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.JAKQ));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.JAKQ));
 
 	public static final DeferredItem<Item> QUEEN_CARD = ITEMS.register("queen_card",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","heart_queen","jakq_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.JAKQ));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.JAKQ));
 
 	public static final DeferredItem<Item> KING_CARD = ITEMS.register("king_card",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","clover_king","jakq_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)).AddToTabList(RangerTabs.JAKQ));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.JAKQ));
 
 	public static final DeferredItem<Item> BIG_ONE_CARD = ITEMS.register("big_one_card",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","big_one","big_one_belt",
