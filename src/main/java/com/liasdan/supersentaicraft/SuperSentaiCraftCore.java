@@ -100,6 +100,7 @@ public class SuperSentaiCraftCore {
 		GoGoVItems.register(modEventBus);
 		GaorangerItems.register(modEventBus);
 
+        BoukengerItems.register(modEventBus);
 		ShinkengerItems.register(modEventBus);
 
 		LuPatRangerItems.register(modEventBus);

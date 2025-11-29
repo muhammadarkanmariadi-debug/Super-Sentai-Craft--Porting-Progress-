@@ -17,7 +17,7 @@ public class BaseShieldItem extends ShieldItem {
 	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
 	
 	public BaseShieldItem(Properties prop) {
-		super(prop);
+		super(prop.durability(336));
 		SuperSentaiCraftCore.SHIELD_ITEM.add(this);
 	}
 
