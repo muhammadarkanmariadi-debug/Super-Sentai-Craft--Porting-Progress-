@@ -1376,14 +1376,25 @@
   "item.supersentaicraft.accel_tector": "Accel Tector",
   "item.supersentaicraft.zubaan_crystal": "Zubaan Chest Crystal",
 
+  "supersentaicraft:bouken_red_logo.form": "Ranger: §cBouken Red",
+  "supersentaicraft:bouken_black_logo.form": "Ranger: §8Bouken Black",
+  "supersentaicraft:bouken_blue_logo.form": "Ranger: §9Bouken Blue",
+  "supersentaicraft:bouken_yellow_logo.form": "Ranger: §eBouken Yellow",
+  "supersentaicraft:bouken_pink_logo.form": "Ranger: §dBouken Pink",
+  "supersentaicraft:bouken_silver_logo.form": "Ranger: §7Bouken Silver",
+  "supersentaicraft:accel_tector.form": "§7(Accel Tector)",
+  "supersentaicraft:zubaan_crystal.form": "Extra Hero: §6Zubaan",
+
   "item.supersentaicraft.survi_blade": "Survi-Buster",
   "item.supersentaicraft.bouken_bo": "Bouken Bo",
   "item.supersentaicraft.radial_hammer": "Radial Hammer",
   "item.supersentaicraft.blow_knuckle": "Blow Knuckle",
   "item.supersentaicraft.bucket_scooper": "Bucket Scooper",
+  "item.supersentaicraft.bucket_scooper1": "Bucket Scooper",
   "item.supersentaicraft.hydro_shooter": "Hydro Shooter",
   "item.supersentaicraft.sagaspear": "Sagasniper",
   "item.supersentaicraft.dual_crusher_mixer": "Dual Crusher",
+  "item.supersentaicraft.seiken_zubaan": "Seiken Zubaan",
 
   //31 Gekiranger
   "tab.supersentaicraft.gekiranger": "Juuken Sentai Gekiranger",

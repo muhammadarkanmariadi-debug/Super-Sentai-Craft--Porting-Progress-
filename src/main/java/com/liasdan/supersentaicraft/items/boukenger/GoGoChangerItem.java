@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.items.boukenger;
 
+import com.liasdan.supersentaicraft.items.BoukengerItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.ShinkengerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
@@ -31,8 +32,8 @@ public class GoGoChangerItem extends RangerChangerItem{
 
 		if (formItem2== OtherItems.BLANK_FORM.get()) tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem.toString() + ".form").getString()));
 		else {
-			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem2.toString() + ".form").getString()
-					+ " " + Component.translatable(formItem.toString() + ".form").getString()));
+			tooltipComponents.add(Component.literal("Ranger: " + Component.translatable(formItem.toString() + ".form").getString()
+					+ " " + Component.translatable(formItem2.toString() + ".form").getString()));
 		}
 		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
@@ -45,9 +46,7 @@ public class GoGoChangerItem extends RangerChangerItem{
 		boolean fly = !rider.onGround();
 		
 		if (equipmentSlot == EquipmentSlot.FEET) {
-				if (rider.getMainHandItem().getItem()==ShinkengerItems.SAKANAMARU.get() ||
-						rider.getMainHandItem().getItem()==ShinkengerItems.KYORYUMARU.get() ||
-						rider.getMainHandItem().getItem()==ShinkengerItems.KYORYUMARU_SAKANAMARU.get()) {
+				if (rider.getMainHandItem().getItem()== BoukengerItems.SAGASNIPER.get()) {
 					belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
 				}
 				else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {
