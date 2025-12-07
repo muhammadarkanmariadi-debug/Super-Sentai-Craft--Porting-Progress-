@@ -100,7 +100,12 @@
   "entity.supersentaicraft.NeoDekaRedMob": "Neo DekaRed",
   "entity.supersentaicraft.NeoDekaYellowMob": "Neo DekaYellow",
 
-  "entity.supersentaicraft.KarthsMob": "Combatant Karths",
+  "entity.supersentaicraft.curse": "Combatant Curses",
+  "entity.supersentaicraft.jaryuu": "Dragonoid Soldier Jaryuu",
+  "entity.supersentaicraft.ryuuwon": "Creator King Ryuuwon",
+  "item.supersentaicraft.curse_spawn_egg": "Combatant Curses Spawn Egg",
+  "item.supersentaicraft.jaryuu_spawn_egg": "Dragonoid Soldier Jaryuu Spawn Egg",
+  "item.supersentaicraft.ryuuwon_spawn_egg": "Creator King Ryuuwon Spawn Egg",
 
   "entity.supersentaicraft.RinshisMob": "Rinshis",
 
@@ -184,7 +189,9 @@
   "item.supersentaicraft.jakotsuken": "Jakotsuken",
   "item.supersentaicraft.bone_axe": "Bone Axe",
   "item.supersentaicraft.imps_sword": "Imps Sword",
-  "item.supersentaicraft.karths_sickle": "Karths Sickle",
+  "item.supersentaicraft.karths_sickle": "Curses Sickle",
+  "item.supersentaicraft.jaryuu_sword": "Jaryuu Sword",
+  "item.supersentaicraft.ryuuwon_sword": "Ryuuwon Sword",
   "item.supersentaicraft.buglars_katar": "Buglars Katar",
 
   "item.supersentaicraft.dustlers_sickle": "Dustlers Sickle",
@@ -1394,7 +1401,7 @@
   "item.supersentaicraft.hydro_shooter": "Hydro Shooter",
   "item.supersentaicraft.sagaspear": "Sagasniper",
   "item.supersentaicraft.dual_crusher_mixer": "Dual Crusher",
-  "item.supersentaicraft.seiken_zubaan": "Seiken Zubaan",
+  "item.supersentaicraft.seiken_zubaan": "Seiken (Holy Sword) Zubaan",
 
   //31 Gekiranger
   "tab.supersentaicraft.gekiranger": "Juuken Sentai Gekiranger",

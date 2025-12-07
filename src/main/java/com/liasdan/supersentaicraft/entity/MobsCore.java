@@ -115,7 +115,26 @@ public class MobsCore {
 	public static final DeferredItem<DeferredSpawnEggItem> DUKE_ORG_ROUKI_SPAWN_EGG = ITEMS.register("duke_org_rouki_spawn_egg",
 			() -> new DeferredSpawnEggItem(DUKE_ORG_ROUKI,0xffffff, 0x151515, new Item.Properties()));
 
-	//33 Shinkenger
+    //30 Boukenger
+    public static final DeferredHolder<EntityType<?>, EntityType<CursesEntity>> CURSES = MOBLIST.register("curse",
+            () -> EntityType.Builder.of(CursesEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":curse"));
+
+    public static final DeferredItem<DeferredSpawnEggItem> CURSES_SPAWN_EGG = ITEMS.register("curse_spawn_egg",
+            () -> new DeferredSpawnEggItem(CURSES,0xffffff, 0x151515, new Item.Properties()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<JaryuuEntity>> JARYUU = MOBLIST.register("jaryuu",
+            () -> EntityType.Builder.of(JaryuuEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":jaryuu"));
+
+    public static final DeferredItem<DeferredSpawnEggItem> JARYUU_SPAWN_EGG = ITEMS.register("jaryuu_spawn_egg",
+            () -> new DeferredSpawnEggItem(JARYUU,0xffffff, 0x151515, new Item.Properties()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<RyuuwonEntity>> RYUUWON = MOBLIST.register("ryuuwon",
+            () -> EntityType.Builder.of(RyuuwonEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":ryuuwon"));
+
+    public static final DeferredItem<DeferredSpawnEggItem> RYUUWON_SPAWN_EGG = ITEMS.register("ryuuwon_spawn_egg",
+            () -> new DeferredSpawnEggItem(RYUUWON,0xffffff, 0x151515, new Item.Properties()));
+
+    //33 Shinkenger
 	public static final DeferredHolder<EntityType<?>, EntityType<NanashisEntity>> NANASHIS = MOBLIST.register("nanashi",
             () -> EntityType.Builder.of(NanashisEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":nanashi"));
     

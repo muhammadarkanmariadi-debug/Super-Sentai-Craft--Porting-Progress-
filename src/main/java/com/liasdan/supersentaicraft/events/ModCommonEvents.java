@@ -151,6 +151,10 @@ public class ModCommonEvents {
 		event.put(MobsCore.ORGETTES.get(), OrgettesEntity.setAttributes().build());
 		event.put(MobsCore.DUKE_ORG_ROUKI.get(), DukeOrgRoukiEntity.setAttributes().build());
 
+        event.put(MobsCore.CURSES.get(), CursesEntity.setAttributes().build());
+        event.put(MobsCore.JARYUU.get(), JaryuuEntity.setAttributes().build());
+        event.put(MobsCore.RYUUWON.get(), RyuuwonEntity.setAttributes().build());
+
 		event.put(MobsCore.NANASHIS.get(), NanashisEntity.setAttributes().build());
 		event.put(MobsCore.GEDOU_SHINKEN_RED.get(), GedouShinkenRedEntity.setAttributes().build());
 
@@ -185,7 +189,10 @@ public class ModCommonEvents {
 
 		event.register(MobsCore.ORGETTES.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
-		event.register(MobsCore.NANASHIS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(MobsCore.CURSES.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(MobsCore.JARYUU.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+        event.register(MobsCore.NANASHIS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.PORDERMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

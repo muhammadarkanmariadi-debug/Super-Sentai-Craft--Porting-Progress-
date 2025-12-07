@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "supersentaicraft:goranger_logo",
-      "nbt": "{Damage:0}"
+      "id": "supersentaicraft:goranger_logo"
     },
     "title": "Himitsu Sentai Goranger",
     "description": "Change into each member of Goranger",

@@ -55,7 +55,16 @@ public class MobsItems {
 	public static final DeferredItem<SwordItem> ORGETTES_CLUB = ITEMS.register("orgettes_club",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 
-	public static final DeferredItem<SwordItem> NANASHI_DAO = ITEMS.register("nanashi_dao",
+    public static final DeferredItem<SwordItem> CURSES_SICKLE = ITEMS.register("karths_sickle",
+            () -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
+    public static final DeferredItem<SwordItem> JARYUU_SWORD = ITEMS.register("jaryuu_sword",
+            () -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
+    public static final DeferredItem<SwordItem> RYUUWON_SWORD = ITEMS.register("ryuuwon_sword",
+            () -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
+    public static final DeferredItem<SwordItem> NANASHI_DAO = ITEMS.register("nanashi_dao",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 
 	public static final DeferredItem<SwordItem> PORDERMAN_SWORD = ITEMS.register("porderman_sword",

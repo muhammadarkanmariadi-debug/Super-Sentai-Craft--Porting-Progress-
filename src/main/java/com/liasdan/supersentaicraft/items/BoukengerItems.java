@@ -156,7 +156,6 @@ public class BoukengerItems {
     public static final DeferredItem<SwordItem> SEIKEN_ZUBAAN = ITEMS.register("seiken_zubaan",
             () -> new BaseDualSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
 
-
     public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

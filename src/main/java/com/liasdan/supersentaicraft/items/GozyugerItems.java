@@ -158,7 +158,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
-			.ChangeRangerName("spade_ace").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("spade_ace").ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> BATTLE_FEVER_RING = ITEMS.register("battle_fever_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));

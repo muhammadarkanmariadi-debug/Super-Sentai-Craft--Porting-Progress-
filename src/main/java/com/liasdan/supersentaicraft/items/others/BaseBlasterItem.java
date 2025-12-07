@@ -96,9 +96,8 @@ public class BaseBlasterItem extends BowItem {
 		},
         WIND_CHARGE {
             public void fire(LivingEntity user, Vec3 movement) {
-                BreezeWindCharge fireball = new BreezeWindCharge((Breeze) user,user.level());
-                fireball.setPos(fireball.getX(), user.getY(0.5D) + 0.5D, fireball.getZ());
-                user.level().addFreshEntity(fireball);
+                WindCharge windcharge = new WindCharge(user.level(), user.getX(), user.getY(0.5D) + 0.5D, user.getZ(),user.getLookAngle());
+                user.level().addFreshEntity(windcharge);
             }
         };
 

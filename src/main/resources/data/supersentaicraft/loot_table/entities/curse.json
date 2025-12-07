@@ -6,45 +6,41 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:red_racer_badge",
-          "weight": 8
+          "name": "supersentaicraft:bouken_red_logo",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:blue_racer_badge",
-          "weight": 8
+          "name": "supersentaicraft:bouken_black_logo",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:green_racer_badge",
-          "weight": 8
+          "name": "supersentaicraft:bouken_blue_logo",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:yellow_racer_badge",
-          "weight": 8
+          "name": "supersentaicraft:bouken_yellow_logo",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:pink_racer_badge",
-          "weight": 8
+          "name": "supersentaicraft:bouken_pink_logo",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:white_racer_badge"
+          "name": "supersentaicraft:bouken_silver_logo"
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:signalman_badge"
+          "name": "supersentaicraft:zubaan_crystal"
         },
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:vrv_master_badge"
-        },
-        {
-          "type": "minecraft:item",
+          "name": "supersentaicraft:boukenger_logo",
           "weight": 5,
-          "name": "supersentaicraft:carranger_logo",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -59,7 +55,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "supersentaicraft:carranger_logo"
+          "name": "supersentaicraft:boukenger_logo"
         }
       ]
     }
