@@ -1,32 +1,37 @@
 {
   "display": {
     "icon": {
-      "id": "supersentaicraft:goranger_manga"
+      "id": "supersentaicraft:gogo_changer"
     },
     "title": {
-      "translate": "advancements.supersentaicraft.goranger_manga.title"
+      "translate": "advancements.supersentaicraft.gogo_changer.title"
     },
     "description": {
-      "translate": "advancements.supersentaicraft.goranger_manga.desc"
+      "translate": "advancements.supersentaicraft.gogo_changer.desc"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "supersentaicraft:goranger/goranger",
+  "parent": "supersentaicraft:boukenger/accellular",
   "criteria": {
-    "requirement": {
+    "ranger1": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "supersentaicraft:goranger_manga"
+              "supersentaicraft:gogo_changer"
             ]
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "ranger1"
+    ]
+  ]
 }

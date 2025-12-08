@@ -3,8 +3,12 @@
 	"icon": {
 	  "id": "supersentaicraft:super_sentai_logo"
 	},
-	"title": "Super Sentai Craft",
-	"description": "This is the moment where your story begins!",
+    "title": {
+      "translate": "advancements.supersentaicraft.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.desc"
+    },
 	"background": "minecraft:textures/block/polished_andesite.png",
 	"frame": "task",
 	"show_toast": false,

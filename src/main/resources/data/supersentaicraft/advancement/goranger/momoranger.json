@@ -3,8 +3,12 @@
     "icon": {
       "id": "supersentaicraft:momoranger_belt"
     },
-    "title": "Momoranger!",
-    "description": "Change into Momoranger",
+    "title": {
+      "translate": "advancements.supersentaicraft.momoranger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.momoranger.desc"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

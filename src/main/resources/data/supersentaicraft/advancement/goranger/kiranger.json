@@ -3,8 +3,12 @@
     "icon": {
       "id": "supersentaicraft:kiranger_belt"
     },
-    "title": "Kiranger!",
-    "description": "Change into Kiranger",
+    "title": {
+      "translate": "advancements.supersentaicraft.kiranger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.kiranger.desc"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

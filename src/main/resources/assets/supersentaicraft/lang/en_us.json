@@ -2949,5 +2949,50 @@
   "item.supersentaicraft..desc": "HosephHoestar - ",
   "item.supersentaicraft._music_disc.desc": "HosephHoestar - ",
 
-  "item.supersentaicraft.":""
+  "item.supersentaicraft.":"",
+
+  //Advancements
+  "advancements.supersentaicraft.title": "Super Sentai Craft",
+  "advancements.supersentaicraft.desc": "This is the moment where your story begins!",
+
+  "advancements.supersentaicraft.goranger.desc": "Change into each member of Goranger",
+  "advancements.supersentaicraft.goranger.title": "Himitsu Sentai Goranger",
+  "advancements.supersentaicraft.akaranger.desc": "Change into Akaranger",
+  "advancements.supersentaicraft.akaranger.title": "Akaranger!",
+  "advancements.supersentaicraft.aoranger.desc": "Change into Aoranger",
+  "advancements.supersentaicraft.aoranger.title": "Aoranger!",
+  "advancements.supersentaicraft.kiranger.desc": "Change into Kiranger",
+  "advancements.supersentaicraft.kiranger.title": "Kiranger!",
+  "advancements.supersentaicraft.momoranger.desc": "Change into Momoranger",
+  "advancements.supersentaicraft.momoranger.title": "Momoranger!",
+  "advancements.supersentaicraft.midoranger.desc": "Change into Midoranger",
+  "advancements.supersentaicraft.midoranger.title": "Midoranger!",
+  "advancements.supersentaicraft.goranger_manga.desc": "Obtain Goranger's Manga",
+  "advancements.supersentaicraft.goranger_manga.title": "The Classic Manga",
+
+  "advancements.supersentaicraft.boukenger.desc": "Change into each member of Boukenger",
+  "advancements.supersentaicraft.boukenger.title": "GoGo Sentai Boukenger",
+  "advancements.supersentaicraft.bouken_red.desc": "Change into Bouken Red",
+  "advancements.supersentaicraft.bouken_red.title": "Atsuki Boukensha! Bouken Red!",
+  "advancements.supersentaicraft.bouken_black.desc": "Change into Bouken Black",
+  "advancements.supersentaicraft.bouken_black.title": "Hayaki Boukensha! Bouken Black!",
+  "advancements.supersentaicraft.bouken_blue.desc": "Change into Bouken Blue",
+  "advancements.supersentaicraft.bouken_blue.title": "Takaki Boukensha! Bouken Blue!",
+  "advancements.supersentaicraft.bouken_yellow.desc": "Change into Bouken Yellow",
+  "advancements.supersentaicraft.bouken_yellow.title": "Tsuyoki Boukensha! Bouken Yellow!",
+  "advancements.supersentaicraft.bouken_pink.desc": "Change into Bouken Pink",
+  "advancements.supersentaicraft.bouken_pink.title": "Fukaki Boukensha! Bouken Pink!",
+  "advancements.supersentaicraft.bouken_silver.desc": "Change into Bouken Silver",
+  "advancements.supersentaicraft.bouken_silver.title": "Mabayuki Boukensha! Bouken Silver!",
+  "advancements.supersentaicraft.zubaan.desc": "Change into Zubaan",
+  "advancements.supersentaicraft.zubaan.title": "Zubaan!",
+  "advancements.supersentaicraft.accel_tector.desc": "Change into Boukenger (Accel Tector)",
+  "advancements.supersentaicraft.accel_tector.title": "Task 7: The Salamander's Scale",
+  "advancements.supersentaicraft.accellular.desc": "Obtain any Accellular",
+  "advancements.supersentaicraft.accellular.title": "Boukenger, Start Up!",
+  "advancements.supersentaicraft.gogo_changer.desc": "Obtain Bouken Silver's GoGo Changer",
+  "advancements.supersentaicraft.gogo_changer.title": "GoGo Changer! Start Up!",
+
+  "advancements.supersentaicraft..desc": "",
+  "advancements.supersentaicraft..title": ""
 }

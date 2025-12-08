@@ -1,0 +1,223 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:boukenger_logo"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.boukenger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.boukenger.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_accellular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_accellular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_accellular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_accellular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_accellular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:gogo_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zubaan"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

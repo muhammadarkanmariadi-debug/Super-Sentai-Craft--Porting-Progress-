@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "id": "supersentaicraft:aoranger_belt"
+      "id": "supersentaicraft:gogo_changer"
     },
     "title": {
-      "translate": "advancements.supersentaicraft.aoranger.title"
+      "translate": "advancements.supersentaicraft.bouken_silver.title"
     },
     "description": {
-      "translate": "advancements.supersentaicraft.aoranger.desc"
+      "translate": "advancements.supersentaicraft.bouken_silver.desc"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "supersentaicraft:goranger/akaranger",
+  "parent": "supersentaicraft:boukenger/bouken_pink",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -23,22 +23,22 @@
           "equipment": {
             "head": {
               "items": [
-                "supersentaicraft:goranger_head"
+                "supersentaicraft:boukenger_head"
               ]
             },
             "chest": {
               "items": [
-                "supersentaicraft:goranger_torso"
+                "supersentaicraft:boukenger_torso"
               ]
             },
             "legs": {
               "items": [
-                "supersentaicraft:goranger_legs"
+                "supersentaicraft:boukenger_legs"
               ]
             },
             "feet": {
               "items": [
-                "supersentaicraft:aoranger_belt"
+                "supersentaicraft:gogo_changer"
               ]
             }
           }

@@ -3,8 +3,12 @@
     "icon": {
       "id": "supersentaicraft:midoranger_belt"
     },
-    "title": "Midoranger!",
-    "description": "Change into Midoranger",
+    "title": {
+      "translate": "advancements.supersentaicraft.midoranger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.midoranger.desc"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

@@ -3,8 +3,12 @@
     "icon": {
       "id": "supersentaicraft:goranger_logo"
     },
-    "title": "Himitsu Sentai Goranger",
-    "description": "Change into each member of Goranger",
+    "title": {
+      "translate": "advancements.supersentaicraft.goranger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.goranger.desc"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
