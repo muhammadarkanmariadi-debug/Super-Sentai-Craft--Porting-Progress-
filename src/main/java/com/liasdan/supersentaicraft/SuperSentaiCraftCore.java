@@ -288,7 +288,7 @@ public class SuperSentaiCraftCore {
 						}
 						if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RyusoulChangerItem) {
 							if ($itemStack.getItem() == RyusoulgerItems.MAX_RYUSOUL_CHANGER.get()) {
-								if (RyusoulChangerItem.get_Form_Item(belt, 2).getFormName(false)=="_max") return 1;
+								if (RyusoulChangerItem.get_Form_Item(belt, 1).getFormName(false)=="_max") return 1;
 								else return 0;
 							}
 						}
