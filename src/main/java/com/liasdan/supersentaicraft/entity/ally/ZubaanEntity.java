@@ -1,8 +1,12 @@
 package com.liasdan.supersentaicraft.entity.ally;
 
+import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.summon.BaseSummonEntity;
+import com.liasdan.supersentaicraft.items.OtherItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.NeutralMob;
@@ -80,6 +84,9 @@ public class ZubaanEntity extends BaseAllyEntity {
                     this.gameEvent(GameEvent.EAT);
                     return InteractionResult.sidedSuccess(this.level().isClientSide());
                 } else {
+                    if (itemstack.is(OtherItems.SUPER_SENTAI_LOGO.get())) {
+                        this.addEffect(new MobEffectInstance(EffectCore.BIG, 1200, 2,true,false));
+                    }
                     InteractionResult interactionresult = super.mobInteract(player, hand);
                     if (!interactionresult.consumesAction() && this.isOwnedBy(player)) {
                         this.setOrderedToSit(!this.isOrderedToSit());
