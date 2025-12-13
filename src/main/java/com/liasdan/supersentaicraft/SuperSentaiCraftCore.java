@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft;
 
+import com.liasdan.supersentaicraft.client.renderer.AllyEntityRenderer;
 import com.liasdan.supersentaicraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.supersentaicraft.client.renderer.ThrownShurikenRenderer;
 import com.liasdan.supersentaicraft.client.renderer.ThrownWeaponRenderer;
@@ -167,17 +168,15 @@ public class SuperSentaiCraftCore {
                         model.body.visible = false;
                     }
                 } else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
-            } else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
-        }
-
-        if (event.getRenderer().getModel() instanceof PlayerModel model) {
-            if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem
+            }
+            else if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem
                     && event.getEntity().getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
                 double tag = event.getEntity().getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).copyTag().getDouble("render_type2");
                 if (tag != 0) {
                     model.setAllVisible(false);
                 } else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
             } else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
+            else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
         }
 
 		float size = 1;
@@ -357,6 +356,7 @@ public class SuperSentaiCraftCore {
             event.registerEntityRenderer(MobsCore.CURSES.get(), BasicEntityRenderer::new);
             event.registerEntityRenderer(MobsCore.JARYUU.get(), BasicEntityRenderer::new);
             event.registerEntityRenderer(MobsCore.RYUUWON.get(), BasicEntityRenderer::new);
+            event.registerEntityRenderer(MobsCore.ZUBAAN.get(), AllyEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.NANASHIS.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.GEDOU_SHINKEN_RED.get(), BasicEntityRenderer::new);

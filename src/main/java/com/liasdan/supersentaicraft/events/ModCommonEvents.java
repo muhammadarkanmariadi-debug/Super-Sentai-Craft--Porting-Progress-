@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
+import com.liasdan.supersentaicraft.entity.ally.ZubaanEntity;
 import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 
@@ -154,6 +155,7 @@ public class ModCommonEvents {
         event.put(MobsCore.CURSES.get(), CursesEntity.setAttributes().build());
         event.put(MobsCore.JARYUU.get(), JaryuuEntity.setAttributes().build());
         event.put(MobsCore.RYUUWON.get(), RyuuwonEntity.setAttributes().build());
+        event.put(MobsCore.ZUBAAN.get(), ZubaanEntity.setAttributes().build());
 
 		event.put(MobsCore.NANASHIS.get(), NanashisEntity.setAttributes().build());
 		event.put(MobsCore.GEDOU_SHINKEN_RED.get(), GedouShinkenRedEntity.setAttributes().build());

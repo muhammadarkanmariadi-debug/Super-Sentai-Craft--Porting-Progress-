@@ -1,6 +1,7 @@
 package com.liasdan.supersentaicraft.entity;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.entity.ally.ZubaanEntity;
 import com.liasdan.supersentaicraft.entity.boss.*;
 import com.liasdan.supersentaicraft.entity.footsoldier.*;
 import com.liasdan.supersentaicraft.entity.projectile.ExplosiveProjectileEntity;
@@ -133,6 +134,12 @@ public class MobsCore {
 
     public static final DeferredItem<DeferredSpawnEggItem> RYUUWON_SPAWN_EGG = ITEMS.register("ryuuwon_spawn_egg",
             () -> new DeferredSpawnEggItem(RYUUWON,0xffffff, 0x151515, new Item.Properties()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ZubaanEntity>> ZUBAAN = MOBLIST.register("zubaan",
+            () -> EntityType.Builder.of(ZubaanEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":zubaan"));
+
+    public static final DeferredItem<DeferredSpawnEggItem> ZUBAAN_SPAWN_EGG = ITEMS.register("zubaan_spawn_egg",
+            () -> new DeferredSpawnEggItem(ZUBAAN,0xffffff, 0x151515, new Item.Properties()));
 
     //33 Shinkenger
 	public static final DeferredHolder<EntityType<?>, EntityType<NanashisEntity>> NANASHIS = MOBLIST.register("nanashi",

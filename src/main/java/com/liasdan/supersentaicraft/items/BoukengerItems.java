@@ -2,8 +2,10 @@ package com.liasdan.supersentaicraft.items;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
+import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.items.boukenger.AccellularItem;
 import com.liasdan.supersentaicraft.items.boukenger.GoGoChangerItem;
+import com.liasdan.supersentaicraft.items.boukenger.SeikenZubaanItem;
 import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.shinkenger.SecretDiskItem;
 import com.liasdan.supersentaicraft.items.shinkenger.ShodoPhoneItem;
@@ -154,7 +156,7 @@ public class BoukengerItems {
             () -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsSuperGun().IsDualWeapon().AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
 
     public static final DeferredItem<SwordItem> SEIKEN_ZUBAAN = ITEMS.register("seiken_zubaan",
-            () -> new BaseDualSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
+            () -> new SeikenZubaanItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties(), MobsCore.ZUBAAN).AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
 
     public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
