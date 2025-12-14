@@ -127,7 +127,7 @@ public class BoukengerItems {
                     .Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
     public static final DeferredItem<Item> ZUBAAN = ITEMS.register("zubaan",
             () -> new RangerChangerItem(ArmorMaterials.DIAMOND,"zubaan",ZUBAAN_CRYSTAL,BOUKENGER_HELMET,BOUKENGER_CHESTPLATE,BOUKENGER_LEGGINGS,new Item.Properties())
-                    .AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
+                    .Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));
 
     public static final DeferredItem<BaseBlasterItem> SURVI_BUSTER = ITEMS.register("survi_blade",
             () -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RangerTabs.BOUKENGER).ChangeRepairItem(BOUKENGER_LOGO.get()));

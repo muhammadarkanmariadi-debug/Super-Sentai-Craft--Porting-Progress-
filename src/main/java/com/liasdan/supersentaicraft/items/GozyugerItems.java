@@ -444,7 +444,7 @@ public class GozyugerItems {
 			.ChangeRangerName("ryusoul_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
     public static final DeferredItem<Item> KIRAMEIGER_RING_GOZYU = ITEMS.register("kirameiger_ring_gozyu",
-            () -> new RangerFormChangeItem(new Item.Properties(),0,"","universe","gozyuger_belt_kirameiger",
+            () -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt_kirameiger",
                     new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
