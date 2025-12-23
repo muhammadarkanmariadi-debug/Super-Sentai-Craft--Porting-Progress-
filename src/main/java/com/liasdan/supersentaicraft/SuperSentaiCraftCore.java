@@ -259,13 +259,13 @@ public class SuperSentaiCraftCore {
 						}
 						if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof VSChangerItem) {
 							if ($itemStack.getItem() == LuPatRangerItems.VS_CHANGER.get()) {
-								if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="_tricolor") return 7;
-								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="_ugou") return 8;
+								if (VSChangerItem.get_Form_Item(belt,1).getFormName(false)=="_tricolor") return 7;
+								else if (VSChangerItem.get_Form_Item(belt,1).getFormName(false)=="_ugou") return 8;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_scissor") return 9;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_crane") return 10;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_magic") return 11;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_splash") return 12;
-								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="_super") return 13;
+								else if (VSChangerItem.get_Form_Item(belt,1).getFormName(false)=="_super") return 13;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_siren") return 14;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="lupat_gold") return 15;
 								else if (VSChangerItem.get_Form_Item(belt,2).getFormName(false)=="") {
