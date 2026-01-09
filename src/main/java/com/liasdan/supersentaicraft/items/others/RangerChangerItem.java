@@ -4,10 +4,13 @@ import java.util.function.Consumer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.liasdan.supersentaicraft.effect.EffectCore;
+import com.liasdan.supersentaicraft.entity.summon.BaseSummonEntity;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -77,6 +80,8 @@ public class RangerChangerItem extends RangerArmorItem{
 			if (tag.getDouble("is_transforming")!=0) tag.putDouble("is_transforming", tag.getDouble("is_transforming")-1);
 			if (tag.getDouble("is_transforming")<0) tag.putDouble("is_transforming", 0);
 
+			if (tag.getDouble("use_ability") != 0) tag.putDouble("use_ability", tag.getDouble("use_ability") - 1);
+			if (tag.getDouble("use_ability") < 0) tag.putDouble("use_ability", 0);
 			//if (!level.isClientSide)player.sendSystemMessage(Component.literal("SlotID=" + slotId));
 
 		}else{
@@ -91,7 +96,18 @@ public class RangerChangerItem extends RangerArmorItem{
 				RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), n + 1);
 				List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
 				for (MobEffectInstance effect : potionEffectList) {
-					player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
+					if ((effect.getEffect() != MobEffects.DAMAGE_BOOST&&
+							effect.getEffect() != MobEffects.DIG_SPEED&&
+							effect.getEffect() != MobEffects.REGENERATION&&
+							effect.getEffect() != MobEffects.DAMAGE_RESISTANCE&&
+							effect.getEffect() != MobEffects.MOVEMENT_SPEED&&
+							effect.getEffect() != EffectCore.SLASH&&
+							effect.getEffect() != EffectCore.PUNCH)
+							||(player instanceof BaseSummonEntity
+							&&(effect.getEffect() != MobEffects.DAMAGE_RESISTANCE || effect.getAmplifier() < 3))
+							||player instanceof Player) {
+						player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
+					}
 				}
 			}
 		}
@@ -225,6 +241,18 @@ public class RangerChangerItem extends RangerArmorItem{
 				form.putBoolean("Update_form", true);
 				form.putDouble("render_type", getRenderType(itemstack));
 			};
+			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
+		}
+	}
+
+
+	public static void setUseAbility(ItemStack itemstack)
+	{
+		if (!itemstack.has(DataComponents.CUSTOM_DATA)) {
+			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
+		}
+		if (itemstack.getItem() instanceof RangerChangerItem) {
+			Consumer<CompoundTag> data = form -> form.putDouble("use_ability", 5);
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
 		}
 	}

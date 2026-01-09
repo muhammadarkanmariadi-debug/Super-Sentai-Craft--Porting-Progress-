@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft;
 
+import com.liasdan.supersentaicraft.client.KeyBindings;
 import com.liasdan.supersentaicraft.client.renderer.AllyEntityRenderer;
 import com.liasdan.supersentaicraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.supersentaicraft.client.renderer.ThrownShurikenRenderer;
@@ -17,6 +18,8 @@ import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
 import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
+import com.liasdan.supersentaicraft.network.ServerPayloadHandler;
+import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
 import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
@@ -40,13 +43,14 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.neoforge.client.event.RenderLivingEvent;
-import net.neoforged.neoforge.client.event.RenderPlayerEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
+import net.neoforged.neoforge.network.registration.HandlerThread;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
@@ -103,6 +107,8 @@ public class SuperSentaiCraftCore {
 
         BoukengerItems.register(modEventBus);
 		ShinkengerItems.register(modEventBus);
+
+		GoBustersItems.register(modEventBus);
 
 		LuPatRangerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
@@ -388,6 +394,25 @@ public class SuperSentaiCraftCore {
 			event.registerSpriteSet(ModParticles.BLACK_SPARK_PARTICLES.get(), BlackSparkParticles.Provider::new);
 
 			event.registerSpriteSet(ModParticles.GOZYUGER_PARTICLES.get(), GozyugerParticles.Provider::new);
+		}
+
+		@SubscribeEvent
+		public static void registerKeys(RegisterKeyMappingsEvent event) {
+			event.register(KeyBindings.INSTANCE.AbilityKey);
+		}
+
+		@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
+		public static class CommonModEvents {
+			@SubscribeEvent
+			public static void register(final RegisterPayloadHandlersEvent event) {
+				PayloadRegistrar registrar = event.registrar("supersentaicraft");
+				registrar = registrar.executesOn(HandlerThread.MAIN);
+				registrar.playToServer(
+						AbilityKeyPayload.TYPE,
+						AbilityKeyPayload.STREAM_CODEC,
+						ServerPayloadHandler::handleAbilityKeyPress
+				);
+			}
 		}
 	}
 }

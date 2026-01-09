@@ -3,6 +3,7 @@ package com.liasdan.supersentaicraft.events;
 import java.util.List;
 import java.util.Objects;
 
+import com.liasdan.supersentaicraft.client.KeyBindings;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.entity.ally.ZubaanEntity;
@@ -11,6 +12,7 @@ import com.liasdan.supersentaicraft.entity.footsoldier.*;
 
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
+import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
@@ -30,23 +32,32 @@ import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 public class ModCommonEvents {
 
 	public static class EventHandler {
 
 		@SubscribeEvent
+		public void clientTick(ClientTickEvent.Post event) {
+			if (Minecraft.getInstance().player != null) {
+				while (KeyBindings.INSTANCE.AbilityKey.consumeClick()) PacketDistributor.sendToServer(new AbilityKeyPayload(0));
+			}
+		}
+
+		@SubscribeEvent
 		public void onEntityTick(EntityTickEvent.Post event) {
 			if (event.getEntity()instanceof LivingEntity entity){
 				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem belt){
 					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET),entity.level(),entity,36);
-//					belt.giveEffects(entity);
+					belt.giveEffects(entity);
 				}
 			}
 		}
