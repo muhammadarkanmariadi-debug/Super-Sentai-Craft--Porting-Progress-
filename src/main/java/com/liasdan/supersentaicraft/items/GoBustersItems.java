@@ -6,6 +6,7 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.boonboomger.BoonboomChangerItem;
 import com.liasdan.supersentaicraft.items.boonboomger.BoonboomControllerItem;
 import com.liasdan.supersentaicraft.items.boonboomger.ZoonzoomShokaBlasterItem;
+import com.liasdan.supersentaicraft.items.go_busters.MorphinBlasterItem;
 import com.liasdan.supersentaicraft.items.others.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -68,6 +69,95 @@ public class GoBustersItems {
 					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false))
 			.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
+	public static final DeferredItem<Item> CUSTOM_VISOR_R = ITEMS.register("custom_visor_r",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","yellow_rabbit","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false))
+			.ChangeBeltModel("geo/rangerbelt1.geo.json"));
+
+	public static final DeferredItem<Item> CUSTOM_VISOR_G = ITEMS.register("custom_visor_g",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","blue_gorilla","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 6,true,false))
+			.addAlternative(CUSTOM_VISOR_R.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+
+	public static final DeferredItem<Item> CUSTOM_VISOR_C = ITEMS.register("custom_visor_c",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","red_cheetah","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false))
+			.addAlternative(CUSTOM_VISOR_G.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+
+	public static final DeferredItem<Item> CUSTOM_VISOR_Y = ITEMS.register("custom_visor_y",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","yellow_buster","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false))
+			.addAlternative(CUSTOM_VISOR_C.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+
+	public static final DeferredItem<Item> CUSTOM_VISOR_B = ITEMS.register("custom_visor_b",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","blue_buster","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 6,true,false))
+			.addAlternative(CUSTOM_VISOR_Y.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+
+	public static final DeferredItem<Item> CUSTOM_VISOR = ITEMS.register("custom_visor",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","red_buster","go_busters_belt_pc",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false))
+			.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> CHEETAH_ANIMAL_DISK = ITEMS.register("cheetah_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_cheetah","go_busters_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false))
+					.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> GORILLA_ANIMAL_DISK = ITEMS.register("gorilla_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","blue_gorilla","go_busters_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false))
+					.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> RABBIT_ANIMAL_DISK = ITEMS.register("rabbit_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","yellow_rabbit","go_busters_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+					.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> BEETLE_ANIMAL_DISK = ITEMS.register("beetle_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gold_beetle","beet_buster_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> STAG_ANIMAL_DISK = ITEMS.register("stag_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","stag_buster","beet_buster_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> HIPPOPOTAMUS_ANIMAL_DISK = ITEMS.register("hippopotamus_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","green_hippopotamus","go_busters_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false))
+					.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
+	public static final DeferredItem<Item> PUMA_ANIMAL_DISK = ITEMS.register("puma_animal_disk",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","black_puma","black_puma_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false))
+					.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+
 	public static final DeferredItem<Item> GO_BUSTERS_HELMET = ITEMS.register("go_busters_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
     public static final DeferredItem<Item> GO_BUSTERS_CHESTPLATE = ITEMS.register("go_busters_torso",
@@ -91,6 +181,19 @@ public class GoBustersItems {
 	public static final DeferredItem<Item> DARK_MORPHIN_BRACE = ITEMS.register("dark_morphin_brace",
 			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"dark_buster",VAGLASS_LOGO,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 
+	public static final DeferredItem<Item> CHEETAH_MORPHIN_BRACE = ITEMS.register("cheetah_morphin_brace",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"red_cheetah",CHEETAH_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+	public static final DeferredItem<Item> GORILLA_MORPHIN_BRACE = ITEMS.register("gorilla_morphin_brace",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"blue_gorilla",GORILLA_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+	public static final DeferredItem<Item> RABBIT_MORPHIN_BRACE = ITEMS.register("rabbit_morphin_brace",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"yellow_rabbit",RABBIT_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+	public static final DeferredItem<Item> BEETLE_MORPHIN_BLASTER = ITEMS.register("beetle_morphin_blaster",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"gold_beetle",BEETLE_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+	public static final DeferredItem<Item> HIPPOPOTAMUS_MORPHIN_BRACE = ITEMS.register("hippopotamus_morphin_brace",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"green_hippopotamus",HIPPOPOTAMUS_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+	public static final DeferredItem<Item> PUMA_MORPHIN_BRACE = ITEMS.register("puma_morphin_brace",
+			() -> new RangerChangerItem(ArmorMaterials.DIAMOND,"black_puma",PUMA_ANIMAL_DISK,GO_BUSTERS_HELMET,GO_BUSTERS_CHESTPLATE,GO_BUSTERS_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+
 	public static final DeferredItem<SwordItem> SOUGAN_BLADE = ITEMS.register("sougan_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 	public static final DeferredItem<BaseBlasterItem> ICHIGAN_BUSTER = ITEMS.register("ichigan_buster",
@@ -99,7 +202,7 @@ public class GoBustersItems {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 
 	public static final DeferredItem<BaseBlasterItem> MORPHIN_BLASTER = ITEMS.register("morphin_blaster",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+			() -> new MorphinBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 	public static final DeferredItem<SwordItem> DRI_BLADE = ITEMS.register("dri_blade",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 

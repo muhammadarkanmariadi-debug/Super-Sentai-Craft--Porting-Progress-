@@ -1594,7 +1594,8 @@
   "item.supersentaicraft.yellow_morphin_brace": "Morphin Brace (Yellow Buster)",
   "item.supersentaicraft.beet_morphin_blaster": "Morphin Blaster (Beet Buster)",
   "item.supersentaicraft.stag_morphin_blaster": "Morphin Blaster (Stag Buster/Silver Stag)",
-  "item.supersentaicraft.beet_enter_morphin_blaster": "Morphin Blaster (Enter's Beet Buster)",
+  "item.supersentaicraft.enter_morphin_blaster": "Morphin Blaster (Enter's Beet Buster)",
+  "item.supersentaicraft.dark_morphin_brace": "Morphin Brace (Dark Buster)",
 
   "item.supersentaicraft.cheetah_morphin_brace": "Morphin Brace (Red Cheetah)",
   "item.supersentaicraft.gorilla_morphin_brace": "Morphin Brace (Blue Gorilla)",
@@ -1608,6 +1609,7 @@
   "item.supersentaicraft.yellow_enetron": "Yellow Enetron",
   "item.supersentaicraft.gold_enetron": "Gold Enetron",
   "item.supersentaicraft.silver_enetron": "Silver Enetron",
+  "item.supersentaicraft.vaglass_logo": "Vaglass Logo",
 
   "item.supersentaicraft.cheetah_animal_disk": "Cheetah Animal Disk",
   "item.supersentaicraft.gorilla_animal_disk": "Gorilla Animal Disk",
@@ -1619,12 +1621,36 @@
 
   "item.supersentaicraft.custom_visor": "Custom Visor",
 
+  "supersentaicraft:red_enetron.form": "Ranger: §cRed Buster",
+  "supersentaicraft:blue_enetron.form": "Ranger: §9Blue Buster",
+  "supersentaicraft:yellow_enetron.form": "Ranger: §eYellow Buster",
+  "supersentaicraft:gold_enetron.form": "Ranger: §6Beet Buster",
+  "supersentaicraft:silver_enetron.form": "Ranger: §7Stag Buster/Silver Stag",
+  "supersentaicraft:vaglass_logo.form": "Ranger: §4Dark Buster",
+
+  "supersentaicraft:cheetah_animal_disk.form": "Ranger: §cRed Cheetah",
+  "supersentaicraft:gorilla_animal_disk.form": "Ranger: §9Blue Gorilla",
+  "supersentaicraft:rabbit_animal_disk.form": "Ranger: §eYellow Rabbit",
+  "supersentaicraft:beetle_animal_disk.form": "Ranger: §6Gold Beetle",
+  "supersentaicraft:hippopotamus_animal_disk.form": "Ranger: §aGreen Hippopotamus",
+  "supersentaicraft:puma_animal_disk.form": "Ranger: §8Black Puma",
+
+  "supersentaicraft:custom_visor.form": "Ranger: §cRed Buster Powered Custom",
+  "supersentaicraft:custom_visor_b.form": "Ranger: §9Blue Buster Powered Custom",
+  "supersentaicraft:custom_visor_y.form": "Ranger: §eYellow Buster Powered Custom",
+  "supersentaicraft:custom_visor_c.form": "Ranger: §cRed Cheetah Animal Perfect",
+  "supersentaicraft:custom_visor_g.form": "Ranger: §9Blue Gorilla Animal Perfect",
+  "supersentaicraft:custom_visor_r.form": "Ranger: §eYellow Rabbit Animal Perfect",
+
   "item.supersentaicraft.morphin_blaster": "Morphin Blaster",
   "item.supersentaicraft.ichigan_buster": "Ichigan Buster",
   "item.supersentaicraft.sougan_blade": "Sougan Blade",
   "item.supersentaicraft.ichigan_buster_special": "Ichigan Buster Special Buster Mode",
   "item.supersentaicraft.dri_blade": "DriBlade",
   "item.supersentaicraft.lio_attache": "Lio Attaché",
+  "item.supersentaicraft.lio_blaster": "Lio Blaster",
+  "item.supersentaicraft.lio_blaster_final": "Lio Blaster (Final Mode)",
+  "item.supersentaicraft.dark_buster_sword": "Dark Buster Sword",
 
   //36-37 Akibaranger
   "tab.supersentaicraft.akibaranger": "Hikounin Sentai Akibaranger",
