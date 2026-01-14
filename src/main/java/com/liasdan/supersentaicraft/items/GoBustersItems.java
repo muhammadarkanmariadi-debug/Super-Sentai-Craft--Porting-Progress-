@@ -162,8 +162,7 @@ public class GoBustersItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","yellow_rabbit","go_busters_belt_pc",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
-					new MobEffectInstance(EffectCore.RED_BUSTER, 40, 2,true,false))
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false))
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
@@ -269,8 +268,7 @@ public class GoBustersItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_cheetah","go_busters_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
-					new MobEffectInstance(EffectCore.RED_BUSTER, 40, 1,true,false))
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false))
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
