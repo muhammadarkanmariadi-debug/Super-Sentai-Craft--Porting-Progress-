@@ -43,13 +43,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.RED_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
@@ -64,13 +64,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
@@ -85,13 +85,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.YELLOW_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
@@ -105,13 +105,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,20));
 
@@ -125,13 +125,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.SILVER_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,20));
 
@@ -148,13 +148,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
@@ -212,13 +212,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.YELLOW_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.addAlternative(CUSTOM_VISOR_C.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
 
@@ -233,13 +233,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.addAlternative(CUSTOM_VISOR_Y.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
 
@@ -255,13 +255,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.RED_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
@@ -332,13 +332,13 @@ public class GoBustersItems {
 					super.OnTransformation(itemstack,player);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0.5, 0, 1);
+							player.getZ(), 100, 0, 0.5, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.SILVER_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, 0, 0, 1);
+							player.getZ(), 100, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_MORPHIN_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 30, 0, -0.5, 0, 1);
+							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GO_BUSTERS));
 
