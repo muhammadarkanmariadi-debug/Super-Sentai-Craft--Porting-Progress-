@@ -41,10 +41,10 @@ public class GozyugerItems {
 						player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GOZYUGER));
 

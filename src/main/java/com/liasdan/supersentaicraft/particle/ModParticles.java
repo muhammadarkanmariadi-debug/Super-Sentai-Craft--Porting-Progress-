@@ -43,7 +43,23 @@ public class ModParticles {
     public static final Supplier<SimpleParticleType> BLACK_SPARK_PARTICLES =
             PARTICLE_TYPES.register("black_spark_particles", () -> new SimpleParticleType(true));
 
+    public static final Supplier<SimpleParticleType> GREEN_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("green_morphin_particles", () -> new SimpleParticleType(true));
 
+    public static final Supplier<SimpleParticleType> GOLD_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("gold_morphin_particles", () -> new SimpleParticleType(true));
+
+    public static final Supplier<SimpleParticleType> RED_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("red_morphin_particles", () -> new SimpleParticleType(true));
+
+    public static final Supplier<SimpleParticleType> BLUE_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("blue_morphin_particles", () -> new SimpleParticleType(true));
+
+    public static final Supplier<SimpleParticleType> YELLOW_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("yellow_morphin_particles", () -> new SimpleParticleType(true));
+
+    public static final Supplier<SimpleParticleType> SILVER_MORPHIN_PARTICLES =
+            PARTICLE_TYPES.register("silver_morphin_particles", () -> new SimpleParticleType(true));
 
     public static final Supplier<SimpleParticleType> GOZYUGER_PARTICLES =
             PARTICLE_TYPES.register("gozyuger_particles", () -> new SimpleParticleType(true));

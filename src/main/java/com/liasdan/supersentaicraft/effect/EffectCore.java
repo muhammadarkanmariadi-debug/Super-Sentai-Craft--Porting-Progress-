@@ -81,6 +81,21 @@ public class EffectCore {
 	public static final Holder<MobEffect>  WIDE= EFFECT.register("wide",
 			() -> new 	BasicEffect(MobEffectCategory.NEUTRAL, 0x87ce87));
 
+	public static final Holder<MobEffect> RED_BUSTER_WEAKNESS= EFFECT.register("red_buster_weakness",
+			() -> new RedBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> RED_BUSTER= EFFECT.register("red_buster",
+			() -> new RedBusterEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> MORPHIN_PARTICLE_EFFECT= EFFECT.register("morphin_particle",
+			() -> new MorphinParticleEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> BLUE_BUSTER_WEAKNESS= EFFECT.register("blue_buster_weakness",
+			() -> new BlueBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> YELLOW_BUSTER_WEAKNESS= EFFECT.register("yellow_buster_weakness",
+			() -> new YellowBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);
 	}

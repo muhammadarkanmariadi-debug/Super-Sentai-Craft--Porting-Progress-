@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.blocks.custom.LifeBird;
 import com.liasdan.supersentaicraft.blocks.machine.BoonboomCarProgrammer;
+import com.liasdan.supersentaicraft.blocks.machine.MiniatureEnetronTank;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.RangerTabs;
 
@@ -49,6 +50,10 @@ public class RangerBlocks {
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
+	public static final DeferredBlock<Block> UNREFINED_ENETRON = registerBlock("unrefined_enetron",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
+
 	public static final DeferredBlock<Block> LUPAT_ORE = registerBlock("lupat_ore",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
@@ -69,6 +74,11 @@ public class RangerBlocks {
 			() -> new LifeBird(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).dynamicShape().lightLevel((p_152632_) -> {
 						return 10;}),Block.box(4, 0, 4, 12,16, 12)).AddToTabList(RangerTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> MINIATURE_ENETRON_TANK = registerBlock("miniature_enetron_tank",
+			() -> new MiniatureEnetronTank(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).sound(SoundType.METAL).dynamicShape().lightLevel((p_152632_) -> {
+						return 10;}),Block.box(1, 0, 2, 14,16, 14)).AddToTabList(RangerTabs.BLOCKS));
 
 	public static final DeferredBlock<Block> BOONBOOM_CAR_PROGRAMMER = registerBlock("boonboom_car_programmer",
 			() -> new BoonboomCarProgrammer(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)

@@ -393,6 +393,13 @@ public class SuperSentaiCraftCore {
 			event.registerSpriteSet(ModParticles.GOLD_SPARK_PARTICLES.get(), GoldSparkParticles.Provider::new);
 			event.registerSpriteSet(ModParticles.BLACK_SPARK_PARTICLES.get(), BlackSparkParticles.Provider::new);
 
+			event.registerSpriteSet(ModParticles.GREEN_MORPHIN_PARTICLES.get(), GreenMorphinParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.GOLD_MORPHIN_PARTICLES.get(), GoldMorphinParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.RED_MORPHIN_PARTICLES.get(), RedMorphinParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.BLUE_MORPHIN_PARTICLES.get(), BlueMorphinParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.YELLOW_MORPHIN_PARTICLES.get(), YellowMorphinParticles.Provider::new);
+			event.registerSpriteSet(ModParticles.SILVER_MORPHIN_PARTICLES.get(), SilverMorphinParticles.Provider::new);
+
 			event.registerSpriteSet(ModParticles.GOZYUGER_PARTICLES.get(), GozyugerParticles.Provider::new);
 		}
 
