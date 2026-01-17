@@ -25,6 +25,8 @@ public class GoBustersItems {
     
 	public static final DeferredItem<Item> GO_BUSTERS_LOGO = ITEMS.register("go_busters_logo",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS));
+	public static final DeferredItem<Item> DOUBUTSU_GO_BUSTERS_LOGO = ITEMS.register("doubutsu_go_busters_logo",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> ENETRON = ITEMS.register("enetron",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS));
@@ -409,7 +411,7 @@ public class GoBustersItems {
 	public static final DeferredItem<BaseBlasterItem> ICHIGAN_BUSTER = ITEMS.register("ichigan_buster",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 	public static final DeferredItem<BaseBlasterItem> ICHIGAN_BUSTER_SPECIAL = ITEMS.register("ichigan_buster_special",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsSuperGun().KeepDifItem(ICHIGAN_BUSTER.get()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 
 	public static final DeferredItem<BaseBlasterItem> MORPHIN_BLASTER = ITEMS.register("morphin_blaster",
 			() -> new MorphinBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
@@ -419,7 +421,7 @@ public class GoBustersItems {
 	public static final DeferredItem<BaseBlasterItem> LIO_BLASTER = ITEMS.register("lio_blaster",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).IsSuperGun().AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 	public static final DeferredItem<BaseBlasterItem> LIO_BLASTER_FINAL = ITEMS.register("lio_blaster_final",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsHyperGun().AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsHyperGun().KeepDifItem(ICHIGAN_BUSTER.get()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));
 
 	public static final DeferredItem<SwordItem> DARK_BUSTER_SWORD = ITEMS.register("dark_buster_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));

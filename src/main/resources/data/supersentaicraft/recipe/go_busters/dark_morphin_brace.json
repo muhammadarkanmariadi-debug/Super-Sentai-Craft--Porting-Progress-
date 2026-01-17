@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "group": "dark_buster",
   "pattern": [
-    "aba",
     "aaa",
+    "aba",
 	"aaa"
   ],
   "key": {
@@ -11,10 +11,10 @@
 	  "item": "supersentaicraft:enetron"
 	},
 	"b": {
-      "item": "supersentaicraft:gold_enetron"
+      "item": "supersentaicraft:vaglass_logo"
     }
   },
   "result": {
-    "id": "supersentaicraft:beet_enter_morphin_blaster"
+    "id": "supersentaicraft:dark_morphin_brace"
   }
 }
