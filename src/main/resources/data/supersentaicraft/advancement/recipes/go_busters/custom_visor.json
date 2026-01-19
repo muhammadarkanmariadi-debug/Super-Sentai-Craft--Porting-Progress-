@@ -1,0 +1,27 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:go_busters/lio_blaster",
+      "supersentaicraft:go_busters/lio_blaster_final",
+      "supersentaicraft:go_busters/lio_blaster_final1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:custom_visor"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

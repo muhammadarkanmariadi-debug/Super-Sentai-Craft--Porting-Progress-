@@ -1,0 +1,26 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:go_busters/dark_morphin_brace",
+      "supersentaicraft:go_busters/dark_buster_sword"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:vaglass_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

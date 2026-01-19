@@ -1,0 +1,25 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:go_busters/yellow_morphin_brace"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:yellow_enetron"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

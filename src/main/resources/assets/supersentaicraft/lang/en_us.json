@@ -2988,6 +2988,7 @@
 
   "advancements.supersentaicraft.goranger.desc": "Change into each member of Goranger",
   "advancements.supersentaicraft.goranger.title": "Himitsu Sentai Goranger",
+
   "advancements.supersentaicraft.akaranger.desc": "Change into Akaranger",
   "advancements.supersentaicraft.akaranger.title": "Akaranger!",
   "advancements.supersentaicraft.aoranger.desc": "Change into Aoranger",
@@ -2998,11 +2999,13 @@
   "advancements.supersentaicraft.momoranger.title": "Momoranger!",
   "advancements.supersentaicraft.midoranger.desc": "Change into Midoranger",
   "advancements.supersentaicraft.midoranger.title": "Midoranger!",
+
   "advancements.supersentaicraft.goranger_manga.desc": "Obtain Goranger's Manga",
   "advancements.supersentaicraft.goranger_manga.title": "The Classic Manga",
 
   "advancements.supersentaicraft.boukenger.desc": "Change into each member of Boukenger",
   "advancements.supersentaicraft.boukenger.title": "GoGo Sentai Boukenger",
+
   "advancements.supersentaicraft.bouken_red.desc": "Change into Bouken Red",
   "advancements.supersentaicraft.bouken_red.title": "Atsuki Boukensha! Bouken Red!",
   "advancements.supersentaicraft.bouken_black.desc": "Change into Bouken Black",
@@ -3017,8 +3020,10 @@
   "advancements.supersentaicraft.bouken_silver.title": "Mabayuki Boukensha! Bouken Silver!",
   "advancements.supersentaicraft.zubaan.desc": "Change into Zubaan",
   "advancements.supersentaicraft.zubaan.title": "Zubaan!",
+
   "advancements.supersentaicraft.accel_tector.desc": "Change into Boukenger (Accel Tector)",
   "advancements.supersentaicraft.accel_tector.title": "Task 7: The Salamander's Scale",
+
   "advancements.supersentaicraft.accellular.desc": "Obtain any Accellular",
   "advancements.supersentaicraft.accellular.title": "Boukenger, Start Up!",
   "advancements.supersentaicraft.gogo_changer.desc": "Obtain Bouken Silver's GoGo Changer",
@@ -3030,6 +3035,58 @@
   "advancements.supersentaicraft.tokumei.title": "Tokumei Sentai Go-Busters",
   "advancements.supersentaicraft.doubutsu.desc": "Change into each member of Go-Busters (Doubutsu)",
   "advancements.supersentaicraft.doubutsu.title": "Doubutsu Sentai Go-Busters",
+
+  "advancements.supersentaicraft.red_buster.desc": "Change into Red Buster",
+  "advancements.supersentaicraft.red_buster.title": "Red Buster!",
+  "advancements.supersentaicraft.blue_buster.desc": "Change into Blue Buster",
+  "advancements.supersentaicraft.blue_buster.title": "Blue Buster!",
+  "advancements.supersentaicraft.yellow_buster.desc": "Change into Yellow Buster",
+  "advancements.supersentaicraft.yellow_buster.title": "Yellow Buster!",
+  "advancements.supersentaicraft.beet_buster.desc": "Change into Beet Buster",
+  "advancements.supersentaicraft.beet_buster.title": "Beet Buster!",
+  "advancements.supersentaicraft.stag_buster.desc": "Change into Stag Buster",
+  "advancements.supersentaicraft.stag_buster.title": "Stag Buster!",
+  "advancements.supersentaicraft.dark_buster.desc": "Change into Dark Buster",
+  "advancements.supersentaicraft.dark_buster.title": "Mission 49: Preparation and Selection",
+  "advancements.supersentaicraft.beet_buster_enter.desc": "Change into Beet Buster (Enter)",
+  "advancements.supersentaicraft.beet_buster_enter.title": "Go-Busters vs. Beet Buster vs. J",
+
+  "advancements.supersentaicraft.powered_custom.desc": "Change into Powered Custom Go-Busters",
+  "advancements.supersentaicraft.powered_custom.title": "Mission 33: Morphin'! Powered Custom",
+
+  "advancements.supersentaicraft.red_cheetah.desc": "Change into Red Cheetah",
+  "advancements.supersentaicraft.red_cheetah.title": "Daichi no Hunter! Red Cheetah!",
+  "advancements.supersentaicraft.blue_gorilla.desc": "Change into Blue Gorilla",
+  "advancements.supersentaicraft.blue_gorilla.title": "Hayashi no Warrior! Blue Gorilla!",
+  "advancements.supersentaicraft.yellow_rabbit.desc": "Change into Yellow Rabbit",
+  "advancements.supersentaicraft.yellow_rabbit.title": "Nohara no Jumper! Yellow Rabbit!",
+  "advancements.supersentaicraft.gold_beetle.desc": "Change into Gold Beetle",
+  "advancements.supersentaicraft.gold_beetle.title": "Jumoku no Leader! Gold Beetle!",
+  "advancements.supersentaicraft.silver_stag.desc": "Change into Silver Stag",
+  "advancements.supersentaicraft.silver_stag.title": "Jueki no Drunker! Silver Stag!",
+  "advancements.supersentaicraft.green_hippopotamus.desc": "Change into Green Hippopotamus",
+  "advancements.supersentaicraft.green_hippopotamus.title": "Shicchi no Swimmer! Green Hippopotamus!",
+  "advancements.supersentaicraft.black_puma.desc": "Change into Black Puma",
+  "advancements.supersentaicraft.black_puma.title": "Yonaka no Walker! Black Puma!",
+
+  "advancements.supersentaicraft.animal_perfect.desc": "Change into Go-Busters Animal Perfect Mode",
+  "advancements.supersentaicraft.animal_perfect.title": "Go-Busters Returns vs Go-Busters",
+
+  "advancements.supersentaicraft.morphin_brace.desc": "Obtain any Morphin Brace",
+  "advancements.supersentaicraft.morphin_brace.title": "Let's Morphin!",
+  "advancements.supersentaicraft.morphin_blaster.desc": "Obtain any Morphin Blaster",
+  "advancements.supersentaicraft.morphin_blaster.title": "Let's Morphin!",
+  "advancements.supersentaicraft.custom_visor.desc": "Obtain Custom Visor",
+  "advancements.supersentaicraft.custom_visor.title": "Powered Morphin!",
+  "advancements.supersentaicraft.dark_morphin_brace.desc": "Obtain Dark Buster's Morphin Brace",
+  "advancements.supersentaicraft.dark_morphin_brace.title": "Let's Morphin!",
+
+  "advancements.supersentaicraft.morphin_brace_d.desc": "Obtain any Morphin Brace",
+  "advancements.supersentaicraft.morphin_brace_d.title": "Animal Change!",
+  "advancements.supersentaicraft.morphin_blaster_d.desc": "Obtain any Morphin Blaster",
+  "advancements.supersentaicraft.morphin_blaster_d.title": "Animal Change!",
+  "advancements.supersentaicraft.custom_visor_d.desc": "Obtain Custom Visor",
+  "advancements.supersentaicraft.custom_visor_d.title": "Animal Perfect Mode!",
 
   "advancements.supersentaicraft..desc": "",
   "advancements.supersentaicraft..title": ""
