@@ -43,7 +43,7 @@
         {
           "condition": "minecraft:location_check",
           "predicate": {
-            "biomes": "#minecraft:is_overworld"
+            "biomes": "#supersentaicraft:super_sentai_topia"
           }
         }
       ]
@@ -115,7 +115,7 @@
             {
               "condition": "minecraft:location_check",
               "predicate": {
-                "biomes": "#minecraft:is_overworld"
+                "biomes": "#supersentaicraft:super_sentai_topia"
               }
             }
           ]
