@@ -29,8 +29,8 @@ public class RedBusterWeaknessEffect extends InstantenousMobEffect {
 							entity -> (entity instanceof Chicken));
 
 					for (LivingEntity enemy : chicken) {
-						player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 8, true, true));
-						player.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3, 8, true, true));
+						player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 8, true, false));
+						player.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3, 8, true, false));
 					}
 				}
 			}

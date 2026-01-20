@@ -1,0 +1,138 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:red_enetron",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blue_enetron",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:yellow_enetron",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gold_enetron"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:silver_enetron"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:enetron",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biomes": "#minecraft:is_overworld"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:cheetah_animal_disk",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:gorilla_animal_disk",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:rabbit_animal_disk",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:beetle_animal_disk",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:stag_animal_disk",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:hippopotamus_animal_disk"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:puma_animal_disk"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blank_animal_disk",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biomes": "#minecraft:is_nether"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:enetron",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#minecraft:is_overworld"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blank_animal_disk",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#minecraft:is_nether"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

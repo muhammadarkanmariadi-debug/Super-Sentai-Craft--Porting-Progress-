@@ -207,6 +207,8 @@ public class GoBustersItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.LOW_GRAVITY, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.YELLOW_BUSTER_PC, 40, 0,true,false),
 					new MobEffectInstance(EffectCore.YELLOW_BUSTER_WEAKNESS, 40, 0,true,false))
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
@@ -264,7 +266,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,5));
 
 	public static final DeferredItem<Item> CHEETAH_ANIMAL_DISK = ITEMS.register("cheetah_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_cheetah","go_busters_belt",

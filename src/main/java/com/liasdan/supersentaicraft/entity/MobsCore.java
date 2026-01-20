@@ -154,6 +154,19 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> GEDOU_SHINKEN_RED_SPAWN_EGG = ITEMS.register("gedou_shinken_red_spawn_egg",
 			() -> new DeferredSpawnEggItem(GEDOU_SHINKEN_RED,0xffffff, 0x151515, new Item.Properties()));
 
+	//36 Go-Busters
+	public static final DeferredHolder<EntityType<?>, EntityType<BuglersEntity>> BUGLERS = MOBLIST.register("bugler",
+			() -> EntityType.Builder.of(BuglersEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":bugler"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> BUGLERS_SPAWN_EGG = ITEMS.register("bugler_spawn_egg",
+			() -> new DeferredSpawnEggItem(BUGLERS,0xffffff, 0x151515, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<DarkBusterEntity>> DARK_BUSTER = MOBLIST.register("dark_buster",
+			() -> EntityType.Builder.of(DarkBusterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":dark_buster"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> DARK_BUSTER_SPAWN_EGG = ITEMS.register("dark_buster_spawn_egg",
+			() -> new DeferredSpawnEggItem(DARK_BUSTER,0xffffff, 0x151515, new Item.Properties()));
+
 	//42 LuPat
 	public static final DeferredHolder<EntityType<?>, EntityType<PordermenEntity>> PORDERMEN = MOBLIST.register("porderman",
 			() -> EntityType.Builder.of(PordermenEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":porderman"));

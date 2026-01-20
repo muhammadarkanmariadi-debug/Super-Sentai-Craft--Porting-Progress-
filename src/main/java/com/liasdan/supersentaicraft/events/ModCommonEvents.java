@@ -171,6 +171,9 @@ public class ModCommonEvents {
 		event.put(MobsCore.NANASHIS.get(), NanashisEntity.setAttributes().build());
 		event.put(MobsCore.GEDOU_SHINKEN_RED.get(), GedouShinkenRedEntity.setAttributes().build());
 
+		event.put(MobsCore.BUGLERS.get(), BuglersEntity.setAttributes().build());
+		event.put(MobsCore.DARK_BUSTER.get(), DarkBusterEntity.setAttributes().build());
+
 		event.put(MobsCore.PORDERMEN.get(), PordermenEntity.setAttributes().build());
 
 		event.put(MobsCore.DRUNNS.get(), DrunnsEntity.setAttributes().build());
@@ -206,6 +209,8 @@ public class ModCommonEvents {
         event.register(MobsCore.JARYUU.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
         event.register(MobsCore.NANASHIS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+		event.register(MobsCore.BUGLERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
 		event.register(MobsCore.PORDERMEN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 

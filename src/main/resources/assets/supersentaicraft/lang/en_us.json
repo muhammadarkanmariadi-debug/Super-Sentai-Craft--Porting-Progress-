@@ -13,6 +13,12 @@
   "effect.supersentaicraft.waterboost": "Water Boost",
   "effect.supersentaicraft.frost_walker": "Frost Walker",
   "effect.supersentaicraft.smoke": "Smoke",
+  "effect.supersentaicraft.morphin_particle": "Morphin' Particle",
+  "effect.supersentaicraft.red_buster": "Red Buster",
+  "effect.supersentaicraft.yellow_buster_pc": "Yellow Buster Powered Custom",
+  "effect.supersentaicraft.red_buster_weakness": "Red Buster's Weakness",
+  "effect.supersentaicraft.blue_buster_weakness": "Blue Buster's Weakness",
+  "effect.supersentaicraft.yellow_buster_weakness": "Yellow Buster's Weakness",
 
   "effect.supersentaicraft.boost": "Boost",
   "effect.supersentaicraft.anti_poison": "Anti Poison",
@@ -25,6 +31,7 @@
   "effect.supersentaicraft.flat": "Flatten",
   "effect.supersentaicraft.stretch": "Stretch",
   "effect.supersentaicraft.wide": "Wide",
+  "effect.supersentaicraft.low_gravity": "Low Gravity",
 
   "entity.supersentaicraft.zolder": "Zolders",
   "item.supersentaicraft.zolder_spawn_egg": "Zolders Spawn Egg",
@@ -118,7 +125,10 @@
   "item.supersentaicraft.nanashi_spawn_egg": "Nanashi Companies Spawn Egg",
   "item.supersentaicraft.gedou_shinken_red_spawn_egg": "Gedou Shinken Red Spawn Egg",
 
-  "entity.supersentaicraft.BuglarsMob": "Buglars",
+  "entity.supersentaicraft.bugler": "Buglers",
+  "entity.supersentaicraft.dark_buster": "Dark Buster",
+  "item.supersentaicraft.bugler_spawn_egg": "Buglars Spawn Egg",
+  "item.supersentaicraft.dark_buster_spawn_egg": "Dark Buster Spawn Egg",
 
   "entity.supersentaicraft.DroansMob": "Droans",
 
@@ -194,7 +204,7 @@
   "item.supersentaicraft.karths_sickle": "Curses Sickle",
   "item.supersentaicraft.jaryuu_sword": "Jaryuu Sword",
   "item.supersentaicraft.ryuuwon_sword": "Ryuuwon Sword",
-  "item.supersentaicraft.buglars_katar": "Buglars Katar",
+  "item.supersentaicraft.buglars_katar": "Buglers Katar",
 
   "item.supersentaicraft.dustlers_sickle": "Dustlers Sickle",
   "item.supersentaicraft.kunekunes_sword": "Kunekunes Sword",

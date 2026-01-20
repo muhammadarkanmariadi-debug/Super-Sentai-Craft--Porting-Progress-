@@ -81,6 +81,10 @@ public class EffectCore {
 	public static final Holder<MobEffect>  WIDE= EFFECT.register("wide",
 			() -> new 	BasicEffect(MobEffectCategory.NEUTRAL, 0x87ce87));
 
+	public static final Holder<MobEffect> LOW_GRAVITY= EFFECT.register("low_gravity",
+			() -> new LowGravityEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
+					.addAttributeModifier(Attributes.GRAVITY, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.low_gravity"), -0.1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
 	public static final Holder<MobEffect> RED_BUSTER_WEAKNESS= EFFECT.register("red_buster_weakness",
 			() -> new RedBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
 
@@ -95,6 +99,9 @@ public class EffectCore {
 
 	public static final Holder<MobEffect> YELLOW_BUSTER_WEAKNESS= EFFECT.register("yellow_buster_weakness",
 			() -> new YellowBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> YELLOW_BUSTER_PC= EFFECT.register("yellow_buster_pc",
+			() -> new YellowBusterPCEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
 
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);

@@ -7,28 +7,24 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.phys.Vec3;
-
-import java.util.List;
 
 
-public class RedBusterEffect extends InstantenousMobEffect {
+public class YellowBusterPCEffect extends InstantenousMobEffect {
 
 
-	public RedBusterEffect(MobEffectCategory mobEffectCategory, int color) {
+	public YellowBusterPCEffect(MobEffectCategory mobEffectCategory, int color) {
 		super(mobEffectCategory, color);
 	}
 
 
 	@Override
 	public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+		pLivingEntity.fallDistance=0;
+
 		if (!pLivingEntity.level().isClientSide()) {
 			if (pLivingEntity.level() instanceof ServerLevel level) {
 				if (pLivingEntity instanceof Player player) {
@@ -37,8 +33,7 @@ public class RedBusterEffect extends InstantenousMobEffect {
 						if (stack.has(DataComponents.CUSTOM_DATA)) {
 							CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 							if (tag.getDouble("use_ability") != 0  & pAmplifier != 9) {
-								player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 10*(pAmplifier+1), true, false));
-								player.addEffect(new MobEffectInstance(EffectCore.MORPHIN_PARTICLE_EFFECT, 10, 0, true, false));
+								player.addEffect(new MobEffectInstance(EffectCore.LOW_GRAVITY, 10, 9, true, false));
 							}
 						}
 					}
