@@ -3,6 +3,7 @@ package com.liasdan.supersentaicraft.blocks;
 import java.util.function.Supplier;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.blocks.custom.DaigoyouBlock;
 import com.liasdan.supersentaicraft.blocks.custom.LifeBird;
 import com.liasdan.supersentaicraft.blocks.machine.BoonboomCarProgrammer;
 import com.liasdan.supersentaicraft.blocks.machine.MiniatureEnetronTank;
@@ -74,6 +75,11 @@ public class RangerBlocks {
 			() -> new LifeBird(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).dynamicShape().lightLevel((p_152632_) -> {
 						return 10;}),Block.box(4, 0, 4, 12,16, 12)).AddToTabList(RangerTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> DAIGOYOU_BLOCK = registerBlock("daigoyou_block",
+			() -> new DaigoyouBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).dynamicShape().lightLevel((p_152632_) -> {
+						return 15;}),Block.box(4, 0, 4, 12,16, 12)).AddToTabList(RangerTabs.BLOCKS));
 
 	public static final DeferredBlock<Block> MINIATURE_ENETRON_TANK = registerBlock("miniature_enetron_tank",
 			() -> new MiniatureEnetronTank(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)

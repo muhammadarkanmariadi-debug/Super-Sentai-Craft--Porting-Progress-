@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shinkenger",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:common_disk"
+    },
+	"b": {
+      "item": "supersentaicraft:saishuu_ougi_disk"
+    },
+	"c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:mogyuu_bazooka"
+  }
+}

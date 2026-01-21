@@ -158,15 +158,22 @@ public class BaseBlasterItem extends BowItem {
 				projectile.fire(player, player.getLookAngle());
 				stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
 			}
+			else if (entityLiving.hasEffect(EffectCore.SHOTBOOST)) {
+				ItemStack arrow = new ItemStack(Items.ARROW, 1);
+				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
+				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1), 1.0F, true, (LivingEntity)null);
+			}
 			else if (SuperGun) {
 				ItemStack arrow = new ItemStack(Items.ARROW, 1);
 				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
-				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), (2 + (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1)) * 3.0F, 1.0F, true, (LivingEntity)null);
+				if (entityLiving.hasEffect(EffectCore.SHOTBOOST)) this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), (2 + (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1)) * 2.5F, 1.0F, true, (LivingEntity)null);
+				else this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * 2.5F, 1.0F, true, (LivingEntity)null);
 			}
 			else if (HyperGun) {
 				ItemStack arrow = new ItemStack(Items.ARROW, 1);
 				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
-				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), (2 + (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1)) * 7.0F, 1.0F, true, (LivingEntity)null);
+				if (entityLiving.hasEffect(EffectCore.SHOTBOOST)) this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), (2 + (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1)) * 5.0F, 1.0F, true, (LivingEntity)null);
+				else this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * 5.0F, 1.0F, true, (LivingEntity)null);
 			}
 			else {
 				if (Charged) {
@@ -177,7 +184,7 @@ public class BaseBlasterItem extends BowItem {
 				}
 				ItemStack arrow = new ItemStack(Items.ARROW, 1);
 				arrow.set(DataComponents.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
-				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 2 * (entityLiving.getEffect(EffectCore.SHOTBOOST).getAmplifier()+1), 1.0F, true, (LivingEntity)null);
+				this.shoot(serverlevel, player, player.getUsedItemHand(), stack, List.of(arrow), 3, 1.0F, true, (LivingEntity)null);
 			}
 			level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + 1 * 0.5F);
 			player.awardStat(Stats.ITEM_USED.get(this));

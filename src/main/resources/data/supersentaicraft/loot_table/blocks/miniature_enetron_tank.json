@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:miniature_enetron_tank"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "supersentaicraft:blocks/miniature_enetron_tank"
+}

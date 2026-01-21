@@ -113,8 +113,14 @@ public class ShinkengerItems {
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 4,true,false))
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
-    
-    public static final DeferredItem<Item> SHINKENGER_HELMET = ITEMS.register("shinkenger_head",
+
+	public static final DeferredItem<Item> SAISHUU_OUGI_DISK = ITEMS.register("saishuu_ougi_disk",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));
+
+	public static final DeferredItem<Item> DAIGOYOU_DISK = ITEMS.register("daigoyou_disk",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));
+
+	public static final DeferredItem<Item> SHINKENGER_HELMET = ITEMS.register("shinkenger_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     public static final DeferredItem<Item> SHINKENGER_CHESTPLATE = ITEMS.register("shinkenger_torso",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
@@ -150,7 +156,7 @@ public class ShinkengerItems {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     public static final DeferredItem<BaseBlasterItem> WATER_ARROW = ITEMS.register("water_arrow",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
-    public static final DeferredItem<SwordItem> HEAVEN_FAN = ITEMS.register("heaven_fan",
+	public static final DeferredItem<SwordItem> HEAVEN_FAN = ITEMS.register("heaven_fan",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     public static final DeferredItem<SwordItem> WOOD_SPEAR = ITEMS.register("wood_spear",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
@@ -166,8 +172,16 @@ public class ShinkengerItems {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties().rarity(Rarity.EPIC)).KeepDifItem(SHINKENMARU.get()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
     public static final DeferredItem<SwordItem> KYORYUMARU_SAKANAMARU = ITEMS.register("kyoryumaru_sakanamaru",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties().rarity(Rarity.EPIC)).KeepDifItem(SAKANAMARU.get()).ChangeRepairItem(KYOUTSU_DISK.get()));
-    
-    public static void register(IEventBus eventBus) {
+
+	public static final DeferredItem<BaseBlasterItem> MOGYUU_BAZOOKA = ITEMS.register("mogyuu_bazooka",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.SMALL_FIREBALL).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
+	public static final DeferredItem<BaseBlasterItem> SUPER_MOGYUU_BAZOOKA = ITEMS.register("super_mogyuu_bazooka",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 2, -2.4F, new Item.Properties()).setProjectile(BaseBlasterItem.BlasterProjectile.LARGE_FIREBALL).KeepDifItem(MOGYUU_BAZOOKA.get()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
+
+	public static final DeferredItem<SwordItem> DAIGOYOU_JITTE = ITEMS.register("daigoyou_jitte",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER).ChangeRepairItem(KYOUTSU_DISK.get()));
+
+	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
 

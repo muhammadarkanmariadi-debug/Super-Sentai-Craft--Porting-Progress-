@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "shinken_super",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:mogyuu_bazooka"
+    },
+	{
+      "item": "supersentaicraft:shinkenmaru"
+    },
+    {
+      "item": "supersentaicraft:inromaru"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:super_mogyuu_bazooka"
+  }
+}

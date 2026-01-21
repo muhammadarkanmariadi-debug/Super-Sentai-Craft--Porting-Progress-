@@ -58,7 +58,8 @@ public class ShodoPhoneItem extends RangerChangerItem{
 						rider.getMainHandItem().getItem()==ShinkengerItems.LAND_SLICER.get() ||
 						rider.getMainHandItem().getItem()==ShinkengerItems.SUPER_SHINKENMARU.get() ||
 						rider.getMainHandItem().getItem()==ShinkengerItems.KYORYUMARU.get() ||
-						rider.getMainHandItem().getItem()==ShinkengerItems.KYORYUMARU_SAKANAMARU.get()) {
+						rider.getMainHandItem().getItem()==ShinkengerItems.KYORYUMARU_SAKANAMARU.get() ||
+						rider.getMainHandItem().getItem()==ShinkengerItems.SUPER_MOGYUU_BAZOOKA.get()) {
 					belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
 				}
 				else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {

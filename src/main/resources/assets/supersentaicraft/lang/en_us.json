@@ -1556,6 +1556,8 @@
   "item.supersentaicraft.super_disk": "Super Disk",
   "item.supersentaicraft.hyper_disk": "Hyper Disk",
   "item.supersentaicraft.gedou_disk": "Gedou Disk",
+  "item.supersentaicraft.saishuu_ougi_disk": "Saishuu Ougi Disk",
+  "item.supersentaicraft.daigoyou_disk": "DaiGoyou Disk",
 
   "supersentaicraft:shishi_disk.form": "§cShinken Red",
   "supersentaicraft:ryuu_disk.form": "§9Shinken Blue",
@@ -1577,6 +1579,11 @@
   "item.supersentaicraft.super_shinkenmaru": "Super Shinkenmaru",
   "item.supersentaicraft.kyoryumaru": "Kyoryumaru",
   "item.supersentaicraft.kyoryumaru_sakanamaru": "Kyoryumaru",
+  "item.supersentaicraft.mogyuu_bazooka": "Mogyuu Bazooka",
+  "item.supersentaicraft.super_mogyuu_bazooka": "Super Mogyuu Bazooka",
+  "block.supersentaicraft.daigoyou_block": "DaiGoyou (Paper Lantern Mode)",
+  "item.supersentaicraft.daigoyou": "DaiGoyou (Paper Lantern Mode)",
+  "item.supersentaicraft.daigoyou_jitte": "DaiGoyou (Jitte Mode)",
 
   //34 Goseiger
   "tab.supersentaicraft.goseiger": "Tensou Sentai Goseiger",
