@@ -143,6 +143,21 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 15,
+          "functions": [
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "supersentaicraft:daigoyou_disk"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 10,
           "functions": [
             {
@@ -155,6 +170,21 @@
             }
           ],
           "name": "supersentaicraft:super_disk"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "supersentaicraft:saishuu_ougi_disk"
         },
         {
           "type": "minecraft:item",
