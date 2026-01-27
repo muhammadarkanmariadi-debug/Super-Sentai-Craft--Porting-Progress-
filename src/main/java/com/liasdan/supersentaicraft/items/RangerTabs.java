@@ -96,6 +96,10 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(GozyugerItems.GOZYUGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gozyuger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.gozyuger")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GavanInfinityTab = CREATIVE_MODE_TABS.register("ssc051", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(GavanInfinityItems.GAVAN_INFINITY_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/base_tab_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.gavan_infinity")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.SUPER_SENTAI_LOGO.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.misc")).build());
@@ -126,6 +130,8 @@ public class RangerTabs {
 	public static List<Item> RYUSOULGER= new ArrayList<Item>();
 	public static List<Item> BOONBOOMGER= new ArrayList<Item>();
 	public static List<Item> GOZYUGER= new ArrayList<Item>();
+
+	public static List<Item> GAVAN_INFINITY= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
@@ -252,6 +258,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.GOZYUGER.size(); i++)
 			{
 				event.accept( RangerTabs.GOZYUGER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.GavanInfinityTab.get()) {
+			for (int i = 0; i < RangerTabs.GAVAN_INFINITY.size(); i++)
+			{
+				event.accept( RangerTabs.GAVAN_INFINITY.get(i));
 			}
 
 		}

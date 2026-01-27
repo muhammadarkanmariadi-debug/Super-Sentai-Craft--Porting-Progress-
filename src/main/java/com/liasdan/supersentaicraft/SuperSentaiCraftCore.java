@@ -115,6 +115,8 @@ public class SuperSentaiCraftCore {
 		BoonboomgerItems.register(modEventBus);
 		GozyugerItems.register(modEventBus);
 
+		GavanInfinityItems.register(modEventBus);
+
 		RangerBlocks.register(modEventBus);
 
 		MobsCore.register(modEventBus);

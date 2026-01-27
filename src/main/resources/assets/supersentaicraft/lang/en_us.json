@@ -2900,6 +2900,23 @@
   "item.supersentaicraft.tega_june":"Tega June",
   "item.supersentaicraft.tega_sword_silver":"Tega Sword",
 
+  //50 Gavan Infinity
+  "tab.supersentaicraft.gavan_infinity": "Chou Uchuu Keiji Gavan Infinity",
+
+  "item.supersentaicraft.gavan_infinity_head":"Gavan Infinity Helmet",
+  "item.supersentaicraft.gavan_infinity_torso":"Gavan Infinity Chestplate",
+  "item.supersentaicraft.gavan_infinity_legs":"Gavan Infinity Leggings",
+
+  "item.supersentaicraft.infinity_gavarion_trigger":"Gavarion Trigger (Gavan Infinity)",
+  "item.supersentaicraft.bushido_gavarion_trigger":"Gavarion Trigger (Gavan Bushido)",
+  "item.supersentaicraft.luminous_gavarion_trigger":"Gavarion Trigger (Gavan Luminous)",
+
+  "item.supersentaicraft.gekido_emorgear":"Gekido Emorgear",
+  "item.supersentaicraft.hisoo_emorgear":"Hisoo Emorgear",
+  "item.supersentaicraft.kanki_emorgear":"Kanki Emorgear",
+
+  "item.supersentaicraft.gavarion_trigger":"Gavarion Trigger",
+
   //?? Kawarimono Team
   "item.supersentaicraft.kawarimono_head": "Kawarimono Helmet",
   "item.supersentaicraft.kawarimono_torso": "Kawarimono Chestplate",
