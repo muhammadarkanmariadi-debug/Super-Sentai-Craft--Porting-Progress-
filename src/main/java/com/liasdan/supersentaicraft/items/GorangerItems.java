@@ -35,8 +35,7 @@ public class GorangerItems {
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
 			}
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json")
-            .ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GORANGER));
+            .HasCape().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> AO_STAR = ITEMS.register("ao_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","aoranger","aoranger_belt",
@@ -50,7 +49,7 @@ public class GorangerItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.GORANGER));
+			}.HasCape().AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> KI_STAR = ITEMS.register("ki_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","kiranger","kiranger_belt",
@@ -64,7 +63,7 @@ public class GorangerItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.GORANGER));
+			}.HasCape().AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> MOMO_STAR = ITEMS.register("momo_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","momoranger","momoranger_belt",
@@ -78,7 +77,7 @@ public class GorangerItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.GORANGER));
+			}.HasCape().AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> MIDO_STAR = ITEMS.register("mido_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","midoranger","midoranger_belt",
@@ -92,42 +91,42 @@ public class GorangerItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.GORANGER));
+			}.HasCape().AddToTabList(RangerTabs.GORANGER));
     
 	public static final DeferredItem<Item> AORANGER_MANGA = ITEMS.register("aoranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","aoranger","aoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json"));
+            .HasCape());
 	
 	public static final DeferredItem<Item> KIRANGER_MANGA = ITEMS.register("kiranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","kiranger","kiranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json"));
+            .HasCape());
 	
 	public static final DeferredItem<Item> MOMORANGER_MANGA = ITEMS.register("momoranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","momoranger","momoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json"));
+            .HasCape());
 	
 	public static final DeferredItem<Item> MIDORANGER_MANGA = ITEMS.register("midoranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_manga","midoranger","midoranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json"));
+            .HasCape());
 	
 	public static final DeferredItem<Item> GORANGER_MANGA = ITEMS.register("goranger_manga",
             () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"_manga","akaranger","akaranger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").ChangeBeltModel("geo/rangerbeltextra.geo.json")
+            .HasCape().ChangeBeltModel("geo/rangerbeltextra.geo.json")
             .addAlternative(AORANGER_MANGA.get()).addAlternative(KIRANGER_MANGA.get()).addAlternative(MOMORANGER_MANGA.get()).addAlternative(MIDORANGER_MANGA.get())
             .AddToTabList(RangerTabs.GORANGER));
 	

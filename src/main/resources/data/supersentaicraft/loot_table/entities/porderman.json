@@ -45,7 +45,7 @@
         {
           "type": "minecraft:item",
           "name": "supersentaicraft:blank_striker",
-          "weight": 5,
+          "weight": 6,
           "functions": [
             {
               "function": "minecraft:set_count",

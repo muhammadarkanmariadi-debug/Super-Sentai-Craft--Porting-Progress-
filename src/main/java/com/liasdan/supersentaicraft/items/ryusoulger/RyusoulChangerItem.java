@@ -93,7 +93,7 @@ public class RyusoulChangerItem extends RangerChangerItem{
 
 	}
 	
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 		case HEAD ->{ 

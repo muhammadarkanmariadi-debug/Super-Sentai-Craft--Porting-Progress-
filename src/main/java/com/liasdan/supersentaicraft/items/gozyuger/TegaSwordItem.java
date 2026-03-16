@@ -1,7 +1,6 @@
 package com.liasdan.supersentaicraft.items.gozyuger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.items.GorangerItems;
 import com.liasdan.supersentaicraft.items.GozyugerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
@@ -55,7 +54,7 @@ public class TegaSwordItem extends RangerChangerItem{
 
 	}
 
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 			case HEAD ->{

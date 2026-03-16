@@ -75,7 +75,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+            .HasCape().ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
     public static final DeferredItem<Item> GINGA_NO_HIKARI = ITEMS.register("lights_of_ginga",
             () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.RARE),0,"_beast_armor_shine","ginga_red","beast_armor_shine_belt",

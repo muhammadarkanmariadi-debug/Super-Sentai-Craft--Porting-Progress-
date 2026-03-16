@@ -2,7 +2,6 @@ package com.liasdan.supersentaicraft.items.boukenger;
 
 import com.liasdan.supersentaicraft.items.BoukengerItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
-import com.liasdan.supersentaicraft.items.ShinkengerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -62,7 +61,7 @@ public class GoGoChangerItem extends RangerChangerItem{
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
 	}
 	
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 		case HEAD ->{ 

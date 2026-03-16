@@ -1,10 +1,8 @@
 package com.liasdan.supersentaicraft.items.lupatranger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.items.BoonboomgerItems;
 import com.liasdan.supersentaicraft.items.LuPatRangerItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
-import com.liasdan.supersentaicraft.items.RyusoulgerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.core.Holder;
@@ -110,7 +108,7 @@ public class VSChangerItem extends RangerChangerItem{
 		else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
 	}
 
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 		case HEAD ->{ 

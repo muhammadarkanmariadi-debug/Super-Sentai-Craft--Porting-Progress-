@@ -54,6 +54,9 @@ public class RangerFormChangeItem extends BaseItem {
 	private Boolean SET_SHOW_FACE = false;
 	private Boolean SET_SHOW_UNDER = false;
 
+	private Boolean USE_WALK = false;
+	private Boolean HAS_CAPE = false;
+
 
 	public RangerFormChangeItem( Properties properties,int belt,String formName,String rangername,String beltTex, MobEffectInstance... effects) {
 		super( properties);
@@ -94,6 +97,7 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public String get_Model() {
 		if (UPDATED_MODEL!=null) return UPDATED_MODEL;
+		else if (HAS_CAPE) return "geo/black_knight.geo.json";
 		return "geo/ranger.geo.json";
 	}
 
@@ -128,6 +132,13 @@ public class RangerFormChangeItem extends BaseItem {
 	public Boolean HasWingsIfFlying() {
 		return FLYING_TEXT;
 	}
+
+	public Boolean get_has_cape() {
+		return HAS_CAPE;
+	}
+	public Boolean get_Walk() {
+		return USE_WALK;
+	}
 	
 	public RangerFormChangeItem alsoChange2ndSlot(Item item) {
 		alsoChange2ndSlot=  (RangerFormChangeItem) item;
@@ -136,6 +147,11 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public RangerFormChangeItem IsGlowing() {
 		IS_GLOWING=true;
+		return this;
+	}
+
+	public RangerFormChangeItem HasCape() {
+		HAS_CAPE=true;
 		return this;
 	}
 

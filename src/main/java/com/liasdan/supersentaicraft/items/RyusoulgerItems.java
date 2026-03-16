@@ -355,7 +355,7 @@ public class RyusoulgerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeRangerName("lupin_yellow"));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeRangerName("lupin_yellow"));
 
 	public static final DeferredItem<Item> LUPIN_BLUE_SOUL = ITEMS.register("lupin_blue_soul",
 			() -> new RyusoulItem(new Item.Properties(),0,"","ryusoul_blue","lupinranger_belt",
@@ -364,7 +364,7 @@ public class RyusoulgerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeRangerName("lupin_blue").addAlternative(LUPIN_YELLOW_SOUL.get()));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeRangerName("lupin_blue").addAlternative(LUPIN_YELLOW_SOUL.get()));
 
 	public static final DeferredItem<Item> LUPINRANGER_SOUL = ITEMS.register("lupinranger_soul",
 			() -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","ryusoul_red","lupinranger_belt",
@@ -373,7 +373,7 @@ public class RyusoulgerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeRangerName("lupin_red").addAlternative(LUPIN_BLUE_SOUL.get()).AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeRangerName("lupin_red").addAlternative(LUPIN_BLUE_SOUL.get()).AddToTabList(RangerTabs.RYUSOULGER));
 
 	public static final DeferredItem<Item> UNFINISHED_RYUSOUL_CALIBUR = ITEMS.register("unfinished_ryusoul_calibur",
     		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));

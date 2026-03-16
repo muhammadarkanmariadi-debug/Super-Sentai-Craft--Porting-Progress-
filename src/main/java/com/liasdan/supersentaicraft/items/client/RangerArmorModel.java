@@ -5,79 +5,74 @@ import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.cache.object.GeoBone;
+import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 
-	private static LivingEntity RIDER;
-	private EquipmentSlot slot;
+	public RangerArmorModel() {
+	}
 
-	public RangerArmorModel(LivingEntity livingEntity, EquipmentSlot equipmentSlot) {
-
-		RIDER =  livingEntity;
-		slot =  equipmentSlot;
+	@Override
+	public ResourceLocation getModelResource(RangerArmorItem animatable, @Nullable GeoRenderer<RangerArmorItem> renderer) {
+		if (renderer instanceof RangerArmorRenderer riderRenderer) {
+			LivingEntity RIDER = riderRenderer.GetEntity();
+			EquipmentSlot slot= riderRenderer.getCurrentSlot();
+			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem BELT) {
+				if (slot == EquipmentSlot.FEET)
+					return BELT.getBeltModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET), animatable, slot, RIDER);
+				else return BELT.getModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET), animatable, slot, RIDER);
+			}
+		}
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/ranger.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(RangerArmorItem animatable) {
-		if (slot== EquipmentSlot.FEET) {
-			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
-				RangerChangerItem BELT = ((RangerChangerItem)RIDER.getItemBySlot(EquipmentSlot.FEET).getItem()); 
-				
-				return BELT.getBeltModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot,RIDER);
-				
-			}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/rangerbelt.geo.json");
-		}else {
-			
-			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
-				RangerChangerItem BELT = ((RangerChangerItem)RIDER.getItemBySlot(EquipmentSlot.FEET).getItem()); 
-				
-				return BELT.getModelResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot,RIDER);
-				
-			}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/ranger.geo.json");
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/ranger.geo.json");
+	}
+
+	@Override
+	public ResourceLocation getTextureResource(RangerArmorItem animatable, @Nullable GeoRenderer<RangerArmorItem> renderer) {
+		if (renderer instanceof RangerArmorRenderer riderRenderer) {
+			LivingEntity RIDER = riderRenderer.GetEntity();
+			EquipmentSlot slot = riderRenderer.getCurrentSlot();
+			ItemStack BELT = RIDER.getItemBySlot(EquipmentSlot.FEET);
+			if (BELT.getItem() instanceof RangerChangerItem DRIVER && (slot == EquipmentSlot.FEET || DRIVER.isTransformed(RIDER))) {
+				return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/" + DRIVER.GET_TEXT(BELT, slot, RIDER, DRIVER.Rider) + ".png");
+			}
 		}
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/blank.png");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(RangerArmorItem animatable) {
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/blank.png");
+	}
 
 
-		String FORM="blank";
-		ItemStack BELT = RIDER.getItemBySlot(EquipmentSlot.FEET); 
-		if (BELT.getItem() instanceof RangerChangerItem) {
-			FORM=((RangerChangerItem) BELT.getItem()).GET_TEXT(BELT,slot,RIDER,((RangerChangerItem) BELT.getItem()).Rider );
-			if (slot == EquipmentSlot.FEET) {
+	@Override
+	public ResourceLocation getAnimationResource(RangerArmorItem animatable) {
+		return  ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
+	}
 
-				FORM=((RangerChangerItem) BELT.getItem()).GET_TEXT(BELT,slot ,RIDER,((RangerChangerItem) BELT.getItem()).Rider);
-			}else if ( ((RangerChangerItem) BELT.getItem()).HEAD.asItem()!=RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem()||
-					 ((RangerChangerItem) BELT.getItem()).TORSO.asItem()!=RIDER.getItemBySlot(EquipmentSlot.CHEST).getItem()||
-					 ((RangerChangerItem) BELT.getItem()).LEGS.asItem()!=RIDER.getItemBySlot(EquipmentSlot.LEGS).getItem()) {
-				 FORM="blank";
-			}
-	
+	@Override
+	public void setCustomAnimations(RangerArmorItem an, long instanceId, AnimationState<RangerArmorItem> state) {
 
+		Entity entity = state.getData(DataTickets.ENTITY);
+		if (entity instanceof LivingEntity RIDER) {
+			GeoBone cape = this.getAnimationProcessor().getBone("cape");
+
+			if (cape != null & RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)) < 0)
+				cape.setRotX(RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)));
 		}
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/"+FORM+".png");
 	}
-
-
-
-@Override
-public ResourceLocation getAnimationResource(RangerArmorItem animatable) {
-	if (slot== EquipmentSlot.FEET) {
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/rangerbelt.animation.json");
-	}else {
-		
-		if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
-			RangerChangerItem BELT = ((RangerChangerItem)RIDER.getItemBySlot(EquipmentSlot.FEET).getItem()); 
-			
-			return BELT.getAnimationResource(RIDER.getItemBySlot(EquipmentSlot.FEET),animatable,slot);
-			
-		}else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
-	}
-
-}
 }

@@ -43,7 +43,7 @@ public class LuPatRangerItems {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.LUPATRANGER));
+					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).HasCape().AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> BLUE_DIAL_FIGHTER = ITEMS.register("blue_dial_fighter",
 			() -> new VSVehicleItem(new Item.Properties(),0,"","lupin_blue","lupinranger_belt",
@@ -52,7 +52,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.LUPATRANGER));
+					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).HasCape().AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> YELLOW_DIAL_FIGHTER = ITEMS.register("yellow_dial_fighter",
 			() -> new VSVehicleItem(new Item.Properties(),0,"","lupin_yellow","lupinranger_belt",
@@ -61,7 +61,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.LUPATRANGER));
+					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).HasCape().AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> TRIGGER_MACHINE_ICHIGOU = ITEMS.register("ichigou_trigger_machine",
 			() -> new VSVehicleItem(new Item.Properties(),0,"","patren_1gou","patren_1gou_belt",
@@ -129,7 +129,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 3,true,false))
-					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddCompatibilityList(LUPINRANGER).ChangeRangerName("lupin").ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.LUPATRANGER));
+					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddCompatibilityList(LUPINRANGER).ChangeRangerName("lupin").HasCape().AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> SCISSOR_DIAL_FIGHTER = ITEMS.register("scissor_dial_fighter",
 			() -> new VSVehicleItem(new Item.Properties(),0,"lupat_scissor","lupin_red","blank",
@@ -167,7 +167,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 5,true,false),
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false))
-					.ChangeRangerName("patren_x").ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json"));
+					.ChangeRangerName("patren_x").HasCape());
 
 	public static final DeferredItem<Item> VICTORY_STRIKER = ITEMS.register("victory_striker",
 			() -> new VSVehicleItem(new Item.Properties(),0,"_super","lupin_red","lupinranger_belt",
@@ -180,7 +180,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 5,true,false),
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false))
-					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddCompatibilityList(LUPINSOUL).addAlternative(VICTORY_STRIKER_X.get()).ChangeModel("geo/black_knight.geo.json").ChangeAnimation("black_knight.animation.json").AddToTabList(RangerTabs.LUPATRANGER));
+					.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddCompatibilityList(LUPINSOUL).addAlternative(VICTORY_STRIKER_X.get()).HasCape().AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> SIREN_STRIKER_X = ITEMS.register("siren_striker_x",
 			() -> new VSVehicleItem(new Item.Properties(),0,"_super","lupin_x","lupin_x_belt",

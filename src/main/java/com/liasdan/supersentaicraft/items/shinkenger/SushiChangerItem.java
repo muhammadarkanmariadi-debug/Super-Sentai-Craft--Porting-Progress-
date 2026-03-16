@@ -1,15 +1,11 @@
 package com.liasdan.supersentaicraft.items.shinkenger;
 
-import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.items.GorangerItems;
-import com.liasdan.supersentaicraft.items.MaskmanItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.ShinkengerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorMaterial;
@@ -68,7 +64,7 @@ public class SushiChangerItem extends RangerChangerItem{
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
 	}
 	
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 		case HEAD ->{ 

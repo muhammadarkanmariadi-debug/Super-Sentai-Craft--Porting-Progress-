@@ -85,6 +85,9 @@ public class EffectCore {
 			() -> new LowGravityEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
 					.addAttributeModifier(Attributes.GRAVITY, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.low_gravity"), -0.1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
+	public static final Holder<MobEffect> GLIDE = EFFECT.register("glide",
+			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xd368fa));
+
 	public static final Holder<MobEffect> RED_BUSTER_WEAKNESS= EFFECT.register("red_buster_weakness",
 			() -> new RedBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
 
@@ -102,6 +105,9 @@ public class EffectCore {
 
 	public static final Holder<MobEffect> YELLOW_BUSTER_PC= EFFECT.register("yellow_buster_pc",
 			() -> new YellowBusterPCEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+
+	public static final Holder<MobEffect> NINJA_SMOKE= EFFECT.register("ninja_smoke",
+			() -> new NinjaSmokeEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
 
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);

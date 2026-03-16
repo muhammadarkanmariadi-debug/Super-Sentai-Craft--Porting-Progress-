@@ -26,9 +26,11 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
-public class RangerChangerItem extends RangerArmorItem{
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.animation.AnimationState;
 
-	public String armorNamePrefix;
+public class RangerChangerItem extends RangerArmorItem {
+
 	public RangerFormChangeItem Base_Form_Item;
 	private ArrayList<RangerFormChangeItem> Extra_Base_Form_Item;
 	public String Rider;
@@ -37,6 +39,9 @@ public class RangerChangerItem extends RangerArmorItem{
 	public Item LEGS; 
 	public int Num_Base_Form_Item = 1;
 	public String BELT_TEXT;
+
+	public int Unlimited_Textures = 0;
+	public int Unlimited_Belt_Textures = 0;
 
 	public Boolean Has_basic_belt_info = true;
 	public Boolean Show_belt_form_info = true;
@@ -51,14 +56,25 @@ public class RangerChangerItem extends RangerArmorItem{
 		HEAD=head.get();
 		TORSO=torso.get(); 
 		LEGS=legs.get();
+		GeoItem.registerSyncedAnimatable(this);
 
 	}
 
 	public boolean isTransformed(LivingEntity player) {
+		if (!(player.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem))return false;
 		return player.getItemBySlot(EquipmentSlot.HEAD).getItem()==HEAD.asItem()
 				&&player.getItemBySlot(EquipmentSlot.CHEST).getItem()==TORSO.asItem()
 				&&player.getItemBySlot(EquipmentSlot.LEGS).getItem()==LEGS.asItem()
 				&&player.getItemBySlot(EquipmentSlot.FEET).getItem()==this;
+	}
+
+	public static boolean isTransforming(LivingEntity player) {
+		if (!(player.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem))return false;
+		else if (player.getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
+			CompoundTag tag = player.getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).getUnsafe();
+			return tag.getDouble("is_transforming")!=0;
+		}
+		return false;
 	}
 
 	public static double getRenderType(ItemStack stack) {
@@ -72,19 +88,18 @@ public class RangerChangerItem extends RangerArmorItem{
 	public void beltTick(ItemStack stack, Level level, LivingEntity player, int slotId) {
 		if (stack.has(DataComponents.CUSTOM_DATA)) {
 			CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-			if (tag.getBoolean("Update_form")&&slotId==36) OnformChange(stack, player, tag);
-			if (!isTransformed(player)||slotId!=36) tag.putBoolean("Update_form", true);
-
+			if (tag.getBoolean("Update_form") && slotId == 36) OnformChange(stack, player, tag);
+			if (!isTransformed(player) || slotId != 36) tag.putBoolean("Update_form", true);
 			if (isTransformed(player)) tag.putDouble("render_type", getRenderType(stack));
 			if (!isTransformed(player)) tag.putDouble("render_type", 0);
-			if (tag.getDouble("is_transforming")!=0) tag.putDouble("is_transforming", tag.getDouble("is_transforming")-1);
-			if (tag.getDouble("is_transforming")<0) tag.putDouble("is_transforming", 0);
 
-			if (tag.getDouble("use_ability") != 0) tag.putDouble("use_ability", tag.getDouble("use_ability") - 1);
-			if (tag.getDouble("use_ability") < 0) tag.putDouble("use_ability", 0);
-			//if (!level.isClientSide)player.sendSystemMessage(Component.literal("SlotID=" + slotId));
+			if (!level.isClientSide) {
+				if (tag.getDouble("is_transforming") != 0)
+					tag.putDouble("is_transforming", tag.getDouble("is_transforming") - 1);
+				if (tag.getDouble("is_transforming") < 0) tag.putDouble("is_transforming", 0);
+			}
 
-		}else{
+		} else {
 			set_Update_Form(stack);
 		}
 	}
@@ -126,6 +141,8 @@ public class RangerChangerItem extends RangerArmorItem{
 			OnTransformation(itemstack,player);
 			Consumer<CompoundTag> data = form -> {
 				form.putBoolean("Update_form", false);
+				form.putDouble("is_transforming",30);
+				form.putFloat("cape", 0f);
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
 		}
@@ -180,6 +197,10 @@ public class RangerChangerItem extends RangerArmorItem{
 
 	}
 
+	public String getUnlimitedTextures(ItemStack itemstack, LivingEntity rider, String riderName ,int num)
+	{
+		return "blank";
+	}
 
 	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
@@ -195,6 +216,10 @@ public class RangerChangerItem extends RangerArmorItem{
 	public ResourceLocation getAnimationResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot) {
 
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_Animation());
+
+	}
+
+	public void setCustomAnimations(RangerArmorItem an, long instanceId, AnimationState<RangerArmorItem> state) {
 
 	}
 
@@ -283,7 +308,7 @@ public class RangerChangerItem extends RangerArmorItem{
 	{
 	}
 
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
 		case HEAD ->{ 
@@ -336,5 +361,12 @@ public class RangerChangerItem extends RangerArmorItem{
 			}
 		}
 		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+	}
+
+	public boolean HasCape(ItemStack itemstack) {
+		for (int n = 0; n < Num_Base_Form_Item; n++) {
+			if(get_Form_Item(itemstack, n + 1).get_has_cape())return true;
+		}
+		return false;
 	}
 }
