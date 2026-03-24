@@ -57,7 +57,6 @@ public class RangerChangerItem extends RangerArmorItem {
 		TORSO=torso.get(); 
 		LEGS=legs.get();
 		GeoItem.registerSyncedAnimatable(this);
-
 	}
 
 	public boolean isTransformed(LivingEntity player) {

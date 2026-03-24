@@ -73,6 +73,23 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 
 			if (cape != null & RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)) < 0)
 				cape.setRotX(RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)));
+
+			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
+				belt.setCustomAnimations(an, instanceId, state);
+
+				GeoBone gozyuger_logo = this.getAnimationProcessor().getBone("gozyuger_logo");
+				if (gozyuger_logo != null) {
+					if (RangerChangerItem.isTransforming(RIDER)) {
+						gozyuger_logo.setScaleX(40-RangerChangerItem.GetTransforming(RIDER.getItemBySlot(EquipmentSlot.FEET))/10);
+						gozyuger_logo.setScaleY(40-RangerChangerItem.GetTransforming(RIDER.getItemBySlot(EquipmentSlot.FEET))/10);
+						gozyuger_logo.setScaleZ(1f);
+
+						gozyuger_logo.setHidden(false);
+					}else {
+						gozyuger_logo.setHidden(true);
+					}
+				}
+			}
 		}
 	}
 }

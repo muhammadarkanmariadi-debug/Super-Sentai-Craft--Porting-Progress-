@@ -24,7 +24,7 @@ public class GoGoVItems {
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","go_red","go_red_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().SetShowFace().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> GO_RED_BADGE_KYOKO = ITEMS.register("go_red_badge_kyoko",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","go_red_kyoko","go_red_belt",
@@ -36,25 +36,25 @@ public class GoGoVItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","go_blue","go_blue_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().SetShowFace().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> GO_GREEN_BADGE = ITEMS.register("go_green_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","go_green","go_green_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().SetShowFace().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> GO_YELLOW_BADGE = ITEMS.register("go_yellow_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","go_yellow","go_yellow_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().SetShowFace().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> GO_PINK_BADGE = ITEMS.register("go_pink_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","go_pink","go_pink_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().SetShowFace().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> ZEEK_CRYSTAL_FRAGMENT = ITEMS.register("zeek_fragment",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","zeek","zeek_belt",

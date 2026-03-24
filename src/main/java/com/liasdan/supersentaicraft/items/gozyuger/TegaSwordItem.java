@@ -37,7 +37,8 @@ public class TegaSwordItem extends RangerChangerItem{
             if (this == GozyugerItems.LEON_TEGA_SWORD.get())
                 if (get_Form_Item(itemstack,1) == GozyugerItems.GOZYU_LEON_RING.get()) return rangerName+"_armor";
                 else return rangerName+"_armor2";
-            else return rangerName+"_armor";
+            if (get_Form_Item(itemstack,1) == GozyugerItems.WILD_GOZYU_WOLF_RING.get()) return "blank";
+			else return rangerName+"_armor";
         }
 
 		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);

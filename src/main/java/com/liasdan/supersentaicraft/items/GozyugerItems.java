@@ -36,9 +36,6 @@ public class GozyugerItems {
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
-					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
-						player.getX(), player.getY()+1,
-						player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
 							player.getZ(), 30, 0, 0, 0, 1);
@@ -56,15 +53,12 @@ public class GozyugerItems {
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
-					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
-							player.getX(), player.getY()+1,
-							player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GOZYUGER));
 
@@ -76,15 +70,12 @@ public class GozyugerItems {
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
-					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
-							player.getX(), player.getY()+1,
-							player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.YELLOW_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
-							player.getZ(), 100, 0, 0, 0, 1);
+							player.getZ(), 30, 0, 0, 0, 1);
 				}
 			}.AddToTabList(RangerTabs.GOZYUGER));
 
@@ -97,9 +88,6 @@ public class GozyugerItems {
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
 					super.OnTransformation(itemstack,player);
-					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
-							player.getX(), player.getY()+1,
-							player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
@@ -116,10 +104,6 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
 			{
 				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
-					super.OnTransformation(itemstack,player);
-					((ServerLevel) player.level()).sendParticles(ModParticles.GOZYUGER_PARTICLES.get(),
-							player.getX(), player.getY()+1,
-							player.getZ(), 1, 0, 0, 0, 1);
 					((ServerLevel) player.level()).sendParticles(ModParticles.BLACK_SPARK_PARTICLES.get(),
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
@@ -149,20 +133,39 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
 	 		.HasCape().AddToTabList(RangerTabs.GOZYUGER));
 
+	public static final DeferredItem<Item> WILD_GOZYU_WOLF_RING = ITEMS.register("wild_gozyu_wolf_ring",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_wild","gozyu_wolf","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 30, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GOLD_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 30, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.GOZYUGER));
+
 	public static final DeferredItem<Item> GORANGER_RING_GOZYU = ITEMS.register("goranger_ring_gozyu",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt_01",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-			.ChangeRangerName("akaranger").HasCape().AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("akaranger").HasCape());
 
 	public static final DeferredItem<Item> GORANGER_RING = ITEMS.register("goranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt_01",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
 			.ChangeRangerName("akaranger_gozyu").HasCape().addAlternative(GORANGER_RING_GOZYU.get())
-			.AddCompatibilityList(GOZYUGER).AddToTabList(RangerTabs.GOZYUGER));
+			.AddCompatibilityList(GOZYUGER).ChangeBeltModel("geo/gozyuger_belt.geo.json").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> JAKQ_RING = ITEMS.register("jakq_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -172,13 +175,30 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
 			.ChangeRangerName("spade_ace").HasCape().AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
+	public static final DeferredItem<Item> BATTLE_FEVER_RING_KILLER = ITEMS.register("battle_fever_ring_killer",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_killer","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
+			.ChangeRangerName("battle_japan"));
+
+	public static final DeferredItem<Item> BATTLE_FEVER_RING_GOZYU = ITEMS.register("battle_fever_ring_gozyu",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("battle_japan").addSwitchForm(BATTLE_FEVER_RING_KILLER.get()));
+
 	public static final DeferredItem<Item> BATTLE_FEVER_RING = ITEMS.register("battle_fever_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.ChangeRangerName("battle_japan").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("battle_japan").addAlternative(BATTLE_FEVER_RING_GOZYU.get())
+			.AddCompatibilityList(GOZYUGER).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> DENZIMAN_RING = ITEMS.register("denziman_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -322,10 +342,16 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.ChangeRangerName("red_racer").AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("red_racer").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> MEGARANGER_RING = ITEMS.register("megaranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
+			.ChangeRangerName("mega_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GINGAMAN_RING = ITEMS.register("gingaman_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -333,14 +359,14 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-					.ChangeRangerName("ginga_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+			.ChangeRangerName("ginga_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOGO_V_RING = ITEMS.register("gogo_v_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
                     new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
-                    .IsGlowing().ChangeRangerName("go_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+            .ChangeRangerName("go_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> TIMERANGER_RING = ITEMS.register("timeranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -357,8 +383,10 @@ public class GozyugerItems {
 			.ChangeRangerName("gao_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> HURRICANEGER_RING = ITEMS.register("hurricaneger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt")
-					.ChangeRangerName("hurricane_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false))
+			.ChangeRangerName("hurricane_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> ABARANGER_RING = ITEMS.register("abaranger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt_abaranger",
@@ -369,11 +397,38 @@ public class GozyugerItems {
 					new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false))
 			.ChangeRangerName("aba_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
+	public static final DeferredItem<Item> DEKARANGER_RING_ARMED = ITEMS.register("dekaranger_ring_armed",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_premier","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+			.ChangeRangerName("deka_red"));
+
+	public static final DeferredItem<Item> DEKARANGER_RING_GOZYU = ITEMS.register("dekaranger_ring_gozyu",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+			.ChangeRangerName("deka_red").addSwitchForm(DEKARANGER_RING_ARMED.get()));
+
 	public static final DeferredItem<Item> DEKARANGER_RING = ITEMS.register("dekaranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+			.ChangeRangerName("deka_red").AddCompatibilityList(GOZYUGER).addAlternative(DEKARANGER_RING_GOZYU.get()).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> MAGIRANGER_RING = ITEMS.register("magiranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false))
+			.ChangeRangerName("magi_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> BOUKENGER_RING = ITEMS.register("boukenger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","don_momotarou","gozyuger_belt",
@@ -429,7 +484,11 @@ public class GozyugerItems {
 			.ChangeRangerName("gosei_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GOKAIGER_RING = ITEMS.register("gokaiger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("gokai_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> GO_BUSTERS_RING = ITEMS.register("go_busters_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt_go_busters",
@@ -448,7 +507,12 @@ public class GozyugerItems {
 			.ChangeRangerName("kyoryu_red_gozyu").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> TOQGER_RING = ITEMS.register("toqger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("toq_1gou").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> NINNINGER_RING = ITEMS.register("ninninger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
@@ -474,13 +538,55 @@ public class GozyugerItems {
 			.ChangeRangerName("zyuoh_eagle").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> KYURANGER_RING = ITEMS.register("kyuranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.LUCK, 40, 2,true,false))
+			.ChangeRangerName("shishi_red").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+
+	public static final DeferredItem<Item> LUPINRANGER_RING_SUPER = ITEMS.register("lupinranger_ring_super",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_super","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 5,true,false),
+					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false))
+			.ChangeRangerName("lupin_red").HasCape().AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> LUPINRANGER_RING = ITEMS.register("lupinranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
+			.ChangeRangerName("lupin_red").HasCape().AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
+
+	public static final DeferredItem<Item> PATRANGER_RING_SUPER = ITEMS.register("patranger_ring_super",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_super","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 5,true,false))
+			.ChangeRangerName("patren_1gou").AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> PATRANGER_RING = ITEMS.register("patranger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
+					new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
+			.ChangeRangerName("patren_1gou").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> RYUSOULGER_RING = ITEMS.register("ryusoulger_ring",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt_ryusoulger",
@@ -507,15 +613,39 @@ public class GozyugerItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
             .ChangeRangerName("kiramei_red_gozyu").addAlternative(KIRAMEIGER_RING_GOZYU.get()).AddCompatibilityList(GOZYUGER).AddToTabList(RangerTabs.GOZYUGER));
 
+	public static final DeferredItem<Item> ZENKAIGER_RING_BLACK = ITEMS.register("zenkaiger_ring_black",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("zenkaizer_black"));
+
+	public static final DeferredItem<Item> ZENKAIGER_RING_GOZYU = ITEMS.register("zenkaiger_ring_gozyu",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("zenkaizer").addSwitchForm(ZENKAIGER_RING_BLACK.get()));
+
 	public static final DeferredItem<Item> ZENKAIGER_RING = ITEMS.register("zenkaiger_ring",
-			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt").AddToTabList(RangerTabs.GOZYUGER));
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","","gozyuger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			.ChangeRangerName("zenkaizer").addAlternative(ZENKAIGER_RING_GOZYU.get()).AddCompatibilityList(GOZYUGER).AddToTabList(RangerTabs.GOZYUGER));
 
     public static final DeferredItem<Item> DONBROTHERS_RING_GOZYU2 = ITEMS.register("donbrothers_ring_gozyu2",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"_pm","universe_senshi","gozyuger_belt",
                     new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-                    .ChangeRangerName("don_momotarou"));
+            .ChangeRangerName("don_momotarou"));
 
     public static final DeferredItem<Item> DONBROTHERS_RING_GOZYU = ITEMS.register("donbrothers_ring_gozyu",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","universe_senshi","gozyuger_belt",

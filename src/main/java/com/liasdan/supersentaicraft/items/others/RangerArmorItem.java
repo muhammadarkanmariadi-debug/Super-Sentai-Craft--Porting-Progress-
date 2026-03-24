@@ -161,7 +161,7 @@ public class RangerArmorItem extends ArmorItem implements GeoItem {
 
 				if (this instanceof RangerChangerItem belt) {
 
-					if (GetTransforming(player.getItemBySlot(EquipmentSlot.FEET)) > 0)setTransforming(player.getItemBySlot(EquipmentSlot.FEET),GetTransforming(player.getItemBySlot(EquipmentSlot.FEET))-0.2f);
+					if (GetTransforming(player.getItemBySlot(EquipmentSlot.FEET)) > 0) setTransforming(player.getItemBySlot(EquipmentSlot.FEET),GetTransforming(player.getItemBySlot(EquipmentSlot.FEET))-0.2f);
 					if (GetTransforming(player.getItemBySlot(EquipmentSlot.FEET)) < 0) setTransforming(player.getItemBySlot(EquipmentSlot.FEET),0f);
 
 					if (belt.HasCape(player.getItemBySlot(EquipmentSlot.FEET))) {
