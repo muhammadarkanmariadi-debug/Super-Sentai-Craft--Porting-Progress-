@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.OtherItems;
 
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -20,6 +22,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import software.bernie.geckolib.cache.GeckoLibCache;
 
 public class RangerFormChangeItem extends BaseItem {
 
@@ -45,6 +48,7 @@ public class RangerFormChangeItem extends BaseItem {
 	private Boolean HAS_NEED_ITEM_LIST = false;
 	public List<Item> needItemList;
 	private Boolean IS_GLOWING = false;
+	private Boolean HAS_STATIC_WINGS = false;
 
 	private RangerFormChangeItem NEED_FORM_SLOT_1;
 	private RangerFormChangeItem NEED_FORM_SLOT_2;
@@ -95,10 +99,11 @@ public class RangerFormChangeItem extends BaseItem {
 		return BELT_TEX;
 	}
 
-	public String get_Model() {
+	public String get_Model(String rangerName) {
 		if (UPDATED_MODEL!=null) return UPDATED_MODEL;
-		else if (HAS_CAPE) return "geo/black_knight.geo.json";
-		return "geo/ranger.geo.json";
+		else if (HAS_CAPE) return "rangercape.geo.json";
+		ResourceLocation FORM_MODEL = ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+getRangerName(rangerName)+FORM_NAME+".geo.json");
+		return (GeckoLibCache.getBakedModels().get(FORM_MODEL)!=null ? getRangerName(rangerName)+FORM_NAME+".geo.json" : (get_Has_Static_Wings() ? "rangerwing.geo.json" : "ranger.geo.json"));
 	}
 
 	public String getBeltModel() {
@@ -131,6 +136,10 @@ public class RangerFormChangeItem extends BaseItem {
 	}
 	public Boolean HasWingsIfFlying() {
 		return FLYING_TEXT;
+	}
+
+	public Boolean get_Has_Static_Wings() {
+		return HAS_STATIC_WINGS;
 	}
 
 	public Boolean get_has_cape() {

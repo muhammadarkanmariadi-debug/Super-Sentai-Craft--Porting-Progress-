@@ -102,10 +102,10 @@ public class VSChangerItem extends RangerChangerItem{
 		int num = 1;
 		if (slot == EquipmentSlot.HEAD)num=2;
 
-		if (get_Form_Item(itemstack,num).get_Model()=="geo/rangerwing.geo.json") {
+		if (get_Form_Item(itemstack,num).get_Model(this.Rider)=="geo/rangerwing.geo.json") {
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/rangerwing.geo.json");
 		}
-		else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+		else return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model(this.Rider));
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {

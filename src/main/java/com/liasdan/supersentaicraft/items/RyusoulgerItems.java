@@ -320,7 +320,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 5,true,false),
             		new MobEffectInstance(EffectCore.FROSTWALKER, 40, 0,true,false))
-			.addAlternative(HIEHIE_SOUL_2.get()).ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGER).AddToTabList(RangerTabs.RYUSOULGER));
+			.addAlternative(HIEHIE_SOUL_2.get()).ChangeSlot(2).BackToBase().ChangeModel("rangerwing.geo.json").ifFlyingModelResource("geo/rangerwing.geo.json").AddCompatibilityList(RYUSOULGER).AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> MAX_RYUSOUL = ITEMS.register("max_ryusoul",
             () -> new RyusoulItem(new Item.Properties().rarity(Rarity.RARE),0,"_max","ryusoul_red","ryusoul_red_belt",
@@ -340,7 +340,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.REGENERATION, 40, 5,true,false))
-            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGER).ChangeModel("geo/noblesse.geo.json"));
+            .ChangeSlot(2).BackToBase().AddCompatibilityList(RYUSOULGER).ChangeModel("noblesse.geo.json"));
     
 	public static final DeferredItem<Item> SHIAWASE_SOUL = ITEMS.register("shiawase_soul",
     		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.RYUSOULGER));

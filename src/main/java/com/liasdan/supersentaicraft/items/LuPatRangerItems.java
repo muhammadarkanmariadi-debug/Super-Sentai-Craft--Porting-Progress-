@@ -136,7 +136,7 @@ public class LuPatRangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2,true,false))
-					.ChangeSlot(2).BackToBase().ChangeModel("geo/rangerwing.geo.json").AddCompatibilityList(LUPAT).AddToTabList(RangerTabs.LUPATRANGER));
+					.ChangeSlot(2).BackToBase().ChangeModel("rangerwing.geo.json").AddCompatibilityList(LUPAT).AddToTabList(RangerTabs.LUPATRANGER));
 
 	public static final DeferredItem<Item> MAGIC_DIAL_FIGHTER = ITEMS.register("magic_dial_fighter",
 			() -> new VSVehicleItem(new Item.Properties(),0,"lupat_magic","lupin_red","blank",

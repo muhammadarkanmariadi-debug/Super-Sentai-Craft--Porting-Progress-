@@ -1,13 +1,17 @@
 package com.liasdan.supersentaicraft.items.gingaman;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.GingamanItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
+import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -69,6 +73,13 @@ public class GingaBraceItem extends RangerChangerItem{
 		else if (equipmentSlot == EquipmentSlot.HEAD) return rangerName+get_Form_Item(itemstack,2).getFormName(fly);
 
 		else return rangerName+get_Form_Item(itemstack,1).getFormName(fly);
+	}
+
+	public ResourceLocation getModelResource(ItemStack itemstack, RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		int num = 1;
+		if (slot == EquipmentSlot.HEAD)num=2;
+
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model(this.Rider));
 	}
 	
 	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {

@@ -80,12 +80,14 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 				GeoBone gozyuger_logo = this.getAnimationProcessor().getBone("gozyuger_logo");
 				if (gozyuger_logo != null) {
 					if (RangerChangerItem.isTransforming(RIDER)) {
-						gozyuger_logo.setScaleX(40-RangerChangerItem.GetTransforming(RIDER.getItemBySlot(EquipmentSlot.FEET))/10);
-						gozyuger_logo.setScaleY(40-RangerChangerItem.GetTransforming(RIDER.getItemBySlot(EquipmentSlot.FEET))/10);
+						float size = RangerChangerItem.GetTransforming(RIDER.getItemBySlot(EquipmentSlot.FEET))/40;
+						gozyuger_logo.setScaleX(1-size);
+						gozyuger_logo.setScaleY(1-size);
 						gozyuger_logo.setScaleZ(1f);
 
 						gozyuger_logo.setHidden(false);
-					}else {
+					}
+					else {
 						gozyuger_logo.setHidden(true);
 					}
 				}

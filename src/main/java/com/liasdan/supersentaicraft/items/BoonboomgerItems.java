@@ -8,8 +8,11 @@ import com.liasdan.supersentaicraft.items.boonboomger.BoonboomControllerItem;
 import com.liasdan.supersentaicraft.items.boonboomger.ZoonzoomShokaBlasterItem;
 import com.liasdan.supersentaicraft.items.gozyuger.TegaSwordItem;
 import com.liasdan.supersentaicraft.items.others.*;
+import com.liasdan.supersentaicraft.particle.ModParticles;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -31,7 +34,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_OFFROAD = ITEMS.register("boonboom_offroad",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_blue","boonboomger_belt",
@@ -39,7 +49,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_WAGON = ITEMS.register("boonboom_wagon",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_pink","boonboomger_belt",
@@ -47,7 +64,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.PINK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_PATCAR_1 = ITEMS.register("boonboom_patcar_1",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","bun_black","boonboomger_belt_2",
@@ -55,7 +79,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLACK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_PATCAR_2 = ITEMS.register("boonboom_patcar_2",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,15));
@@ -66,7 +97,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.ORANGE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,25));
 
 	public static final DeferredItem<Item> BOONBOOM_DOZER = ITEMS.register("boonboom_dozer",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,15));
@@ -89,7 +127,14 @@ public class BoonboomgerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,20));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.PURPLE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,20));
 
 	public static final DeferredItem<Item> BOONBOOM_SHOUBOUSHA = ITEMS.register("boonboom_shoubousha",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.BOONBOOMGER).AddToList(BoonboomCarProgrammer.BOONBOOM_CAR,5));

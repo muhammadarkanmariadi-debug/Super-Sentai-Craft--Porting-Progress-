@@ -75,7 +75,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-            .HasCape().ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
+            .HasCape().ChangeModel("black_knight.geo.json").ChangeBeltModel("geo/black_knight_belt.geo.json").AddToTabList(RangerTabs.GINGAMAN));
     
     public static final DeferredItem<Item> GINGA_NO_HIKARI = ITEMS.register("lights_of_ginga",
             () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.RARE),0,"_beast_armor_shine","ginga_red","beast_armor_shine_belt",
@@ -83,7 +83,7 @@ public class GingamanItems {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 400, 3,true,false))
-            .ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json")
+            .ChangeSlot(2).ChangeBeltModel("geo/rangerbeltextra.geo.json").ChangeModel("gingaman_juusoukou.geo.json")
             .AddCompatibilityList(new String[] {"ginga_green","ginga_blue","ginga_yellow","ginga_pink"}).AddToTabList(RangerTabs.GINGAMAN));
     
     public static final DeferredItem<Item> GINGAMAN_HELMET = ITEMS.register("gingaman_head",

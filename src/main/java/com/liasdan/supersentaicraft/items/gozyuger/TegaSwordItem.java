@@ -34,10 +34,12 @@ public class TegaSwordItem extends RangerChangerItem{
 				return "belts/"+belt;
 		}
 		else if (equipmentSlot == EquipmentSlot.HEAD) {
+			if (get_Form_Item(itemstack,1) == GozyugerItems.WILD_GOZYU_WOLF_RING.get()) return "blank";
+			if (get_Form_Item(itemstack,1) == GozyugerItems.RYOU_TEGA_SWORD_RING.get()) return "blank";
+			if (get_Form_Item(itemstack,2) == GozyugerItems.RYOU_TEGA_SWORD_RING_OTHERS.get()) return "gozyu_tega_sword";
             if (this == GozyugerItems.LEON_TEGA_SWORD.get())
                 if (get_Form_Item(itemstack,1) == GozyugerItems.GOZYU_LEON_RING.get()) return rangerName+"_armor";
                 else return rangerName+"_armor2";
-            if (get_Form_Item(itemstack,1) == GozyugerItems.WILD_GOZYU_WOLF_RING.get()) return "blank";
 			else return rangerName+"_armor";
         }
 
@@ -49,9 +51,9 @@ public class TegaSwordItem extends RangerChangerItem{
 		if (slot == EquipmentSlot.HEAD)num=2;
 
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
-			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_FlyingModel());
 		}else
-			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model(this.Rider));
 
 	}
 

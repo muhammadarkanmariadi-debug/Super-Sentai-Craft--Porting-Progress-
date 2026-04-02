@@ -4,8 +4,11 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.items.goranger.GorangerBeltItem;
 import com.liasdan.supersentaicraft.items.others.*;
+import com.liasdan.supersentaicraft.particle.ModParticles;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -23,7 +26,16 @@ public class BattleFeverItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}
+	);
 
 	public static final DeferredItem<Item> JAPAN_BADGE = ITEMS.register("japan_badge",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","battle_japan","battle_japan_belt",
@@ -31,27 +43,59 @@ public class BattleFeverItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addSwitchForm(JAPAN_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.RED_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.addSwitchForm(JAPAN_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
 
 	public static final DeferredItem<Item> COSSACK_BADGE_ORIGINAL = ITEMS.register("cossack_badge_original",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_original","battle_cossack","battle_cossack_belt_o",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.ORANGE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}
+	);
 
 	public static final DeferredItem<Item> COSSACK_BADGE = ITEMS.register("cossack_badge",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","battle_cossack","battle_cossack_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addSwitchForm(COSSACK_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.ORANGE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.addSwitchForm(COSSACK_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
 
 	public static final DeferredItem<Item> FRANCE_BADGE_EARLY = ITEMS.register("france_badge_early",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_early","battle_france","battle_france_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}
+	);
 
 	public static final DeferredItem<Item> FRANCE_BADGE_ORIGINAL = ITEMS.register("france_badge_original",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_original","battle_france","battle_france_belt_o",
@@ -59,7 +103,14 @@ public class BattleFeverItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addNeedForm(FRANCE_BADGE_EARLY.get(),1).addAlternative(FRANCE_BADGE_EARLY.get()));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.addNeedForm(FRANCE_BADGE_EARLY.get(),1).addAlternative(FRANCE_BADGE_EARLY.get()));
 
 	public static final DeferredItem<Item> FRANCE_BADGE = ITEMS.register("france_badge",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","battle_france","battle_france_belt",
@@ -67,14 +118,33 @@ public class BattleFeverItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addNeedForm(FRANCE_BADGE_ORIGINAL.get(),1).addAlternative(FRANCE_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLUE_MORPHIN_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.addNeedForm(FRANCE_BADGE_ORIGINAL.get(),1).addAlternative(FRANCE_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
 
 	public static final DeferredItem<Item> KENYA_BADGE_ORIGINAL = ITEMS.register("kenya_badge_original",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_original","battle_kenya","battle_kenya_belt_o",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLACK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 50, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 50, 0, 0, 0, 1);
+				}
+			}
+	);
 
 	public static final DeferredItem<Item> KENYA_BADGE = ITEMS.register("kenya_badge",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","battle_kenya","battle_kenya_belt",
@@ -82,14 +152,33 @@ public class BattleFeverItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addSwitchForm(KENYA_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.BLACK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 50, 0, 0, 0, 1);
+					((ServerLevel) player.level()).sendParticles(ModParticles.GREEN_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 50, 0, 0, 0, 1);
+				}
+			}.addSwitchForm(KENYA_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
 
 	public static final DeferredItem<Item> AMERICA_BADGE_ORIGINAL = ITEMS.register("america_badge_original",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_original","miss_america","miss_america_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.PINK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}
+	);
 
 	public static final DeferredItem<Item> AMERICA_BADGE = ITEMS.register("america_badge",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","miss_america","miss_america_belt",
@@ -97,7 +186,14 @@ public class BattleFeverItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-			.addSwitchForm(AMERICA_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
+			{
+				public void OnTransformation(ItemStack itemstack, LivingEntity player) {
+					super.OnTransformation(itemstack,player);
+					((ServerLevel) player.level()).sendParticles(ModParticles.PINK_SPARK_PARTICLES.get(),
+							player.getX(), player.getY()+1,
+							player.getZ(), 100, 0, 0, 0, 1);
+				}
+			}.addSwitchForm(AMERICA_BADGE_ORIGINAL.get()).AddToTabList(RangerTabs.BATTLE_FEVER));
 	
 	public static final DeferredItem<Item> BATTLE_FEVER_HELMET = ITEMS.register("battle_fever_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.BATTLE_FEVER).ChangeRepairItem(BATTLE_FEVER_LOGO.get()));

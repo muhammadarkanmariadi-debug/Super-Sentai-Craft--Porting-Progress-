@@ -98,9 +98,9 @@ public class MosaChangerItem extends RangerChangerItem{
 		if (slot == EquipmentSlot.HEAD)num=2;
 
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
-			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_FlyingModel());
 		}else
-			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model(this.Rider));
 
 	}
 	
