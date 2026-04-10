@@ -131,8 +131,10 @@ public class RangerFormChangeItem extends BaseItem {
 		return (OVERRIDE_RANGER_NAME!=null ? OVERRIDE_RANGER_NAME : name);
 	}
 
-	public String get_FlyingModel() {
-		return FLYING_MODEL;
+	public String get_FlyingModel(String riderName) {
+		if (FLYING_MODEL!=null) return FLYING_MODEL;
+		ResourceLocation FORM_MODEL = ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+getRangerName(riderName)+FORM_NAME+"_wing.geo.json");
+		return (GeckoLibCache.getBakedModels().get(FORM_MODEL)!=null ? getRangerName(riderName)+FORM_NAME+"_wing.geo.json" : "rangerwing.geo.json");
 	}
 	public Boolean HasWingsIfFlying() {
 		return FLYING_TEXT;

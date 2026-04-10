@@ -97,7 +97,7 @@ public class RangerTabs {
 					.title(Component.translatable("tab.supersentaicraft.gozyuger")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> GavanInfinityTab = CREATIVE_MODE_TABS.register("ssc051", () ->
-			CreativeModeTab.builder().icon(() -> new ItemStack(GavanInfinityItems.GAVAN_INFINITY_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/base_tab_items.png"))
+			CreativeModeTab.builder().icon(() -> new ItemStack(GavanInfinityItems.GAVAN_INFINITY_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_gavan_infinity_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.gavan_infinity")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->

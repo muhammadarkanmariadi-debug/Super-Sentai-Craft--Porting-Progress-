@@ -2,6 +2,7 @@ package com.liasdan.supersentaicraft.items.boonboomger;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.BoonboomgerItems;
+import com.liasdan.supersentaicraft.items.GaorangerItems;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
@@ -10,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +26,25 @@ public class BoonboomChangerItem extends RangerChangerItem{
 	{
 		super(material, rider, baseFormItem, head, torso, legs, properties);
 		Has_basic_belt_info=false;
+	}
+
+	@Override
+	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName)
+	{
+		boolean fly = rider instanceof Player player && player.getAbilities().flying;
+
+		if (equipmentSlot == EquipmentSlot.FEET) {
+			String belt = ((RangerChangerItem)itemstack.getItem()).BELT_TEXT;
+			if (!isTransformed(rider)) {
+				if (get_Form_Item(itemstack, 1).getBeltTex()=="boonboomger_belt") belt = "boonboom_changer";
+				else belt = "blank";
+			}
+			if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {
+				belt = get_Form_Item(itemstack,1).getBeltTex();
+			}
+			return "belts/"+belt;
+		}
+		else return get_Form_Item(itemstack,1).getRangerName(riderName)+get_Form_Item(itemstack,1).getFormName(fly);
 	}
 
 	@Override

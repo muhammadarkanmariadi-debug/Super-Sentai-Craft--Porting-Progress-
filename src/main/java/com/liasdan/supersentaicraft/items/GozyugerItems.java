@@ -609,7 +609,7 @@ public class GozyugerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 2,true,false),
 					new MobEffectInstance(EffectCore.FLYING, 40, 2,true,false))
-			.addSwitchForm(ZYUOHGER_RING_GORILLA.get()).ifFlyingModelResource("geo/rangerwing.geo.json")
+			.addSwitchForm(ZYUOHGER_RING_GORILLA.get()).ifFlyingModelResource(null)
 			.ChangeRangerName("zyuoh_eagle").ChangeBeltModel("geo/gozyuger_belt.geo.json").AddCompatibilityList(GOZYUGERS).AddToTabList(RangerTabs.GOZYUGER));
 
 	public static final DeferredItem<Item> KYURANGER_RING = ITEMS.register("kyuranger_ring",
