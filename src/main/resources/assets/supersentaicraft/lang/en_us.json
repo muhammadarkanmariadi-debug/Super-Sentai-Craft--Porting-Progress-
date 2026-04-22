@@ -33,6 +33,9 @@
   "effect.supersentaicraft.wide": "Wide",
   "effect.supersentaicraft.low_gravity": "Low Gravity",
 
+  "key.supersentaicraft.ability": "Use an Ability",
+  "key.supersentaicraft.pose": "Do a Pose",
+
   "entity.supersentaicraft.zolder": "Zolders",
   "item.supersentaicraft.zolder_spawn_egg": "Zolders Spawn Egg",
 

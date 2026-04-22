@@ -4,7 +4,7 @@ package com.liasdan.supersentaicraft.items.others;
 import java.util.List;
 
 
-
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 public class BaseItem extends Item {
@@ -25,6 +25,10 @@ public class BaseItem extends Item {
 	public BaseItem KeepItem() {
 		craftingRemainingItem=this;
 		return this;
+	}
+
+	public boolean is(TagKey<Item> tag) {
+		return this.builtInRegistryHolder().is(tag);
 	}
 	
 	@SuppressWarnings("deprecation")

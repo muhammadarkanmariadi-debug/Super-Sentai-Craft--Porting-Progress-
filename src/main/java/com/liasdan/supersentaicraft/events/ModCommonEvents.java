@@ -13,6 +13,7 @@ import com.liasdan.supersentaicraft.entity.footsoldier.*;
 import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
+import com.liasdan.supersentaicraft.network.payload.PoseKeyPayload;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
@@ -49,6 +50,7 @@ public class ModCommonEvents {
 		public void clientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().player != null) {
 				while (KeyBindings.INSTANCE.AbilityKey.consumeClick()) PacketDistributor.sendToServer(new AbilityKeyPayload(0));
+				while (KeyBindings.INSTANCE.PoseKey.consumeClick()) PacketDistributor.sendToServer(new PoseKeyPayload(0));
 			}
 		}
 

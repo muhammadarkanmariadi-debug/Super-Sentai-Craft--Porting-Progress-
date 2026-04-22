@@ -20,9 +20,11 @@ import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
 import com.liasdan.supersentaicraft.network.ServerPayloadHandler;
 import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
+import com.liasdan.supersentaicraft.network.payload.PoseKeyPayload;
 import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.liasdan.supersentaicraft.util.RegisterItemProperties;
+import com.liasdan.supersentaicraft.world.attributeGenerator;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -118,6 +120,7 @@ public class SuperSentaiCraftCore {
 
 		RangerBlocks.register(modEventBus);
 
+		attributeGenerator.ATTRIBUTES.register(modEventBus);
 		MobsCore.register(modEventBus);
 		MobsCore.MOBLIST.register(modEventBus);
 		MobsItems.register(modEventBus);
@@ -298,6 +301,7 @@ public class SuperSentaiCraftCore {
 		@SubscribeEvent
 		public static void registerKeys(RegisterKeyMappingsEvent event) {
 			event.register(KeyBindings.INSTANCE.AbilityKey);
+			event.register(KeyBindings.INSTANCE.PoseKey);
 		}
 
 		@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
@@ -310,6 +314,12 @@ public class SuperSentaiCraftCore {
 						AbilityKeyPayload.TYPE,
 						AbilityKeyPayload.STREAM_CODEC,
 						ServerPayloadHandler::handleAbilityKeyPress
+				);
+
+				registrar.playToServer(
+						PoseKeyPayload.TYPE,
+						PoseKeyPayload.STREAM_CODEC,
+						ServerPayloadHandler::handlePoseKeyPress
 				);
 			}
 		}

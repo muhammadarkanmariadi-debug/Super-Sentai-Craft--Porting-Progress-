@@ -1,23 +1,20 @@
 {
 	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
-	"parent": "item/handheld",
+	"parent": "item/generated",
 	"textures": {
-		"layer0": "supersentaicraft:item/aba_laser"
+		"layer0": "supersentaicraft:item/kings_weapon_bow"
 	},
 	"gui_light": "front",
-	"overrides": [
-		{"predicate": {"change": 1}, "model": "supersentaicraft:item/aba_laser_gun"}
-	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, -90, 55],
-			"translation": [0, 3.75, 1],
+			"rotation": [0, -90, 45],
+			"translation": [3, -1.75, 1],
 			"scale": [1.7, 1.7, 0.85]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, 90, -55],
-			"translation": [0, 3.75, 1],
+			"rotation": [0, 90, -45],
+			"translation": [3, -1.75, 1],
 			"scale": [1.7, 1.7, 0.85]
 		},
 		"firstperson_righthand": {
@@ -33,10 +30,6 @@
 		"ground": {
 			"translation": [0, 2, 0],
 			"scale": [0.5, 0.5, 0.5]
-		},
-		"gui": {
-			"translation": [-2.75, -2.75, 0],
-			"scale": [1.35, 1.35, 1]
 		},
 		"head": {
 			"translation": [0, 13, 7]

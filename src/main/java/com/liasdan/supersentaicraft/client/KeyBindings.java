@@ -16,6 +16,13 @@ public class KeyBindings {
             InputConstants.getKey(InputConstants.KEY_V, -1),
             CATEGORY
     );
+
+    public final KeyMapping PoseKey = new KeyMapping(
+            "key."+ SuperSentaiCraftCore.MODID +".pose",
+            KeyConflictContext.IN_GAME,
+            InputConstants.getKey(InputConstants.KEY_G, -1),
+            CATEGORY
+    );
 }
 
 
