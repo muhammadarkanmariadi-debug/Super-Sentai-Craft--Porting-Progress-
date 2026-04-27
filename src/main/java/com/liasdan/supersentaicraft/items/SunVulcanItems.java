@@ -41,21 +41,21 @@ public class SunVulcanItems {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 2,true,false),
-            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
+            		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
 
 	public static final DeferredItem<Item> VUL_SHARK_SYMBOL = ITEMS.register("vul_shark_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","vul_shark","vul_shark_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
 
 	public static final DeferredItem<Item> VUL_PANTHER_SYMBOL = ITEMS.register("vul_panther_medal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","vul_panther","vul_panther_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.PUNCH, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.SUN_VULCAN));
 	
 	public static final DeferredItem<Item> SUN_VULCAN_HELMET = ITEMS.register("sun_vulcan_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.SUN_VULCAN).ChangeRepairItem(SUN_VULCAN_LOGO.get()));

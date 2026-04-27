@@ -113,6 +113,7 @@ public class SuperSentaiCraftCore {
 
 		LuPatRangerItems.register(modEventBus);
 		RyusoulgerItems.register(modEventBus);
+		KingOhgerItems.register(modEventBus);
 		BoonboomgerItems.register(modEventBus);
 		GozyugerItems.register(modEventBus);
 

@@ -23,7 +23,7 @@ public class CarrangerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
+			.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> BLUE_RACER_BADGE = ITEMS.register("blue_racer_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","blue_racer","carranger_belt",
@@ -31,7 +31,7 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
+					.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> GREEN_RACER_BADGE = ITEMS.register("green_racer_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","green_racer","carranger_belt",
@@ -39,7 +39,7 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
+					.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> YELLOW_RACER_BADGE = ITEMS.register("yellow_racer_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","yellow_racer","carranger_belt",
@@ -47,7 +47,7 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
+					.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> PINK_RACER_BADGE = ITEMS.register("pink_racer_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","pink_racer","carranger_belt",
@@ -55,7 +55,7 @@ public class CarrangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
+					.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.CARRANGER));
 
 	public static final DeferredItem<Item> WHITE_RACER_BADGE = ITEMS.register("white_racer_badge",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","white_racer","white_racer_belt",

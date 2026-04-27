@@ -23,31 +23,31 @@ public class MaskmanItems {
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","red_mask","maskman_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
 
 	public static final DeferredItem<Item> BLACK_AURA_POWER = ITEMS.register("black_aura_power",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","black_mask","maskman_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
 
 	public static final DeferredItem<Item> BLUE_AURA_POWER = ITEMS.register("blue_aura_power",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","blue_mask","maskman_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
 
 	public static final DeferredItem<Item> YELLOW_AURA_POWER = ITEMS.register("yellow_aura_power",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","yellow_mask","maskman_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
 
 	public static final DeferredItem<Item> PINK_AURA_POWER = ITEMS.register("pink_aura_power",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","pink_mask","maskman_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.MASKMAN));
     
 	public static final DeferredItem<Item> X1_AURA_POWER = ITEMS.register("x1_aura_power",
             () -> new RangerFormChangeItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","x1_mask","x1_mask_belt",

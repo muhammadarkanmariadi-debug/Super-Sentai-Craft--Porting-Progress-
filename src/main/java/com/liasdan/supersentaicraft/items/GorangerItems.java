@@ -35,7 +35,7 @@ public class GorangerItems {
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
 			}
-            .HasCape().ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GORANGER));
+            .HasCape().ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GORANGER));
 
 	public static final DeferredItem<Item> AO_STAR = ITEMS.register("ao_star",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","aoranger","aoranger_belt",
@@ -126,7 +126,7 @@ public class GorangerItems {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.BOOST, 40, 2,true,false))
-            .HasCape().ChangeBeltModel("geo/rangerbeltextra.geo.json")
+            .HasCape().ChangeBeltModel("rangerbeltextra.geo.json")
             .addAlternative(AORANGER_MANGA.get()).addAlternative(KIRANGER_MANGA.get()).addAlternative(MOMORANGER_MANGA.get()).addAlternative(MIDORANGER_MANGA.get())
             .AddToTabList(RangerTabs.GORANGER));
 	

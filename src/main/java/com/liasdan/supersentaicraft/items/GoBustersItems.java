@@ -53,7 +53,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
 	public static final DeferredItem<Item> BLUE_ENETRON = ITEMS.register("blue_enetron",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","blue_buster","go_busters_belt",
@@ -74,7 +74,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
 	public static final DeferredItem<Item> YELLOW_ENETRON = ITEMS.register("yellow_enetron",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","yellow_buster","go_busters_belt",
@@ -95,7 +95,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,25));
 
 	public static final DeferredItem<Item> GOLD_ENETRON = ITEMS.register("gold_enetron",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","beet_buster","beet_buster_belt",
@@ -158,7 +158,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR_R = ITEMS.register("custom_visor_r",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","yellow_rabbit","go_busters_belt_pc",
@@ -172,7 +172,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json"));
+			}.ChangeBeltModel("rangerbelt1.geo.json"));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR_G = ITEMS.register("custom_visor_g",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","blue_gorilla","go_busters_belt_pc",
@@ -186,7 +186,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_R.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+			}.addAlternative(CUSTOM_VISOR_R.get()).ChangeBeltModel("rangerbelt1.geo.json"));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR_C = ITEMS.register("custom_visor_c",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_animal_perfect","red_cheetah","go_busters_belt_pc",
@@ -200,7 +200,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_G.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+			}.addAlternative(CUSTOM_VISOR_G.get()).ChangeBeltModel("rangerbelt1.geo.json"));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR_Y = ITEMS.register("custom_visor_y",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","yellow_buster","go_busters_belt_pc",
@@ -223,7 +223,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_C.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+			}.addAlternative(CUSTOM_VISOR_C.get()).ChangeBeltModel("rangerbelt1.geo.json"));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR_B = ITEMS.register("custom_visor_b",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","blue_buster","go_busters_belt_pc",
@@ -244,7 +244,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_Y.get()).ChangeBeltModel("geo/rangerbelt1.geo.json"));
+			}.addAlternative(CUSTOM_VISOR_Y.get()).ChangeBeltModel("rangerbelt1.geo.json"));
 
 	public static final DeferredItem<Item> CUSTOM_VISOR = ITEMS.register("custom_visor",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_powered_custom","red_buster","go_busters_belt_pc",
@@ -266,7 +266,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, -0.5, 0, 1);
 				}
-			}.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,5));
+			}.addAlternative(CUSTOM_VISOR_B.get()).ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS).AddToList(MiniatureEnetronTank.ENETRON,5));
 
 	public static final DeferredItem<Item> CHEETAH_ANIMAL_DISK = ITEMS.register("cheetah_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","red_cheetah","go_busters_belt",
@@ -280,7 +280,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> GORILLA_ANIMAL_DISK = ITEMS.register("gorilla_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","blue_gorilla","go_busters_belt",
@@ -294,7 +294,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> RABBIT_ANIMAL_DISK = ITEMS.register("rabbit_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","yellow_rabbit","go_busters_belt",
@@ -308,7 +308,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> BEETLE_ANIMAL_DISK = ITEMS.register("beetle_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gold_beetle","beet_buster_belt",
@@ -356,7 +356,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> PUMA_ANIMAL_DISK = ITEMS.register("puma_animal_disk",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","black_puma","black_puma_belt",
@@ -370,7 +370,7 @@ public class GoBustersItems {
 							player.getX(), player.getY()+1,
 							player.getZ(), 100, 0, 0, 0, 1);
 				}
-			}.ChangeBeltModel("geo/rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
+			}.ChangeBeltModel("rangerbelt1.geo.json").AddToTabList(RangerTabs.GO_BUSTERS));
 
 	public static final DeferredItem<Item> GO_BUSTERS_HELMET = ITEMS.register("go_busters_head",
             () -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.GO_BUSTERS).ChangeRepairItem(ENETRON.get()));

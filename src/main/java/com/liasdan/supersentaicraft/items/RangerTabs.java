@@ -88,6 +88,10 @@ public class RangerTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(RyusoulgerItems.RYUSOULGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_ryusoulger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.ryusoulger")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> KingOhgerTab = CREATIVE_MODE_TABS.register("ssc047", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(KingOhgerItems.KING_OHGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_king_ohger_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.king_ohger")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> BoonboomgerTab = CREATIVE_MODE_TABS.register("ssc048", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(BoonboomgerItems.BOONBOOMGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_boonboomger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.boonboomger")).build());
@@ -128,6 +132,7 @@ public class RangerTabs {
 
 	public static List<Item> LUPATRANGER= new ArrayList<Item>();
 	public static List<Item> RYUSOULGER= new ArrayList<Item>();
+	public static List<Item> KING_OHGER= new ArrayList<Item>();
 	public static List<Item> BOONBOOMGER= new ArrayList<Item>();
 	public static List<Item> GOZYUGER= new ArrayList<Item>();
 
@@ -244,6 +249,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.RYUSOULGER.size(); i++)
 			{
 				event.accept( RangerTabs.RYUSOULGER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.KingOhgerTab.get()) {
+			for (int i = 0; i < RangerTabs.KING_OHGER.size(); i++)
+			{
+				event.accept( RangerTabs.KING_OHGER.get(i));
 			}
 
 		}

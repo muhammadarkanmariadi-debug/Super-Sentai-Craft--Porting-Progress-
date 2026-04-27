@@ -50,14 +50,14 @@ public class GaorangerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
-					.addAlternative(GAO_LION_JEWEL_KING.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					.addAlternative(GAO_LION_JEWEL_KING.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_EAGLE_JEWEL = ITEMS.register("gao_eagle_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_yellow","gao_yellow_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_SHARK_JEWEL_KING = ITEMS.register("gao_shark_jewel_king",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_shark","gao_king","blank")
@@ -69,7 +69,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false))
-					.addAlternative(GAO_SHARK_JEWEL_KING.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					.addAlternative(GAO_SHARK_JEWEL_KING.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_BISON_JEWEL_KING = ITEMS.register("gao_bison_jewel_king",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_bison","gao_king","blank")
@@ -85,7 +85,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
 					.addAlternative(GAO_BISON_JEWEL_KING.get()).addAlternative(GAO_BISON_JEWEL_OTHERS.get())
-					.ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					.ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_TIGER_JEWEL_KING = ITEMS.register("gao_tiger_jewel_king",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_tiger","gao_king","blank")
@@ -96,7 +96,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-					.addAlternative(GAO_TIGER_JEWEL_KING.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					.addAlternative(GAO_TIGER_JEWEL_KING.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_WOLF_JEWEL_KING = ITEMS.register("gao_wolf_jewel_king",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_wolf","gao_king","blank")
@@ -108,7 +108,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-					.addAlternative(GAO_WOLF_JEWEL_KING.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					.addAlternative(GAO_WOLF_JEWEL_KING.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_ELEPHANT_JEWEL = ITEMS.register("gao_elephant_jewel",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.GAORANGER));
@@ -148,7 +148,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false)).ChangeBeltModel("geo/gao_hunter.geo.json"));
+					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false)).ChangeBeltModel("gao_hunter.geo.json"));
 
 	public static final DeferredItem<Item> GAO_LIGATOR_JEWEL = ITEMS.register("gao_ligator_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_hunter", "ligator_blade",
@@ -158,7 +158,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
-					.ChangeBeltModel("geo/gao_hunter.geo.json").addAlternative(GAO_LIGATOR_JEWEL_BLUE_MOON.get()).AddToTabList(RangerTabs.GAORANGER));
+					.ChangeBeltModel("gao_hunter.geo.json").addAlternative(GAO_LIGATOR_JEWEL_BLUE_MOON.get()).AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_LIGATOR_JEWEL_BLUE_MOON_EVIL = ITEMS.register("gao_ligator_jewel_blue_moon_evil",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_evil","gao_hunter_blue_moon", "ligator_blade_blue_moon",
@@ -167,7 +167,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false)).ChangeBeltModel("geo/gao_hunter.geo.json"));
+					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false)).ChangeBeltModel("gao_hunter.geo.json"));
 
 	public static final DeferredItem<Item> GAO_LIGATOR_JEWEL_EVIL = ITEMS.register("gao_ligator_jewel_evil",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_evil","gao_hunter", "ligator_blade",
@@ -176,7 +176,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).ChangeBeltModel("geo/gao_hunter.geo.json"));
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).ChangeBeltModel("gao_hunter.geo.json"));
 
 	public static final DeferredItem<Item> GAO_RHINOS_JEWEL = ITEMS.register("gao_rhinos_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_striker","gao_king","blank",
@@ -212,7 +212,7 @@ public class GaorangerItems {
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false),
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).ChangeBeltModel("geo/rangerwingbelt.geo.json").AddToTabList(RangerTabs.GAORANGER));
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).ChangeBeltModel("rangerwingbelt.geo.json").AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_LEON_JEWEL = ITEMS.register("gao_leon_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","gao_god", "blank",

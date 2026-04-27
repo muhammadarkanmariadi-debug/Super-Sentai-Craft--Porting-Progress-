@@ -209,7 +209,7 @@ public class RangerChangerItem extends RangerArmorItem {
 	}
 	
 	public ResourceLocation getBeltModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
+		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, 1).getBeltModel());
 	}
 
 	public ResourceLocation getAnimationResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot) {

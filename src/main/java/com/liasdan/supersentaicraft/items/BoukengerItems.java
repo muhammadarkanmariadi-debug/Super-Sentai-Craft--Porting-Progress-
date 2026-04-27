@@ -33,7 +33,7 @@ public class BoukengerItems {
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> BOUKEN_BLACK_LOGO = ITEMS.register("bouken_black_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","bouken_black","boukenger_belt",
@@ -42,7 +42,7 @@ public class BoukengerItems {
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false))
-                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> BOUKEN_BLUE_LOGO = ITEMS.register("bouken_blue_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","bouken_blue","boukenger_belt",
@@ -52,7 +52,7 @@ public class BoukengerItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
                     new MobEffectInstance(EffectCore.SHOTBOOST, 40, 2,true,false))
-                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> BOUKEN_YELLOW_LOGO = ITEMS.register("bouken_yellow_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","bouken_yellow","boukenger_belt",
@@ -61,7 +61,7 @@ public class BoukengerItems {
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> BOUKEN_PINK_LOGO = ITEMS.register("bouken_pink_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","bouken_pink","boukenger_belt",
@@ -71,7 +71,7 @@ public class BoukengerItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 2,true,false))
-                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> BOUKEN_SILVER_LOGO = ITEMS.register("bouken_silver_logo",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","bouken_silver","bouken_silver_belt",
@@ -81,7 +81,7 @@ public class BoukengerItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false))
-                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltextra1.geo.json").AddToTabList(RangerTabs.BOUKENGER));
+                    .alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltextra1.geo.json").AddToTabList(RangerTabs.BOUKENGER));
 
     public static final DeferredItem<Item> ZUBAAN_CRYSTAL = ITEMS.register("zubaan_crystal",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","zubaan","blank",

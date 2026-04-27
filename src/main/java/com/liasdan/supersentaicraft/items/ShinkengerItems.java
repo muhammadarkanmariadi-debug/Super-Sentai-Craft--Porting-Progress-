@@ -44,7 +44,7 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.FIRESLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddCompatibilityList(new String[] {"princess_shinken_red"}).AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddCompatibilityList(new String[] {"princess_shinken_red"}).AddToTabList(RangerTabs.SHINKENGER));
 
 	public static final DeferredItem<Item> RYUU_DISK = ITEMS.register("ryuu_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_blue","shinkenger_belt",
@@ -52,7 +52,7 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
 	public static final DeferredItem<Item> KAME_DISK = ITEMS.register("kame_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_pink","shinkenger_belt",
@@ -60,21 +60,21 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
 	public static final DeferredItem<Item> KUMA_DISK = ITEMS.register("kuma_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_green","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
 	public static final DeferredItem<Item> SARU_DISK = ITEMS.register("saru_disk",
             () -> new SecretDiskItem(new Item.Properties(),0,"","shinken_yellow","shinkenger_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
 	public static final DeferredItem<Item> SUSHI_DISK = ITEMS.register("sushi_disk",
             () -> new SecretDiskItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","shinken_gold","shinken_gold_belt",
@@ -82,7 +82,7 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.SHINKENGER));
     
 	public static final DeferredItem<Item> INROMARU = ITEMS.register("inromaru",
     		() -> new BaseItem(new Item.Properties().rarity(Rarity.RARE)).AddToTabList(RangerTabs.SHINKENGER));
@@ -112,7 +112,7 @@ public class ShinkengerItems {
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false),
             		new MobEffectInstance(EffectCore.FLYING, 40, 4,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.SHINKENGER));
 
 	public static final DeferredItem<Item> SAISHUU_OUGI_DISK = ITEMS.register("saishuu_ougi_disk",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.SHINKENGER));

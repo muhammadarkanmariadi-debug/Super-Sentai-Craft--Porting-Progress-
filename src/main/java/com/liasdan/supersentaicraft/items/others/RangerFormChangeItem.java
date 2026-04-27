@@ -108,7 +108,7 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public String getBeltModel() {
 		if (UPDATED_BELT!=null) return UPDATED_BELT;
-		return "geo/rangerbelt.geo.json";
+		return "rangerbelt.geo.json";
 	}
 
 	public String get_Animation() {

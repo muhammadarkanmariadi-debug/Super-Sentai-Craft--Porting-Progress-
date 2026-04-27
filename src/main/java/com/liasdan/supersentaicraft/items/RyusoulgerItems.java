@@ -56,14 +56,14 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BLUE_RYUSOUL = ITEMS.register("blue_ryusoul",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_blue","ryusoul_blue_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 3,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> PINK_RYUSOUL = ITEMS.register("pink_ryusoul",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_pink","ryusoul_pink_belt",
@@ -71,7 +71,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GREEN_RYUSOUL = ITEMS.register("green_ryusoul",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_green","ryusoul_green_belt",
@@ -79,14 +79,14 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> BLACK_RYUSOUL = ITEMS.register("black_ryusoul",
             () -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_black","ryusoul_black_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> GOLD_RYUSOUL = ITEMS.register("gold_ryusoul",
             () -> new RyusoulItem(new Item.Properties().rarity(Rarity.UNCOMMON),0,"","ryusoul_gold","ryusoul_gold_belt",
@@ -330,7 +330,7 @@ public class RyusoulgerItems {
             		new MobEffectInstance(EffectCore.SLASH, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("geo/ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").AddToTabList(RangerTabs.RYUSOULGER));
     
 	public static final DeferredItem<Item> NOBLESSE = ITEMS.register("noblesse",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_noblesse","","blank",
