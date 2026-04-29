@@ -77,6 +77,16 @@ public class KingOhgerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
 					.ChangeModel("king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
 
+	public static final DeferredItem<Item> GOD_KABUTO_SOUL_CORRUPTED = ITEMS.register("god_kabuto_soul_corrupted",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+
+	public static final DeferredItem<Item> GOD_KABUTO_SOUL = ITEMS.register("god_kabuto_soul",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+	public static final DeferredItem<Item> GOD_SCORPION_SOUL = ITEMS.register("god_scorpion_soul",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+	public static final DeferredItem<Item> GOD_HOPPER_SOUL = ITEMS.register("god_hopper_soul",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+
 	public static final DeferredItem<Item> OHGER_CROWN_ZERO = ITEMS.register("ohger_crown_zero",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_king","oh_kuwagata_ohger","oh_kuwagata_ohger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
@@ -94,6 +104,13 @@ public class KingOhgerItems {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
 			.addAlternative(OHGER_CROWN_ZERO.get()).ChangeModel("king_king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
+
+	public static final DeferredItem<Item> CHANGE_KUMONOS_KEY = ITEMS.register("change_kumonos_key",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+	public static final DeferredItem<Item> VENOMIX_KUMONOS_KEY = ITEMS.register("venomix_kumonos_key",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+	public static final DeferredItem<Item> SHUGOD_KUMONOS_KEY = ITEMS.register("shugod_kumonos_key",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
 
 	public static final DeferredItem<Item> KING_OHGER_HELMET = ITEMS.register("king_ohger_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));

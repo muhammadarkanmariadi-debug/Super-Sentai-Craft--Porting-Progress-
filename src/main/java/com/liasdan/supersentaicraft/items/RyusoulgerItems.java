@@ -111,6 +111,15 @@ public class RyusoulgerItems {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
 			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).AddToTabList(RangerTabs.RYUSOULGER));
+
+	public static final DeferredItem<Item> MORIA_RYUSOUL = ITEMS.register("moria_ryusoul",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"","ryusoul_moria","ryusoul_red_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
+			.alsoChange2ndSlot(OtherItems.BLANK_FORM.get()).ChangeBeltModel("ryusoulger_belt.geo.json").HasCape());
     
 	public static final DeferredItem<Item> TSUYO_SOUL = ITEMS.register("tsuyo_soul",
             () -> new RyusoulItem(new Item.Properties(),0,"ryusoul_tsuyo_soul","","blank",
@@ -411,7 +420,7 @@ public class RyusoulgerItems {
     		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_brown",BROWN_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.RARE))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     public static final DeferredItem<Item> MORIA_RYUSOUL_CHANGER = ITEMS.register("moria_ryusoul_changer",
-    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_moria",RED_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.RARE))
+    		() -> new GaisoulKenItem(ArmorMaterials.DIAMOND,"ryusoul_moria",MORIA_RYUSOUL,RYUSOULGER_HELMET,RYUSOULGER_CHESTPLATE,RYUSOULGER_LEGGINGS,new Item.Properties().rarity(Rarity.RARE))
     		.Add_Extra_Base_Form_Items(OtherItems.BLANK_FORM).AddToTabList(RangerTabs.RYUSOULGER).ChangeRepairItem(BLANK_RYUSOUL.get()));
     
     public static final DeferredItem<SwordItem> RYUSOUL_KEN = ITEMS.register("ryusoul_ken",
