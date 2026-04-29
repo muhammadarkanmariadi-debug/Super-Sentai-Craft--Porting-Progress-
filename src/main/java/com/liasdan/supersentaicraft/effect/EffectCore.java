@@ -88,6 +88,9 @@ public class EffectCore {
 	public static final Holder<MobEffect> GLIDE = EFFECT.register("glide",
 			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xd368fa));
 
+	public static final Holder<MobEffect> CLIMBING= EFFECT.register("climbing",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xffffff));
+
 	public static final Holder<MobEffect> RED_BUSTER_WEAKNESS= EFFECT.register("red_buster_weakness",
 			() -> new RedBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
 

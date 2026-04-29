@@ -32,6 +32,7 @@ import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
@@ -56,6 +57,14 @@ public class ModCommonEvents {
 
 		@SubscribeEvent
 		public void onEntityTick(EntityTickEvent.Post event) {
+			if (event.getEntity()instanceof LivingEntity entity&& entity.hasEffect(EffectCore.CLIMBING)) {
+				if ( entity.horizontalCollision) {
+					Vec3 initialVec = entity.getDeltaMovement();
+					Vec3 climbVec = new Vec3(initialVec.x, 0.1D*(1+entity.getEffect(EffectCore.CLIMBING).getAmplifier()), initialVec.z);
+					entity.setDeltaMovement(climbVec.scale(0.97D));
+				}
+			}
+
 			if (event.getEntity()instanceof LivingEntity entity){
 				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem belt){
 					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET),entity.level(),entity,36);
