@@ -76,6 +76,9 @@ public class MobsItems {
     public static final DeferredItem<Item> DRUNN_SHIELD = ITEMS.register("drunn_shield",
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 
+	public static final DeferredItem<SwordItem> GUN_SHOVEL = ITEMS.register("gun_shovel",
+			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
+
 	public static final DeferredItem<SwordItem> MUFFLAMBO = ITEMS.register("mufflambo",
 			() -> new BaseSwordItem(Tiers.IRON, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.MISC).ChangeRepairItem(Items.IRON_INGOT));
 

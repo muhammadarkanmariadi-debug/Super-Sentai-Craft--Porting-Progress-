@@ -71,6 +71,14 @@ public class RangerBlocks {
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
 
+	public static final DeferredBlock<Block> KING_OHGER_ORE = registerBlock("king_ohger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> DEEPSLATE_KING_OHGER_ORE = registerBlock("deepslate_king_ohger_ore",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RangerTabs.BLOCKS));
+
 	public static final DeferredBlock<Block> LIFE_BIRD = registerBlock("life_bird",
 			() -> new LifeBird(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).dynamicShape().lightLevel((p_152632_) -> {

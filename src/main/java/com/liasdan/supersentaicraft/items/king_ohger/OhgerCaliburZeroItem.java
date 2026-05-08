@@ -26,7 +26,7 @@ public class OhgerCaliburZeroItem extends RangerChangerItem {
 		
 		if (equipmentSlot == EquipmentSlot.FEET) {
 				if (rider.getMainHandItem().getItem()== KingOhgerItems.OHGER_CALIBUR_ZERO.get()) {
-					belt = get_Form_Item(itemstack,1).getBeltTex()+"_empty";
+					belt = "king_ohger_belt_empty";
 				}
 				else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT==null) {
 					belt = get_Form_Item(itemstack,1).getBeltTex();
