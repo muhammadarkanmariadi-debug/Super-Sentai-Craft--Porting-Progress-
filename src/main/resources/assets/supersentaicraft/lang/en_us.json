@@ -180,6 +180,11 @@
   "entity.supersentaicraft.NoutoMob": "Nouto",
   "entity.supersentaicraft.DonMurasameMob": "Don Murasame",
 
+  "entity.supersentaicraft.sanagim": "Sanagims",
+  "entity.supersentaicraft.oh_kuwagata_ohger": "Oh Kuwagata Ohger",
+  "item.supersentaicraft.sanagim_spawn_egg": "Sanagims Spawn Egg",
+  "item.supersentaicraft.oh_kuwagata_ohger_spawn_egg": "Oh Kuwagata Ohger Spawn Egg",
+
   "entity.supersentaicraft.nejiretta": "Nejirettas",
   "item.supersentaicraft.nejiretta_spawn_egg": "Nejirettas Spawn Egg",
 
@@ -235,6 +240,7 @@
   "item.supersentaicraft.jimmers_hatchet": "Jimmers Hatchet",
   "item.supersentaicraft.ano_hammer": "AnoHammer",
 
+  "item.supersentaicraft.gun_shovel": "Gun Shovel",
   "item.supersentaicraft.mufflambo": "Mufflambo",
 
   //01 Goranger
@@ -2743,6 +2749,83 @@
   //47 King-Ohger
   "tab.supersentaicraft.king_ohger": "Ohsama Sentai King-Ohger",
 
+  "item.supersentaicraft.king_ohger_logo":"King-Ohger Logo",
+  "item.supersentaicraft.empty_shugod_soul":"Empty Shugod Soul",
+
+  "item.supersentaicraft.king_ohger_head":"King-Ohger Helmet",
+  "item.supersentaicraft.king_ohger_torso":"King-Ohger Chestplate",
+  "item.supersentaicraft.king_ohger_legs":"King-Ohger Leggings",
+
+  "item.supersentaicraft.kuwagata_ohger_calibur":"Ohger Calibur (Kuwagata Ohger)",
+  "item.supersentaicraft.tonbo_ohger_calibur":"Ohger Calibur (Tonbo Ohger)",
+  "item.supersentaicraft.kamakiri_ohger_calibur":"Ohger Calibur (Kamakiri Ohger)",
+  "item.supersentaicraft.papillon_ohger_calibur":"Ohger Calibur (Papillon Ohger)",
+  "item.supersentaicraft.hachi_ohger_calibur":"Ohger Calibur (Hachi Ohger)",
+  "item.supersentaicraft.spider_kumono_slayer":"KumonoSlayer (Spider Kumonos)",
+  "item.supersentaicraft.oh_kuwagata_ohger_calibur_zero":"Ohger Calibur ZERO (Oh Kuwagata Ohger)",
+
+  "item.supersentaicraft.god_kuwagata_soul":"God Kuwagata Soul",
+  "item.supersentaicraft.god_tonbo_soul":"God Tonbo Soul",
+  "item.supersentaicraft.god_kamakiri_soul":"God Kamakiri Soul",
+  "item.supersentaicraft.god_papillon_soul":"God Papillon Soul",
+  "item.supersentaicraft.god_hachi_soul":"God Hachi Soul",
+  "item.supersentaicraft.god_tarantula_soul":"God Tarantula Soul",
+
+  "item.supersentaicraft.god_kuwagata_zero_soul":"God Kuwagata ZERO Soul",
+  "item.supersentaicraft.god_kabuto_soul_corrupted":"God Kabuto Soul (Corrupted)",
+
+  "item.supersentaicraft.god_kabuto_soul":"God Kabuto Soul",
+  "item.supersentaicraft.god_scorpion_soul":"God Scorpion Soul",
+  "item.supersentaicraft.god_hopper_soul":"God Hopper Soul",
+
+  "item.supersentaicraft.ohger_crown":"Ohger Crown",
+
+  "item.supersentaicraft.change_kumonos_key":"Change Kumonos Key",
+  "item.supersentaicraft.venomix_kumonos_key":"Venomix Kumonos Key",
+  "item.supersentaicraft.shugod_kumonos_key":"Shugod Kumonos Key",
+
+  "item.supersentaicraft.shugodom_crown":"Shugodom Crown",
+  "item.supersentaicraft.nkosopa_earring":"Nkosopa Earring",
+  "item.supersentaicraft.ishabana_tiara":"Ishabana Tiara",
+  "item.supersentaicraft.gokkan_bracelet":"Gokkan Bracelet",
+  "item.supersentaicraft.toufu_necklace":"Toufu Necklace",
+  "item.supersentaicraft.bug_naraku_crystal":"Bug Naraku Crystal",
+
+  "supersentaicraft:god_kuwagata_soul.form":"Ranger: §cKuwagata Ohger",
+  "supersentaicraft:god_tonbo_soul.form":"Ranger: §9Tonbo Ohger",
+  "supersentaicraft:god_kamakiri_soul.form":"Ranger: §eKamakiri Ohger",
+  "supersentaicraft:god_papillon_soul.form":"Ranger: §5Papillon Ohger",
+  "supersentaicraft:god_hachi_soul.form":"Ranger: §8Hachi Ohger",
+  "supersentaicraft:god_tarantula_soul.form":"Ranger: Spider Kumonos",
+  "supersentaicraft:god_kuwagata_zero_soul.form":"Ranger: §7Oh Kuwagata Ohger",
+
+  "supersentaicraft:god_kuwagata_soul_ri.form":"Ranger: §cKuwagata Ohger (Ryouga Issen)",
+  "supersentaicraft:god_tonbo_soul_ri.form":"Ranger: §9Tonbo Ohger (Ryouga Issen)",
+  "supersentaicraft:god_kamakiri_soul_ri.form":"Ranger: §eKamakiri Ohger (Ryouga Issen)",
+  "supersentaicraft:god_papillon_soul_ri.form":"Ranger: §5Papillon Ohger (Ryouga Issen)",
+  "supersentaicraft:god_hachi_soul_ri.form":"Ranger: §8Hachi Ohger (Ryouga Issen)",
+  "supersentaicraft:god_tarantula_soul_ri.form":"Ranger: Spider Kumonos (Ryouga Issen)",
+  "supersentaicraft:god_kuwagata_zero_soul_ri.form":"Ranger: §7Oh Kuwagata Ohger (Ryouga Issen)",
+
+  "supersentaicraft:ohger_crown.form":"Ranger: §6King §cKuwagata Ohger",
+  "supersentaicraft:ohger_crown_ri.form":"Ranger: §6King §cKuwagata Ohger (Ryouga Issen)",
+  "supersentaicraft:ohger_crown_zero.form":"Ranger: §6King §7Oh Kuwagata Ohger",
+  "supersentaicraft:ohger_crown_zero_ri.form":"Ranger: §6King §7Oh Kuwagata Ohger (Ryouga Issen)",
+
+  "item.supersentaicraft.ohger_calibur":"Ohger Calibur",
+  "item.supersentaicraft.kumono_slayer":"KumonoSlayer",
+  "item.supersentaicraft.ohger_calibur_zero":"Ohger Calibur ZERO",
+  "item.supersentaicraft.ohger_crown_lance":"Ohger Crown Lance",
+  "item.supersentaicraft.kings_weapon_shield":"Kings Weapon (Shield Mode)",
+  "item.supersentaicraft.kings_weapon_sword":"Kings Weapon (Sword Mode)",
+  "item.supersentaicraft.kings_weapon_gun":"Kings Weapon (Gun Mode)",
+  "item.supersentaicraft.kings_weapon_sickle":"Kings Weapon (Sickle Mode)",
+  "item.supersentaicraft.kings_weapon_bow":"Kings Weapon (Bow Mode)",
+  "item.supersentaicraft.kings_weapon_claw":"Kings Weapon (Claw Mode)",
+  "item.supersentaicraft.kings_weapon_naginata":"Kings Weapon (Naginata Mode)",
+  "item.supersentaicraft.kings_weapon_scythe":"Kings Weapon (Scythe Mode)",
+  "item.supersentaicraft.venomix_shooter":"Venomix Shooter",
+
   //48 Boonboomger
   "tab.supersentaicraft.boonboomger": "Bakuage Sentai Boonboomger",
 
@@ -3124,6 +3207,38 @@
   "advancements.supersentaicraft.morphin_blaster_d.title": "Animal Change!",
   "advancements.supersentaicraft.custom_visor_d.desc": "Obtain Custom Visor",
   "advancements.supersentaicraft.custom_visor_d.title": "Animal Perfect Mode!",
+
+  "advancements.supersentaicraft.king_ohger.desc": "Change into each member of King-Ohger",
+  "advancements.supersentaicraft.king_ohger.title": "Ohsama Sentai King-Ohger",
+
+  "advancements.supersentaicraft.kuwagata_ohger.desc": "Change into Kuwagata Ohger",
+  "advancements.supersentaicraft.kuwagata_ohger.title": "Jaaku no Oh! Gira Husty!",
+  "advancements.supersentaicraft.tonbo_ohger.desc": "Change into Tonbo Ohger",
+  "advancements.supersentaicraft.tonbo_ohger.title": "Eichi no Oh! Yanma Gust da!",
+  "advancements.supersentaicraft.kamakiri_ohger.desc": "Change into Kamakiri Ohger",
+  "advancements.supersentaicraft.kamakiri_ohger.title": "Kenran no Jo-Oh! Hymeno Ran!",
+  "advancements.supersentaicraft.papillon_ohger.desc": "Change into Papillon Ohger",
+  "advancements.supersentaicraft.papillon_ohger.title": "Fudou no Oh! Rita Kaniska!",
+  "advancements.supersentaicraft.hachi_ohger.desc": "Change into Hachi Ohger",
+  "advancements.supersentaicraft.hachi_ohger.title": "Houjou no Oh-tonosama! Kaguragi Dybowski!",
+  "advancements.supersentaicraft.spider_kumonos.desc": "Change into Spider Kumonos",
+  "advancements.supersentaicraft.spider_kumonos.title": "Hazama no Oh! Jeramie Brasieri!",
+  "advancements.supersentaicraft.oh_kuwagata_ohger.desc": "Change into Oh Kuwagata Ohger",
+  "advancements.supersentaicraft.oh_kuwagata_ohger.title": "Bougyaku no Oh! Rcules Husty!",
+
+  "advancements.supersentaicraft.king_king_ohger.desc": "Change into King Kuwagata Ohger/Oh Kuwagata Ohger",
+  "advancements.supersentaicraft.king_king_ohger.title": "Ep18: The Crown of Beginnings",
+  "advancements.supersentaicraft.ryouga_issen.desc": "Change into King-Ohger (Ryouga Issen)",
+  "advancements.supersentaicraft.ryouga_issen.title": "Ep39: Nkosopa Climactic Battle",
+
+  "advancements.supersentaicraft.ohger_calibur.desc": "Obtain any Ohger Calibur",
+  "advancements.supersentaicraft.ohger_calibur.title": "Ohgai Busou!",
+  "advancements.supersentaicraft.kumono_slayer.desc": "Obtain Spider Kumonos' KumonoSlayer",
+  "advancements.supersentaicraft.kumono_slayer.title": "Ohgai Busou!",
+  "advancements.supersentaicraft.ohger_calibur_zero.desc": "Obtain Oh Kuwagata Ohger's Ohger Calibur ZERO",
+  "advancements.supersentaicraft.ohger_calibur_zero.title": "Ohgai Busou!",
+  "advancements.supersentaicraft.ohger_crown.desc": "Obtain Ohger Crown",
+  "advancements.supersentaicraft.ohger_crown.title": "Shiso Kourai!",
 
   "advancements.supersentaicraft..desc": "",
   "advancements.supersentaicraft..title": ""

@@ -280,9 +280,9 @@ public class RangerFormChangeItem extends BaseItem {
 			}
 		}
 		if (NEED_FORM_SLOT_1!=null )if (RangerChangerItem.get_Form_Item(stack, 1)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_2!=null )if (RangerChangerItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_3!=null )if (RangerChangerItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_4!=null )if (RangerChangerItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_1)return false;
+		if (NEED_FORM_SLOT_2!=null )if (RangerChangerItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_2)return false;
+		if (NEED_FORM_SLOT_3!=null )if (RangerChangerItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_3)return false;
+		if (NEED_FORM_SLOT_4!=null )if (RangerChangerItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_4)return false;
 		
 		if  (HAS_NEED_ITEM_LIST) {
 			for (int i = 0; i < needItemList.size(); i++)
@@ -312,9 +312,9 @@ public class RangerFormChangeItem extends BaseItem {
 			}
 		}
 		if (NEED_FORM_SLOT_1!=null )if (MechaGattaiItem.get_Form_Item(stack, 1)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_2!=null )if (MechaGattaiItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_3!=null )if (MechaGattaiItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_4!=null )if (MechaGattaiItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_1)return false;
+		if (NEED_FORM_SLOT_2!=null )if (MechaGattaiItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_2)return false;
+		if (NEED_FORM_SLOT_3!=null )if (MechaGattaiItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_3)return false;
+		if (NEED_FORM_SLOT_4!=null )if (MechaGattaiItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_4)return false;
 
 		if  (HAS_NEED_ITEM_LIST) {
 			for (int i = 0; i < needItemList.size(); i++)
@@ -357,12 +357,12 @@ public class RangerFormChangeItem extends BaseItem {
 			}
 		}
 
-		if (MECHA.getItem() instanceof MechaGattaiItem belt) {
+		if (MECHA.getItem() instanceof MechaGattaiItem head) {
 
 			if (SHIFT_ITEM instanceof RangerFormChangeItem& p_41129_.isShiftKeyDown()) {
 				((RangerFormChangeItem)SHIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
 			}
-			else if (CanChangeMecha(p_41129_,belt,MECHA)) {
+			else if (CanChangeMecha(p_41129_,head,MECHA)) {
 				if (alsoChange2ndSlot !=null)MechaGattaiItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.HEAD),alsoChange2ndSlot, 2);
 
 				if (SWITCH_ITEM!=null&MechaGattaiItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.HEAD), Slot)==this) MechaGattaiItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.HEAD),SWITCH_ITEM, Slot);
@@ -379,7 +379,6 @@ public class RangerFormChangeItem extends BaseItem {
 		}
 
 		return InteractionResultHolder.sidedSuccess(itemstack, p_41128_.isClientSide());
-
 	}
 
 	public void OnTransformation(ItemStack itemstack, LivingEntity entity) {

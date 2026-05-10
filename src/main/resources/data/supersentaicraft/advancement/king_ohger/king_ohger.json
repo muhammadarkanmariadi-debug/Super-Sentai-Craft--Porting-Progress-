@@ -1,0 +1,223 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:king_ohger_logo"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.king_ohger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.king_ohger.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kuwagata_ohger_calibur"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tonbo_ohger_calibur"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kamakiri_ohger_calibur"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:papillon_ohger_calibur"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:hachi_ohger_calibur"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:spider_kumono_slayer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oh_kuwagata_ohger_calibur_zero"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

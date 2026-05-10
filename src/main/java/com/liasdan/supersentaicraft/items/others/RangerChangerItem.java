@@ -132,10 +132,19 @@ public class RangerChangerItem extends RangerArmorItem {
 		if (entity instanceof LivingEntity player) {
 			beltTick(stack,level,player,slotId);
 			giveEffects(player);
+
+			if (stack.has(DataComponents.CUSTOM_DATA)) {
+				if (!isTransformed(player) || slotId != 36) {
+					Consumer<CompoundTag> data = form -> {
+						form.putBoolean("Update_form", true);
+					};
+					CustomData.update(DataComponents.CUSTOM_DATA, stack, data);
+				}
+			}
 		}
 	}
 
-	public void OnformChange(ItemStack itemstack, LivingEntity player,CompoundTag  tag) {
+	public void OnformChange(ItemStack itemstack, LivingEntity player,CompoundTag tag) {
 		if(isTransformed(player)) {
 			OnTransformation(itemstack,player);
 			Consumer<CompoundTag> data = form -> {

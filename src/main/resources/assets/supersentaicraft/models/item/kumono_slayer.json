@@ -42,5 +42,13 @@
 			"rotation": [45, 90, 0],
 			"scale": [1.31, 1.31, 1.31]
 		}
-	}
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"change": 1
+			},
+			"model": "supersentaicraft:item/spider_kumono_slayer"
+		}
+	]
 }

@@ -1,9 +1,12 @@
 package com.liasdan.supersentaicraft.util;
 
 import com.liasdan.supersentaicraft.items.GingamanItems;
+import com.liasdan.supersentaicraft.items.KingOhgerItems;
 import com.liasdan.supersentaicraft.items.LuPatRangerItems;
 import com.liasdan.supersentaicraft.items.RyusoulgerItems;
 import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
+import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburItem;
+import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburZeroItem;
 import com.liasdan.supersentaicraft.items.lupatranger.VSChangerItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
 import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
@@ -139,6 +142,32 @@ public class RegisterItemProperties {
                             }
                             else return 0;
                         }
+                    }
+                    if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof OhgerCaliburItem) {
+
+                        if ($itemStack.getItem() == KingOhgerItems.OHGER_CROWN_LANCE.get()) {
+                            if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem()==KingOhgerItems.KUWAGATA_OHGER_CALIBUR.get()){
+                                if (OhgerCaliburItem.get_Form_Item(belt, 1).getFormName(false)!="") return 1;
+                                else return 0;
+                            }
+                            else return 0;
+                        }
+                    }
+                    if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof OhgerCaliburZeroItem) {
+
+                        if ($itemStack.getItem() == KingOhgerItems.OHGER_CROWN_LANCE.get()) {
+                            if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem()==KingOhgerItems.OH_KUWAGATA_OHGER_CALIBUR_ZERO.get()){
+                                if (OhgerCaliburZeroItem.get_Form_Item(belt, 1).getFormName(false)!="") return 1;
+                                else return 0;
+                            }
+                            else return 0;
+                        }
+                    }
+                    if ($entity.getItemBySlot(EquipmentSlot.FEET).getItem()== KingOhgerItems.SPIDER_KUMONO_SLAYER.get()) {
+                        if ($itemStack.getItem() == KingOhgerItems.KUMONO_SLAYER.get()){
+                            if (RangerChangerItem.get_Form_Item(belt, 1).getFormName(false)=="") return 1;
+                        }
+                        else return 0;
                     }
                     else {
                         return $entity.getUseItem() != $itemStack ? 0.0F : 1.0F;

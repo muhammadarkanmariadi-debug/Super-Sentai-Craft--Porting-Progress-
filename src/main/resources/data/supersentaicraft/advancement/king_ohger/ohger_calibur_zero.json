@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ohger_calibur_zero"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.ohger_calibur_zero.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.ohger_calibur_zero.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:king_ohger/kumono_slayer",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:oh_kuwagata_ohger_calibur_zero"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1"
+    ]
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:god_kuwagata_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:god_tonbo_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:god_kamakiri_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:god_papillon_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:god_hachi_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:empty_shugod_soul",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:empty_shugod_soul"
+        }
+      ]
+    }
+  ]
+}

@@ -4,10 +4,13 @@ import java.util.function.Consumer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.liasdan.supersentaicraft.effect.EffectCore;
+import com.liasdan.supersentaicraft.entity.summon.BaseSummonEntity;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.CustomData;
@@ -58,10 +61,20 @@ public class MechaGattaiItem extends MechaArmorItem{
 	}
 
 	public boolean isTransformed(LivingEntity player) {
+		if (!(player.getItemBySlot(EquipmentSlot.HEAD).getItem()instanceof MechaGattaiItem))return false;
 		return player.getItemBySlot(EquipmentSlot.FEET).getItem()==BOOTS.asItem()
 				&&player.getItemBySlot(EquipmentSlot.CHEST).getItem()==TORSO.asItem()
 				&&player.getItemBySlot(EquipmentSlot.LEGS).getItem()==LEGS.asItem()
 				&&player.getItemBySlot(EquipmentSlot.HEAD).getItem()==this;
+	}
+
+	public static boolean isTransforming(LivingEntity player) {
+		if (!(player.getItemBySlot(EquipmentSlot.HEAD).getItem()instanceof MechaGattaiItem))return false;
+		else if (player.getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
+			CompoundTag tag = player.getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).getUnsafe();
+			return tag.getDouble("is_transforming")!=0;
+		}
+		return false;
 	}
 
 	public static double getRenderType(ItemStack stack) {
@@ -69,31 +82,60 @@ public class MechaGattaiItem extends MechaArmorItem{
 		return form_double ;
 	}
 
-	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+	public void beltTick(ItemStack stack, Level level, LivingEntity player, int slotId) {
+		if (stack.has(DataComponents.CUSTOM_DATA)) {
+			CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
+			if (tag.getBoolean("Update_form") && slotId == 36) OnformChange(stack, player, tag);
+			if (!isTransformed(player) || slotId != 36) tag.putBoolean("Update_form", true);
+			if (isTransformed(player)) tag.putDouble("render_type", getRenderType(stack));
+			if (!isTransformed(player)) tag.putDouble("render_type", 0);
 
-		if (entity instanceof LivingEntity player) {
-
-			if (stack.has(DataComponents.CUSTOM_DATA)) {
-				CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-				if (tag.getBoolean("Update_form")) OnformChange(stack, player, tag);
-				if (!isTransformed(player)) tag.putBoolean("Update_form", true);
-
-				if (isTransformed(player)) tag.putDouble("render_type2", 1);
-				if (!isTransformed(player)) tag.putDouble("render_type2", 0);
-			}
-			else {
-				set_Update_Form(stack);
+			if (!level.isClientSide) {
+				if (tag.getDouble("is_transforming") != 0)
+					tag.putDouble("is_transforming", tag.getDouble("is_transforming") - 1);
+				if (tag.getDouble("is_transforming") < 0) tag.putDouble("is_transforming", 0);
 			}
 
-			if (isTransformed(player)) {
-				for (int n = 0; n < Num_Base_Form_Item; n++) {
-					RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.HEAD), n + 1);
+		} else {
+			set_Update_Form(stack);
+		}
+	}
 
-					List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
-					for (MobEffectInstance effect : potionEffectList) {
+	public void giveEffects(LivingEntity player) {
+		if (isTransformed(player)) {
+			for (int n = 0; n < Num_Base_Form_Item; n++) {
+				RangerFormChangeItem form = get_Form_Item(player.getItemBySlot(EquipmentSlot.HEAD), n + 1);
+				List<MobEffectInstance> potionEffectList = form.getPotionEffectList();
+				for (MobEffectInstance effect : potionEffectList) {
+					if ((effect.getEffect() != MobEffects.DAMAGE_BOOST&&
+							effect.getEffect() != MobEffects.DIG_SPEED&&
+							effect.getEffect() != MobEffects.REGENERATION&&
+							effect.getEffect() != MobEffects.DAMAGE_RESISTANCE&&
+							effect.getEffect() != MobEffects.MOVEMENT_SPEED&&
+							effect.getEffect() != EffectCore.SLASH&&
+							effect.getEffect() != EffectCore.PUNCH)
+							||(player instanceof BaseSummonEntity
+							&&(effect.getEffect() != MobEffects.DAMAGE_RESISTANCE || effect.getAmplifier() < 3))
+							||player instanceof Player) {
 						player.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration(), effect.getAmplifier(), true, false));
 					}
+				}
+			}
+		}
+	}
+
+	@Override
+	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+		if (entity instanceof LivingEntity player) {
+			beltTick(stack,level,player,slotId);
+			giveEffects(player);
+
+			if (stack.has(DataComponents.CUSTOM_DATA)) {
+				if (!isTransformed(player) || slotId != 36) {
+					Consumer<CompoundTag> data = form -> {
+						form.putBoolean("Update_form", true);
+					};
+					CustomData.update(DataComponents.CUSTOM_DATA, stack, data);
 				}
 			}
 		}
@@ -104,6 +146,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 			OnTransformation(itemstack,player);
 			Consumer<CompoundTag> data = form -> {
 				form.putBoolean("Update_form", false);
+				form.putDouble("is_transforming",30);
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
 		}
@@ -114,6 +157,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 		if(isTransformed(player) && !player.level().isClientSide()) {
 			for (int n = 0; n < Num_Base_Form_Item; n++) {
 				RangerFormChangeItem form = get_Form_Item(itemstack, n + 1);
+				form.OnTransformation(itemstack, player);
 			}
 		}
 	}
@@ -246,26 +290,15 @@ public class MechaGattaiItem extends MechaArmorItem{
 	public static RangerFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT)
 	{
 		MechaGattaiItem belt = (MechaGattaiItem)itemstack.getItem();
-		RangerFormChangeItem Base_Form_Item = belt.Base_Form_Item;
+		RangerFormChangeItem Base_Form_Item = (SLOT>=2 ? belt.Extra_Base_Form_Item.get(SLOT-2) : belt.Base_Form_Item);
 
-		if (SLOT == 2) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(0);
-		}else if (SLOT == 3) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(1);
-		}else if (SLOT == 4) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(2);
-		}else if (SLOT == 5) {
-			Base_Form_Item =belt.Extra_Base_Form_Item.get(3);
-		}
-
-		if (itemstack.getComponents().has(DataComponents.CUSTOM_DATA)) {
+		if (itemstack.has(DataComponents.CUSTOM_DATA)) {
 			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 			ResourceLocation Used_Form_Item = ResourceLocation.parse(tag.getString("slot_tex" + SLOT));
 			if (BuiltInRegistries.ITEM.get(Used_Form_Item) instanceof RangerFormChangeItem formItem) {
 				return formItem;
 			}
 		}
-
 		return Base_Form_Item;
 	}
 

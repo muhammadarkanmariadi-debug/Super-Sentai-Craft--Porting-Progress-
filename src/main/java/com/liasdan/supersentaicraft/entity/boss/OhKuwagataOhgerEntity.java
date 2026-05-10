@@ -57,7 +57,7 @@ public class OhKuwagataOhgerEntity extends BaseFootsoldierEntity {
                 && this.getItemBySlot(EquipmentSlot.FEET).getItem()==KingOhgerItems.OH_KUWAGATA_OHGER_CALIBUR_ZERO.get() && RangerChangerItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET),1)!=KingOhgerItems.OHGER_CROWN_ZERO.get()) {
 
             Inventory Inventory = playerIn.getInventory();
-            boolean hasSoul = Inventory.countItem(KingOhgerItems.GOD_TARANTULA_SOUL.get()) != 0;
+            boolean hasSoul = Inventory.countItem(KingOhgerItems.SHUGODOM_CROWN.get()) != 0;
 
             if (hasSoul) {
                 RangerChangerItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), KingOhgerItems.OHGER_CROWN_ZERO.get(), 1);

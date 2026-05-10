@@ -1,0 +1,89 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ohger_crown"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.king_king_ohger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.king_king_ohger.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:king_ohger/king_ohger",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kuwagata_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:ohger_crown\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oh_kuwagata_ohger_calibur_zero"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:ohger_crown_zero\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1",
+      "ranger2"
+    ]
+  ]
+}

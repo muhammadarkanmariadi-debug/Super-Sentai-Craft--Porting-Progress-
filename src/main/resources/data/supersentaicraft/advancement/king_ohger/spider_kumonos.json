@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:spider_kumono_slayer"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.spider_kumonos.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.spider_kumonos.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:king_ohger/hachi_ohger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:spider_kumono_slayer"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
