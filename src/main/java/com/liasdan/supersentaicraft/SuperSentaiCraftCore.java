@@ -267,6 +267,9 @@ public class SuperSentaiCraftCore {
 			event.registerEntityRenderer(MobsCore.GAISOULG.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.RYUSOUL_MORIA.get(), BasicEntityRenderer::new);
 
+			event.registerEntityRenderer(MobsCore.SANAGIMS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.OH_KUWAGATA_OHGER.get(), BasicEntityRenderer::new);
+
 			event.registerEntityRenderer(MobsCore.NEJIRETTAS.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.EXPLOSIVE_PROJECTILE.get(), ThrownItemRenderer::new);

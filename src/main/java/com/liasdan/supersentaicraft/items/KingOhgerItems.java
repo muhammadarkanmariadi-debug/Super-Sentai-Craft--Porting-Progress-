@@ -6,9 +6,12 @@ import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.items.boukenger.AccellularItem;
 import com.liasdan.supersentaicraft.items.boukenger.GoGoChangerItem;
 import com.liasdan.supersentaicraft.items.boukenger.SeikenZubaanItem;
+import com.liasdan.supersentaicraft.items.king_ohger.KumonosKeyItem;
 import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburItem;
+import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburSwordItem;
 import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburZeroItem;
 import com.liasdan.supersentaicraft.items.others.*;
+import com.mojang.blaze3d.shaders.Effect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -115,19 +118,36 @@ public class KingOhgerItems {
 					new MobEffectInstance(EffectCore.FIRESLASH, 40, 2,true,false))
 			.addShiftForm(GOD_HACHI_SOUL_RI.get()).ChangeModel("king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
 
+	public static final DeferredItem<Item> GOD_TARANTULA_SOUL_RI = ITEMS.register("god_tarantula_soul_ri",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_ryouga_issen","spider_kumonos","spider_kumonos_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(EffectCore.CLIMBING, 40, 3,true,false)).AddNeedItemList(BUG_NARAKU).IsGlowing());
+
 	public static final DeferredItem<Item> GOD_TARANTULA_SOUL = ITEMS.register("god_tarantula_soul",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","spider_kumonos","spider_kumonos_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false)).AddToTabList(RangerTabs.KING_OHGER));
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.CLIMBING, 40, 2,true,false))
+			.addShiftForm(GOD_TARANTULA_SOUL_RI.get()).AddToTabList(RangerTabs.KING_OHGER));
+
+	public static final DeferredItem<Item> GOD_KUWAGATA_ZERO_SOUL_RI = ITEMS.register("god_kuwagata_zero_soul_ri",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_ryouga_issen","oh_kuwagata_ohger","oh_kuwagata_ohger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false))
+			.IsGlowing().ChangeModel("kuwagata_ohger_ryouga_issen.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddNeedItemList(SHUGODOM));
 
 	public static final DeferredItem<Item> GOD_KUWAGATA_ZERO_SOUL = ITEMS.register("god_kuwagata_zero_soul",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","oh_kuwagata_ohger","oh_kuwagata_ohger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
-					.ChangeModel("king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
+			.addShiftForm(GOD_KUWAGATA_ZERO_SOUL_RI.get()).ChangeModel("king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
 
 	public static final DeferredItem<Item> GOD_KABUTO_SOUL_CORRUPTED = ITEMS.register("god_kabuto_soul_corrupted",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
@@ -139,6 +159,15 @@ public class KingOhgerItems {
 	public static final DeferredItem<Item> GOD_HOPPER_SOUL = ITEMS.register("god_hopper_soul",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
 
+	public static final DeferredItem<Item> OHGER_CROWN_ZERO_RI = ITEMS.register("ohger_crown_zero_ri",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_king_ryouga_issen","oh_kuwagata_ohger","oh_kuwagata_ohger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
+			.ChangeModel("king_king_ohger_ryouga_issen.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddNeedItemList(SHUGODOM));
+
 	public static final DeferredItem<Item> OHGER_CROWN_ZERO = ITEMS.register("ohger_crown_zero",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_king","oh_kuwagata_ohger","oh_kuwagata_ohger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
@@ -148,6 +177,15 @@ public class KingOhgerItems {
 					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
 			.ChangeModel("king_king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json"));
 
+	public static final DeferredItem<Item> OHGER_CROWN_RI = ITEMS.register("ohger_crown_ri",
+			() -> new RangerFormChangeItem(new Item.Properties(),0,"_king_ryouga_issen","kuwagata_ohger","king_ohger_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
+			.addAlternative(OHGER_CROWN_ZERO_RI.get()).ChangeModel("king_king_ohger_ryouga_issen.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddNeedItemList(SHUGODOM));
+
 	public static final DeferredItem<Item> OHGER_CROWN = ITEMS.register("ohger_crown",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_king","kuwagata_ohger","king_ohger_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
@@ -155,10 +193,10 @@ public class KingOhgerItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(EffectCore.SLASH, 40, 4,true,false))
-			.addAlternative(OHGER_CROWN_ZERO.get()).ChangeModel("king_king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
+			.addShiftForm(OHGER_CROWN_RI.get()).addAlternative(OHGER_CROWN_ZERO.get()).ChangeModel("king_king_ohger.geo.json").ChangeBeltModel("rangerbeltweapon.geo.json").AddToTabList(RangerTabs.KING_OHGER));
 
 	public static final DeferredItem<Item> CHANGE_KUMONOS_KEY = ITEMS.register("change_kumonos_key",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+			() -> new KumonosKeyItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
 	public static final DeferredItem<Item> VENOMIX_KUMONOS_KEY = ITEMS.register("venomix_kumonos_key",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
 	public static final DeferredItem<Item> SHUGOD_KUMONOS_KEY = ITEMS.register("shugod_kumonos_key",
@@ -175,7 +213,7 @@ public class KingOhgerItems {
 	public static final DeferredItem<Item> TOUFU_NECKLACE = ITEMS.register("toufu_necklace",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).AddToList(TOUFU));
 	public static final DeferredItem<Item> BUG_NARAKU_CRYSTAL = ITEMS.register("bug_naraku_crystal",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).AddToList(BUG_NARAKU));
 
 	public static final DeferredItem<Item> KING_OHGER_HELMET = ITEMS.register("king_ohger_head",
     		() -> new RangerArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
@@ -202,13 +240,13 @@ public class KingOhgerItems {
 			() -> new OhgerCaliburZeroItem(ArmorMaterials.DIAMOND,"oh_kuwagata_ohger",GOD_KUWAGATA_ZERO_SOUL,KING_OHGER_HELMET,KING_OHGER_CHESTPLATE,KING_OHGER_LEGGINGS,new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<SwordItem> OHGER_CALIBUR = ITEMS.register("ohger_calibur",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
+			() -> new OhgerCaliburSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<SwordItem> KUMONO_SLAYER = ITEMS.register("kumono_slayer",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<SwordItem> OHGER_CALIBUR_ZERO = ITEMS.register("ohger_calibur_zero",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
+			() -> new OhgerCaliburSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<SwordItem> OHGER_CROWN_LANCE = ITEMS.register("ohger_crown_lance",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 16, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));

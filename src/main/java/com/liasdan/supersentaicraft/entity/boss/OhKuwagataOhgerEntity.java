@@ -2,6 +2,7 @@ package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
 import com.liasdan.supersentaicraft.items.KingOhgerItems;
+import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.RyusoulgerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.ChatFormatting;
@@ -47,7 +48,6 @@ public class OhKuwagataOhgerEntity extends BaseFootsoldierEntity {
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(KingOhgerItems.KING_OHGER_LEGGINGS.get()));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(KingOhgerItems.OH_KUWAGATA_OHGER_CALIBUR_ZERO.get()));
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(KingOhgerItems.OHGER_CALIBUR_ZERO.get()));
-        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(KingOhgerItems.KINGS_WEAPON_SHIELD.get()));
     }
 
     @Override
@@ -61,7 +61,9 @@ public class OhKuwagataOhgerEntity extends BaseFootsoldierEntity {
 
             if (hasSoul) {
                 RangerChangerItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), KingOhgerItems.OHGER_CROWN_ZERO.get(), 1);
-                playerIn.sendSystemMessage(Component.translatable("<King Oh Kuwagata Ohger>Shiso Kourai!"));
+                playerIn.sendSystemMessage(Component.translatable("<King Oh Kuwagata Ohger>Shiso Kourai!").withStyle(ChatFormatting.GOLD));
+                playerIn.sendSystemMessage(Component.translatable("You are, I am, We are the, We are the King! King-Ohger~!").withStyle(ChatFormatting.GOLD));
+                this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(KingOhgerItems.OHGER_CROWN_LANCE.get()));
                 this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.3);
                 this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(7.0D);
                 this.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(128.0D);

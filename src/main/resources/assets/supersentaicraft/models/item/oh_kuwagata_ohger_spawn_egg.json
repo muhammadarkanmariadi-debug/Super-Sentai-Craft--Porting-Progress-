@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/oh_kuwagata_ohger_spawn_egg"
+  }
+}

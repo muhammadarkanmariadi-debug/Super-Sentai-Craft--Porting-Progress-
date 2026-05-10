@@ -2,6 +2,8 @@ package com.liasdan.supersentaicraft.entity.footsoldier;
 
 import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.items.MobsItems;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -19,13 +21,15 @@ public class SanagimsEntity extends BaseFootsoldierEntity {
     public void remove(RemovalReason p_149847_) {
         if ( this.isDeadOrDying()) {
             if (this.random.nextInt(5) == 1) {
-                BaseFootsoldierEntity boss = MobsCore.ULAR_CAPTAIN.get().create(this.level());
+                BaseFootsoldierEntity boss = MobsCore.OH_KUWAGATA_OHGER.get().create(this.level());
                 if (boss != null) {
                     boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
                     this.level().addFreshEntity(boss);
 
                     if (this.getLastAttacker()instanceof Player){
                         Player playerIn = (Player) this.getLastAttacker();
+                        playerIn.sendSystemMessage(Component.translatable("<Oh Kuwagata Ohger>Ohgai Busou!").withStyle(ChatFormatting.GRAY));
+                        playerIn.sendSystemMessage(Component.translatable("Lord of the, Lord of the, Lord~ of the Shugod~! Ohkuwagata Ohger!").withStyle(ChatFormatting.GRAY));
                     }
                 }
             }

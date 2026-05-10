@@ -194,6 +194,19 @@ public class MobsCore {
     public static final DeferredItem<DeferredSpawnEggItem> RYUSOUL_MORIA_SPAWN_EGG = ITEMS.register("ryusoul_moria_spawn_egg",
 			() -> new DeferredSpawnEggItem(RYUSOUL_MORIA,0xffffff, 0x151515, new Item.Properties()));
 
+	//47 King-Ohger
+	public static final DeferredHolder<EntityType<?>, EntityType<SanagimsEntity>> SANAGIMS = MOBLIST.register("sanagim",
+			() -> EntityType.Builder.of(SanagimsEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":sanagim"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> SANAGIMS_SPAWN_EGG = ITEMS.register("sanagim_spawn_egg",
+			() -> new DeferredSpawnEggItem(SANAGIMS,0xffffff, 0x151515, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<OhKuwagataOhgerEntity>> OH_KUWAGATA_OHGER = MOBLIST.register("oh_kuwagata_ohger",
+			() -> EntityType.Builder.of(OhKuwagataOhgerEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":oh_kuwagata_ohger"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> OH_KUWAGATA_OHGER_SPAWN_EGG = ITEMS.register("oh_kuwagata_ohger_spawn_egg",
+			() -> new DeferredSpawnEggItem(OH_KUWAGATA_OHGER,0xffffff, 0x151515, new Item.Properties()));
+
 	//48 Boonboomger
 	public static final DeferredHolder<EntityType<?>, EntityType<NejirettasEntity>> NEJIRETTAS = MOBLIST.register("nejiretta",
 			() -> EntityType.Builder.of(NejirettasEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(SuperSentaiCraftCore.MODID + ":nejiretta"));
