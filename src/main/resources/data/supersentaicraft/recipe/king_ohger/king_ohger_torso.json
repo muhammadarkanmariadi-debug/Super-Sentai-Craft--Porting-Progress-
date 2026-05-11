@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:king_ohger_torso"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_tonbo_soul"
+    },
+    "c": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "d": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "ada",
+    "dbd",
+    "aca"
+  ],
+  "result": {
+    "count": 1,
+    "id": "supersentaicraft:nkosopa_earring"
+  }
+}

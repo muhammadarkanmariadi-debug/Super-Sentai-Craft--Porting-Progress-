@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.summon.BaseSummonEntity;
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -68,12 +69,8 @@ public class RangerChangerItem extends RangerArmorItem {
 	}
 
 	public static boolean isTransforming(LivingEntity player) {
-		if (!(player.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem))return false;
-		else if (player.getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
-			CompoundTag tag = player.getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).getUnsafe();
-			return tag.getDouble("is_transforming")!=0;
-		}
-		return false;
+		if (!(player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem)) return false;
+		return player.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()!=0;
 	}
 
 	public static double getRenderType(ItemStack stack) {
@@ -130,8 +127,8 @@ public class RangerChangerItem extends RangerArmorItem {
 	@Override
 	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
 		if (entity instanceof LivingEntity player) {
-			beltTick(stack,level,player,slotId);
-			giveEffects(player);
+			this.beltTick(stack,level,player,slotId);
+			this.giveEffects(player);
 
 			if (stack.has(DataComponents.CUSTOM_DATA)) {
 				if (!isTransformed(player) || slotId != 36) {
@@ -149,10 +146,10 @@ public class RangerChangerItem extends RangerArmorItem {
 			OnTransformation(itemstack,player);
 			Consumer<CompoundTag> data = form -> {
 				form.putBoolean("Update_form", false);
-				form.putDouble("is_transforming",30);
 				form.putFloat("cape", 0f);
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
+			player.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(30);
 		}
 
 	}

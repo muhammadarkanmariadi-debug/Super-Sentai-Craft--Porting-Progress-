@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_kuwagata_zero_soul"
+    },
+    "c": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:kings_weapon_shield"
+  }
+}

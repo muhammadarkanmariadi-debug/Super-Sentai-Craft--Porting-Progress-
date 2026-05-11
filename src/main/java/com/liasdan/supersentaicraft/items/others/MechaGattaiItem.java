@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.summon.BaseSummonEntity;
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -30,6 +31,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import software.bernie.geckolib.animation.AnimationState;
+
 public class MechaGattaiItem extends MechaArmorItem{
 
 	public String armorNamePrefix;
@@ -69,12 +72,8 @@ public class MechaGattaiItem extends MechaArmorItem{
 	}
 
 	public static boolean isTransforming(LivingEntity player) {
-		if (!(player.getItemBySlot(EquipmentSlot.HEAD).getItem()instanceof MechaGattaiItem))return false;
-		else if (player.getItemBySlot(EquipmentSlot.HEAD).has(DataComponents.CUSTOM_DATA)) {
-			CompoundTag tag = player.getItemBySlot(EquipmentSlot.HEAD).get(DataComponents.CUSTOM_DATA).getUnsafe();
-			return tag.getDouble("is_transforming")!=0;
-		}
-		return false;
+		if (!(player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem)) return false;
+		return player.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()!=0;
 	}
 
 	public static double getRenderType(ItemStack stack) {
@@ -127,8 +126,8 @@ public class MechaGattaiItem extends MechaArmorItem{
 	@Override
 	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
 		if (entity instanceof LivingEntity player) {
-			beltTick(stack,level,player,slotId);
-			giveEffects(player);
+			this.beltTick(stack,level,player,slotId);
+			this.giveEffects(player);
 
 			if (stack.has(DataComponents.CUSTOM_DATA)) {
 				if (!isTransformed(player) || slotId != 36) {
@@ -149,6 +148,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 				form.putDouble("is_transforming",30);
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
+			player.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(30);
 		}
 
 	}
@@ -207,7 +207,7 @@ public class MechaGattaiItem extends MechaArmorItem{
 
 	}
 
-	public String getUnlimitedTextures(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName ,int num)
+	public String getUnlimitedTextures(ItemStack itemstack, LivingEntity rider, String riderName ,int num)
 	{
 		return "blank";
 	}
@@ -222,6 +222,30 @@ public class MechaGattaiItem extends MechaArmorItem{
 
 	public ResourceLocation getAnimationResource(ItemStack itemstack,MechaArmorItem animatable, EquipmentSlot slot) {
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
+	}
+
+	public void setCustomAnimations(MechaArmorItem an, long instanceId, AnimationState<MechaArmorItem> state) {
+
+	}
+
+	public boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
+
+		if (isTransformed(livingEntity)){
+			switch (currentSlot) {
+				case FEET ->{
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				case CHEST -> {
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				case LEGS -> {
+					return get_Form_Item(itemstack, 1).get_Is_Glowing();
+				}
+				default -> {}
+			}
+			return false;
+		}
+		return false;
 	}
 
 	public static void set_Update_Form(ItemStack itemstack)
@@ -316,7 +340,11 @@ public class MechaGattaiItem extends MechaArmorItem{
 		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 	}
 
-
-
+	public boolean HasCape(ItemStack itemstack) {
+		for (int n = 0; n < Num_Base_Form_Item; n++) {
+			if(get_Form_Item(itemstack, n + 1).get_has_cape())return true;
+		}
+		return false;
+	}
 
 }

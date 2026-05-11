@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "king_ohger",
+  "ingredients": [
+    {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:king_ohger_logo"
+  }
+}

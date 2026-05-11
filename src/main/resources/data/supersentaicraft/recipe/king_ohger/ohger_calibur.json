@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": [
+      {
+        "item": "supersentaicraft:god_kuwagata_soul"
+      },
+      {
+        "item": "supersentaicraft:god_tonbo_soul"
+      },
+      {
+        "item": "supersentaicraft:god_kamakiri_soul"
+      },
+      {
+        "item": "supersentaicraft:god_papillon_soul"
+      },
+      {
+        "item": "supersentaicraft:god_hachi_soul"
+      }
+    ],
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:ohger_calibur"
+  }
+}

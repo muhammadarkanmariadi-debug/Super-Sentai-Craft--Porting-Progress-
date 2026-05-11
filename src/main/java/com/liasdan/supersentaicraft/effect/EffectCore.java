@@ -2,6 +2,7 @@ package com.liasdan.supersentaicraft.effect;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -73,13 +74,16 @@ public class EffectCore {
 			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0x76ecff));
 
 	public static final Holder<MobEffect> FLAT= EFFECT.register("flat",
-			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf7fada)
+					.addAttributeModifier(AttributeRegistry.PLAYER_SIZE_Z, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.flat"), -0.96F, AttributeModifier.Operation.ADD_VALUE));
 
 	public static final Holder<MobEffect>  STRETCH= EFFECT.register("stretch",
-			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf78d95));
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xf78d95)
+					.addAttributeModifier(AttributeRegistry.PLAYER_SIZE_Y, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.stretch"), 0.5F, AttributeModifier.Operation.ADD_VALUE));
 
 	public static final Holder<MobEffect>  WIDE= EFFECT.register("wide",
-			() -> new 	BasicEffect(MobEffectCategory.NEUTRAL, 0x87ce87));
+			() -> new 	WideEffect(MobEffectCategory.NEUTRAL, 0x87ce87)
+					.addAttributeModifier(AttributeRegistry.PLAYER_SIZE_X, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.wide"), 0.5F, AttributeModifier.Operation.ADD_VALUE));
 
 	public static final Holder<MobEffect> LOW_GRAVITY= EFFECT.register("low_gravity",
 			() -> new LowGravityEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
@@ -89,7 +93,8 @@ public class EffectCore {
 			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xd368fa));
 
 	public static final Holder<MobEffect> CLIMBING= EFFECT.register("climbing",
-			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xffffff));
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0xffffff)
+					.addAttributeModifier(AttributeRegistry.CLIMBING, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.climbing"), 1F, AttributeModifier.Operation.ADD_VALUE));
 
 	public static final Holder<MobEffect> RED_BUSTER_WEAKNESS= EFFECT.register("red_buster_weakness",
 			() -> new RedBusterWeaknessEffect(MobEffectCategory.NEUTRAL, 0xf7fada));

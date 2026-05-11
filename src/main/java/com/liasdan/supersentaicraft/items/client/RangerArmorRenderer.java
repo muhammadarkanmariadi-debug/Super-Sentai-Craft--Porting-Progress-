@@ -34,7 +34,6 @@ public class RangerArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
 				return null;
 			}});
 
-
 		if (equipmentSlot == EquipmentSlot.HEAD||equipmentSlot == EquipmentSlot.FEET) {
 			addRenderLayer(new RangerRenderLayer<>(this));
 		}
@@ -81,7 +80,7 @@ public class RangerArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
 	protected void applyBoneVisibilityBySlot(EquipmentSlot currentSlot) {
 		setAllVisible(false);
 		if (GetEntity()!=null){
-			if (!GetEntity().hasEffect(MobEffects.INVISIBILITY) || !GetEntity().isInvisible()) {
+			if (!GetEntity().isInvisible()) {
 				if (currentSlot == EquipmentSlot.FEET) {
 					setBoneVisible(this.body, true);
 					setBoneVisible(this.leftArm, true);
@@ -96,5 +95,4 @@ public class RangerArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
 			}
 		}
 	}
-
 }

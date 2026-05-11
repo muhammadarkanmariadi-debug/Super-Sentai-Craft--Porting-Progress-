@@ -14,6 +14,7 @@ import com.liasdan.supersentaicraft.items.OtherItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
 import com.liasdan.supersentaicraft.network.payload.PoseKeyPayload;
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
@@ -57,17 +58,23 @@ public class ModCommonEvents {
 
 		@SubscribeEvent
 		public void onEntityTick(EntityTickEvent.Post event) {
-			if (event.getEntity()instanceof LivingEntity entity&& entity.hasEffect(EffectCore.CLIMBING)) {
-				if ( entity.horizontalCollision) {
+			if (event.getEntity() instanceof LivingEntity entity ) {
+				if (entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()!=0)entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()-0.2);
+				if (entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()<=0)entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(0);
+			}
+
+
+			if (!(event.getEntity() instanceof Player) && event.getEntity() instanceof LivingEntity entity && !entity.level().isClientSide && entity.getAttribute(AttributeRegistry.CLIMBING).getValue() != 0) {
+				if (entity.horizontalCollision) {
 					Vec3 initialVec = entity.getDeltaMovement();
-					Vec3 climbVec = new Vec3(initialVec.x, 0.1D*(1+entity.getEffect(EffectCore.CLIMBING).getAmplifier()), initialVec.z);
+					Vec3 climbVec = new Vec3(initialVec.x, 0.1D * (entity.getAttribute(AttributeRegistry.CLIMBING).getValue()), initialVec.z);
 					entity.setDeltaMovement(climbVec.scale(0.97D));
 				}
 			}
 
-			if (event.getEntity()instanceof LivingEntity entity){
-				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RangerChangerItem belt){
-					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET),entity.level(),entity,36);
+			if (event.getEntity() instanceof LivingEntity entity && !(event.getEntity() instanceof Player)) {
+				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
+					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET), entity.level(), entity, 36);
 					belt.giveEffects(entity);
 				}
 			}
@@ -75,6 +82,10 @@ public class ModCommonEvents {
 
 		@SubscribeEvent
 		public void addLivingDamageEvent(LivingDamageEvent.Post event) {
+
+			if (event.getSource().getEntity() instanceof LivingEntity attacker && attacker.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem && attacker.getAttribute(AttributeRegistry.ABILITY_METER).getBaseValue() < 300) {
+				attacker.getAttribute(AttributeRegistry.ABILITY_METER).setBaseValue(attacker.getAttribute(AttributeRegistry.ABILITY_METER).getBaseValue() + 1);
+			}
 
 			if (event.getSource().getEntity() instanceof LivingEntity _livEnt) {
 				if (event.getSource().is(DamageTypes.PLAYER_ATTACK) || event.getSource().is(DamageTypes.MOB_ATTACK) || event.getSource().is(DamageTypes.MOB_ATTACK_NO_AGGRO)) {

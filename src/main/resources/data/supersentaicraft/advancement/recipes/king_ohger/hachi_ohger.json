@@ -1,0 +1,25 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:king_ohger/kings_weapon_claw"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:god_hachi_soul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

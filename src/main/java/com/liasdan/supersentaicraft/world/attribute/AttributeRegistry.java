@@ -1,4 +1,4 @@
-package com.liasdan.supersentaicraft.world;
+package com.liasdan.supersentaicraft.world.attribute;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import net.minecraft.core.registries.Registries;
@@ -14,18 +14,59 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 @EventBusSubscriber(modid = SuperSentaiCraftCore.MODID, bus=EventBusSubscriber.Bus.MOD)
-public class attributeGenerator extends Event implements IModBusEvent {
+public class AttributeRegistry extends Event implements IModBusEvent {
 
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(Registries.ATTRIBUTE, SuperSentaiCraftCore.MODID);
 
-    public static final DeferredHolder<Attribute, Attribute> HEAD_SIZE = ATTRIBUTES.register("head_size",
+
+
+    public static final DeferredHolder<Attribute, Attribute> IS_TRANSFORMING = ATTRIBUTES.register("is_transforming",
             () -> new RangedAttribute(
-                    "attribute.supersentaicraft.head_size",
+                    "attribute.supersentaicraft.is_transforming",
+                    0,
+                    0,
+                    30
+            ).setSyncable(true)
+    );
+
+
+
+    public static final DeferredHolder<Attribute, Attribute> CLIMBING = ATTRIBUTES.register("climbing",
+            () -> new RangedAttribute(
+                    "attribute.supersentaicraft.climbing",
+                    0,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_X = ATTRIBUTES.register("player_size_x",
+            () -> new RangedAttribute(
+                    "attribute.supersentaicraft.player_size",
                     1,
                     0,
                     255
             ).setSyncable(true)
     );
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_Y = ATTRIBUTES.register("player_size_y",
+            () -> new RangedAttribute(
+                    "attribute.supersentaicraft.player_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_Z = ATTRIBUTES.register("player_size_z",
+            () -> new RangedAttribute(
+                    "attribute.supersentaicraft.player_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+
 
     public static final DeferredHolder<Attribute, Attribute> ABILITY_METER = ATTRIBUTES.register("ability_meter",
             () -> new RangedAttribute(
@@ -60,12 +101,13 @@ public class attributeGenerator extends Event implements IModBusEvent {
             ).setSyncable(true)
     );
 
+
     public static final DeferredHolder<Attribute, Attribute> POSE_COOLDOWN = ATTRIBUTES.register("pose_cooldown",
             () -> new RangedAttribute(
                     "attribute.supersentaicraft.pose_cooldown",
                     0,
                     0,
-                    200
+                    9999
             ).setSyncable(true)
     );
 

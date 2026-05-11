@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:equipment",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:change_kumonos_key",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "container.*": {
+                    "items": "supersentaicraft:kumono_slayer"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:venomix_kumonos_key",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "container.*": {
+                    "items": "supersentaicraft:kumono_slayer"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:shugod_kumonos_key",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "container.*": {
+                    "items": "supersentaicraft:kumono_slayer"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:empty_shugod_soul"
+        }
+      ]
+    }
+  ]
+}

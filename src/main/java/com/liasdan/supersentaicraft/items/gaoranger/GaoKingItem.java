@@ -102,7 +102,7 @@ public class GaoKingItem extends MechaGattaiItem {
 	}
 
 	@Override
-	public String getUnlimitedTextures(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName, int num)
+	public String getUnlimitedTextures(ItemStack itemstack, LivingEntity rider, String riderName, int num)
 	{
 		boolean fly = rider instanceof Player player && player.getAbilities().flying;
 

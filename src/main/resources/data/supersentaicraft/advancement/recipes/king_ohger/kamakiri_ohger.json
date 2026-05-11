@@ -1,0 +1,27 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:king_ohger/kings_weapon_sickle",
+      "supersentaicraft:king_ohger/kings_weapon_scythe",
+      "supersentaicraft:king_ohger/kings_weapon_scythe1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:god_kamakiri_soul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

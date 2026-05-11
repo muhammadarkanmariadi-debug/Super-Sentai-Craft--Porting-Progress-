@@ -1,0 +1,320 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:shugodom_crown"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.ryouga_issen.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.ryouga_issen.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:king_ohger/king_king_ohger",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kuwagata_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_kuwagata_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kuwagata_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:ohger_crown_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tonbo_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_tonbo_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kamakiri_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_kamakiri_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:papillon_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_papillon_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:hachi_ohger_calibur"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_hachi_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:spider_kumono_slayer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_tarantula_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oh_kuwagata_ohger_calibur_zero"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:god_kuwagata_zero_soul_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:king_ohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:king_ohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:king_ohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oh_kuwagata_ohger_calibur_zero"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:ohger_crown_zero_ri\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1",
+      "ranger2",
+      "ranger3",
+      "ranger4",
+      "ranger5",
+      "ranger6",
+      "ranger7",
+      "ranger8",
+      "ranger9"
+    ]
+  ]
+}

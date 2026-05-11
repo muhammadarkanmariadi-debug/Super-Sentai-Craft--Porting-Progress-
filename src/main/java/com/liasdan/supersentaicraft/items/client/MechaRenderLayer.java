@@ -1,10 +1,15 @@
 package com.liasdan.supersentaicraft.items.client;
 
+import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.supersentaicraft.items.others.MechaGattaiItem;
+import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
@@ -13,21 +18,17 @@ import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
 
 public class MechaRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T> {
-    private final ResourceLocation TEXT;
 
-    public MechaRenderLayer(GeoRenderer<T> renderer, ResourceLocation text ) {
+    public MechaRenderLayer(GeoRenderer<T> renderer ) {
         super(renderer);
-        TEXT=text;
     }
 
-    protected ResourceLocation getTextureResource(T animatable) {
-        return TEXT;
+    protected ResourceLocation getTextureResource(T animatable, int n, LivingEntity entity, MechaGattaiItem belt, EquipmentSlot slot) {
+        return  ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/" +belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.HEAD), entity, belt.Rider, n + 1) + ".png");
     }
-
-
     @Nullable
-    protected RenderType getRenderType(T animatable, @Nullable MultiBufferSource bufferSource) {
-        return RenderType.armorCutoutNoCull(getTextureResource(animatable));
+    protected RenderType getRenderType(T animatable,int run,LivingEntity entity,MechaGattaiItem belt,EquipmentSlot slot) {
+        return RenderType.entityTranslucent(getTextureResource(animatable,run,entity,belt,slot));
     }
 
     /**
@@ -37,12 +38,25 @@ public class MechaRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T>
      */
     @Override
     public void render(PoseStack poseStack, T animatable, BakedGeoModel bakedModel, @Nullable RenderType renderType, MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
-        renderType = getRenderType(animatable,null);
 
-        if (renderType != null) {
-            getRenderer().reRender(bakedModel, poseStack, bufferSource, animatable, renderType,
-                    bufferSource.getBuffer(renderType), partialTick, 15728640, packedOverlay,
-                    getRenderer().getRenderColor(animatable, partialTick, packedLight).argbInt());
+        if (this.getRenderer() instanceof MechaArmorRenderer renderer2) {
+            LivingEntity RIDER = renderer2.GetEntity();
+            if (RIDER!=null&&RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+                if (belt.Unlimited_Textures != 0 & renderer2.getCurrentSlot() == EquipmentSlot.FEET) {
+                    for (int n = 0; n < belt.Unlimited_Textures; n++) {
+                        renderType = getRenderType(animatable,n,RIDER,belt,EquipmentSlot.FEET);
+
+                        if (renderType != null) {
+                            getRenderer().reRender(bakedModel, poseStack, bufferSource, animatable, renderType,
+                                    bufferSource.getBuffer(renderType), partialTick, packedLight, packedOverlay,
+                                    getRenderer().getRenderColor(animatable, partialTick, packedLight).argbInt());
+                        }
+                    }
+                }
+            }
         }
+
     }
 }
+
+

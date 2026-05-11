@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "spider_kumonos",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_tarantula_soul"
+    },
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:kumono_slayer"
+  }
+}

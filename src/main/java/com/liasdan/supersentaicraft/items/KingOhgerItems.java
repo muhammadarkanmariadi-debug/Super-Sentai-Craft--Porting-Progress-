@@ -6,12 +6,10 @@ import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.items.boukenger.AccellularItem;
 import com.liasdan.supersentaicraft.items.boukenger.GoGoChangerItem;
 import com.liasdan.supersentaicraft.items.boukenger.SeikenZubaanItem;
-import com.liasdan.supersentaicraft.items.king_ohger.KumonosKeyItem;
-import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburItem;
-import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburSwordItem;
-import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburZeroItem;
+import com.liasdan.supersentaicraft.items.king_ohger.*;
 import com.liasdan.supersentaicraft.items.others.*;
 import com.mojang.blaze3d.shaders.Effect;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -37,7 +35,7 @@ public class KingOhgerItems {
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
 
     public static final DeferredItem<Item> EMPTY_SHUGOD_SOUL = ITEMS.register("empty_shugod_soul",
-            () -> new BaseItem(new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER));
+            () -> new BaseDropItem(new Item.Properties(), ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "items/empty_shugod_soul")).AddToTabList(RangerTabs.KING_OHGER));
 
 	public static final DeferredItem<Item> GOD_KUWAGATA_SOUL_RI = ITEMS.register("god_kuwagata_soul_ri",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_ryouga_issen","kuwagata_ohger","king_ohger_belt",
@@ -265,9 +263,9 @@ public class KingOhgerItems {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<SwordItem> KINGS_WEAPON_NAGINATA = ITEMS.register("kings_weapon_naginata",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).KeepDifItem(OHGER_CALIBUR.get()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 	public static final DeferredItem<SwordItem> KINGS_WEAPON_SCYTHE = ITEMS.register("kings_weapon_scythe",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
+			() -> new BaseSwordItem(Tiers.DIAMOND, 12, -2.4F, new Item.Properties()).KeepDifItem(OHGER_CALIBUR.get()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));
 
 	public static final DeferredItem<BaseBlasterItem> VENOMIX_SHOOTER = ITEMS.register("venomix_shooter",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 0, -2.4F, new Item.Properties()).AddToTabList(RangerTabs.KING_OHGER).ChangeRepairItem(EMPTY_SHUGOD_SOUL.get()));

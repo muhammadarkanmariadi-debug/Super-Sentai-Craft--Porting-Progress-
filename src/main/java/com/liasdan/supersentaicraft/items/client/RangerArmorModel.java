@@ -4,6 +4,7 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -69,6 +70,8 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 
 		Entity entity = state.getData(DataTickets.ENTITY);
 		if (entity instanceof LivingEntity RIDER) {
+			Float GetTransforming = (float) RIDER.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()-(state.getPartialTick()*0.2f);
+
 			GeoBone cape = this.getAnimationProcessor().getBone("cape");
 
 			if (cape != null & RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)) < 0)

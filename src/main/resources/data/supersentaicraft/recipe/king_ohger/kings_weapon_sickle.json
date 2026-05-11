@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "pattern": [
+    "aaa",
+    "acb",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_kamakiri_soul"
+    },
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:kings_weapon_sickle"
+  }
+}

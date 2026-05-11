@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_tarantula_soul"
+    },
+    "c": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "d": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    "ada",
+    "dbd",
+    "aca"
+  ],
+  "result": {
+    "count": 1,
+    "id": "supersentaicraft:bug_naraku_crystal"
+  }
+}

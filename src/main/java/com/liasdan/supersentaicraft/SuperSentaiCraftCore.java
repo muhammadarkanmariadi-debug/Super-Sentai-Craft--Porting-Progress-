@@ -12,11 +12,7 @@ import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.events.ModCommonEvents;
 import com.liasdan.supersentaicraft.items.*;
-import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
-import com.liasdan.supersentaicraft.items.lupatranger.VSChangerItem;
 import com.liasdan.supersentaicraft.items.others.*;
-import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
-import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
 import com.liasdan.supersentaicraft.network.ServerPayloadHandler;
 import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
@@ -24,19 +20,13 @@ import com.liasdan.supersentaicraft.network.payload.PoseKeyPayload;
 import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.liasdan.supersentaicraft.util.RegisterItemProperties;
-import com.liasdan.supersentaicraft.world.attributeGenerator;
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -51,7 +41,6 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
 import net.neoforged.neoforge.network.registration.HandlerThread;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.slf4j.Logger;
@@ -121,7 +110,7 @@ public class SuperSentaiCraftCore {
 
 		RangerBlocks.register(modEventBus);
 
-		attributeGenerator.ATTRIBUTES.register(modEventBus);
+		AttributeRegistry.ATTRIBUTES.register(modEventBus);
 		MobsCore.register(modEventBus);
 		MobsCore.MOBLIST.register(modEventBus);
 		MobsItems.register(modEventBus);
@@ -190,24 +179,10 @@ public class SuperSentaiCraftCore {
             else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
         }
 
-		float size = 1;
-		boolean Tall = event.getEntity().hasEffect(EffectCore.STRETCH);
-
-		if (event.getEntity().hasEffect(EffectCore.STRETCH)) {
-			size = size + ((event.getEntity().getEffect(EffectCore.STRETCH).getAmplifier()) +1f);
-		}
-
-		float size2 = event.getEntity().hasEffect(EffectCore.STRETCH) ? 1 : size;
-
-		if (event.getEntity().hasEffect(EffectCore.FLAT)) {
-			size2 = 0.04f;
-		}
-		float size3 = event.getEntity().hasEffect(EffectCore.STRETCH) ? 1 : size;
-		if (event.getEntity().hasEffect(EffectCore.WIDE)) {
-			size2 = (float) (size2 * 3);
-			size3 = (float) (size3 * 3);
-		}
-		event.getPoseStack().scale(size3, size, size2);
+		float sizeX= (float) event.getEntity().getAttribute(AttributeRegistry.PLAYER_SIZE_X).getValue();
+		float sizeY = (float) event.getEntity().getAttribute(AttributeRegistry.PLAYER_SIZE_Y).getValue();
+		float sizeZ = (float) event.getEntity().getAttribute(AttributeRegistry.PLAYER_SIZE_Z).getValue();
+		event.getPoseStack().scale(sizeX, sizeY, sizeZ);
 	}
 
 	@SubscribeEvent

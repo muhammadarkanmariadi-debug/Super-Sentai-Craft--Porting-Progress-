@@ -23,7 +23,6 @@ public class RangerRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T
     }
 
     protected ResourceLocation getTextureResource(T animatable, int n, LivingEntity entity, RangerChangerItem belt, EquipmentSlot slot) {
-        if (slot == EquipmentSlot.FEET)  return   ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/belts/" +belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.FEET), entity, belt.Rider, n + 1) + ".png");
         return   ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/" +belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.FEET), entity, belt.Rider, n + 1) + ".png");
     }
     @Nullable
@@ -45,16 +44,6 @@ public class RangerRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T
                 if (belt.Unlimited_Textures != 0 & renderer2.getCurrentSlot() == EquipmentSlot.HEAD) {
                     for (int n = 0; n < belt.Unlimited_Textures; n++) {
                         renderType = getRenderType(animatable,n,RIDER,belt,EquipmentSlot.HEAD);
-
-                        if (renderType != null) {
-                            getRenderer().reRender(bakedModel, poseStack, bufferSource, animatable, renderType,
-                                    bufferSource.getBuffer(renderType), partialTick, packedLight, packedOverlay,
-                                    getRenderer().getRenderColor(animatable, partialTick, packedLight).argbInt());
-                        }
-                    }
-                }else if (belt.Unlimited_Belt_Textures != 0 & renderer2.getCurrentSlot() == EquipmentSlot.FEET) {
-                    for (int n = 0; n < belt.Unlimited_Belt_Textures; n++) {
-                        renderType = getRenderType(animatable,n,RIDER,belt,EquipmentSlot.FEET);
 
                         if (renderType != null) {
                             getRenderer().reRender(bakedModel, poseStack, bufferSource, animatable, renderType,
