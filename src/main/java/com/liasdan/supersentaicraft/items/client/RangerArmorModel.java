@@ -6,6 +6,7 @@ import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 
 import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -70,12 +71,28 @@ public class RangerArmorModel extends GeoModel<RangerArmorItem> {
 
 		Entity entity = state.getData(DataTickets.ENTITY);
 		if (entity instanceof LivingEntity RIDER) {
-			Float GetTransforming = (float) RIDER.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()-(state.getPartialTick()*0.2f);
+
+			double GetTransformingOld =  RIDER.getAttribute(AttributeRegistry.IS_TRANSFORMING_OLD).getBaseValue();
+			double GetTransforming = RIDER.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue();
+
+			double GetBallOld =  RIDER.getAttribute(AttributeRegistry.BALL_ROT_OLD).getBaseValue();
+			double GetBall = RIDER.getAttribute(AttributeRegistry.BALL_ROT).getBaseValue();
+			double GetWheelOld =  RIDER.getAttribute(AttributeRegistry.WHEEL_ROT_OLD).getBaseValue();
+			double GetWheel = RIDER.getAttribute(AttributeRegistry.WHEEL_ROT).getBaseValue();
+			double GetCapeOld =  RIDER.getAttribute(AttributeRegistry.CAPE_ROT_OLD).getBaseValue();
+			double GetCape = RIDER.getAttribute(AttributeRegistry.CAPE_ROT).getBaseValue();
+
+			Float  Transforming = (float) Mth.lerp(state.getPartialTick(),GetTransformingOld,GetTransforming);
+			Float  wheel= (float) Mth.lerp(state.getPartialTick(),GetWheelOld,GetWheel);
+			Float  ball = (float) Mth.lerp(state.getPartialTick(),GetBallOld,GetBall);
+			Float  Cape = (float) Mth.lerp(state.getPartialTick(),GetCapeOld,GetCape);
 
 			GeoBone cape = this.getAnimationProcessor().getBone("cape");
 
-			if (cape != null & RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)) < 0)
-				cape.setRotX(RangerArmorItem.GetCapeRotation(RIDER.getItemBySlot(EquipmentSlot.FEET)));
+			if (cape != null & Cape< 0)
+				cape.setRotX(Cape);
+			if (cape != null & ball != 0)
+				cape.setRotY(ball);
 
 			if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
 				belt.setCustomAnimations(an, instanceId, state);

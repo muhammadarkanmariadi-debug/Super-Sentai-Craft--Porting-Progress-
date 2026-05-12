@@ -20,8 +20,8 @@ public class SuperSentaiCraftCoreClient {
     }
 
     @SubscribeEvent
-    public static void registerPlayerAnimations( FMLClientSetupEvent event) {
-        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(ANIMATION_LAYER_ID, 15000,
+    public static void registerPlayerAnimations() {
+        PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(ANIMATION_LAYER_ID, 17500,
                 player -> new PlayerAnimationController(player,
                         (controller, state, animSetter) -> PlayState.STOP
                 )

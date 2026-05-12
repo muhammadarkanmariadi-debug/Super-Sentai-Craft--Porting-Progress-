@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.util;
 
+import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.liasdan.supersentaicraft.network.payload.EndPosePayload;
 import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.server.level.ServerLevel;

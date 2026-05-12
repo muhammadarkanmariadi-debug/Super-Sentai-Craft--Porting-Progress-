@@ -46,19 +46,22 @@ import net.neoforged.neoforge.network.PacketDistributor;
 
 public class ModCommonEvents {
 
-	public static class EventHandler {
+	public static class CommonEvents {
 
 		@SubscribeEvent
 		public void clientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().player != null) {
-				while (KeyBindings.INSTANCE.AbilityKey.consumeClick()) PacketDistributor.sendToServer(new AbilityKeyPayload(0));
-				while (KeyBindings.INSTANCE.PoseKey.consumeClick()) PacketDistributor.sendToServer(new PoseKeyPayload(0));
+				while (KeyBindings.INSTANCE.AbilityKey.consumeClick())
+					PacketDistributor.sendToServer(new AbilityKeyPayload(0));
+				while (KeyBindings.INSTANCE.PoseKey.consumeClick())
+					PacketDistributor.sendToServer(new PoseKeyPayload(0));
 			}
 		}
 
 		@SubscribeEvent
 		public void onEntityTick(EntityTickEvent.Post event) {
 			if (event.getEntity() instanceof LivingEntity entity ) {
+				entity.getAttribute(AttributeRegistry.IS_TRANSFORMING_OLD).setBaseValue(entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue());
 				if (entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()!=0)entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()-0.2);
 				if (entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).getBaseValue()<=0)entity.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(0);
 			}
@@ -141,9 +144,6 @@ public class ModCommonEvents {
 				}
 			}
 		}
-	}
-
-	public static class CommonEvents {
 
 		@SubscribeEvent
 		public void addCustomTrades(VillagerTradesEvent event) {

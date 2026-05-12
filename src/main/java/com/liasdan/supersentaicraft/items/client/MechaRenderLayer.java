@@ -2,7 +2,6 @@ package com.liasdan.supersentaicraft.items.client;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.others.MechaGattaiItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;

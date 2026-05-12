@@ -6,14 +6,14 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 16,
+				"visible_bounds_offset": [0, 4, 0]
 			},
 			"bones": [
 				{
 					"name": "body",
-					"pivot": [0, 0, 0]
+					"pivot": [0.66667, 15.66667, 0]
 				},
 				{
 					"name": "torso_root",
@@ -68,13 +68,15 @@
 					"pivot": [0, 24, 0],
 					"cubes": [
 						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.1, "uv": [0, 0]},
-						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [32, 0]}
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [32, 0]},
+						{"origin": [0, 30, -4.5], "size": [1, 5, 1], "pivot": [1, 30, -5], "rotation": [0, 0, 22.5], "uv": [4, 2]},
+						{"origin": [-1, 30, -4.5], "size": [1, 5, 1], "pivot": [-1, 30, -5], "rotation": [0, 0, -22.5], "uv": [0, 2]}
 					]
 				},
 				{
 					"name": "right_arm_root",
 					"parent": "body",
-					"pivot": [-5, 22, 0]
+					"pivot": [0, 0, 0]
 				},
 				{
 					"name": "right_arm",
@@ -84,6 +86,11 @@
 						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.5, "uv": [40, 32]},
 						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.1, "uv": [40, 16]}
 					]
+				},
+				{
+					"name": "right_item",
+					"parent": "right_arm",
+					"pivot": [-6.5, 11.5, 0]
 				},
 				{
 					"name": "left_arm_root",
@@ -98,6 +105,11 @@
 						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.1, "uv": [32, 48]},
 						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.5, "uv": [48, 48]}
 					]
+				},
+				{
+					"name": "left_item",
+					"parent": "left_arm",
+					"pivot": [6.25, 11.5, 0]
 				}
 			]
 		}

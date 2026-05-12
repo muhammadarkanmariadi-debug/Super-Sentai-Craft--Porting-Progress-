@@ -14,9 +14,9 @@ import com.liasdan.supersentaicraft.events.ModCommonEvents;
 import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
+import com.liasdan.supersentaicraft.network.ClientPayloadHandler;
 import com.liasdan.supersentaicraft.network.ServerPayloadHandler;
-import com.liasdan.supersentaicraft.network.payload.AbilityKeyPayload;
-import com.liasdan.supersentaicraft.network.payload.PoseKeyPayload;
+import com.liasdan.supersentaicraft.network.payload.*;
 import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.liasdan.supersentaicraft.util.RegisterItemProperties;
@@ -71,7 +71,6 @@ public class SuperSentaiCraftCore {
 		modEventBus.addListener(this::commonSetup);
 		NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 		NeoForge.EVENT_BUS.register(new ModCommonEvents.CommonEvents());
-		NeoForge.EVENT_BUS.register(new ModCommonEvents.EventHandler());
 
 		// Register ourselves for server and other game events we are interested in.
 		// Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -197,6 +196,7 @@ public class SuperSentaiCraftCore {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
 			event.enqueueWork(RegisterItemProperties::addCustomItemProperties);
+			event.enqueueWork(SuperSentaiCraftCoreClient::registerPlayerAnimations);
 		}
 
 		@SubscribeEvent
@@ -293,6 +293,24 @@ public class SuperSentaiCraftCore {
 						AbilityKeyPayload.TYPE,
 						AbilityKeyPayload.STREAM_CODEC,
 						ServerPayloadHandler::handleAbilityKeyPress
+				);
+
+				registrar.playToServer(
+						ClimbCollisionPayload.TYPE,
+						ClimbCollisionPayload.STREAM_CODEC,
+						ServerPayloadHandler::handleClimbing
+				);
+
+				registrar.playToClient(
+						EndPosePayload.TYPE,
+						EndPosePayload.STREAM_CODEC,
+						ClientPayloadHandler::endPoseAnimations
+				);
+
+				registrar.playToClient(
+						StartPosePayload.TYPE,
+						StartPosePayload.STREAM_CODEC,
+						ClientPayloadHandler::startPoseAnimations
 				);
 
 				registrar.playToServer(
