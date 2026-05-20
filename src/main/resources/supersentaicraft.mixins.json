@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.liasdan.supersentaicraft.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "livingentity.LivingEntityMixin",
+    "client.AbstractClientPlayerMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

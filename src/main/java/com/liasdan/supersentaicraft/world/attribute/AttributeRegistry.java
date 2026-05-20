@@ -18,6 +18,15 @@ public class AttributeRegistry extends Event implements IModBusEvent {
 
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(Registries.ATTRIBUTE, SuperSentaiCraftCore.MODID);
 
+    public static final DeferredHolder<Attribute, Attribute> WINGS_OUT = ATTRIBUTES.register("wing_out",
+            () -> new RangedAttribute(
+                    "attribute.kamenridercraftcore.wings_out",
+                    0,
+                    0,
+                    1
+            ).setSyncable(true)
+    );
+
     public static final DeferredHolder<Attribute, Attribute> CAPE_ROT_OLD = ATTRIBUTES.register("cape_rotation_old",
             () -> new RangedAttribute(
                     "attribute.kamenridercraftcore.cape_rotation_old",
@@ -26,7 +35,6 @@ public class AttributeRegistry extends Event implements IModBusEvent {
                     30
             ).setSyncable(true)
     );
-
 
     public static final DeferredHolder<Attribute, Attribute> CAPE_ROT = ATTRIBUTES.register("cape_rotation",
             () -> new RangedAttribute(
@@ -164,17 +172,6 @@ public class AttributeRegistry extends Event implements IModBusEvent {
 
             ).setSyncable(true)
     );
-
-
-    public static final DeferredHolder<Attribute, Attribute> POSE_COOLDOWN = ATTRIBUTES.register("pose_cooldown",
-            () -> new RangedAttribute(
-                    "attribute.supersentaicraft.pose_cooldown",
-                    0,
-                    0,
-                    9999
-            ).setSyncable(true)
-    );
-
 
    @SubscribeEvent
     public static void modifyEntityAttributes(EntityAttributeModificationEvent eMod) {

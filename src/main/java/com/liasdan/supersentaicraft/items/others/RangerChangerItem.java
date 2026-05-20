@@ -1,5 +1,6 @@
 package com.liasdan.supersentaicraft.items.others;
 
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,18 +83,13 @@ public class RangerChangerItem extends RangerArmorItem {
 	}
 
 	public void beltTick(ItemStack stack, Level level, LivingEntity player, int slotId) {
+		// if (player.level().isClientSide)player.sendSystemMessage(Component.literal("beltTick"));
 		if (stack.has(DataComponents.CUSTOM_DATA)) {
 			CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).getUnsafe();
 			if (tag.getBoolean("Update_form") && slotId == 36) OnformChange(stack, player, tag);
 			if (!isTransformed(player) || slotId != 36) tag.putBoolean("Update_form", true);
 			if (isTransformed(player)) tag.putDouble("render_type", getRenderType(stack));
 			if (!isTransformed(player)) tag.putDouble("render_type", 0);
-
-			if (!level.isClientSide) {
-				if (tag.getDouble("is_transforming") != 0)
-					tag.putDouble("is_transforming", tag.getDouble("is_transforming") - 1);
-				if (tag.getDouble("is_transforming") < 0) tag.putDouble("is_transforming", 0);
-			}
 
 		} else {
 			set_Update_Form(stack);
@@ -126,13 +122,17 @@ public class RangerChangerItem extends RangerArmorItem {
 
 	@Override
 	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-		if (entity instanceof LivingEntity player) {
-			this.beltTick(stack,level,player,slotId);
-			this.giveEffects(player);
-
+		if (entity instanceof LivingEntity livingEntity && stack == livingEntity.getItemBySlot(EquipmentSlot.FEET)) {
+			this.beltTick(stack, level, livingEntity, slotId);
+			this.giveEffects(livingEntity);
+		} else if (entity instanceof
+				LivingEntity player) {
 			if (stack.has(DataComponents.CUSTOM_DATA)) {
 				if (!isTransformed(player) || slotId != 36) {
 					Consumer<CompoundTag> data = form -> {
+						form.putBoolean("rider_kicking", false);
+						form.putDouble("rider_kick_cooldown", 200);
+						form.putDouble("rider_kick_tick", 0);
 						form.putBoolean("Update_form", true);
 					};
 					CustomData.update(DataComponents.CUSTOM_DATA, stack, data);
@@ -142,16 +142,18 @@ public class RangerChangerItem extends RangerArmorItem {
 	}
 
 	public void OnformChange(ItemStack itemstack, LivingEntity player,CompoundTag tag) {
-		if(isTransformed(player)) {
-			OnTransformation(itemstack,player);
+		if (isTransformed(player)) {
+			OnTransformation(itemstack, player);
 			Consumer<CompoundTag> data = form -> {
 				form.putBoolean("Update_form", false);
-				form.putFloat("cape", 0f);
+				form.putDouble("render_type", getRenderType(itemstack));
 			};
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
 			player.getAttribute(AttributeRegistry.IS_TRANSFORMING).setBaseValue(30);
+			player.getAttribute(AttributeRegistry.CAPE_ROT).setBaseValue(0);
+			player.getAttribute(AttributeRegistry.WHEEL_ROT).setBaseValue(0);
+			player.getAttribute(AttributeRegistry.BALL_ROT).setBaseValue(0);
 		}
-
 	}
 
 	public void OnTransformation(ItemStack itemstack, LivingEntity player) {
@@ -208,7 +210,7 @@ public class RangerChangerItem extends RangerArmorItem {
 	}
 
 	public ResourceLocation getModelResource(ItemStack itemstack,RangerArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
-		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
+		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider.getAttribute(AttributeRegistry.WINGS_OUT).getBaseValue()==1){
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, 1).get_FlyingModel(this.Rider));
 		}
 		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, 1).get_Model(this.Rider));
@@ -228,23 +230,10 @@ public class RangerChangerItem extends RangerArmorItem {
 
 	}
 
-	public boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
 
-		if (isTransformed(livingEntity)){
-			switch (currentSlot) {
-				case HEAD ->{
-					return get_Form_Item(itemstack, 1).get_Is_Glowing();
-				}
-				case CHEST -> {
-					return get_Form_Item(itemstack, 1).get_Is_Glowing();
-				}
-				case LEGS -> {
-					return get_Form_Item(itemstack, 1).get_Is_Glowing();
-				}
-				default -> {}
-			}
-			return false;
-		}
+	public boolean getGlowForSlot(ItemStack itemstack, EquipmentSlot currentSlot, LivingEntity livingEntity) {
+		if (currentSlot == EquipmentSlot.FEET) return get_Form_Item(itemstack, 1).get_Is_Belt_Glowing();
+		else if (isTransformed(livingEntity)) return get_Form_Item(itemstack, 1).get_Is_Glowing();
 		return false;
 	}
 
@@ -316,20 +305,21 @@ public class RangerChangerItem extends RangerArmorItem {
 	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
 
 		switch (currentSlot) {
-		case HEAD ->{ 
-			if (part =="head") return true;
-		}
-		case CHEST -> {
-			if (part =="body") return true;
-			if (part =="rightArm") return true;
-			if (part =="leftArm") return true;
-		}
-		case LEGS -> {
+			case HEAD -> {
+				if (Objects.equals(part, "head")) return true;
+			}
+			case CHEST -> {
+				if (Objects.equals(part, "body")) return true;
+				if (Objects.equals(part, "rightArm")) return true;
+				if (Objects.equals(part, "leftArm")) return true;
+			}
+			case LEGS -> {
 
-			if (part =="rightLeg") return true;
-			if (part =="leftLeg") return true;
-		}
-		default -> {}
+				if (Objects.equals(part, "rightLeg")) return true;
+				if (Objects.equals(part, "leftLeg")) return true;
+			}
+			default -> {
+			}
 		}
 		return false;
 	}

@@ -2,13 +2,7 @@
   "parent": "supersentaicraft:recipes/root",
   "rewards": {
     "recipes": [
-      "supersentaicraft:king_ohger/ohger_crown_lance",
-      "supersentaicraft:king_ohger/shugodom_crown",
-      "supersentaicraft:king_ohger/nkosopa_earring",
-      "supersentaicraft:king_ohger/ishabana_tiara",
-      "supersentaicraft:king_ohger/gokkan_bracelet",
-      "supersentaicraft:king_ohger/toufu_necklace",
-      "supersentaicraft:king_ohger/bug_naraku_crystal"
+      "supersentaicraft:king_ohger/ohger_crown_lance"
     ]
   },
   "criteria": {

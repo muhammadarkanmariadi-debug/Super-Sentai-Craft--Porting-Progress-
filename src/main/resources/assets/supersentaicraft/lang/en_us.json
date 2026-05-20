@@ -1,4 +1,6 @@
 {
+  "key.categories.supersentaicraft": "Super Sentai Craft",
+
   "effect.supersentaicraft.flying": "Flying",
   "effect.supersentaicraft.fire_punch": "Fire Punch",
   "effect.supersentaicraft.punch": "Punch",
@@ -32,9 +34,12 @@
   "effect.supersentaicraft.stretch": "Stretch",
   "effect.supersentaicraft.wide": "Wide",
   "effect.supersentaicraft.low_gravity": "Low Gravity",
+  "effect.supersentaicraft.climbing":"Climbing",
 
   "key.supersentaicraft.ability": "Use an Ability",
-  "key.supersentaicraft.pose": "Do a Pose",
+  "key.supersentaicraft.pose": "Strike a Pose",
+
+  "travelerstitles.supersentaicraft.super_sentai_topia": "Super Sentai Topia",
 
   "entity.supersentaicraft.zolder": "Zolders",
   "item.supersentaicraft.zolder_spawn_egg": "Zolders Spawn Egg",
@@ -2748,6 +2753,9 @@
 
   //47 King-Ohger
   "tab.supersentaicraft.king_ohger": "Ohsama Sentai King-Ohger",
+
+  "block.supersentaicraft.king_ohger_ore": "King-Ohger Ore",
+  "block.supersentaicraft.deepslate_king_ohger_ore": "Deepslate King-Ohger Ore",
 
   "item.supersentaicraft.king_ohger_logo":"King-Ohger Logo",
   "item.supersentaicraft.empty_shugod_soul":"Empty Shugod Soul",

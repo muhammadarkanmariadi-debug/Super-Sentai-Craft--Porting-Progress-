@@ -4,6 +4,7 @@ import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
 import com.liasdan.supersentaicraft.items.GozyugerItems;
 import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
+import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -50,7 +51,7 @@ public class TegaSwordItem extends RangerChangerItem{
 		int num = 1;
 		if (slot == EquipmentSlot.HEAD)num=2;
 
-		if (get_Form_Item(itemstack, num).HasWingsIfFlying() & !rider.onGround()){
+		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider.getAttribute(AttributeRegistry.WINGS_OUT).getBaseValue()==1){
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_FlyingModel(this.Rider));
 		}else
 			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model(this.Rider));

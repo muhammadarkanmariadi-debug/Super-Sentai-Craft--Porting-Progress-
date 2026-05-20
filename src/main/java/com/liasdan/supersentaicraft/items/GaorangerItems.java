@@ -199,8 +199,7 @@ public class GaorangerItems {
 	public static final DeferredItem<Item> GAO_DEERS_JEWEL = ITEMS.register("gao_deers_jewel",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"gao_deers","gao_king","blank",
 					new MobEffectInstance(EffectCore.SLASH, 40, 3,true,false),
-					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0,true,false))
+					new MobEffectInstance(EffectCore.PUNCH, 40, 3,true,false))
 					.ChangeSlot(4).AddCompatibilityList(ARMS).AddToTabList(RangerTabs.GAORANGER));
 
 	public static final DeferredItem<Item> GAO_FALCON_JEWEL = ITEMS.register("gao_falcon_jewel",

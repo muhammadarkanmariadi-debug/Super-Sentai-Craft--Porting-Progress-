@@ -49,6 +49,7 @@ public class RangerFormChangeItem extends BaseItem {
 	public List<Item> needItemList;
 	private Boolean IS_GLOWING = false;
 	private Boolean HAS_STATIC_WINGS = false;
+	private Boolean IS_BELT_GLOWING = false;
 
 	private RangerFormChangeItem NEED_FORM_SLOT_1;
 	private RangerFormChangeItem NEED_FORM_SLOT_2;
@@ -125,6 +126,10 @@ public class RangerFormChangeItem extends BaseItem {
 
 	public Boolean get_Is_Glowing() {
 		return IS_GLOWING;
+	}
+
+	public Boolean get_Is_Belt_Glowing() {
+		return IS_BELT_GLOWING;
 	}
 
 	public String getRangerName(String name) {

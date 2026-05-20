@@ -19,6 +19,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -39,6 +40,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
@@ -72,13 +74,6 @@ public class ModCommonEvents {
 					Vec3 initialVec = entity.getDeltaMovement();
 					Vec3 climbVec = new Vec3(initialVec.x, 0.1D * (entity.getAttribute(AttributeRegistry.CLIMBING).getValue()), initialVec.z);
 					entity.setDeltaMovement(climbVec.scale(0.97D));
-				}
-			}
-
-			if (event.getEntity() instanceof LivingEntity entity && !(event.getEntity() instanceof Player)) {
-				if (entity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt) {
-					belt.beltTick(entity.getItemBySlot(EquipmentSlot.FEET), entity.level(), entity, 36);
-					belt.giveEffects(entity);
 				}
 			}
 		}
@@ -156,6 +151,14 @@ public class ModCommonEvents {
 						new ItemCost(Items.EMERALD, 2),
 						stack, 10, 8, 0.02F));
 			}
+		}
+	}
+
+	@SubscribeEvent
+	public void riderVisibility(LivingEvent.LivingVisibilityEvent event) {
+		if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem belt
+				&& belt.isTransformed(event.getEntity()) && event.getEntity().hasEffect(MobEffects.INVISIBILITY)) {
+			event.modifyVisibility(event.getVisibilityModifier() * 0.1);
 		}
 	}
 

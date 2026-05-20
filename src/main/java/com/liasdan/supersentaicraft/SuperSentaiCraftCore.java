@@ -6,11 +6,11 @@ import com.liasdan.supersentaicraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.supersentaicraft.client.renderer.ThrownShurikenRenderer;
 import com.liasdan.supersentaicraft.client.renderer.ThrownWeaponRenderer;
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.events.ModClientEvents;
 import com.liasdan.supersentaicraft.blocks.RangerBlocks;
 import com.liasdan.supersentaicraft.effect.EffectCore;
 import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.supersentaicraft.events.ModCommonEvents;
+import com.liasdan.supersentaicraft.events.ModServerEvents;
 import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.loot.ModLootModifiers;
@@ -21,6 +21,7 @@ import com.liasdan.supersentaicraft.particle.*;
 import com.liasdan.supersentaicraft.sounds.ModSounds;
 import com.liasdan.supersentaicraft.util.RegisterItemProperties;
 import com.liasdan.supersentaicraft.world.attribute.AttributeRegistry;
+import com.liasdan.supersentaicraft.world.data_attachments.AttachmentTypeRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -69,13 +70,14 @@ public class SuperSentaiCraftCore {
 	public SuperSentaiCraftCore(IEventBus modEventBus, ModContainer modContainer) {
 		// Register the commonSetup method for modloading
 		modEventBus.addListener(this::commonSetup);
-		NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
+		//NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 		NeoForge.EVENT_BUS.register(new ModCommonEvents.CommonEvents());
 
 		// Register ourselves for server and other game events we are interested in.
 		// Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
 		// Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
 		NeoForge.EVENT_BUS.register(this);
+		AttachmentTypeRegistry.register(modEventBus);
 		EffectCore.register(modEventBus);
 		ModSounds.register(modEventBus);
 
@@ -140,6 +142,7 @@ public class SuperSentaiCraftCore {
 	@SubscribeEvent
 	public void onServerStarting(ServerStartingEvent event)
 	{
+		NeoForge.EVENT_BUS.register(new ModServerEvents.ServerEvents());
 	}
 
 	@SubscribeEvent
@@ -293,6 +296,18 @@ public class SuperSentaiCraftCore {
 						AbilityKeyPayload.TYPE,
 						AbilityKeyPayload.STREAM_CODEC,
 						ServerPayloadHandler::handleAbilityKeyPress
+				);
+
+				registrar.playToClient(
+						AttributeChangeClientPayload.TYPE,
+						AttributeChangeClientPayload.STREAM_CODEC,
+						ClientPayloadHandler::handleAttributeCLientChange
+				);
+
+				registrar.playToServer(
+						AttributeChangePayload.TYPE,
+						AttributeChangePayload.STREAM_CODEC,
+						ServerPayloadHandler::handleAttributeChange
 				);
 
 				registrar.playToServer(

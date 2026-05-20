@@ -71,10 +71,10 @@ public class KingOhgerItems {
 
 	public static final DeferredItem<Item> GOD_KAMAKIRI_SOUL_RI = ITEMS.register("god_kamakiri_soul_ri",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_ryouga_issen","kamakiri_ohger","king_ohger_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(EffectCore.SLASH, 40, 2,true,false))
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(EffectCore.SLASH, 40, 3,true,false))
 			.IsGlowing().ChangeBeltModel("rangerbeltweapon.geo.json").AddNeedItemList(ISHABANA));
 
 	public static final DeferredItem<Item> GOD_KAMAKIRI_SOUL = ITEMS.register("god_kamakiri_soul",
@@ -102,10 +102,10 @@ public class KingOhgerItems {
 
 	public static final DeferredItem<Item> GOD_HACHI_SOUL_RI = ITEMS.register("god_hachi_soul_ri",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"_ryouga_issen","hachi_ohger","king_ohger_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(EffectCore.FIRESLASH, 40, 2,true,false))
+					new MobEffectInstance(EffectCore.FIRESLASH, 40, 3,true,false))
 			.IsGlowing().ChangeBeltModel("rangerbeltweapon.geo.json").AddNeedItemList(TOUFU));
 
 	public static final DeferredItem<Item> GOD_HACHI_SOUL = ITEMS.register("god_hachi_soul",
