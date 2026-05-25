@@ -17,11 +17,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.NotNull;
 
-import com.liasdan.supersentaicraft.items.GorangerItems;
+import com.liasdan.supersentaicraft.items.sentai_10.GorangerItems;
 import com.liasdan.supersentaicraft.items.client.MechaArmorRenderer;
-import com.liasdan.supersentaicraft.items.client.RangerArmorRenderer;
 
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;

@@ -1,13 +1,10 @@
 package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.items.CarrangerItems;
+import com.liasdan.supersentaicraft.items.sentai_20.CarrangerItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;

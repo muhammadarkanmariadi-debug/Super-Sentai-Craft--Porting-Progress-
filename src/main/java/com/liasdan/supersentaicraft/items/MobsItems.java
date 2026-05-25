@@ -1,19 +1,9 @@
 package com.liasdan.supersentaicraft.items;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.effect.EffectCore;
-import com.liasdan.supersentaicraft.items.maskman.MaskingBraceItem;
-import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
-import com.liasdan.supersentaicraft.items.others.BaseItem;
-import com.liasdan.supersentaicraft.items.others.BasePickaxeItem;
 import com.liasdan.supersentaicraft.items.others.BaseShieldItem;
 import com.liasdan.supersentaicraft.items.others.BaseSwordItem;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.others.RangerFormChangeItem;
 
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;

@@ -3,8 +3,7 @@ package com.liasdan.supersentaicraft.items.others;
 import java.util.List;
 
 import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.events.ModClientEvents;
-import com.liasdan.supersentaicraft.items.GorangerItems;
+import com.liasdan.supersentaicraft.items.sentai_10.GorangerItems;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

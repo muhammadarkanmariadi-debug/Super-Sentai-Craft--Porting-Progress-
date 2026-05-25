@@ -1,9 +1,7 @@
 package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.items.GoBustersItems;
-import com.liasdan.supersentaicraft.items.ShinkengerItems;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
+import com.liasdan.supersentaicraft.items.sentai_40.GoBustersItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -15,7 +13,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -23,7 +20,6 @@ import net.minecraft.world.level.block.Blocks;
 import javax.annotation.Nullable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
-import java.util.Random;
 
 public class DarkBusterEntity extends BaseFootsoldierEntity {
 

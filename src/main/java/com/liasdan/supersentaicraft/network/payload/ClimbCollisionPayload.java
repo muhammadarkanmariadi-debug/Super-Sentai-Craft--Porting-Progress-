@@ -6,16 +6,16 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 
-public record ClimbCollisionPayload(int hand) implements CustomPacketPayload {
-    public static final Type<ClimbCollisionPayload> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("supersentaicraft", "climb_collision"));
+public record ClimbCollisionPayload(String id) implements CustomPacketPayload {
+    public static final CustomPacketPayload.Type<ClimbCollisionPayload> TYPE = new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath("supersentaicraft", "climb_collision"));
 
     public static final StreamCodec<ByteBuf, ClimbCollisionPayload> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.VAR_INT, ClimbCollisionPayload::hand,
+            ByteBufCodecs.STRING_UTF8, ClimbCollisionPayload::id,
             ClimbCollisionPayload::new
     );
 
     @Override
-    public Type<? extends CustomPacketPayload> type() {
+    public CustomPacketPayload.Type<? extends CustomPacketPayload> type() {
         return TYPE;
     }
 }

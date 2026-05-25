@@ -1,8 +1,7 @@
 package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.items.CarrangerItems;
-import com.liasdan.supersentaicraft.items.GingamanItems;
+import com.liasdan.supersentaicraft.items.sentai_30.GingamanItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -15,7 +14,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 

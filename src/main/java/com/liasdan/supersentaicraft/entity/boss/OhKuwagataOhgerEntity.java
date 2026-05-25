@@ -1,9 +1,7 @@
 package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.items.KingOhgerItems;
-import com.liasdan.supersentaicraft.items.OtherItems;
-import com.liasdan.supersentaicraft.items.RyusoulgerItems;
+import com.liasdan.supersentaicraft.items.sentai_50.KingOhgerItems;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +14,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

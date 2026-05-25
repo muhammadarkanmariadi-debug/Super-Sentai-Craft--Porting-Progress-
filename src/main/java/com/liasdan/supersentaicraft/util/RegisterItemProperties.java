@@ -1,34 +1,22 @@
 package com.liasdan.supersentaicraft.util;
 
-import com.liasdan.supersentaicraft.items.GingamanItems;
-import com.liasdan.supersentaicraft.items.KingOhgerItems;
-import com.liasdan.supersentaicraft.items.LuPatRangerItems;
-import com.liasdan.supersentaicraft.items.RyusoulgerItems;
-import com.liasdan.supersentaicraft.items.gingaman.GingaBraceItem;
-import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburItem;
-import com.liasdan.supersentaicraft.items.king_ohger.OhgerCaliburZeroItem;
-import com.liasdan.supersentaicraft.items.lupatranger.VSChangerItem;
+import com.liasdan.supersentaicraft.items.sentai_30.GingamanItems;
+import com.liasdan.supersentaicraft.items.sentai_50.KingOhgerItems;
+import com.liasdan.supersentaicraft.items.sentai_50.LuPatRangerItems;
+import com.liasdan.supersentaicraft.items.sentai_50.RyusoulgerItems;
+import com.liasdan.supersentaicraft.items.sentai_30.gingaman.GingaBraceItem;
+import com.liasdan.supersentaicraft.items.sentai_50.king_ohger.OhgerCaliburItem;
+import com.liasdan.supersentaicraft.items.sentai_50.king_ohger.OhgerCaliburZeroItem;
+import com.liasdan.supersentaicraft.items.sentai_50.lupatranger.VSChangerItem;
 import com.liasdan.supersentaicraft.items.others.BaseBlasterItem;
 import com.liasdan.supersentaicraft.items.others.BaseDualSwordItem;
 import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
-import com.liasdan.supersentaicraft.items.ryusoulger.MosaChangerItem;
-import com.liasdan.supersentaicraft.items.ryusoulger.RyusoulChangerItem;
+import com.liasdan.supersentaicraft.items.sentai_50.ryusoulger.MosaChangerItem;
+import com.liasdan.supersentaicraft.items.sentai_50.ryusoulger.RyusoulChangerItem;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.neoforged.fml.ModList;
-
-import java.util.List;
-import java.util.Objects;
 
 import static com.liasdan.supersentaicraft.SuperSentaiCraftCore.*;
 

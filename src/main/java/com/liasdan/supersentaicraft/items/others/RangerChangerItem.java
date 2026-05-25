@@ -190,8 +190,7 @@ public class RangerChangerItem extends RangerArmorItem {
 
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName)
 	{
-
-		boolean fly = rider instanceof Player player && player.getAbilities().flying;
+		boolean fly = rider.getAttribute(AttributeRegistry.WINGS_OUT).getBaseValue() == 1;
 
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			String belt = ((RangerChangerItem)itemstack.getItem()).BELT_TEXT;

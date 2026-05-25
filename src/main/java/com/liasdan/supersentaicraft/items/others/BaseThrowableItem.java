@@ -2,12 +2,9 @@ package com.liasdan.supersentaicraft.items.others;
 
 import java.util.List;
 
-import com.liasdan.supersentaicraft.entity.projectile.ExplosiveProjectileEntity;
 import com.liasdan.supersentaicraft.entity.projectile.ShurikenProjectileEntity;
 import com.liasdan.supersentaicraft.entity.projectile.WeaponProjectileEntity;
-import com.liasdan.supersentaicraft.events.ModClientEvents;
-import com.liasdan.supersentaicraft.items.GorangerItems;
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
+import com.liasdan.supersentaicraft.items.sentai_10.GorangerItems;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,7 +13,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.level.Level;
 
 public class BaseThrowableItem extends SwordItem {

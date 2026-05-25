@@ -2,8 +2,7 @@ package com.liasdan.supersentaicraft.blocks.machine;
 
 import com.liasdan.supersentaicraft.blocks.MachineBlock;
 import com.liasdan.supersentaicraft.blocks.RangerBlocks;
-import com.liasdan.supersentaicraft.items.BoonboomgerItems;
-import com.liasdan.supersentaicraft.items.GoBustersItems;
+import com.liasdan.supersentaicraft.items.sentai_40.GoBustersItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;

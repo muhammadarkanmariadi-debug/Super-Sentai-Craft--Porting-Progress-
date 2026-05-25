@@ -1,9 +1,7 @@
 package com.liasdan.supersentaicraft.entity.boss;
 
 import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
-import com.liasdan.supersentaicraft.items.GaorangerItems;
-import com.liasdan.supersentaicraft.items.GingamanItems;
-import com.liasdan.supersentaicraft.items.ShinkengerItems;
+import com.liasdan.supersentaicraft.items.sentai_30.GaorangerItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
