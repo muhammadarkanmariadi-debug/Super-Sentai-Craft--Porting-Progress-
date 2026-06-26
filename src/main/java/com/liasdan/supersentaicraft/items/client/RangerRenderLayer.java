@@ -23,11 +23,12 @@ public class RangerRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T
     }
 
     protected ResourceLocation getTextureResource(T animatable, int n, LivingEntity entity, RangerChangerItem belt, EquipmentSlot slot) {
-        return   ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/" +belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.FEET), entity, belt.Rider, n + 1) + ".png");
+        return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/" + belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.FEET), entity, belt.Rider, n + 1) + ".png");
     }
     @Nullable
     protected RenderType getRenderType(T animatable,int run,LivingEntity entity,RangerChangerItem belt,EquipmentSlot slot) {
-        return RenderType.entityTranslucent(getTextureResource(animatable,run,entity,belt,slot));
+        if (getTextureResource(animatable, run, entity, belt, slot).getPath().equals((ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/blank.png")).getPath()))return null;
+        return RenderType.entityTranslucent(getTextureResource(animatable, run, entity, belt, slot));
     }
 
     /**

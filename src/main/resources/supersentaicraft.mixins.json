@@ -3,10 +3,10 @@
   "package": "com.liasdan.supersentaicraft.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "livingentity.LivingEntityMixin",
-    "client.AbstractClientPlayerMixin"
+    "livingentity.LivingEntityMixin"
   ],
   "client": [
+    "client.LocalPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

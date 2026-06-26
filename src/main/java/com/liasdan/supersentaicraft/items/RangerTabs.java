@@ -8,10 +8,7 @@ import com.liasdan.supersentaicraft.blocks.RangerBlocks;
 import com.liasdan.supersentaicraft.entity.MobsCore;
 
 import com.liasdan.supersentaicraft.items.project_red.GavanInfinityItems;
-import com.liasdan.supersentaicraft.items.sentai_10.BattleFeverItems;
-import com.liasdan.supersentaicraft.items.sentai_10.GorangerItems;
-import com.liasdan.supersentaicraft.items.sentai_10.JAKQItems;
-import com.liasdan.supersentaicraft.items.sentai_10.SunVulcanItems;
+import com.liasdan.supersentaicraft.items.sentai_10.*;
 import com.liasdan.supersentaicraft.items.sentai_20.CarrangerItems;
 import com.liasdan.supersentaicraft.items.sentai_20.MaskmanItems;
 import com.liasdan.supersentaicraft.items.sentai_20.TurborangerItems;
@@ -54,6 +51,10 @@ public class RangerTabs {
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> BattleFeverTab = CREATIVE_MODE_TABS.register("ssc003", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(BattleFeverItems.BATTLE_FEVER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_battle_fever_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.battle_fever")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> DenzimanTab = CREATIVE_MODE_TABS.register("ssc004", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(DenzimanItems.DENZIMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_denziman_items.png"))
+					.title(Component.translatable("tab.supersentaicraft.denziman")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> SunVulcanTab = CREATIVE_MODE_TABS.register("ssc005", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(SunVulcanItems.SUN_VULCAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_sun_vulcan_items.png"))
@@ -130,6 +131,7 @@ public class RangerTabs {
     public static List<Item> GORANGER= new ArrayList<Item>();
 	public static List<Item> JAKQ= new ArrayList<Item>();
 	public static List<Item> BATTLE_FEVER= new ArrayList<Item>();
+	public static List<Item> DENZIMAN= new ArrayList<Item>();
 	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
 
 	public static List<Item> MASKMAN= new ArrayList<Item>();
@@ -180,6 +182,13 @@ public class RangerTabs {
 			for (int i = 0; i < RangerTabs.BATTLE_FEVER.size(); i++)
 			{
 				event.accept( RangerTabs.BATTLE_FEVER.get(i));
+			}
+
+		}
+		else if(event.getTab() == RangerTabs.DenzimanTab.get()) {
+			for (int i = 0; i < RangerTabs.DENZIMAN.size(); i++)
+			{
+				event.accept( RangerTabs.DENZIMAN.get(i));
 			}
 
 		}

@@ -20,25 +20,57 @@ import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 import software.bernie.geckolib.util.RenderUtil;
 
+import static net.minecraft.client.renderer.RenderType.ENTITY_TRANSLUCENT_EMISSIVE;
+import static software.bernie.geckolib.cache.texture.GeoAbstractTexture.appendToPath;
+
 public class MechaArmorRenderer extends GeoArmorRenderer<MechaArmorItem> {
 
 	public MechaArmorRenderer(EquipmentSlot equipmentSlot) {
 
 		super(new MechaArmorModel());
-		addRenderLayer(new AutoGlowingGeoLayer<>(this){
-			@Nullable
-			protected RenderType getRenderType(MechaArmorItem animatable, @Nullable MultiBufferSource bufferSource) {
-				if (this.getRenderer() instanceof MechaArmorRenderer renderer2) {
-					LivingEntity RIDER = renderer2.GetEntity();
-					if (RIDER!=null&&RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
-						return belt.getGlowForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD), equipmentSlot,RIDER)? AutoGlowingTexture.getRenderType(getTextureResource(animatable)): null;
-					}}
-				return null;
-			}});
+		if (equipmentSlot == EquipmentSlot.FEET) {
+			addRenderLayer(new AutoGlowingGeoLayer<>(this) {
+				@Nullable
+				protected RenderType getRenderType(MechaArmorItem animatable, @Nullable MultiBufferSource bufferSource) {
+					if (this.getRenderer() instanceof MechaArmorRenderer renderer2) {
+						LivingEntity RIDER = renderer2.GetEntity();
+						if (RIDER != null && RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+							if (renderer.getTextureLocation(animatable).getPath().equals((ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/blank.png")).getPath()))
+								return null;
+							return belt.getGlowForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD), equipmentSlot, RIDER) ? AutoGlowingTexture.getRenderType(getTextureResource(animatable)) : null;
 
-		if (equipmentSlot == EquipmentSlot.HEAD||equipmentSlot == EquipmentSlot.FEET) {
+						}
+					}
+					return null;
+				}
+			});
+		}else{
+			addRenderLayer(new AutoGlowingGeoLayer<>(this) {
+				@Nullable
+				protected RenderType getRenderType(MechaArmorItem animatable, @Nullable MultiBufferSource bufferSource) {
+					if (this.getRenderer() instanceof MechaArmorRenderer renderer2) {
+						LivingEntity RIDER = renderer2.GetEntity();
+						if (RIDER != null && RIDER.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof MechaGattaiItem belt) {
+							if (renderer.getTextureLocation(animatable).getPath().equals((ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/blank.png")).getPath()))
+								return null;
+							ResourceLocation path = appendToPath(model.getTextureResource(animatable, renderer2), "_glowmask");
+							return belt.getGlowForSlot(RIDER.getItemBySlot(EquipmentSlot.HEAD), renderer2.getCurrentSlot(), RIDER) ? (RenderType) ENTITY_TRANSLUCENT_EMISSIVE.apply(path, false) : null;
+						}
+					}
+					return null;
+				}
+			});
+		}
+
+		if (equipmentSlot == EquipmentSlot.HEAD || equipmentSlot == EquipmentSlot.FEET) {
 			addRenderLayer(new MechaRenderLayer<>(this));
 		}
+		addRenderLayer(new AutoGlowingGeoLayer<>(this) {
+			@Nullable
+			protected RenderType getRenderType(MechaArmorItem animatable, @Nullable MultiBufferSource bufferSource) {
+				return null;
+			}
+		});
 	}
 
 	public GeoArmorRenderer<MechaArmorItem> addRenderLayer(GeoRenderLayer<MechaArmorItem> renderLayer) {

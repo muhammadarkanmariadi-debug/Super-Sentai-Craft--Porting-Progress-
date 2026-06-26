@@ -61,7 +61,7 @@ public class GoGoVItems {
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","zeek","zeek_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).ChangeBeltModel("rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.GOGO_V));
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).IsGlowing().ChangeBeltModel("rangerbeltweapon1.geo.json").AddToTabList(RangerTabs.GOGO_V));
 
 	public static final DeferredItem<Item> JEANNE_CRYSTAL_FRAGMENT = ITEMS.register("jeanne_fragment",
 			() -> new RangerFormChangeItem(new Item.Properties(),0,"","zeek_jeanne","blank",

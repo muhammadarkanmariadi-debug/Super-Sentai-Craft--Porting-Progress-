@@ -288,22 +288,13 @@ public class MechaGattaiItem extends MechaArmorItem{
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {
-
 		switch (currentSlot) {
-		case FEET ->{ 
-			if (part =="head") return true;
-		}
-		case CHEST -> {
-			if (part =="body") return true;
-			if (part =="rightArm") return true;
-			if (part =="leftArm") return true;
-		}
-		case LEGS -> {
-
-			if (part =="rightLeg") return true;
-			if (part =="leftLeg") return true;
-		}
-		default -> {}
+			case HEAD ->{
+				return true;
+			}case LEGS,CHEST ->{
+				return false;
+			}
+			default -> {}
 		}
 		return false;
 	}

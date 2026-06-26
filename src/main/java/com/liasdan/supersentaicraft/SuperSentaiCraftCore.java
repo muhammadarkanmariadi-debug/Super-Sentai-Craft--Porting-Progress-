@@ -14,10 +14,7 @@ import com.liasdan.supersentaicraft.events.ModServerEvents;
 import com.liasdan.supersentaicraft.items.*;
 import com.liasdan.supersentaicraft.items.others.*;
 import com.liasdan.supersentaicraft.items.project_red.GavanInfinityItems;
-import com.liasdan.supersentaicraft.items.sentai_10.BattleFeverItems;
-import com.liasdan.supersentaicraft.items.sentai_10.GorangerItems;
-import com.liasdan.supersentaicraft.items.sentai_10.JAKQItems;
-import com.liasdan.supersentaicraft.items.sentai_10.SunVulcanItems;
+import com.liasdan.supersentaicraft.items.sentai_10.*;
 import com.liasdan.supersentaicraft.items.sentai_20.CarrangerItems;
 import com.liasdan.supersentaicraft.items.sentai_20.MaskmanItems;
 import com.liasdan.supersentaicraft.items.sentai_20.TurborangerItems;
@@ -101,6 +98,7 @@ public class SuperSentaiCraftCore {
 		GorangerItems.register(modEventBus);
 		JAKQItems.register(modEventBus);
 		BattleFeverItems.register(modEventBus);
+		DenzimanItems.register(modEventBus);
 		SunVulcanItems.register(modEventBus);
 
 		MaskmanItems.register(modEventBus);

@@ -23,11 +23,12 @@ public class MechaRenderLayer<T extends GeoAnimatable> extends GeoRenderLayer<T>
     }
 
     protected ResourceLocation getTextureResource(T animatable, int n, LivingEntity entity, MechaGattaiItem belt, EquipmentSlot slot) {
-        return  ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/" +belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.HEAD), entity, belt.Rider, n + 1) + ".png");
+        return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/" + belt.getUnlimitedTextures(entity.getItemBySlot(EquipmentSlot.HEAD), entity, belt.Rider, n + 1) + ".png");
     }
     @Nullable
     protected RenderType getRenderType(T animatable,int run,LivingEntity entity,MechaGattaiItem belt,EquipmentSlot slot) {
-        return RenderType.entityTranslucent(getTextureResource(animatable,run,entity,belt,slot));
+        if (getTextureResource(animatable, run, entity, belt, slot).getPath().equals((ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "textures/armor/mecha/blank.png")).getPath()))return null;
+        return RenderType.entityTranslucent(getTextureResource(animatable, run, entity, belt, slot));
     }
 
     /**

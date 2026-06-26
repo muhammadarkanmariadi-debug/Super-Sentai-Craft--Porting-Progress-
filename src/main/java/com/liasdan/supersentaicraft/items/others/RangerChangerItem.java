@@ -301,24 +301,14 @@ public class RangerChangerItem extends RangerArmorItem {
 	{
 	}
 
-	public  boolean getPartsForSlot(ItemStack itemBySlot, EquipmentSlot currentSlot, String  part) {
-
+	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {
 		switch (currentSlot) {
-			case HEAD -> {
-				if (Objects.equals(part, "head")) return true;
+			case HEAD ->{
+				return true;
+			}case LEGS,CHEST ->{
+				return false;
 			}
-			case CHEST -> {
-				if (Objects.equals(part, "body")) return true;
-				if (Objects.equals(part, "rightArm")) return true;
-				if (Objects.equals(part, "leftArm")) return true;
-			}
-			case LEGS -> {
-
-				if (Objects.equals(part, "rightLeg")) return true;
-				if (Objects.equals(part, "leftLeg")) return true;
-			}
-			default -> {
-			}
+			default -> {}
 		}
 		return false;
 	}
