@@ -61,7 +61,7 @@ public class TimerangerItems {
 
         // 4. Changer
         public static final DeferredItem<Item> CHRONO_CHANGER = ITEMS.register("chrono_changer",
-                        () -> new RangerChangerItem(ArmorMaterials.DIAMOND, "time_red", OtherItems.BLANK_FORM,
+                        () -> new RangerChangerItem(ArmorMaterials.DIAMOND, "time_red", TIMERANGER_BADGE_RED,
                                         TIMERANGER_HELMET, TIMERANGER_CHESTPLATE, TIMERANGER_LEGGINGS,
                                         new Item.Properties())
                                         .AddToTabList(RangerTabs.TIMERANGER).ChangeRepairItem(TIMERANGER_LOGO.get()));
