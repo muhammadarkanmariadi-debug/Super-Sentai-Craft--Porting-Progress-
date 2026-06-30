@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_morphin_brace"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.black_puma.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.black_puma.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_busters/green_hippopotamus",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_busters_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_busters_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_busters_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:puma_morphin_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:maskman/maskman_head",
+      "supersentaicraft:maskman/maskman_torso",
+      "supersentaicraft:maskman/maskman_legs",
+      "supersentaicraft:maskman/laser_magnum",
+      "supersentaicraft:maskman/laser_magnum_sword"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:maskman_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zyuoh_elephant_brace"
+    },
+    "title": "Zyuoh Elephant",
+    "description": "Change into Zyuoh Elephant",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:zyuohger/zyuohger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_elephant_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

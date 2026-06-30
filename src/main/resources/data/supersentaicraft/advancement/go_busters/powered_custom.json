@@ -1,0 +1,123 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:custom_visor"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.powered_custom.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.powered_custom.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_busters/tokumei",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_busters_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_busters_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_busters_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_morphin_brace"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:custom_visor\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_busters_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_busters_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_busters_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_morphin_brace"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:custom_visor_b\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_busters_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_busters_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_busters_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_morphin_brace"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:custom_visor_y\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1",
+      "ranger2",
+      "ranger3"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:goggle_black_brace"
+    },
+    "title": "Goggle Black",
+    "description": "Change into Goggle Black",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:goggle_v/goggle_v",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

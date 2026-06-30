@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:boukenger/boukenger_head",
+      "supersentaicraft:boukenger/boukenger_torso",
+      "supersentaicraft:boukenger/boukenger_legs",
+      "supersentaicraft:boukenger/survi_blade"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:boukenger_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:ryusoulger/mosa_changer",
+      "supersentaicraft:ryusoulger/mosa_blade",
+      "supersentaicraft:ryusoulger/mosa_breaker",
+      "supersentaicraft:ryusoulger/mosa_breaker1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:gold_ryusoul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

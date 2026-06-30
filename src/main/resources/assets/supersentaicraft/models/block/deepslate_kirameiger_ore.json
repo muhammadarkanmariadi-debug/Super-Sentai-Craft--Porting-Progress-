@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "supersentaicraft:block/deepslate_kirameiger_ore"
+  }
+}

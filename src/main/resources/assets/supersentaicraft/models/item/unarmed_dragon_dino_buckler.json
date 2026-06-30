@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/unarmed_dragon_dino_buckler"
+  }
+}

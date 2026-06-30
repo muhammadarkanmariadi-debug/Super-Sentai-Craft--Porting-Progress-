@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/hurricaneger_legs"
+                 },
+    "parent":  "item/generated"
+}

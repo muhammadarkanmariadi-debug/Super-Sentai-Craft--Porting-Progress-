@@ -1,0 +1,89 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ohger_calibur"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.ohger_calibur.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.ohger_calibur.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:king_ohger/king_ohger",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:kuwagata_ohger_calibur"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:tonbo_ohger_calibur"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:kamakiri_ohger_calibur"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:papillon_ohger_calibur"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:hachi_ohger_calibur"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1",
+      "ranger2",
+      "ranger3",
+      "ranger4",
+      "ranger5"
+    ]
+  ]
+}

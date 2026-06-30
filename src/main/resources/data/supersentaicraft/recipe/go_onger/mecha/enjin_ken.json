@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "engine_daishogun",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:blank_engine_soul"
+    },
+	"b": {
+      "item": "supersentaicraft:daishogun_soul"
+    },
+	"c": {
+      "item": "supersentaicraft:base_mecha_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:enjin_ken"
+  }
+}

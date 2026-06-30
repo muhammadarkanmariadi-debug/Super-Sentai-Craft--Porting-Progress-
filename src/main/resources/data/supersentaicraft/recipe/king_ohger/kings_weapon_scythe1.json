@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+	"a": {
+      "item": "supersentaicraft:kings_weapon_scythe"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:kings_weapon_sickle"
+  }
+}

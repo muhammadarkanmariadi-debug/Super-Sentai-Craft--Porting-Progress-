@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gingaman/gingaman_head",
+      "supersentaicraft:gingaman/gingaman_torso",
+      "supersentaicraft:gingaman/gingaman_legs",
+      "supersentaicraft:gingaman/starbeast_sword"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:gingaman_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

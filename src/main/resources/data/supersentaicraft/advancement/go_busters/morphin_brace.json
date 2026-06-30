@@ -1,0 +1,63 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_morphin_brace"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.morphin_brace.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.morphin_brace.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_busters/tokumei",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:red_morphin_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:blue_morphin_brace"
+            ]
+          }
+        ]
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:yellow_morphin_brace"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1",
+      "ranger2",
+      "ranger3"
+    ]
+  ]
+}

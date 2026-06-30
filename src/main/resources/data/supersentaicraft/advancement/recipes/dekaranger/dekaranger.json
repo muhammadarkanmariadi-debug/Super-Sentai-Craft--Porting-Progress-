@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:dekaranger/dekaranger_head",
+      "supersentaicraft:dekaranger/dekaranger_torso",
+      "supersentaicraft:dekaranger/dekaranger_legs",
+      "supersentaicraft:dekaranger/sp_shooter",
+      "supersentaicraft:dekaranger/d_knuckle"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:dekaranger_badge"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

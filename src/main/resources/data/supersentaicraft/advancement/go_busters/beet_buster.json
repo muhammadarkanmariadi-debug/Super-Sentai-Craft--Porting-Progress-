@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:morphin_blaster"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.beet_buster.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.beet_buster.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_busters/yellow_buster",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_busters_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_busters_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_busters_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:beet_morphin_blaster"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/shurikenger_fire_medal"
+                 },
+    "parent":  "item/generated"
+}

@@ -1,0 +1,46 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.patkaiser_slash.blast": {
+            "animation_length": 0.625,
+            "bones": {
+                "rightArm": {
+                    "rotation": [
+                        141.44024,
+                        -53.427,
+                        184.87222
+                    ]
+                },
+                "leftArm": {
+                    "rotation": [
+                        -96.26757,
+                        84.44184,
+                        110.77201
+                    ]
+                },
+                "leftArmDown": {
+                    "rotation": [
+                        0,
+                        0,
+                        -87.5
+                    ],
+                    "position": [
+                        0,
+                        0,
+                        -11
+                    ]
+                }
+            }
+        },
+        "animation.patkaiser_blast.idle": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        },
+        "animation.patkaiser_blast.walk": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        }
+    }
+}

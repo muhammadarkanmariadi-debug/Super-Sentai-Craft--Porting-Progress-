@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gao_muscle",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_gao_jewel"
+    },
+	"b": {
+      "item": "supersentaicraft:gao_gorilla_jewel"
+    },
+	"c": {
+      "item": "supersentaicraft:base_mecha_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:muscle_anchor"
+  }
+}

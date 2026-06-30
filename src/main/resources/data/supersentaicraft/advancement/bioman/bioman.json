@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:bioman_logo"
+    },
+    "title": "Bioman",
+    "description": "Change into each member of Bioman",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "blue_three": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_three_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "green_two": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_two_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "pink_five": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_five_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "red_one": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_one_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_four": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_four_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

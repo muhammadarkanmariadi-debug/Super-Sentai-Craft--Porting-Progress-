@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "red_turbo",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:gt_sword"
+    },
+	{
+      "item": "supersentaicraft:turbo_laser_gun"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:turbo_laser_gt"
+  }
+}

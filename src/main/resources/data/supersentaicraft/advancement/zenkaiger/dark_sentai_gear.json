@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:dark_sentai_gear_brace"
+    },
+    "title": "Dark Sentai Gear",
+    "description": "Change into Dark Sentai Gear",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:zenkaiger/zenkaiger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dark_sentai_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

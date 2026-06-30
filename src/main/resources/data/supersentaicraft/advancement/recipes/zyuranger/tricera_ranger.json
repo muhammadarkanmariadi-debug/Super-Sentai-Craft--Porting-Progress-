@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:zyuranger/tricera_dino_buckler",
+      "supersentaicraft:zyuranger/trice_lance",
+      "supersentaicraft:zyuranger/trice_lance1",
+      "supersentaicraft:zyuranger/trice_lance_trident"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:tricera_medal"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

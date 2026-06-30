@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:abaranger_mecha_brace"
+    },
+    "title": "Abaranger Mecha",
+    "description": "Change into Abaranger Mecha",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:abaranger/abaranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abaranger_mecha_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

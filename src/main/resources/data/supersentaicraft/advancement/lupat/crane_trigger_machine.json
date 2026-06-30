@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:crane_trigger_machine"
+    },
+    "title": "#29: Photos to Remember",
+    "description": "Use Trigger Machine Crane",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:lupat/patranger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_vs_changer",
+                "supersentaicraft:blue_vs_changer",
+                "supersentaicraft:yellow_vs_changer",
+                "supersentaicraft:ichigou_vs_changer",
+                "supersentaicraft:nigou_vs_changer",
+                "supersentaicraft:sangou_vs_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex2:\"supersentaicraft:crane_trigger_machine\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

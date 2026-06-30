@@ -1,0 +1,335 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:gekiranger_logo"
+    },
+    "title": "Gekiranger",
+    "description": "Change into each member of Gekiranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "bat_spirit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:bat_spirit_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "elephant_spirit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:elephant_spirit_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geki_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geki_chopper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_chopper_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geki_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geki_violet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_violet_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geki_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "shark_spirit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:shark_spirit_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "super_geki_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_geki_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "super_geki_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_geki_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "super_geki_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_geki_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:battle_fever_logo"
+    },
+    "title": "Battle Fever J",
+    "description": "Change into each member of Battle Fever",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "battle_japan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:japan_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "battle_cossack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:cossack_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "battle_france": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:france_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "battle_kenya": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kenya_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "miss_america": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:america_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

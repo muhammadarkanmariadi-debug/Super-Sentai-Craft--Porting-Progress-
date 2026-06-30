@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kakuranger_logo"
+    },
+    "title": "Kakuranger",
+    "description": "Change into each member of Kakuranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "ninja_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ninja_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ninja_man": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_man_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ninja_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ninja_white": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_white_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ninja_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

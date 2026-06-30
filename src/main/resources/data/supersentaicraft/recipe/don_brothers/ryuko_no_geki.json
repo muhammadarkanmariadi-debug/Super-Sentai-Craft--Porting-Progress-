@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:blank_avatarou_gear"
+    },
+    "b": [
+      {
+        "item": "supersentaicraft:don_doragoku_avatarou_gear"
+      },
+      {
+        "item": "supersentaicraft:don_torabolt_avatarou_gear"
+      }
+    ],
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:ryuko_no_geki",
+    "count": 1
+  }
+}

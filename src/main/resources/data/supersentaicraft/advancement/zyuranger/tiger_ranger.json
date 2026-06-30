@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:tiger_ranger_brace"
+    },
+    "title": "Tiger Ranger",
+    "description": "Change into Tiger Ranger",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:zyuranger/zyuranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tiger_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

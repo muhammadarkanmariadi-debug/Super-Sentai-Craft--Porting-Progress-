@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "kiranger",
+  "pattern": [
+    " a ",
+    "aba",
+	" c "
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:goranger_logo"
+    },
+	"b": {
+      "item": "supersentaicraft:ki_star"
+    },
+	"c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:ki_sticker_short"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:mega_blue_brace"
+    },
+    "title": "Mega Blue",
+    "description": "Change into Mega Blue",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:megaranger/megaranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

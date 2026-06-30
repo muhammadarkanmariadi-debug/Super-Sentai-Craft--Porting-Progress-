@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_turbo_brace"
+    },
+    "title": "Red Turbo!",
+    "description": "Change into Red Turbo",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:turboranger/turboranger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:turboranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:turboranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:turboranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_turbo_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

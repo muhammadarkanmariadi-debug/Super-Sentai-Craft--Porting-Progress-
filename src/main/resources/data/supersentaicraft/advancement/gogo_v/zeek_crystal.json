@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zeek_crystal"
+    },
+    "title": "Zeek Tector!",
+    "description": "Obtain Zeek Crystal",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gogo_v/gogo_brace",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:zeek_crystal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ranger1"
+    ]
+  ]
+}

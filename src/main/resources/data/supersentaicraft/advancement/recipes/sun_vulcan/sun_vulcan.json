@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:sun_vulcan/sun_vulcan_head",
+      "supersentaicraft:sun_vulcan/sun_vulcan_torso",
+      "supersentaicraft:sun_vulcan/sun_vulcan_legs",
+      "supersentaicraft:sun_vulcan/vulcan_stick"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:sun_vulcan_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

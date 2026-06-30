@@ -1,0 +1,277 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:carranger_logo"
+    },
+    "title": "Gekisou Sentai Carranger",
+    "description": "Change into each member of Carranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "red_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "blue_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "green_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "pink_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_accel_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "white_racer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:white_racer_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "signalman": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:signal_whistle"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "signalman_evil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:signal_whistle_evil"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "vrv_master": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:vrv_module"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

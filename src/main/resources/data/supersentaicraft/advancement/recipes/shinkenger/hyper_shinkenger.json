@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:shinkenger/kyoryumaru",
+      "supersentaicraft:shinkenger/kyoryumaru1",
+      "supersentaicraft:shinkenger/kyoryumaru_sakanamaru",
+      "supersentaicraft:shinkenger/kyoryumaru_sakanamaru1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:hyper_disk"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

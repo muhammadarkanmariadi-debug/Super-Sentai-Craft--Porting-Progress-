@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:engine_oh_g12_brace"
+    },
+    "title": "Engine Oh G12",
+    "description": "Change into Engine Oh G12",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_onger/go_onger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_oh_g12_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

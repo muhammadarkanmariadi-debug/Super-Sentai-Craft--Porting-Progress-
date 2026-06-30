@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lupinranger",
+  "pattern": [
+    "a",
+	"b"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:blank_striker"
+    },
+	"b": {
+      "item": "minecraft:paper",
+	  "data": 0
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:lupinranger_logo"
+  }
+}

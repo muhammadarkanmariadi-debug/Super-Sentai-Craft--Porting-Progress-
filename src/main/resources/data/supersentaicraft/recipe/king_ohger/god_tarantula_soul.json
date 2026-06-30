@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "spider_kumonos",
+  "ingredients": [
+    {
+      "item": "supersentaicraft:god_kabuto_soul"
+    },
+    {
+      "item": "supersentaicraft:god_scorpion_soul"
+    },
+    {
+      "item": "supersentaicraft:god_hopper_soul"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:god_tarantula_soul"
+  }
+}

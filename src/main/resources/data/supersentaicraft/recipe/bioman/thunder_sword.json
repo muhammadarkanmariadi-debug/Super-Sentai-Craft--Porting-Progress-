@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "yellow_four",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:bioman_logo"
+    },
+	"b": {
+      "item": "supersentaicraft:yellow_bio_particles"
+    },
+	"c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:thunder_sword"
+  }
+}

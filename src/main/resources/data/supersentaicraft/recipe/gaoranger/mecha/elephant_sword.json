@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gao_knight",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_gao_jewel"
+    },
+	"b": {
+      "item": "supersentaicraft:gao_elephant_jewel"
+    },
+	"c": {
+      "item": "supersentaicraft:base_mecha_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:elephant_sword"
+  }
+}

@@ -1,0 +1,596 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:go_onger_logo"
+    },
+    "title": "Go Onger",
+    "description": "Change into each member of Go Onger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "engine_daishogun": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_daishogun_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "engine_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "engine_oh_g12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_oh_g12_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "engine_oh_g6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_oh_g6_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "engine_oh_g9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:engine_oh_g9_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_onger_mecha": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_onger_mecha_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_gold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_gold_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_green_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_silver_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_on_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "gunbir_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:gunbir_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "jumbowhale_soul": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:jumbowhale_soul_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kegalesia_soul": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kegalesia_soul_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kishamoth_soul": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kishamoth_soul_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kyoretsu_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kyoretsu_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "seikuu_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:seikuu_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "skydor_engine_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:skydor_engine_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

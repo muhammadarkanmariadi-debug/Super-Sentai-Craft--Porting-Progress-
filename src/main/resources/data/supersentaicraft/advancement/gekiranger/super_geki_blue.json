@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:super_geki_blue_brace"
+    },
+    "title": "Super Geki Blue",
+    "description": "Change into Super Geki Blue",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gekiranger/gekiranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_geki_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

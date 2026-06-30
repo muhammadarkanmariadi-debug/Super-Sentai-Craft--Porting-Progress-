@@ -1,0 +1,103 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:sun_vulcan_logo"
+    },
+    "title": "Taiyou Sentai Sun Vulcan",
+    "description": "Change into each member of Sun Vulcan",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "vul_eagle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:sun_vulcan_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:sun_vulcan_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:sun_vulcan_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:eagle_vulcan_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "vul_shark": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:sun_vulcan_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:sun_vulcan_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:sun_vulcan_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:shark_vulcan_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "vul_panther": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:sun_vulcan_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:sun_vulcan_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:sun_vulcan_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:panther_vulcan_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

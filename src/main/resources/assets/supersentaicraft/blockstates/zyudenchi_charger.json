@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "supersentaicraft:block/zyudenchi_charger"
+    },
+    "facing=south": {
+      "model": "supersentaicraft:block/zyudenchi_charger",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "supersentaicraft:block/zyudenchi_charger",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "supersentaicraft:block/zyudenchi_charger",
+      "y": 90
+    }
+  }
+}

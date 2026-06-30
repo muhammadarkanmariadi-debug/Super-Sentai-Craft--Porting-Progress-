@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/hayatemaru_blaster"
+                 },
+    "parent":  "item/handheld"
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:oo_abaren_oh_brace"
+    },
+    "title": "Oo Abaren Oh",
+    "description": "Change into Oo Abaren Oh",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:abaranger/abaranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oo_abaren_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

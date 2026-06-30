@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:abaranger/abaranger_head",
+      "supersentaicraft:abaranger/abaranger_torso",
+      "supersentaicraft:abaranger/abaranger_legs",
+      "supersentaicraft:abaranger/aba_laser",
+      "supersentaicraft:abaranger/baku_laser"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:abaranger_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

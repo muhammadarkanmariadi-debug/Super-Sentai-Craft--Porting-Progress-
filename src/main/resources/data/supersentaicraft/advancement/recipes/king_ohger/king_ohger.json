@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:king_ohger/king_ohger_head",
+      "supersentaicraft:king_ohger/king_ohger_torso",
+      "supersentaicraft:king_ohger/king_ohger_legs",
+      "supersentaicraft:king_ohger/king_ohger_logo",
+      "supersentaicraft:king_ohger/ohger_calibur"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:empty_shugod_soul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

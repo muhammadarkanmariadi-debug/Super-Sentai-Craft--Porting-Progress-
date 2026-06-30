@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "supersentaicraft:item/gaburu_armed_on_zyudenchi"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:sasori_orange_brace"
+    },
+    "title": "Sasori Orange",
+    "description": "Change into Sasori Orange",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kyuranger/kyuranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:sasori_orange_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

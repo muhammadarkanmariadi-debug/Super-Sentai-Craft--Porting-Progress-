@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:turboranger/turboranger_head",
+      "supersentaicraft:turboranger/turboranger_torso",
+      "supersentaicraft:turboranger/turboranger_legs",
+      "supersentaicraft:turboranger/turbo_laser_gun",
+      "supersentaicraft:turboranger/turbo_laser_sword"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:turboranger_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

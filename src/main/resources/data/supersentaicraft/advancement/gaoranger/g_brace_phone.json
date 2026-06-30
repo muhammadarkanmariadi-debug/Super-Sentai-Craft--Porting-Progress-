@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:g_brace_phone"
+    },
+    "title": "Gao Access!",
+    "description": "Obtain GaoSilver's G-Brace Phone",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gaoranger/g_phone",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:g_brace_phone"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

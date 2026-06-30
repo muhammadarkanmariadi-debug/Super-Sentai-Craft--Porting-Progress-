@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:momoranger_belt"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.momoranger.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.momoranger.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:goranger/kiranger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:momoranger_belt"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

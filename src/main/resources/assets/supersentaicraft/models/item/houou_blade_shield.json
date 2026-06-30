@@ -1,0 +1,27 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/houou_blade_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "supersentaicraft:blocking": 1.0
+      },
+      "model": "supersentaicraft:item/houou_blade_shield_blocking"
+    },
+    {
+      "predicate": {
+        "supersentaicraft:sword_drawn": 1.0
+      },
+      "model": "supersentaicraft:item/houou_shield"
+    },
+    {
+      "predicate": {
+        "supersentaicraft:blocking": 1.0,
+        "supersentaicraft:sword_drawn": 1.0
+      },
+      "model": "supersentaicraft:item/houou_shield_blocking"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:zenkaiger/zenkaiger_logo",
+      "supersentaicraft:zenkaiger/zenkaiger_head",
+      "supersentaicraft:zenkaiger/zenkaiger_torso",
+      "supersentaicraft:zenkaiger/zenkaiger_legs",
+      "supersentaicraft:zenkaiger/geartlinger"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blank_sentai_gear"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/ohranger_crystal_shard"
+                 },
+    "parent":  "item/generated"
+}

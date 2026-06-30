@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:dekaranger/red_sp_license",
+      "supersentaicraft:dekaranger/d_magnum_1",
+      "supersentaicraft:dekaranger/d_magnum_2",
+      "supersentaicraft:dekaranger/hybrid_magnum",
+      "supersentaicraft:dekaranger/hybrid_magnum1"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:deka_red_badge"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

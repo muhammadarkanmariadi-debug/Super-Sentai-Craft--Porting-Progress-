@@ -1,0 +1,248 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kirameiger_logo"
+    },
+    "title": "Kirameiger",
+    "description": "Change into each member of Kirameiger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "dark_kiramei_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dark_kiramei_silver_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "go_kirameiger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_kirameiger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_green_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_silver_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiramei_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

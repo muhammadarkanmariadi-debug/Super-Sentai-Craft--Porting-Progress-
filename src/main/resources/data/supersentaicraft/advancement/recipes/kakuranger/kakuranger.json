@@ -1,0 +1,30 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:kakuranger/kakuranger_head",
+      "supersentaicraft:kakuranger/kakuranger_torso",
+      "supersentaicraft:kakuranger/kakuranger_legs",
+      "supersentaicraft:kakuranger/kakuremaru",
+      "supersentaicraft:kakuranger/kaku_laser",
+      "supersentaicraft:kakuranger/shinobi_knuckle"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:kakuranger_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

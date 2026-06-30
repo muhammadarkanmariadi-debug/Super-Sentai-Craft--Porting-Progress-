@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gekiranger/geki_saber_twin_a",
+      "supersentaicraft:gekiranger/geki_saber_twin_b",
+      "supersentaicraft:gekiranger/geki_saber_twin_combo",
+      "supersentaicraft:gekiranger/geki_saber_twin_combo1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:shark_spirit"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

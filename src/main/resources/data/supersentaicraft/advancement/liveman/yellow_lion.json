@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:yellow_lion_brace"
+    },
+    "title": "Yellow Lion",
+    "description": "Change into Yellow Lion",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:liveman/liveman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_lion_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

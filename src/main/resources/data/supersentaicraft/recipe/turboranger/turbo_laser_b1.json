@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "yellow_turbo",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+	"a": {
+      "item": "supersentaicraft:turbo_laser_b"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:b_bowgun"
+  }
+}

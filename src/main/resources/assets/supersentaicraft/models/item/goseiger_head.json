@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/goseiger_head"
+                 },
+    "parent":  "item/generated"
+}

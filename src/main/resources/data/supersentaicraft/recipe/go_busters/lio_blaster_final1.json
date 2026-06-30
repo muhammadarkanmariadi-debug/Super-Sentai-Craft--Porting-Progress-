@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "go_busters",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+	"a": {
+      "item": "supersentaicraft:lio_blaster_final"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:lio_blaster"
+  }
+}

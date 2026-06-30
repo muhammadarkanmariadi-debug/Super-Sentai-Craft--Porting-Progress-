@@ -1,0 +1,422 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:abaranger_logo"
+    },
+    "title": "Abaranger",
+    "description": "Change into each member of Abaranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "abaranger_mecha": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abaranger_mecha_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abaren_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abaren_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abaren_ohji": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abaren_ohji_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abare_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abare_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abare_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abare_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abare_killer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abare_killer_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abare_max": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abare_max_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "abare_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:abare_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "aba_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:aba_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bakuren_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:bakuren_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "killer_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:killer_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "max_ohja": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:max_ohja_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "max_ryuoh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:max_ryuoh_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oo_abaren_oh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:abaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:abaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:abaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oo_abaren_oh_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

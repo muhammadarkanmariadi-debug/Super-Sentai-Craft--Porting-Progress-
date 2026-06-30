@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:flashman_logo"
+    },
+    "title": "Flashman",
+    "description": "Change into each member of Flashman",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "blue_flash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "green_flash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "pink_flash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "red_flash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_flash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

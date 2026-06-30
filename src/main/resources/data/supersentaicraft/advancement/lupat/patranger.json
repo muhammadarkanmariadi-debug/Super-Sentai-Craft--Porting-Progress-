@@ -1,0 +1,135 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:patranger_logo"
+    },
+    "title": "Keisatsu Sentai Patranger",
+    "description": "Change into each member of Patranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:lupat/lupat",
+  "criteria": {
+    "ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ichigou_vs_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:nigou_vs_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:sangou_vs_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:lupin_x_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:gold_x_train\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:zyuohger/zyuohger_head",
+      "supersentaicraft:zyuohger/zyuohger_torso",
+      "supersentaicraft:zyuohger/zyuohger_legs",
+      "supersentaicraft:zyuohger/zyuohger_logo",
+      "supersentaicraft:zyuohger/zyuoh_buster"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:king_s_credential"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

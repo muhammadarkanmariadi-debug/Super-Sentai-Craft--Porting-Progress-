@@ -1,0 +1,30 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:kyoryuger/future_red_gaburivolver",
+      "supersentaicraft:kyoryuger/future_black_gaburivolver",
+      "supersentaicraft:kyoryuger/future_blue_gaburivolver",
+      "supersentaicraft:kyoryuger/future_green_gaburivolver",
+      "supersentaicraft:kyoryuger/future_pink_gaburivolver",
+      "supersentaicraft:kyoryuger/future_gaburichanger"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:sp_zyudenchi"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

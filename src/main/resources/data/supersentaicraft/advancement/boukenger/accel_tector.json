@@ -1,0 +1,55 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:accel_tector"
+    },
+    "title": {
+      "translate": "advancements.supersentaicraft.accel_tector.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.accel_tector.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:boukenger/boukenger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boukenger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boukenger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boukenger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_accellular",
+                "supersentaicraft:black_accellular",
+                "supersentaicraft:blue_accellular",
+                "supersentaicraft:yellow_accellular",
+                "supersentaicraft:pink_accellular",
+                "supersentaicraft:gogo_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex2:\"supersentaicraft:accel_tector\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

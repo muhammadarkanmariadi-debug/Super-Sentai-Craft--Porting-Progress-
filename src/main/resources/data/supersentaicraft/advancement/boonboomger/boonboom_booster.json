@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:black_boonboom_booster"
+    },
+    "title": "Boonboom Change!",
+    "description": "Obtain any Boonboom Booster",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/boonboom_changer",
+  "criteria": {
+    "bun_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:black_boonboom_booster"
+            ]
+          }
+        ]
+      }
+    },
+    "bun_orange": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:orange_boonboom_booster"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bun_black",
+      "bun_orange"
+    ]
+  ]
+}

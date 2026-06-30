@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:go_on_red_brace"
+    },
+    "title": "Go On Red",
+    "description": "Change into Go On Red",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:go_onger/go_onger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:go_onger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:go_onger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:go_onger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:go_on_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

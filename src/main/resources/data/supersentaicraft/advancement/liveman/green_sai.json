@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:green_sai_brace"
+    },
+    "title": "Green Sai",
+    "description": "Change into Green Sai",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:liveman/liveman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_sai_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

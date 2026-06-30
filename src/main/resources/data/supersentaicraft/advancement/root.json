@@ -1,0 +1,23 @@
+{
+  "display": {
+	"icon": {
+	  "id": "supersentaicraft:super_sentai_logo"
+	},
+    "title": {
+      "translate": "advancements.supersentaicraft.title"
+    },
+    "description": {
+      "translate": "advancements.supersentaicraft.desc"
+    },
+	"background": "minecraft:textures/block/polished_andesite.png",
+	"frame": "task",
+	"show_toast": false,
+	"announce_to_chat": false,
+	"hidden": false
+  },
+  "criteria": {
+	"requirement": {
+	  "trigger": "minecraft:tick"
+	}
+  }
+}

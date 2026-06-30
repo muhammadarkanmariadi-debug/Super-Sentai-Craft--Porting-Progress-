@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:dai_denzin_brace"
+    },
+    "title": "Dai Denzin",
+    "description": "Change into Dai Denzin",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:denziman/denziman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dai_denzin_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

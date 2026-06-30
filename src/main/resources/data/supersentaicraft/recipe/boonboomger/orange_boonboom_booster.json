@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bun_orange",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    },
+    "b": {
+      "item": "supersentaicraft:boonboom_shovel"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:orange_boonboom_booster"
+  }
+}

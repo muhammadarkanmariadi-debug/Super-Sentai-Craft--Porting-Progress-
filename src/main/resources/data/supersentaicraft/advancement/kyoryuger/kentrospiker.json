@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kentrospiker_brace"
+    },
+    "title": "Kentrospiker",
+    "description": "Change into Kentrospiker",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kyoryuger/kyoryuger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyoryuger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyoryuger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyoryuger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kentrospiker_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

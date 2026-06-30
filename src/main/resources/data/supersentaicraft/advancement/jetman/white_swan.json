@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:white_swan_brace"
+    },
+    "title": "White Swan",
+    "description": "Change into White Swan",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:jetman/jetman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:white_swan_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

@@ -1,0 +1,83 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.patkaiser.slash": {
+            "animation_length": 0.75,
+            "bones": {
+                "waist": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            20,
+                            0
+                        ],
+                        "0.375": [
+                            0,
+                            -20,
+                            0
+                        ]
+                    }
+                },
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [
+                            10.89082,
+                            -127.36421,
+                            84.74936
+                        ],
+                        "0.375": [
+                            125.17191,
+                            -55.85141,
+                            53.99955
+                        ]
+                    }
+                },
+                "rightArmDown": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            -37.5,
+                            0
+                        ],
+                        "0.375": [
+                            0,
+                            -2.5,
+                            0
+                        ]
+                    }
+                },
+                "leftArm": {
+                    "rotation": [
+                        -69.6116,
+                        34.88358,
+                        54.21031
+                    ]
+                },
+                "leftArmDown": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            27.5,
+                            0
+                        ],
+                        "0.4167": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        },
+        "animation.patkaiser_slash.idle": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        },
+        "animation.patkaiser_slash.walk": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        }
+    }
+}

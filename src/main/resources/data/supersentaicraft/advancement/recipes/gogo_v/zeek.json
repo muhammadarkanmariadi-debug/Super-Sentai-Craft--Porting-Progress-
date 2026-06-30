@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:gogo_v/zeek_crystal",
+      "supersentaicraft:gogo_v/jeanne_crystal",
+      "supersentaicraft:gogo_v/zeek_sword",
+      "supersentaicraft:gogo_v/zeek_shot",
+      "supersentaicraft:gogo_v/zeek_blaster"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:zeek_fragment"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

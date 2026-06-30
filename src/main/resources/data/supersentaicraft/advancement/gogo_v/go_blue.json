@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_gogo_brace"
+    },
+    "title": "Go Blue!",
+    "description": "Change into Go Blue",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gogo_v/go_red",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

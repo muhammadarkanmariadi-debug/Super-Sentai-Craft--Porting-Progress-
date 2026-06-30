@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "abaren_ohji",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:abaranger_logo"
+    },
+	"b": {
+      "item": "supersentaicraft:tyranno_dino_guts"
+    },
+	"c": {
+      "item": "supersentaicraft:base_mecha_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:double_tall_sword"
+  }
+}

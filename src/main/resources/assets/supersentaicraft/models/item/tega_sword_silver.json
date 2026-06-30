@@ -1,0 +1,114 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supersentaicraft:item/tega_sword_silver"
+  },
+  "gui_light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        -45
+      ],
+      "translation": [
+        3,
+        -2,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        45
+      ],
+      "translation": [
+        3,
+        -2,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1.5
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -45,
+        0,
+        45
+      ],
+      "translation": [
+        0,
+        3.75,
+        3.25
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        1.02
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        145,
+        0,
+        145
+      ],
+      "translation": [
+        0,
+        3.75,
+        3.25
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        1.02
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ]
+    },
+    "gui": {
+      "translation": [
+        -2,
+        -2,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        2,
+        -2,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1
+      ]
+    }
+  }
+}

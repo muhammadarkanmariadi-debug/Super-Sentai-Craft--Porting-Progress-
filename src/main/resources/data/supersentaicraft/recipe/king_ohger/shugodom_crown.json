@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "king_ohger",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "supersentaicraft:empty_shugod_soul"
+    },
+    "b": {
+      "item": "supersentaicraft:god_kuwagata_soul"
+    },
+    "c": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "d": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "ada",
+    "dbd",
+    "aca"
+  ],
+  "result": {
+    "count": 1,
+    "id": "supersentaicraft:shugodom_crown"
+  }
+}

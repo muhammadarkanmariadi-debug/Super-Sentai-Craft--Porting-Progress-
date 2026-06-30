@@ -1,0 +1,248 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:gogo_v_logo"
+    },
+    "title": "Kyukyu Sentai GoGo-V",
+    "description": "Change into each member of GoGo-V",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "ranger1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zeek_crystal"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:jeanne_crystal"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ranger8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_kyoko_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

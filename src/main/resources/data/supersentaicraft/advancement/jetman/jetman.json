@@ -1,0 +1,219 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:jetman_logo"
+    },
+    "title": "Jetman",
+    "description": "Change into each member of Jetman",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "black_condor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_condor_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "blue_swallow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_swallow_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "green_eagle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_eagle_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "jetman_manga": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:jetman_manga_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "red_hawk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_hawk_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "white_swan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:white_swan_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_owl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_owl_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:akibaranger_logo"
+    },
+    "title": "Akibaranger",
+    "description": "Change into each member of Akibaranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "akiba_blue_s2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:akiba_blue_s2_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "akiba_white": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:akiba_white_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "akiba_yellow_s2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:akiba_yellow_s2_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "china_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:china_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "powerful_green_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:powerful_green_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "powerful_red_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:powerful_red_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "super": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:akibaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:akibaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:akibaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

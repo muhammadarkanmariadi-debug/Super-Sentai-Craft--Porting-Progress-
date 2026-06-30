@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_gogo_brace"
+    },
+    "title": "Go Green!",
+    "description": "Change into Go Green",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gogo_v/go_blue",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_gogo_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:blue_three_brace"
+    },
+    "title": "Blue Three",
+    "description": "Change into Blue Three",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:bioman/bioman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:bioman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:bioman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:bioman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_three_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

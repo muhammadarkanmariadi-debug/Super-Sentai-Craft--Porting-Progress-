@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:shinkenger/shinkenger_head",
+      "supersentaicraft:shinkenger/shinkenger_torso",
+      "supersentaicraft:shinkenger/shinkenger_legs",
+      "supersentaicraft:shinkenger/shinkenmaru",
+      "supersentaicraft:shinkenger/shinkenger_logo"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:common_disk"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

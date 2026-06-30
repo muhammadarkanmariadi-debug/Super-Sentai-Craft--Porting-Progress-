@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "kyuranger",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:blank_kyutama"
+    },
+	{
+      "item": "minecraft:paper",
+	  "data": 0
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:kyuranger_logo"
+  }
+}

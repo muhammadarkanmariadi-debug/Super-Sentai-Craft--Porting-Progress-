@@ -1,0 +1,306 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:don_brothers_logo"
+    },
+    "title": "Don Brothers",
+    "description": "Change into each member of Don Brothers",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "don_doragoku_torabolt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:don_doragoku_torabolt_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "don_momotarou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:don_momotarou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "don_murasame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:don_murasame_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "future_oni_sister": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:future_oni_sister_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "goldon_momotarou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goldon_momotarou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "inu_brother": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:inu_brother_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "lupinranger_alter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:lupinranger_alter_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oni_sister": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oni_sister_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "patranger_alter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:patranger_alter_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ryusoulger_alter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ryusoulger_alter_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:dairanger_logo"
+    },
+    "title": "Dairanger",
+    "description": "Change into each member of Dairanger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "houou_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:houou_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kiba_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiba_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kirin_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kirin_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ryuu_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ryuu_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "shishi_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:shishi_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tenma_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dairanger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dairanger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dairanger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tenma_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

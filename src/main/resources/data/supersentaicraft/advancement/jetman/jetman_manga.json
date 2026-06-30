@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:jetman_manga_brace"
+    },
+    "title": "Jetman Manga",
+    "description": "Change into Jetman Manga",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:jetman/jetman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:jetman_manga_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

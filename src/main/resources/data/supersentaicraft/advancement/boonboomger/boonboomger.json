@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:boonboomger_logo"
+    },
+    "title": "Bakuage Sentai Boonboomger",
+    "description": "Change into each member of Boonboomger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "bun_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_boonboom_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bun_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_boonboom_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bun_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_boonboom_changer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bun_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_boonboom_booster"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bun_orange": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:orange_boonboom_booster"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "bun_violet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:violet_boonboom_controller"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

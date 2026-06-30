@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/hurricane_gyrote_red"
+                 },
+    "parent":  "item/generated"
+}

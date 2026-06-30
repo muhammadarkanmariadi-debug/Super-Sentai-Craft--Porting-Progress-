@@ -1,0 +1,8 @@
+{
+  "description": {
+    "translate": "item.supersentaicraft.gaoranger_hoero.desc"
+  },
+  "comparator_output": 15,
+  "length_in_seconds": 77,
+  "sound_event": "supersentaicraft:gaoranger_hoero"
+}

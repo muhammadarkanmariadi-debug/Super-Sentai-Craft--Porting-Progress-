@@ -1,0 +1,509 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kyuranger_logo"
+    },
+    "title": "Kyuranger",
+    "description": "Change into each member of Kyuranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "argo_kyutama": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:argo_kyutama_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "chameleon_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:chameleon_green_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ex_aid_kyutama": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ex_aid_kyutama_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "halloween_kyutama": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:halloween_kyutama_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "hebitsukai_metal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:hebitsukai_metal_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "hebitsukai_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:hebitsukai_silver_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "houou_soldier": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:houou_soldier_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "kajiki_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kajiki_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "koguma_sky_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:koguma_sky_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ookami_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ookami_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oushi_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:oushi_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ryu_commander": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ryu_commander_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "saiko_kyutama": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:saiko_kyutama_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "sasori_orange": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:sasori_orange_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "shishi_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:shishi_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tenbin_gold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tenbin_gold_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "washi_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:washi_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

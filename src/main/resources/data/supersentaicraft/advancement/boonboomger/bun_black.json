@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:black_boonboom_booster"
+    },
+    "title": "Bun Black!",
+    "description": "Change into Bun Black",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/bun_pink",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_boonboom_booster"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

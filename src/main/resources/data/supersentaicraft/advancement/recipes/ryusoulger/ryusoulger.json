@@ -1,0 +1,31 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:ryusoulger/ryusoulger_head",
+      "supersentaicraft:ryusoulger/ryusoulger_torso",
+      "supersentaicraft:ryusoulger/ryusoulger_legs",
+      "supersentaicraft:ryusoulger/ryusoulger_logo",
+      "supersentaicraft:ryusoulger/ryusoul_ken",
+      "supersentaicraft:ryusoulger/lupinranger_soul",
+      "supersentaicraft:ryusoulger/kyoryuger_soul"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blank_ryusoul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

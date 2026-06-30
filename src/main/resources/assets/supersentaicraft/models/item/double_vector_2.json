@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/double_vector_2"
+                 },
+    "parent":  "item/handheld"
+}

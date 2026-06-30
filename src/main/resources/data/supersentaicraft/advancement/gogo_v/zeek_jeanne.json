@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zeek_crystal"
+    },
+    "title": "Kyoko, my life will protect you.",
+    "description": "Change into Zeek-Jeanne",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gogo_v/zeek",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gogo_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gogo_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gogo_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:jeanne_crystal"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

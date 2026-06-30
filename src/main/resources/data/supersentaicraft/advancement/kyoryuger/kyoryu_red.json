@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kyoryu_red_brace"
+    },
+    "title": "Kyoryu Red",
+    "description": "Change into Kyoryu Red",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kyoryuger/kyoryuger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyoryuger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyoryuger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyoryuger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kyoryu_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

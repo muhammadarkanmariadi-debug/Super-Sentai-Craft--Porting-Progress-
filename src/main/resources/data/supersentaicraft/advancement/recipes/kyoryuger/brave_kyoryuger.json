@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:kyoryuger/gabu_gaburivolver",
+      "supersentaicraft:kyoryuger/gabu_gabucalibur",
+      "supersentaicraft:kyoryuger/gabu_gabucannon",
+      "supersentaicraft:kyoryuger/gabu_gabucannon1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blank_brave_zyudenchi"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

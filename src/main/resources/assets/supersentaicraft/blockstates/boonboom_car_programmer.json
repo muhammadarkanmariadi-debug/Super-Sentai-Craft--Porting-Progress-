@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "supersentaicraft:block/boonboom_car_programmer" },
+        "facing=south": { "model": "supersentaicraft:block/boonboom_car_programmer", "y": 180 },
+        "facing=west":  { "model": "supersentaicraft:block/boonboom_car_programmer", "y": 270 },
+        "facing=east":  { "model": "supersentaicraft:block/boonboom_car_programmer", "y": 90 }
+    }
+}

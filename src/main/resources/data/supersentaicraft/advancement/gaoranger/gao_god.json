@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:gao_god_head"
+    },
+    "title": "God of the Power Animals",
+    "description": "Combine into GaoGod",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gaoranger/gao_hunter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gao_god_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gao_king_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gao_king_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:gao_king_boots"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/chrono_changer"
+                 },
+    "parent":  "item/generated"
+}

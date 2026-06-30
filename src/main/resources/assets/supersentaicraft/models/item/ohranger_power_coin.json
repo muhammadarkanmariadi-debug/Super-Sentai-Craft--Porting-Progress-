@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/ohranger_power_coin"
+                 },
+    "parent":  "item/generated"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "L": {
+      "item": "supersentaicraft:super_sentai_logo"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "L",
+    "L",
+    "I"
+  ],
+  "result": {
+    "id": "supersentaicraft:base_sword"
+  }
+}

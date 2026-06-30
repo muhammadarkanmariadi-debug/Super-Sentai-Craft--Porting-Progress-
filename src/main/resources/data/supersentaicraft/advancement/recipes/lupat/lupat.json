@@ -1,0 +1,33 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:lupat/lupat_head",
+      "supersentaicraft:lupat/lupat_torso",
+      "supersentaicraft:lupat/lupat_legs",
+      "supersentaicraft:lupat/lupat_logo",
+      "supersentaicraft:lupat/lupinranger_logo",
+      "supersentaicraft:lupat/patranger_logo",
+      "supersentaicraft:lupat/vs_changer",
+      "supersentaicraft:lupat/lupin_sword",
+      "supersentaicraft:lupat/pat_megabo"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blank_striker"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

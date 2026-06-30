@@ -1,0 +1,26 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:boonboom_shovel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:boonboomger/orange_boonboom_booster",
+      "supersentaicraft:boonboomger/boonboom_change_axe"
+    ]
+  }
+}

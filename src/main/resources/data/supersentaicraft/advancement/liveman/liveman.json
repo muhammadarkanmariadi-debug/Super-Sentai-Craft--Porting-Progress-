@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:liveman_logo"
+    },
+    "title": "Liveman",
+    "description": "Change into each member of Liveman",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "black_bison": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_bison_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "blue_dolphin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_dolphin_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "green_sai": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_sai_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "red_falcon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_falcon_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yellow_lion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_lion_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

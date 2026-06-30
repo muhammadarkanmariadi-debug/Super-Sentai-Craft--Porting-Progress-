@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:denziman_logo"
+    },
+    "title": "Denziman",
+    "description": "Change into each member of Denziman",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "dai_denzin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dai_denzin_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "denzi_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:denzi_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "denzi_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:denzi_green_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "denzi_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:denzi_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "denzi_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:denzi_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "denzi_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:denziman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:denziman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:denziman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:denzi_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

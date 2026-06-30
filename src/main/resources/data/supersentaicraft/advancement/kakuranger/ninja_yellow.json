@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ninja_yellow_brace"
+    },
+    "title": "Ninja Yellow",
+    "description": "Change into Ninja Yellow",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kakuranger/kakuranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kakuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kakuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kakuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ninja_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_red_logo",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_black_logo",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_blue_logo",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_yellow_logo",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_pink_logo",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:bouken_silver_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:zubaan_crystal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:boukenger_logo",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:boukenger_logo"
+        }
+      ]
+    }
+  ]
+}

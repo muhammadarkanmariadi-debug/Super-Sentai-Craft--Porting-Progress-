@@ -1,0 +1,59 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_boonboom_changer"
+    },
+    "title": "Boonboom Change!",
+    "description": "Obtain any Boonboom Changer",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/boonboomger",
+  "criteria": {
+    "bun_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:red_boonboom_changer"
+            ]
+          }
+        ]
+      }
+    },
+    "bun_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:blue_boonboom_changer"
+            ]
+          }
+        ]
+      }
+    },
+    "bun_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "supersentaicraft:pink_boonboom_changer"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bun_red",
+      "bun_blue",
+      "bun_pink"
+    ]
+  ]
+}

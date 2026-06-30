@@ -1,0 +1,218 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:champion_changer"
+    },
+    "title": "Bakuage 33: The Procurer Won't Give In",
+    "description": "Change into Champion Boonboomger",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:boonboomger/bun_black_110",
+  "criteria": {
+    "bun_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_boonboom_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bun_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:blue_boonboom_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bun_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:pink_boonboom_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bun_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:black_boonboom_booster"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer_2\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bun_orange": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:orange_boonboom_booster"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer_2\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bun_violet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:boonboomger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:boonboomger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:boonboomger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:violet_boonboom_controller"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:champion_changer_3\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bun_red",
+      "bun_blue",
+      "bun_pink",
+      "bun_black",
+      "bun_orange",
+      "bun_violet"
+    ]
+  ]
+}

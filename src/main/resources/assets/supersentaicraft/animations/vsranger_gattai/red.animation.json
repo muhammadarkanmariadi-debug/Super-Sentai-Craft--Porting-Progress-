@@ -1,0 +1,41 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.red.bob": {
+            "loop": true,
+            "animation_length": 2,
+            "override_previous_animation": true,
+            "bones": {
+                "bone": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "1.0417": [
+                            0,
+                            17,
+                            0
+                        ],
+                        "2.0": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        },
+        "animation.red.idle": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        },
+        "animation.red.walk": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        }
+    }
+}

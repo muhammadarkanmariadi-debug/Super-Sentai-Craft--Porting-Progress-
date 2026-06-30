@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zyuranger_logo"
+    },
+    "title": "Zyuranger",
+    "description": "Change into each member of Zyuranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "dragon_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dragon_buckler"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mammoth_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mammoth_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ptera_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ptera_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tiger_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tiger_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tricera_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tricera_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tyranno_ranger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:tyranno_ranger_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bun_black",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    },
+    "b": {
+      "item": "supersentaicraft:boonboom_patcar_1"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:black_boonboom_booster"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shinkenger",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "supersentaicraft:common_disk"
+    },
+    "b": {
+      "item": "minecraft:torch"
+    },
+    "c": {
+      "item": "supersentaicraft:daigoyou_disk"
+    }
+  },
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "result": {
+    "count": 1,
+    "id": "supersentaicraft:daigoyou_block"
+  }
+}

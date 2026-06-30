@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:toq_2gou_brace"
+    },
+    "title": "Toq 2gou",
+    "description": "Change into Toq 2gou",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:toqger/toqger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_2gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

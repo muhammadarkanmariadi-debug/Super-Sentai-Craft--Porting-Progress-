@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:japan_battleceiver"
+    },
+    "title": "Battle France!",
+    "description": "Change into Battle France",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:battle_fever/battle_cossack",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:battle_fever_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:battle_fever_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:battle_fever_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:france_battleceiver"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "type": "supersentaicraft:super_sentai_topia",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "biomes": [
+        {
+          "biome": "supersentaicraft:plains",
+          "parameters": {
+            "humidity": 0.5,
+            "continentalness": 1,
+            "depth": 0,
+            "erosion": 0,
+            "offset": 0,
+            "temperature": -0.5,
+            "weirdness": 0
+          }
+        },
+        {
+          "biome": "supersentaicraft:savanna",
+          "parameters": {
+            "temperature": 0.5,
+            "continentalness": 1,
+            "depth": 0,
+            "erosion": 0,
+            "humidity": 0.5,
+            "offset": 0,
+            "weirdness": 0
+          }
+        },
+        {
+          "biome": "supersentaicraft:snowy_taiga",
+          "parameters": {
+            "temperature": -0.5,
+            "continentalness": 1,
+            "depth": 0,
+            "erosion": 0,
+            "humidity": -0.5,
+            "offset": 0,
+            "weirdness": 0
+          }
+        },
+        {
+          "biome": "supersentaicraft:swamp",
+          "parameters": {
+            "humidity": -0.5,
+            "continentalness": 1,
+            "depth": 0,
+            "erosion": 0,
+            "offset": 0,
+            "temperature": 0.5,
+            "weirdness": 0
+          }
+        }
+      ],
+      "type": "minecraft:multi_noise"
+    },
+    "settings": "minecraft:overworld"
+  }
+}

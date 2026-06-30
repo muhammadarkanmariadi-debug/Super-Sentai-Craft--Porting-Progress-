@@ -1,0 +1,31 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:battle_fever/mecha/denkouken",
+      "supersentaicraft:battle_fever/mecha/sword_fever",
+      "supersentaicraft:battle_fever/mecha/fever_axe",
+      "supersentaicraft:battle_fever/mecha/stick_attacker",
+      "supersentaicraft:battle_fever/mecha/attack_lancer",
+      "supersentaicraft:battle_fever/mecha/cane_knocker",
+      "supersentaicraft:battle_fever/mecha/battle_shield"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:battle_fever_robo_head"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

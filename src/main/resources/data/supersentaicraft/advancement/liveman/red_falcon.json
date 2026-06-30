@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:red_falcon_brace"
+    },
+    "title": "Red Falcon",
+    "description": "Change into Red Falcon",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:liveman/liveman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:liveman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:liveman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:liveman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_falcon_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

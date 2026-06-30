@@ -1,0 +1,38 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "supersentaicraft:item/champion_carrier_off"
+	},
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3, 1],
+			"scale": [0.825, 0.825, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3, 1],
+			"scale": [0.825, 0.825, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -90, 25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [1.02, 1.02, 0.68]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, -25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [1.02, 1.02, 0.68]
+		},
+		"ground": {
+			"scale": [0.75, 0.75, 0.5]
+		},
+		"gui": {
+			"scale": [1.25, 1.25, 1]
+		},
+		"fixed": {
+			"rotation": [0, 180, 0],
+			"scale": [1.25, 1.25, 1]
+		}
+	}
+}

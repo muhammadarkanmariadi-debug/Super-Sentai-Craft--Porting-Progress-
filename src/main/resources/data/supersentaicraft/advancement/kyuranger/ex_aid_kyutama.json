@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ex_aid_kyutama_brace"
+    },
+    "title": "Ex Aid Kyutama",
+    "description": "Change into Ex Aid Kyutama",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kyuranger/kyuranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kyuranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kyuranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kyuranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ex_aid_kyutama_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

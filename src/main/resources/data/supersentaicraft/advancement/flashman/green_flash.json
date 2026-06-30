@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:green_flash_brace"
+    },
+    "title": "Green Flash",
+    "description": "Change into Green Flash",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:flashman/flashman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:flashman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:flashman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:flashman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:green_flash_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

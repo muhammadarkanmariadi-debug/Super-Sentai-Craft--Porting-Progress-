@@ -1,0 +1,15 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "supersentaicraft:item/moth_breaker"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1
+      },
+      "model": "supersentaicraft:item/moth_breaker_gun"
+    }
+  ]
+}
+}

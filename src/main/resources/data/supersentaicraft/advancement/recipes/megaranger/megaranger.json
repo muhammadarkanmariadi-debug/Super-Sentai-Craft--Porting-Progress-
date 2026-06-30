@@ -1,0 +1,30 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:megaranger/megaranger_head",
+      "supersentaicraft:megaranger/megaranger_torso",
+      "supersentaicraft:megaranger/megaranger_legs",
+      "supersentaicraft:megaranger/mega_magnum",
+      "supersentaicraft:megaranger/mega_shot",
+      "supersentaicraft:megaranger/battleraizer"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:megaranger_logo"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

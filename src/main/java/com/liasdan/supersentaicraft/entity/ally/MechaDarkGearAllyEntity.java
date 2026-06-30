@@ -1,0 +1,45 @@
+package com.liasdan.supersentaicraft.entity.ally;
+
+import com.liasdan.supersentaicraft.items.sentai_50.ZenkaigerItems;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+public class MechaDarkGearAllyEntity extends BaseAllyEntity {
+
+    public MechaDarkGearAllyEntity(EntityType<? extends BaseAllyEntity> type, Level level) {
+        super(type, level);
+        NAME = "mecha_dark_gear";
+
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ZenkaigerItems.ZENKAIGER_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ZenkaigerItems.ZENKAIGER_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ZenkaigerItems.ZENKAIGER_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(ZenkaigerItems.MECHA_DARK_GEAR.get()));
+
+        this.armorDropChances[EquipmentSlot.CHEST.getIndex()] = 0.0F;
+        this.armorDropChances[EquipmentSlot.HEAD.getIndex()] = 0.0F;
+        this.armorDropChances[EquipmentSlot.FEET.getIndex()] = 0.0F;
+        this.armorDropChances[EquipmentSlot.LEGS.getIndex()] = 0.0F;
+    }
+
+    public static AttributeSupplier.Builder setAttributes() {
+        return Monster.createMonsterAttributes()
+                .add(Attributes.FOLLOW_RANGE, 32.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.4D)
+                .add(Attributes.ATTACK_DAMAGE, 7.0D)
+                .add(Attributes.ARMOR, 2.0D)
+                .add(Attributes.MAX_HEALTH, 100.0D);
+    }
+    
+    @Override
+    protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource damageSource, boolean recentlyHit) {
+        super.dropCustomDeathLoot(serverLevel, damageSource, recentlyHit);
+        this.spawnAtLocation(ZenkaigerItems.BLANK_DARK_SENTAI_GEAR.get());
+    }
+}

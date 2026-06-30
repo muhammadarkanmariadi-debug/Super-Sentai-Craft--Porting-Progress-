@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:red_turbo_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:black_turbo_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:blue_turbo_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:yellow_turbo_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:pink_turbo_logo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:turboranger_logo",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "supersentaicraft:turboranger_logo"
+        }
+      ]
+    }
+  ]
+}

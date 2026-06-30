@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zenkai_gaon_brace"
+    },
+    "title": "Zenkai Gaon",
+    "description": "Change into Zenkai Gaon",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:zenkaiger/zenkaiger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zenkai_gaon_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boonboomger",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:boonboom_trailer"
+    },
+    "b": [
+      {
+        "item": "supersentaicraft:boonboom_patcar_1"
+      },
+      {
+        "item": "supersentaicraft:boonboom_shovel"
+      }
+    ],
+    "c": {
+      "item": "supersentaicraft:base_sword"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:boonboom_change_axe"
+  }
+}

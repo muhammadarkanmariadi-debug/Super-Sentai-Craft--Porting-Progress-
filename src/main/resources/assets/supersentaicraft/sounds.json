@@ -1,0 +1,50 @@
+{
+  "susume_goranger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:susume_goranger",
+        "stream": true
+      }
+    ]
+  },
+  "taiyou_sentai_sun_vulcan": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:taiyou_sentai_sun_vulcan",
+        "stream": true
+      }
+    ]
+  },
+  "hikari_sentai_maskman": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:hikari_sentai_maskman",
+        "stream": true
+      }
+    ]
+  },
+  "gaoranger_hoero": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:gaoranger_hoero",
+        "stream": true
+      }
+    ]
+  },
+  "samurai_sentai_shinkenger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:samurai_sentai_shinkenger",
+        "stream": true
+      }
+    ]
+  },
+  "winner_gozyuger": {
+    "sounds": [
+      {
+        "name": "supersentaicraft:winner_gozyuger",
+        "stream": true
+      }
+    ]
+  }
+}

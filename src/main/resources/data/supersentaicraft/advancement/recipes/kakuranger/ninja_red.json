@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:kakuranger/red_doron_changer",
+      "supersentaicraft:kakuranger/red_slicer",
+      "supersentaicraft:kakuranger/hikarimaru",
+      "supersentaicraft:kakuranger/ninja_red_shuriken"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:sasuke_medal"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:goggle_v_logo"
+    },
+    "title": "Goggle V",
+    "description": "Change into each member of Goggle V",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "goggle_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "goggle_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "goggle_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "goggle_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "goggle_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:goggle_v_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:goggle_v_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:goggle_v_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:goggle_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

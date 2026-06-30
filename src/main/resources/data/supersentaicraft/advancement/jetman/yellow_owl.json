@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:yellow_owl_brace"
+    },
+    "title": "Yellow Owl",
+    "description": "Change into Yellow Owl",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:jetman/jetman",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:jetman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:jetman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:jetman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yellow_owl_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

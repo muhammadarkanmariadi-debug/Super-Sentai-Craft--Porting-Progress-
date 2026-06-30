@@ -1,0 +1,8 @@
+{
+  "description": {
+    "translate": "item.supersentaicraft.samurai_sentai_shinkenger.desc"
+  },
+  "comparator_output": 15,
+  "length_in_seconds": 84,
+  "sound_event": "supersentaicraft:samurai_sentai_shinkenger"
+}

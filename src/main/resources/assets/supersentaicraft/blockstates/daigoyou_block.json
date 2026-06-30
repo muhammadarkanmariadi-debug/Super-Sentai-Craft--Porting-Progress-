@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "supersentaicraft:block/daigoyou_block" },
+        "facing=south": { "model": "supersentaicraft:block/daigoyou_block", "y": 180 },
+        "facing=west":  { "model": "supersentaicraft:block/daigoyou_block", "y": 270 },
+        "facing=east":  { "model": "supersentaicraft:block/daigoyou_block", "y": 90 }
+    }
+}

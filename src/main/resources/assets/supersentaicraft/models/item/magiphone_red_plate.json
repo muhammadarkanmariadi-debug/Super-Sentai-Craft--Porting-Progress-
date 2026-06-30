@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/magiphone_red_plate"
+                 },
+    "parent":  "item/generated"
+}

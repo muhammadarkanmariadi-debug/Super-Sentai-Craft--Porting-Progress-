@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:geki_yellow_brace"
+    },
+    "title": "Geki Yellow",
+    "description": "Change into Geki Yellow",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:gekiranger/gekiranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:gekiranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:gekiranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:gekiranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:geki_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:megaranger_logo"
+    },
+    "title": "Megaranger",
+    "description": "Change into each member of Megaranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "mega_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_black_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_silver_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_sniper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_sniper_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mega_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:megaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:megaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:megaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:mega_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

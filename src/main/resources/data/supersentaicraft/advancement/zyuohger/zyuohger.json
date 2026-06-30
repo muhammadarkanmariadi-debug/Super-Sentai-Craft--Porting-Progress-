@@ -1,0 +1,277 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zyuohger_logo"
+    },
+    "title": "Zyuohger",
+    "description": "Change into each member of Zyuohger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "zyuoh_bird": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_bird_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_condor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_condor_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_eagle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_eagle_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_elephant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_elephant_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_lion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_lion_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_shark": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_shark_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_the_world": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_the_light"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_tiger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_tiger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zyuoh_whale": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zyuohger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zyuohger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zyuohger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zyuoh_whale_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

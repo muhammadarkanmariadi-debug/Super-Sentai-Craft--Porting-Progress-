@@ -1,0 +1,91 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.lupinkaiser.slash": {
+            "animation_length": 0.75,
+            "override_previous_animation": true,
+            "bones": {
+                "waist": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.4167": [
+                            0,
+                            17.5,
+                            0
+                        ]
+                    }
+                },
+                "RightArm": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.4167": [
+                            -17.5,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "LeftArm": {
+                    "rotation": {
+                        "0.0": [
+                            -145,
+                            172.5,
+                            67.5
+                        ],
+                        "0.4167": [
+                            -57.08709,
+                            73.45518,
+                            101.93494
+                        ]
+                    }
+                },
+                "leftArmDown": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.4167": [
+                            -40,
+                            0,
+                            -40
+                        ]
+                    }
+                },
+                "bone23": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.4167": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        },
+        "animation.lupinkaiserskill.idle": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        },
+        "animation.lupinkaiserskill.walk": {
+            "loop": true,
+            "animation_length": 1,
+            "bones": {}
+        }
+    }
+}

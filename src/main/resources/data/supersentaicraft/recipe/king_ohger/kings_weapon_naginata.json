@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "king_ohger",
+  "ingredients": [
+    {
+      "item": "supersentaicraft:ohger_calibur"
+    },
+    {
+      "item": "supersentaicraft:kings_weapon_sword"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:kings_weapon_naginata"
+  }
+}

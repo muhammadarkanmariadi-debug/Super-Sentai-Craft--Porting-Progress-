@@ -1,0 +1,29 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:go_onger/rocket_dagger",
+      "supersentaicraft:go_onger/wing_booster",
+      "supersentaicraft:go_onger/wing_booster1",
+      "supersentaicraft:go_onger/wing_booster_silver",
+      "supersentaicraft:go_onger/wing_booster_silver1"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:jumbowhale_soul"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

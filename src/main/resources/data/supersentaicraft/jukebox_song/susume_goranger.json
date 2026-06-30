@@ -1,0 +1,8 @@
+{
+  "description": {
+    "translate": "item.supersentaicraft.susume_goranger.desc"
+  },
+  "comparator_output": 15,
+  "length_in_seconds": 73,
+  "sound_event": "supersentaicraft:susume_goranger"
+}

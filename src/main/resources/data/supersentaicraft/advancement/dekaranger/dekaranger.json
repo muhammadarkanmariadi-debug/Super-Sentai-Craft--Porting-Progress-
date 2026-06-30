@@ -1,0 +1,393 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:dekaranger_logo"
+    },
+    "title": "Dekaranger",
+    "description": "Change into each member of Dekaranger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "deka_battlizer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_battlizer_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_blue_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_break": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_break_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_bright": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_bright_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_fire_squad": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_fire_squad_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_gold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_gold_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_green_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_master": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_master_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_red_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_swan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_swan_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_swat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_swat_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deka_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_yellow_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

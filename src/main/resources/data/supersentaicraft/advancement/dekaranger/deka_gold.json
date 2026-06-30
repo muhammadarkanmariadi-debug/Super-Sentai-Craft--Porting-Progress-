@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:deka_gold_brace"
+    },
+    "title": "Deka Gold",
+    "description": "Change into Deka Gold",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:dekaranger/dekaranger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:dekaranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:dekaranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:dekaranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:deka_gold_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

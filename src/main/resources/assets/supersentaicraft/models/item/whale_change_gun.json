@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "supersentaicraft:item/whale_change_gun_close"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "change": 1.0
+      },
+      "model": "supersentaicraft:item/whale_change_gun_open"
+    }
+  ]
+}

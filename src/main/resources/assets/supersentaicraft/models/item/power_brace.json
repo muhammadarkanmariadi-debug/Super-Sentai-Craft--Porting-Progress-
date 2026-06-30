@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/power_brace"
+                 },
+    "parent":  "item/generated"
+}

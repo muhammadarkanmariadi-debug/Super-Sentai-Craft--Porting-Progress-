@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:ryusoulger_alter_brace"
+    },
+    "title": "Ryusoulger Alter",
+    "description": "Change into Ryusoulger Alter",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:don_brothers/don_brothers",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:don_brothers_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:don_brothers_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:don_brothers_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:ryusoulger_alter_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

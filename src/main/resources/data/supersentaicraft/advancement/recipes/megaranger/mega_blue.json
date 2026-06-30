@@ -1,0 +1,28 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:megaranger/blue_digitaizer",
+      "supersentaicraft:megaranger/mega_tomahawk",
+      "supersentaicraft:megaranger/tomahawk_sniper",
+      "supersentaicraft:megaranger/tomahawk_sniper1"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:mega_blue_disk"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

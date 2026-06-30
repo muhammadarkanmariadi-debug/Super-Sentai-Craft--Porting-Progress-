@@ -1,0 +1,55 @@
+package com.liasdan.supersentaicraft.items.sentai_30.abaranger;
+
+import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
+import com.liasdan.supersentaicraft.items.sentai_30.AbarangerItems;
+
+import net.minecraft.core.Holder;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.registries.DeferredItem;
+
+public class AbarangerChangerItem extends RangerChangerItem {
+
+    public AbarangerChangerItem(Holder<ArmorMaterial> material, String rider, DeferredItem<Item> baseFormItem, DeferredItem<Item> head, DeferredItem<Item> torso, DeferredItem<Item> legs, Properties properties) {
+        super(material, rider, baseFormItem, head, torso, legs, properties);
+    }
+
+    @Override
+    public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String rangerName) {
+        String belt = ((RangerChangerItem)itemstack.getItem()).BELT_TEXT;
+        boolean fly = rider instanceof Player player && player.getAbilities().flying;
+
+        if (equipmentSlot == EquipmentSlot.FEET) {
+            Item handItem = rider.getMainHandItem().getItem();
+            boolean showEmpty = false;
+            
+            // Logika spesifik form
+            if (rangerName.equals("aba_red")) {
+                if (handItem == AbarangerItems.ABA_LASER.get() || handItem == AbarangerItems.BAKU_LASER.get() || 
+                    handItem == AbarangerItems.TYRANNO_ROD.get() || handItem == AbarangerItems.STY_RISER.get() || 
+                    handItem == AbarangerItems.STY_RISER_SHIELD.get()) showEmpty = true;
+            } else if (rangerName.equals("aba_blue")) {
+                if (handItem == AbarangerItems.ABA_LASER.get() || handItem == AbarangerItems.TRICERA_BUNKER.get()) showEmpty = true;
+            } else if (rangerName.equals("aba_yellow")) {
+                if (handItem == AbarangerItems.ABA_LASER.get() || handItem == AbarangerItems.PTERA_DAGGER.get()) showEmpty = true;
+            } else if (rangerName.equals("aba_black")) {
+                if (handItem == AbarangerItems.DINO_THRUSTER.get()) showEmpty = true;
+            } else if (rangerName.equals("abare_killer")) {
+                if (handItem == AbarangerItems.WING_PENTACT.get()) showEmpty = true;
+            }
+            
+            if (showEmpty) {
+                belt = get_Form_Item(itemstack, 1).getBeltTex() + "_empty";
+            } else if (((RangerChangerItem)itemstack.getItem()).BELT_TEXT == null) {
+                belt = get_Form_Item(itemstack, 1).getBeltTex();
+            }
+            return "belts/" + belt;
+        } else {
+            return super.GET_TEXT(itemstack, equipmentSlot, rider, rangerName);
+        }
+    }
+}

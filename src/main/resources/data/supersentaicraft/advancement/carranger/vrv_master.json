@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:vrv_module"
+    },
+    "title": "Uchuu no ippiki ookami... VRV Master",
+    "description": "Change into VRV Master",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:carranger/signalman_evil",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:carranger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:carranger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:carranger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:vrv_module"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

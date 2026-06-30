@@ -1,0 +1,335 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:toqger_logo"
+    },
+    "title": "Toqger",
+    "description": "Change into each member of Toqger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "den_o_ressha": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:den_o_ressha_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "hyper_toqger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:hyper_toqger_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_1gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_1gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_2gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_2gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_3gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_3gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_4gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_4gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_5gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_5gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_6gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_6gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_7gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_7gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toq_blaster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:toq_blaster_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "yami_0gou": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:toqger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:toqger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:toqger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:yami_0gou_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

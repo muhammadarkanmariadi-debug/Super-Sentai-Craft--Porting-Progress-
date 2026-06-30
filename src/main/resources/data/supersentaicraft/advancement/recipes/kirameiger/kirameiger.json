@@ -1,0 +1,32 @@
+{
+  "parent": "supersentaicraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "supersentaicraft:kirameiger/kirameiger_head",
+      "supersentaicraft:kirameiger/kirameiger_torso",
+      "supersentaicraft:kirameiger/kirameiger_legs",
+      "supersentaicraft:kirameiger/kirameiger_logo",
+      "supersentaicraft:kirameiger/kiramei_sword",
+      "supersentaicraft:kirameiger/kiramei_shot",
+      "supersentaicraft:kirameiger/kiramei_buster",
+      "supersentaicraft:kirameiger/kiramei_buster1"
+    ]
+  },
+  "criteria": {
+    "has_logo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supersentaicraft:blue_diamond"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logo"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:kiramei_pink_brace"
+    },
+    "title": "Kiramei Pink",
+    "description": "Change into Kiramei Pink",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:kirameiger/kirameiger",
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:kirameiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:kirameiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:kirameiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:kiramei_pink_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "change"
+    ]
+  ]
+}

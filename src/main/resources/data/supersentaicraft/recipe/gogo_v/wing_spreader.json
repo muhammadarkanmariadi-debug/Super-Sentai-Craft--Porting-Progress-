@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "go_green",
+  "pattern": [
+    "aaa",
+    "acb",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "supersentaicraft:gogo_v_logo"
+    },
+	"b": {
+	  "item": "supersentaicraft:go_green_badge"
+	},
+	"c": {
+      "item": "supersentaicraft:laser_grip_green"
+    }
+  },
+  "result": {
+    "id": "supersentaicraft:wing_spreader"
+  }
+}

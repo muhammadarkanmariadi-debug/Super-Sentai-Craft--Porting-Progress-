@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pink_turbo",
+  "ingredients": [
+	{
+      "item": "supersentaicraft:w_stick"
+    },
+	{
+      "item": "supersentaicraft:turbo_laser_gun"
+    }
+  ],
+  "result": {
+    "id": "supersentaicraft:turbo_laser_w"
+  }
+}

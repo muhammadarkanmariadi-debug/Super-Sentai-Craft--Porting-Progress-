@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "supersentaicraft:item/shinobi_medal_red"
+                 },
+    "parent":  "item/generated"
+}

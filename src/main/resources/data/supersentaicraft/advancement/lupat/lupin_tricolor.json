@@ -1,0 +1,48 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:jackpot_striker"
+    },
+    "title": "Lupinranger|Patranger en Film",
+    "description": "Change into Lupin Tricolor",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "supersentaicraft:lupat/magic_dial_fighter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:lupat_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:lupat_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:lupat_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_vs_changer",
+                "supersentaicraft:blue_vs_changer",
+                "supersentaicraft:yellow_vs_changer"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"supersentaicraft:jackpot_striker\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

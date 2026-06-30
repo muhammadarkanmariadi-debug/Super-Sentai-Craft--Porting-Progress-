@@ -1,0 +1,364 @@
+{
+  "display": {
+    "icon": {
+      "id": "supersentaicraft:zenkaiger_logo"
+    },
+    "title": "Zenkaiger",
+    "description": "Change into each member of Zenkaiger",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "supersentaicraft:root",
+  "criteria": {
+    "dark_sentai_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:dark_sentai_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "red_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:red_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rider_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:rider_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "sentai_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:sentai_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "special_gear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:special_gear_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "stacaesar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:stacaesar_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "super_zenkaizer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:super_zenkaizer_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "twokaizer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:twokaizer_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zenkai_gaon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zenkai_gaon_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zenkai_juran": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zenkai_juran_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zenkai_magine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zenkai_magine_brace"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "zenkai_vroon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "supersentaicraft:zenkaiger_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "supersentaicraft:zenkaiger_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "supersentaicraft:zenkaiger_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "supersentaicraft:zenkai_vroon_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
