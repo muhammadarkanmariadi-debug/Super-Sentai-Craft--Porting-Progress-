@@ -38,12 +38,14 @@ public class MagirangerItems {
             () -> new RangerChangerItem(ArmorMaterials.DIAMOND, "magi_red", OtherItems.BLANK_FORM,
                     MAGIRANGER_HELMET, MAGIRANGER_CHESTPLATE, MAGIRANGER_LEGGINGS, new Item.Properties())
                     .Override_belt_text("magiranger_belt")
+                    .Override_belt_model("rangerbelt2.geo.json")
                     .AddToTabList(RangerTabs.MAGIRANGER).ChangeRepairItem(MAGIRANGER_LOGO.get()));
 
     public static final DeferredItem<Item> MAGIPHONE_GREEN = ITEMS.register("magiphone_green",
             () -> new RangerChangerItem(ArmorMaterials.DIAMOND, "magi_green", OtherItems.BLANK_FORM,
                     MAGIRANGER_HELMET, MAGIRANGER_CHESTPLATE, MAGIRANGER_LEGGINGS, new Item.Properties())
                     .Override_belt_text("magiranger_belt")
+                    .Override_belt_model("rangerbelt2.geo.json")
                     .AddToTabList(RangerTabs.MAGIRANGER).ChangeRepairItem(MAGIRANGER_LOGO.get()));
 
     public static final DeferredItem<Item> MAGIPHONE_RED_PLATE = ITEMS.register("magiphone_red_plate",
